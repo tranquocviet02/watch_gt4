@@ -1,0 +1,19 @@
+$purple-display: none; 
+
+@if ($purple-display = none){
+    .info-right-upgrade-cart .info-right-cart {
+        display: none;
+    }
+    .info-right-upgrade-cart .info-right-upgrade {
+        width: 494px;
+    }
+}
+@else{
+    .info-right-upgrade-cart .info-right-cart {
+        display: flex;
+
+    }
+    .info-right-upgrade-cart .info-right-upgrade {
+        width: 386px;
+    }
+}

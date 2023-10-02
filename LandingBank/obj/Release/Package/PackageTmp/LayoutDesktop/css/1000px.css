@@ -1,0 +1,10 @@
+@media only screen and (max-width: 1024px) {
+
+	.container {width: 1000px; min-width: 1000px;}
+	header nav ul.root li {margin: 8px 15px 4px 15px;}
+	section .box-product-home .col-content .item .info {margin-bottom: 65px;}
+	footer .bg ul.list-logo li img {width: 45%;}
+	section .box-product-home .col-content .item .img {width: 135px;}
+	section .flash-sales .content .item .img a {display: block; padding: 0 15px;}
+	section .flash-sales .content .item .img a img {width: 100%;}
+}

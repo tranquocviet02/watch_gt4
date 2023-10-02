@@ -1,0 +1,955 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{971C4F51-A898-4F2F-BDC0-555466FB6E71}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LandingBank</RootNamespace>
+    <AssemblyName>LandingBank</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44350</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BKCustomerController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HTCController.cs" />
+    <Compile Include="Controllers\Landing_project2Controller.cs" />
+    <Compile Include="Controllers\Watch_GT4Controller.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Client.cs" />
+    <Compile Include="Models\DBContextBank.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ContentWatch_GT4\css\1000px.css" />
+    <Content Include="ContentWatch_GT4\css\styles.css" />
+    <Content Include="ContentWatch_GT4\etc.clientlibs\corewcmcomponentscommonssiteclientlibs\container.ACSHASH68e8a508c100f218cc66bb13a94d1002.js" />
+    <Content Include="ContentWatch_GT4\etc.clientlibs\sonyglobalclientlibs\clientlib-base.ACSHASHf3f0e6cff0ab139c656396a517573673.js" />
+    <Content Include="ContentWatch_GT4\etc.clientlibs\sonyglobalclientlibs\clientlib-dependencies.ACSHASHd41d8cd98f00b204e9800998ecf8427e.css" />
+    <Content Include="ContentWatch_GT4\etc.clientlibs\sonyglobalclientlibs\clientlib-dependencies.ACSHASHd41d8cd98f00b204e9800998ecf8427e.js" />
+    <Content Include="ContentWatch_GT4\etc.clientlibs\sonyglobalclientlibs\clientlib-flow.ACSHASHb51809e20bb5ed5b5fd4757ace69d490.css" />
+    <Content Include="ContentWatch_GT4\etc.clientlibs\sonyglobalclientlibs\clientlib-flow.ACSHASHeb4b09f97a3785c0a87915a88e3789e0.js" />
+    <Content Include="ContentWatch_GT4\etc.clientlibs\sonyglobalclientlibs\clientlib-sony-vietnamese.ACSHASH11b1bab1ce3c5880302bc331ed605f72.css" />
+    <Content Include="ContentWatch_GT4\etc.clientlibs\sonyglobalclientlibs\clientlib-sony.ACSHASH45aadc16459012b298f0f86ff5eb7f1b.js" />
+    <Content Include="ContentWatch_GT4\etc.clientlibs\sonyglobalclientlibs\clientlib-sonyresourcesassetsimgGlobalFooter\EN_Grouplink_White.png" />
+    <Content Include="ContentWatch_GT4\etc.clientlibs\sonyglobalclientlibs\clientlib-sonyresourcesassetsimgGlobalFooter\EN_GroupLink_White_hover.png" />
+    <Content Include="ContentWatch_GT4\etc.clientlibs\sonyglobalclientlibs\clientlib-vendor.ACSHASHb52019df31b805d3bae1221f2c327613.js" />
+    <Content Include="ContentWatch_GT4\etc.clientlibs\sonyglobalclientlibs\Slideshow.js" />
+    <Content Include="ContentWatch_GT4\fonts\icon\css\hoangha.css" />
+    <Content Include="ContentWatch_GT4\fonts\icon\fonts\hoangha.svg" />
+    <Content Include="ContentWatch_GT4\fonts\SegieUI.css" />
+    <Content Include="ContentWatch_GT4\img\Huawei-Mobile.png" />
+    <Content Include="ContentWatch_GT4\img\Huawei.png" />
+    <Content Include="ContentWatch_GT4\img\Huawei_price.png" />
+    <Content Include="ContentWatch_GT4\js-css\glightbox.min.css" />
+    <Content Include="ContentWatch_GT4\js-css\index_Mobile.js" />
+    <Content Include="ContentWatch_GT4\js-css\lightbox.init.js" />
+    <Content Include="ContentWatch_GT4\js-css\glightbox.min.js" />
+    <Content Include="ContentWatch_GT4\js-css\index_Mobile.css" />
+    <Content Include="ContentWatch_GT4\js-css\index.css" />
+    <Content Include="ContentWatch_GT4\js-css\index.js" />
+    <Content Include="ContentWatch_GT4\js\jquery-3.5.1.min.js" />
+    <Content Include="ContentWatch_GT4\js\plugins\jquery-scrolltofixed\jquery-scrolltofixed.js" />
+    <Content Include="ContentWatch_GT4\js\plugins\jssor.slider-28.0.0.min\jssor.slider-28.0.0.min.js" />
+    <Content Include="ContentWatch_GT4\js\plugins\OwlCarousel2-2.3.4\assets\ajax-loader.gif" />
+    <Content Include="ContentWatch_GT4\js\plugins\OwlCarousel2-2.3.4\assets\owl.carousel.css" />
+    <Content Include="ContentWatch_GT4\js\plugins\OwlCarousel2-2.3.4\assets\owl.carousel.min.css" />
+    <Content Include="ContentWatch_GT4\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.default.css" />
+    <Content Include="ContentWatch_GT4\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.default.min.css" />
+    <Content Include="ContentWatch_GT4\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.green.css" />
+    <Content Include="ContentWatch_GT4\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.green.min.css" />
+    <Content Include="ContentWatch_GT4\js\plugins\OwlCarousel2-2.3.4\assets\owl.video.play.png" />
+    <Content Include="ContentWatch_GT4\js\plugins\OwlCarousel2-2.3.4\owl.carousel.js" />
+    <Content Include="ContentWatch_GT4\js\plugins\OwlCarousel2-2.3.4\owl.carousel.min.js" />
+    <Content Include="Content2\Apple\apple.min.css" />
+    <Content Include="Content2\Apple\fonts\SanFranciscoDisplay.min.css" />
+    <Content Include="Content2\Apple\iphone14\app.min.js" />
+    <Content Include="Content2\Apple\iphone14\styles.min.css" />
+    <Content Include="Content2\Apple\iphone14\thu-cu-iphone-web.png" />
+    <Content Include="Content2\Apple\js-css\web_v1.css" />
+    <Content Include="Content2\Apple\js-css\web_v1.js" />
+    <Content Include="Content2\Apple\web\img\logo-atm.png" />
+    <Content Include="Content2\Apple\web\img\logo-bct.png" />
+    <Content Include="Content2\Apple\web\img\logo-jcb.png" />
+    <Content Include="Content2\Apple\web\img\logo-master.png" />
+    <Content Include="Content2\Apple\web\img\logo-samsungpay.png" />
+    <Content Include="Content2\Apple\web\img\logo-text.png" />
+    <Content Include="Content2\Apple\web\img\logo-visa.png" />
+    <Content Include="Content2\Apple\web\img\logo-vnpay.png" />
+    <Content Include="Content2\Apple\web\img\maycugiatot.png" />
+    <Content Include="Content2\Apple\web\img\nhattin.jpg" />
+    <Content Include="Content2\Apple\web\img\thucugiacao.png" />
+    <Content Include="Content2\Apple\web\img\vnpost.jpg" />
+    <Content Include="Content3\css\1000px.css" />
+    <Content Include="Content3\css\styles.css" />
+    <Content Include="Content3\fonts\icon\css\hoangha.css" />
+    <Content Include="Content3\fonts\icon\fonts\hoangha.svg" />
+    <Content Include="Content3\fonts\SegieUI.css" />
+    <Content Include="Content3\img\fire.svg" />
+    <Content Include="Content3\img\logo-atm.png" />
+    <Content Include="Content3\img\logo-bct.png" />
+    <Content Include="Content3\img\logo-jcb.png" />
+    <Content Include="Content3\img\logo-kerry.png" />
+    <Content Include="Content3\img\logo-master.png" />
+    <Content Include="Content3\img\logo-samsungpay.png" />
+    <Content Include="Content3\img\logo-text.png" />
+    <Content Include="Content3\img\logo-viettel.png" />
+    <Content Include="Content3\img\logo-visa.png" />
+    <Content Include="Content3\img\logo-vnpay.png" />
+    <Content Include="Content3\img\logo.png" />
+    <Content Include="Content3\img\Miband 4-01.png" />
+    <Content Include="Content3\img\seo-content.png" />
+    <Content Include="Content3\img\spin.svg" />
+    <Content Include="Content3\img\sub-logo.png" />
+    <Content Include="Content3\js\jquery-3.5.1.min.js" />
+    <Content Include="Content3\js\plugins\jquery-scrolltofixed\jquery-scrolltofixed.js" />
+    <Content Include="Content3\js\plugins\jssor.slider-28.0.0.min\jssor.slider-28.0.0.min.js" />
+    <Content Include="Content3\js\plugins\OwlCarousel2-2.3.4\assets\ajax-loader.gif" />
+    <Content Include="Content3\js\plugins\OwlCarousel2-2.3.4\assets\owl.carousel.css" />
+    <Content Include="Content3\js\plugins\OwlCarousel2-2.3.4\assets\owl.carousel.min.css" />
+    <Content Include="Content3\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.default.css" />
+    <Content Include="Content3\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.default.min.css" />
+    <Content Include="Content3\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.green.css" />
+    <Content Include="Content3\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.green.min.css" />
+    <Content Include="Content3\js\plugins\OwlCarousel2-2.3.4\assets\owl.video.play.png" />
+    <Content Include="Content3\js\plugins\OwlCarousel2-2.3.4\owl.carousel.js" />
+    <Content Include="Content3\js\plugins\OwlCarousel2-2.3.4\owl.carousel.min.js" />
+    <Content Include="Content3\logo\ads-1.png" />
+    <Content Include="Content3\logo\ads-2.png" />
+    <Content Include="Content3\logo\ads-3.png" />
+    <Content Include="Content3\logo\brand %281%29.png" />
+    <Content Include="Content3\logo\brand %282%29.png" />
+    <Content Include="Content3\logo\brand %283%29.png" />
+    <Content Include="Content3\logo\brand %284%29.png" />
+    <Content Include="Content3\logo\brand %285%29.png" />
+    <Content Include="Content3\logo\brand %286%29.png" />
+    <Content Include="Content3\product\airpods.png" />
+    <Content Include="Content3\product\deal.png" />
+    <Content Include="Content3\product\Mask Group 1.png" />
+    <Content Include="Content3\product\Mask Group 2.png" />
+    <Content Include="Content3\product\Mask Group 3.png" />
+    <Content Include="Content3\product\Mask Group 332.png" />
+    <Content Include="Content3\product\Mask Group 4.png" />
+    <Content Include="Content3\product\Mask Group 5.png" />
+    <Content Include="Content3\product\news-home.png" />
+    <Content Include="Content3\product\note-10\01-t.png" />
+    <Content Include="Content3\product\note-10\01.jpg" />
+    <Content Include="Content3\product\note-10\02-t.png" />
+    <Content Include="Content3\product\note-10\02.jpg" />
+    <Content Include="Content3\product\note-10\03-t.jpg" />
+    <Content Include="Content3\product\note-10\03.jpg" />
+    <Content Include="Content3\product\note-10\03.png" />
+    <Content Include="Content3\product\note-10\04-t.png" />
+    <Content Include="Content3\product\note-10\04.jpg" />
+    <Content Include="Content3\product\note-10\05-t.png" />
+    <Content Include="Content3\product\note-10\05.jpg" />
+    <Content Include="Content3\product\phukien.png" />
+    <Content Include="Content3\product\samsung-galaxy-note-10-plus-blue-400x460.png" />
+    <Content Include="Content3\product\slider-2.png" />
+    <Content Include="Content3\product\slider-3.png" />
+    <Content Include="Content3\product\slider-4.png" />
+    <Content Include="Content3\product\slider-5.png" />
+    <Content Include="Content3\product\slider.png" />
+    <Content Include="Content3\product\thaypin.png" />
+    <Content Include="ContentDesktopHTC\img\BUY HTC A103-09.png" />
+    <Content Include="ContentDesktopHTC\img\HTC A103-01_Desktop.jpg" />
+    <Content Include="ContentDesktopHTC\img\HTC A103-02_Mobile.jpg" />
+    <Content Include="ContentDesktopHTC\img\htc-a103-battery01-d.jpg" />
+    <Content Include="ContentDesktopHTC\img\htc-a103-color-gray-d.jpg" />
+    <Content Include="ContentDesktopHTC\img\htc-a103-color-silver-d.jpg" />
+    <Content Include="ContentDesktopHTC\img\htc-a103-cpu01-d.jpg" />
+    <Content Include="ContentDesktopHTC\img\htc-a103-display01-d.jpg" />
+    <Content Include="ContentDesktopHTC\img\htc-a103-kv01-d.jpg" />
+    <Content Include="ContentDesktopHTC\img\htc-a103-memory01-d.jpg" />
+    <Content Include="ContentDesktopHTC\img\htc-a103-network01-d.jpg" />
+    <Content Include="ContentDesktopHTC\img\logo-black.jpg" />
+    <Content Include="ContentDesktopHTC\img\logo-white.svg" />
+    <Content Include="ContentDesktopHTC\js-css\css-Mobile.css" />
+    <Content Include="ContentDesktopHTC\js-css\css.css" />
+    <Content Include="ContentDesktopHTC\js-css\style-css.css" />
+    <Content Include="ContentDesktopHTC\js-css\style-css_Mobile.css" />
+    <Content Include="ContentProject2\css\css.css" />
+    <Content Include="ContentProject2\css\css2.css" />
+    <Content Include="ContentProject2\css\model.css" />
+    <Content Include="ContentProject2\css\model_Mobile.css" />
+    <Content Include="ContentProject2\css\select_option.css" />
+    <Content Include="ContentProject2\css\select_option_Mobile.css" />
+    <Content Include="ContentProject2\css\style.css" />
+    <Content Include="ContentProject2\css\style_Mobile.css" />
+    <Content Include="ContentProject2\css\swiper-min.css" />
+    <Content Include="ContentProject2\css\app.css" />
+    <Content Include="ContentProject2\css\w3school.css" />
+    <Content Include="ContentProject2\css\w3school_Mobile.css" />
+    <Content Include="ContentProject2\images _Mobile\03_2_6.jpg.png" />
+    <Content Include="ContentProject2\images _Mobile\add.svg" />
+    <Content Include="ContentProject2\images _Mobile\add_circle.png" />
+    <Content Include="ContentProject2\images _Mobile\add_fillo.svg" />
+    <Content Include="ContentProject2\images _Mobile\Box.png" />
+    <Content Include="ContentProject2\images _Mobile\call.png" />
+    <Content Include="ContentProject2\images _Mobile\check.png" />
+    <Content Include="ContentProject2\images _Mobile\clock.png" />
+    <Content Include="ContentProject2\images _Mobile\Close button.png" />
+    <Content Include="ContentProject2\images _Mobile\close.svg" />
+    <Content Include="ContentProject2\images _Mobile\compare_arrows.svg" />
+    <Content Include="ContentProject2\images _Mobile\crown-2.png" />
+    <Content Include="ContentProject2\images _Mobile\Delivery.png" />
+    <Content Include="ContentProject2\images _Mobile\dislike.png" />
+    <Content Include="ContentProject2\images _Mobile\document.png" />
+    <Content Include="ContentProject2\images _Mobile\flashsale.png" />
+    <Content Include="ContentProject2\images _Mobile\Frame 236.png" />
+    <Content Include="ContentProject2\images _Mobile\Frame 324.png" />
+    <Content Include="ContentProject2\images _Mobile\Frame 87 %281%29.png" />
+    <Content Include="ContentProject2\images _Mobile\Frame 87 %282%29.png" />
+    <Content Include="ContentProject2\images _Mobile\Frame 87.png" />
+    <Content Include="ContentProject2\images _Mobile\Frame.png" />
+    <Content Include="ContentProject2\images _Mobile\Frame.svg" />
+    <Content Include="ContentProject2\images _Mobile\Frame_rong.png" />
+    <Content Include="ContentProject2\images _Mobile\galaxys23ultra_front_green_221122_2.jpg.png" />
+    <Content Include="ContentProject2\images _Mobile\Group 6551.png" />
+    <Content Include="ContentProject2\images _Mobile\Heading_askandanswer.png" />
+    <Content Include="ContentProject2\images _Mobile\Heading_maycu.png" />
+    <Content Include="ContentProject2\images _Mobile\Heading_phukien.png" />
+    <Content Include="ContentProject2\images _Mobile\Heading_sosanh.png" />
+    <Content Include="ContentProject2\images _Mobile\Heading_thucu.png" />
+    <Content Include="ContentProject2\images _Mobile\Heading_tintuc.png" />
+    <Content Include="ContentProject2\images _Mobile\heart.png" />
+    <Content Include="ContentProject2\images _Mobile\hoanghanone.svg" />
+    <Content Include="ContentProject2\images _Mobile\keyboard_arrow.svg" />
+    <Content Include="ContentProject2\images _Mobile\like.png" />
+    <Content Include="ContentProject2\images _Mobile\location-minus.png" />
+    <Content Include="ContentProject2\images _Mobile\location.png" />
+    <Content Include="ContentProject2\images _Mobile\Logo VNPAY-QR 1.png" />
+    <Content Include="ContentProject2\images _Mobile\machine.png" />
+    <Content Include="ContentProject2\images _Mobile\money-change.png" />
+    <Content Include="ContentProject2\images _Mobile\navigate_next.png" />
+    <Content Include="ContentProject2\images _Mobile\No_content.png" />
+    <Content Include="ContentProject2\images _Mobile\play-circle.png" />
+    <Content Include="ContentProject2\images _Mobile\Rectangle 49.png" />
+    <Content Include="ContentProject2\images _Mobile\Rectangle 49.svg" />
+    <Content Include="ContentProject2\images _Mobile\redeem_FILL0_wght400_GRAD0_opsz48 %281%29 1.png" />
+    <Content Include="ContentProject2\images _Mobile\reply.png" />
+    <Content Include="ContentProject2\images _Mobile\s23-ultra-kem_1.png.png" />
+    <Content Include="ContentProject2\images _Mobile\s23-ultra-tim_1.png.png" />
+    <Content Include="ContentProject2\images _Mobile\s23-ultra-xanh.png.png" />
+    <Content Include="ContentProject2\images _Mobile\send.png" />
+    <Content Include="ContentProject2\images _Mobile\setting-2.png" />
+    <Content Include="ContentProject2\images _Mobile\shield-tick.png" />
+    <Content Include="ContentProject2\images _Mobile\shopping-cart.svg" />
+    <Content Include="ContentProject2\images _Mobile\sm-s908_galaxys22ultra_front_burgundy_211119_3.jpg.png" />
+    <Content Include="ContentProject2\images _Mobile\star.png" />
+    <Content Include="ContentProject2\images _Mobile\trash_can.png" />
+    <Content Include="ContentProject2\images _Mobile\Vector.png" />
+    <Content Include="ContentProject2\images _Mobile\Vector.svg" />
+    <Content Include="ContentProject2\images\03_2_6.jpg.png" />
+    <Content Include="ContentProject2\images\150px 150.png" />
+    <Content Include="ContentProject2\images\200px 200.png" />
+    <Content Include="ContentProject2\images\30x 30.png" />
+    <Content Include="ContentProject2\images\add.svg" />
+    <Content Include="ContentProject2\images\add_circle_FILL0_wght400_GRAD0_opsz48 1 %283%29.png" />
+    <Content Include="ContentProject2\images\Box.png" />
+    <Content Include="ContentProject2\images\Box.svg" />
+    <Content Include="ContentProject2\images\call.png" />
+    <Content Include="ContentProject2\images\check.png" />
+    <Content Include="ContentProject2\images\clock.png" />
+    <Content Include="ContentProject2\images\Close button.png" />
+    <Content Include="ContentProject2\images\close.svg" />
+    <Content Include="ContentProject2\images\compare_arrows.svg" />
+    <Content Include="ContentProject2\images\crown-2.png" />
+    <Content Include="ContentProject2\images\Delivery.png" />
+    <Content Include="ContentProject2\images\dislike.png" />
+    <Content Include="ContentProject2\images\document.png" />
+    <Content Include="ContentProject2\images\Frame 225.png" />
+    <Content Include="ContentProject2\images\Frame 236.png" />
+    <Content Include="ContentProject2\images\Frame 324.png" />
+    <Content Include="ContentProject2\images\Frame 87 %281%29.png" />
+    <Content Include="ContentProject2\images\Frame 87 %282%29.png" />
+    <Content Include="ContentProject2\images\Frame 87.png" />
+    <Content Include="ContentProject2\images\Frame.png" />
+    <Content Include="ContentProject2\images\Frame.svg" />
+    <Content Include="ContentProject2\images\Frame_rong.png" />
+    <Content Include="ContentProject2\images\galaxys23ultra_front_green_221122_2.jpg.png" />
+    <Content Include="ContentProject2\images\Group 6551.png" />
+    <Content Include="ContentProject2\images\Heading_askandanswer.png" />
+    <Content Include="ContentProject2\images\Heading_maycu.png" />
+    <Content Include="ContentProject2\images\Heading_phukien.png" />
+    <Content Include="ContentProject2\images\Heading_sosanh.png" />
+    <Content Include="ContentProject2\images\Heading_thucu.png" />
+    <Content Include="ContentProject2\images\Heading_tintuc.png" />
+    <Content Include="ContentProject2\images\heart.png" />
+    <Content Include="ContentProject2\images\hoanghanone.svg" />
+    <Content Include="ContentProject2\images\keyboard_arrow.svg" />
+    <Content Include="ContentProject2\images\like.png" />
+    <Content Include="ContentProject2\images\location-minus.png" />
+    <Content Include="ContentProject2\images\location.png" />
+    <Content Include="ContentProject2\images\Logo VNPAY-QR 1.png" />
+    <Content Include="ContentProject2\images\machine.png" />
+    <Content Include="ContentProject2\images\money-change.png" />
+    <Content Include="ContentProject2\images\navigate_next.png" />
+    <Content Include="ContentProject2\images\No_content.png" />
+    <Content Include="ContentProject2\images\Path 5577.png" />
+    <Content Include="ContentProject2\images\radio input.png" />
+    <Content Include="ContentProject2\images\Rectangle 49.png" />
+    <Content Include="ContentProject2\images\Rectangle 49.svg" />
+    <Content Include="ContentProject2\images\redeem_FILL0_wght400_GRAD0_opsz48 %281%29 1.png" />
+    <Content Include="ContentProject2\images\reply.png" />
+    <Content Include="ContentProject2\images\s23-ultra-kem_1.png.png" />
+    <Content Include="ContentProject2\images\s23-ultra-tim_1.png.png" />
+    <Content Include="ContentProject2\images\s23-ultra-xanh.png.png" />
+    <Content Include="ContentProject2\images\send.png" />
+    <Content Include="ContentProject2\images\setting-2.png" />
+    <Content Include="ContentProject2\images\shield-tick.png" />
+    <Content Include="ContentProject2\images\shopping-cart.svg" />
+    <Content Include="ContentProject2\images\sm-s908_galaxys22ultra_front_burgundy_211119_3.jpg.png" />
+    <Content Include="ContentProject2\images\trash_can.png" />
+    <Content Include="ContentProject2\images\Vector.png" />
+    <Content Include="ContentProject2\images\Vector.svg" />
+    <Content Include="ContentProject2\javascript\swiper-bundle.min.js" />
+    <Content Include="ContentProject2\javascript\select_option.js" />
+    <Content Include="ContentProject2\javascript\swiper_Mobile.js" />
+    <Content Include="ContentProject2\javascript\function.js" />
+    <Content Include="ContentProject2\javascript\function_Mobile.js" />
+    <Content Include="ContentProject2\javascript\model.js" />
+    <Content Include="ContentProject2\javascript\swiper.js" />
+    <Content Include="ContentProject2\javascript\ww3school.js" />
+    <Content Include="Content\Apple\apple.min.css" />
+    <Content Include="Content\Apple\fonts\apple.min.css" />
+    <Content Include="Content\Apple\iphone14\app.min.js" />
+    <Content Include="Content\Apple\iphone14\styles.min.css" />
+    <Content Include="Content\Apple\iphone14\thu-cu-iphone-web.png" />
+    <Content Include="Content\Bank\VPBank\the1.png" />
+    <Content Include="Content\Bank\VPBank\the3.png" />
+    <Content Include="Content\Bank\VPBank\the4.png" />
+    <Content Include="Content\Bank\VPBank\top.png" />
+    <Content Include="Content\Bank\VPBank\uudai.png" />
+    <Content Include="Content\Bank\VPBank\vpbank.png" />
+    <Content Include="Content\Bank\web.min.css" />
+    <Content Include="Content\Bank\web.min.js" />
+    <Content Include="Content\css\1000px.css" />
+    <Content Include="Content\css\styles.css" />
+    <Content Include="Content\etc.clientlibs\corewcmcomponentscommonssiteclientlibs\container.ACSHASH68e8a508c100f218cc66bb13a94d1002.js" />
+    <Content Include="Content\etc.clientlibs\sonyglobalclientlibs\clientlib-base.ACSHASHf3f0e6cff0ab139c656396a517573673.js" />
+    <Content Include="Content\etc.clientlibs\sonyglobalclientlibs\clientlib-dependencies.ACSHASHd41d8cd98f00b204e9800998ecf8427e.css" />
+    <Content Include="Content\etc.clientlibs\sonyglobalclientlibs\clientlib-dependencies.ACSHASHd41d8cd98f00b204e9800998ecf8427e.js" />
+    <Content Include="Content\etc.clientlibs\sonyglobalclientlibs\clientlib-flow.ACSHASHb51809e20bb5ed5b5fd4757ace69d490.css" />
+    <Content Include="Content\etc.clientlibs\sonyglobalclientlibs\clientlib-flow.ACSHASHeb4b09f97a3785c0a87915a88e3789e0.js" />
+    <Content Include="Content\etc.clientlibs\sonyglobalclientlibs\clientlib-sony-vietnamese.ACSHASH11b1bab1ce3c5880302bc331ed605f72.css" />
+    <Content Include="Content\etc.clientlibs\sonyglobalclientlibs\clientlib-sony.ACSHASH45aadc16459012b298f0f86ff5eb7f1b.js" />
+    <Content Include="Content\etc.clientlibs\sonyglobalclientlibs\clientlib-sonyresourcesassetsimgGlobalFooter\EN_Grouplink_White.png" />
+    <Content Include="Content\etc.clientlibs\sonyglobalclientlibs\clientlib-sonyresourcesassetsimgGlobalFooter\EN_GroupLink_White_hover.png" />
+    <Content Include="Content\etc.clientlibs\sonyglobalclientlibs\clientlib-vendor.ACSHASHb52019df31b805d3bae1221f2c327613.js" />
+    <Content Include="Content\etc.clientlibs\sonyglobalclientlibs\Slideshow.js" />
+    <Content Include="Content\fonts\icon\css\hoangha.css" />
+    <Content Include="Content\fonts\icon\fonts\hoangha.svg" />
+    <Content Include="Content\fonts\SegieUI.css" />
+    <Content Include="Content\img\fire.svg" />
+    <Content Include="Content\img\logo-atm.png" />
+    <Content Include="Content\img\logo-bct.png" />
+    <Content Include="Content\img\logo-jcb.png" />
+    <Content Include="Content\img\logo-kerry.png" />
+    <Content Include="Content\img\logo-master.png" />
+    <Content Include="Content\img\logo-samsungpay.png" />
+    <Content Include="Content\img\logo-text.png" />
+    <Content Include="Content\img\logo-viettel.png" />
+    <Content Include="Content\img\logo-visa.png" />
+    <Content Include="Content\img\logo-vnpay.png" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\Miband 4-01.png" />
+    <Content Include="Content\img\seo-content.png" />
+    <Content Include="Content\img\spin.svg" />
+    <Content Include="Content\img\sub-logo.png" />
+    <Content Include="Content\js-css\web_css.css" />
+    <Content Include="Content\js-css\web_v1.1.8.6.css" />
+    <Content Include="Content\js-css\web_v1.1.8.6.js" />
+    <Content Include="Content\js\jquery-3.5.1.min.js" />
+    <Content Include="Content\js\plugins\jquery-scrolltofixed\jquery-scrolltofixed.js" />
+    <Content Include="Content\js\plugins\jssor.slider-28.0.0.min\jssor.slider-28.0.0.min.js" />
+    <Content Include="Content\js\plugins\OwlCarousel2-2.3.4\assets\ajax-loader.gif" />
+    <Content Include="Content\js\plugins\OwlCarousel2-2.3.4\assets\owl.carousel.css" />
+    <Content Include="Content\js\plugins\OwlCarousel2-2.3.4\assets\owl.carousel.min.css" />
+    <Content Include="Content\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.default.css" />
+    <Content Include="Content\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.default.min.css" />
+    <Content Include="Content\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.green.css" />
+    <Content Include="Content\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.green.min.css" />
+    <Content Include="Content\js\plugins\OwlCarousel2-2.3.4\assets\owl.video.play.png" />
+    <Content Include="Content\js\plugins\OwlCarousel2-2.3.4\owl.carousel.js" />
+    <Content Include="Content\js\plugins\OwlCarousel2-2.3.4\owl.carousel.min.js" />
+    <Content Include="Content\logo\ads-1.png" />
+    <Content Include="Content\logo\ads-2.png" />
+    <Content Include="Content\logo\ads-3.png" />
+    <Content Include="Content\logo\brand %281%29.png" />
+    <Content Include="Content\logo\brand %282%29.png" />
+    <Content Include="Content\logo\brand %283%29.png" />
+    <Content Include="Content\logo\brand %284%29.png" />
+    <Content Include="Content\logo\brand %285%29.png" />
+    <Content Include="Content\logo\brand %286%29.png" />
+    <Content Include="Content\product\airpods.png" />
+    <Content Include="Content\product\deal.png" />
+    <Content Include="Content\product\Mask Group 1.png" />
+    <Content Include="Content\product\Mask Group 2.png" />
+    <Content Include="Content\product\Mask Group 3.png" />
+    <Content Include="Content\product\Mask Group 332.png" />
+    <Content Include="Content\product\Mask Group 4.png" />
+    <Content Include="Content\product\Mask Group 5.png" />
+    <Content Include="Content\product\news-home.png" />
+    <Content Include="Content\product\note-10\01-t.png" />
+    <Content Include="Content\product\note-10\01.jpg" />
+    <Content Include="Content\product\note-10\02-t.png" />
+    <Content Include="Content\product\note-10\02.jpg" />
+    <Content Include="Content\product\note-10\03-t.jpg" />
+    <Content Include="Content\product\note-10\03.jpg" />
+    <Content Include="Content\product\note-10\03.png" />
+    <Content Include="Content\product\note-10\04-t.png" />
+    <Content Include="Content\product\note-10\04.jpg" />
+    <Content Include="Content\product\note-10\05-t.png" />
+    <Content Include="Content\product\note-10\05.jpg" />
+    <Content Include="Content\product\phukien.png" />
+    <Content Include="Content\product\samsung-galaxy-note-10-plus-blue-400x460.png" />
+    <Content Include="Content\product\slider-2.png" />
+    <Content Include="Content\product\slider-3.png" />
+    <Content Include="Content\product\slider-4.png" />
+    <Content Include="Content\product\slider-5.png" />
+    <Content Include="Content\product\slider.png" />
+    <Content Include="Content\product\thaypin.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="LayoutDesktop1\Apple\apple.min.css" />
+    <Content Include="LayoutDesktop1\Apple\fonts\apple.min.css" />
+    <Content Include="LayoutDesktop1\Apple\iphone14\app.min.js" />
+    <Content Include="LayoutDesktop1\Apple\iphone14\styles.min.css" />
+    <Content Include="LayoutDesktop1\Apple\iphone14\thu-cu-iphone-web.png" />
+    <Content Include="LayoutDesktop1\Bank\VPBank\the1.png" />
+    <Content Include="LayoutDesktop1\Bank\VPBank\the2.png" />
+    <Content Include="LayoutDesktop1\Bank\VPBank\the3.png" />
+    <Content Include="LayoutDesktop1\Bank\VPBank\the4.png" />
+    <Content Include="LayoutDesktop1\Bank\VPBank\top.png" />
+    <Content Include="LayoutDesktop1\Bank\VPBank\uudai.png" />
+    <Content Include="LayoutDesktop1\Bank\VPBank\vpbank.png" />
+    <Content Include="LayoutDesktop1\Bank\web.min.css" />
+    <Content Include="LayoutDesktop1\Bank\web.min.js" />
+    <Content Include="LayoutDesktop1\css\1000px.css" />
+    <Content Include="LayoutDesktop1\css\styles.css" />
+    <Content Include="LayoutDesktop1\etc.clientlibs\clientlib-css\StyleClient.css" />
+    <Content Include="LayoutDesktop1\etc.clientlibs\clientlib-css\table-css.css" />
+    <Content Include="LayoutDesktop1\etc.clientlibs\corewcmcomponentscommonssiteclientlibs\container.ACSHASH68e8a508c100f218cc66bb13a94d1002.js" />
+    <Content Include="LayoutDesktop1\etc.clientlibs\sonyglobalclientlibs\clientlib-base.ACSHASHf3f0e6cff0ab139c656396a517573673.js" />
+    <Content Include="LayoutDesktop1\etc.clientlibs\sonyglobalclientlibs\clientlib-dependencies.ACSHASHd41d8cd98f00b204e9800998ecf8427e.css" />
+    <Content Include="LayoutDesktop1\etc.clientlibs\sonyglobalclientlibs\clientlib-dependencies.ACSHASHd41d8cd98f00b204e9800998ecf8427e.js" />
+    <Content Include="LayoutDesktop1\etc.clientlibs\sonyglobalclientlibs\clientlib-flow.ACSHASHb51809e20bb5ed5b5fd4757ace69d490.css" />
+    <Content Include="LayoutDesktop1\etc.clientlibs\sonyglobalclientlibs\clientlib-flow.ACSHASHeb4b09f97a3785c0a87915a88e3789e0.js" />
+    <Content Include="LayoutDesktop1\etc.clientlibs\sonyglobalclientlibs\clientlib-sony-vietnamese.ACSHASH11b1bab1ce3c5880302bc331ed605f72.css" />
+    <Content Include="LayoutDesktop1\etc.clientlibs\sonyglobalclientlibs\clientlib-sony.ACSHASH45aadc16459012b298f0f86ff5eb7f1b.js" />
+    <Content Include="LayoutDesktop1\etc.clientlibs\sonyglobalclientlibs\clientlib-sonyresourcesassetsimgGlobalFooter\EN_Grouplink_White.png" />
+    <Content Include="LayoutDesktop1\etc.clientlibs\sonyglobalclientlibs\clientlib-sonyresourcesassetsimgGlobalFooter\EN_GroupLink_White_hover.png" />
+    <Content Include="LayoutDesktop1\etc.clientlibs\sonyglobalclientlibs\clientlib-vendor.ACSHASHb52019df31b805d3bae1221f2c327613.js" />
+    <Content Include="LayoutDesktop1\etc.clientlibs\sonyglobalclientlibs\Slideshow.js" />
+    <Content Include="LayoutDesktop1\fonts\icon\css\hoangha.css" />
+    <Content Include="LayoutDesktop1\fonts\icon\fonts\hoangha.svg" />
+    <Content Include="LayoutDesktop1\fonts\SegieUI.css" />
+    <Content Include="LayoutDesktop1\img\fire.svg" />
+    <Content Include="LayoutDesktop1\img\logo-atm.png" />
+    <Content Include="LayoutDesktop1\img\logo-bct.png" />
+    <Content Include="LayoutDesktop1\img\logo-jcb.png" />
+    <Content Include="LayoutDesktop1\img\logo-kerry.png" />
+    <Content Include="LayoutDesktop1\img\logo-master.png" />
+    <Content Include="LayoutDesktop1\img\logo-samsungpay.png" />
+    <Content Include="LayoutDesktop1\img\logo-text.png" />
+    <Content Include="LayoutDesktop1\img\logo-viettel.png" />
+    <Content Include="LayoutDesktop1\img\logo-visa.png" />
+    <Content Include="LayoutDesktop1\img\logo-vnpay.png" />
+    <Content Include="LayoutDesktop1\img\logo.png" />
+    <Content Include="LayoutDesktop1\img\Miband 4-01.png" />
+    <Content Include="LayoutDesktop1\img\seo-content.png" />
+    <Content Include="LayoutDesktop1\img\spin.svg" />
+    <Content Include="LayoutDesktop1\img\sub-logo.png" />
+    <Content Include="LayoutDesktop1\js-css-sony\style.css" />
+    <Content Include="LayoutDesktop1\js-css\web_css.css" />
+    <Content Include="LayoutDesktop1\js-css\web_v1.1.8.6.css" />
+    <Content Include="LayoutDesktop1\js-css\web_v1.1.8.6.js" />
+    <Content Include="LayoutDesktop1\js\jquery-3.5.1.min.js" />
+    <Content Include="LayoutDesktop1\js\plugins\jquery-scrolltofixed\jquery-scrolltofixed.js" />
+    <Content Include="LayoutDesktop1\js\plugins\jssor.slider-28.0.0.min\jssor.slider-28.0.0.min.js" />
+    <Content Include="LayoutDesktop1\js\plugins\OwlCarousel2-2.3.4\assets\ajax-loader.gif" />
+    <Content Include="LayoutDesktop1\js\plugins\OwlCarousel2-2.3.4\assets\owl.carousel.css" />
+    <Content Include="LayoutDesktop1\js\plugins\OwlCarousel2-2.3.4\assets\owl.carousel.min.css" />
+    <Content Include="LayoutDesktop1\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.default.css" />
+    <Content Include="LayoutDesktop1\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.default.min.css" />
+    <Content Include="LayoutDesktop1\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.green.css" />
+    <Content Include="LayoutDesktop1\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.green.min.css" />
+    <Content Include="LayoutDesktop1\js\plugins\OwlCarousel2-2.3.4\assets\owl.video.play.png" />
+    <Content Include="LayoutDesktop1\js\plugins\OwlCarousel2-2.3.4\owl.carousel.js" />
+    <Content Include="LayoutDesktop1\js\plugins\OwlCarousel2-2.3.4\owl.carousel.min.js" />
+    <Content Include="LayoutDesktop1\logo\ads-1.png" />
+    <Content Include="LayoutDesktop1\logo\ads-2.png" />
+    <Content Include="LayoutDesktop1\logo\ads-3.png" />
+    <Content Include="LayoutDesktop1\logo\brand %281%29.png" />
+    <Content Include="LayoutDesktop1\logo\brand %282%29.png" />
+    <Content Include="LayoutDesktop1\logo\brand %283%29.png" />
+    <Content Include="LayoutDesktop1\logo\brand %284%29.png" />
+    <Content Include="LayoutDesktop1\logo\brand %285%29.png" />
+    <Content Include="LayoutDesktop1\logo\brand %286%29.png" />
+    <Content Include="LayoutDesktop1\product\airpods.png" />
+    <Content Include="LayoutDesktop1\product\deal.png" />
+    <Content Include="LayoutDesktop1\product\Mask Group 1.png" />
+    <Content Include="LayoutDesktop1\product\Mask Group 2.png" />
+    <Content Include="LayoutDesktop1\product\Mask Group 3.png" />
+    <Content Include="LayoutDesktop1\product\Mask Group 332.png" />
+    <Content Include="LayoutDesktop1\product\Mask Group 4.png" />
+    <Content Include="LayoutDesktop1\product\Mask Group 5.png" />
+    <Content Include="LayoutDesktop1\product\news-home.png" />
+    <Content Include="LayoutDesktop1\product\note-10\01-t.png" />
+    <Content Include="LayoutDesktop1\product\note-10\01.jpg" />
+    <Content Include="LayoutDesktop1\product\note-10\02-t.png" />
+    <Content Include="LayoutDesktop1\product\note-10\02.jpg" />
+    <Content Include="LayoutDesktop1\product\note-10\03-t.jpg" />
+    <Content Include="LayoutDesktop1\product\note-10\03.jpg" />
+    <Content Include="LayoutDesktop1\product\note-10\03.png" />
+    <Content Include="LayoutDesktop1\product\note-10\04-t.png" />
+    <Content Include="LayoutDesktop1\product\note-10\04.jpg" />
+    <Content Include="LayoutDesktop1\product\note-10\05-t.png" />
+    <Content Include="LayoutDesktop1\product\note-10\05.jpg" />
+    <Content Include="LayoutDesktop1\product\phukien.png" />
+    <Content Include="LayoutDesktop1\product\samsung-galaxy-note-10-plus-blue-400x460.png" />
+    <Content Include="LayoutDesktop1\product\slider-2.png" />
+    <Content Include="LayoutDesktop1\product\slider-3.png" />
+    <Content Include="LayoutDesktop1\product\slider-4.png" />
+    <Content Include="LayoutDesktop1\product\slider-5.png" />
+    <Content Include="LayoutDesktop1\product\slider.png" />
+    <Content Include="LayoutDesktop1\product\thaypin.png" />
+    <Content Include="LayoutDesktop1\TYKcSG5WRRSSCogasx3IQnokrEpaDJwrzJ1tGiAcSikDfCB6BnUz\UBA.js" />
+    <Content Include="LayoutDesktop1\web\img\logo-atm.png" />
+    <Content Include="LayoutDesktop1\web\img\logo-bct.png" />
+    <Content Include="LayoutDesktop1\web\img\logo-jcb.png" />
+    <Content Include="LayoutDesktop1\web\img\logo-master.png" />
+    <Content Include="LayoutDesktop1\web\img\logo-samsungpay.png" />
+    <Content Include="LayoutDesktop1\web\img\logo-text.png" />
+    <Content Include="LayoutDesktop1\web\img\logo-visa.png" />
+    <Content Include="LayoutDesktop1\web\img\logo-vnpay.png" />
+    <Content Include="LayoutDesktop1\web\img\maycugiatot.png" />
+    <Content Include="LayoutDesktop1\web\img\nhattin.jpg" />
+    <Content Include="LayoutDesktop1\web\img\thucugiacao.png" />
+    <Content Include="LayoutDesktop1\web\img\vnpost.jpg" />
+    <Content Include="LayoutDesktop1\web\img\zalo.svg" />
+    <Content Include="LayoutDesktop\css\1000px.css" />
+    <Content Include="LayoutDesktop\css\styles.css" />
+    <Content Include="LayoutDesktop\fonts\icon\css\hoangha.css" />
+    <Content Include="LayoutDesktop\fonts\icon\fonts\hoangha.svg" />
+    <Content Include="LayoutDesktop\fonts\SegieUI.css" />
+    <Content Include="LayoutDesktop\img\fire.svg" />
+    <Content Include="LayoutDesktop\img\logo-atm.png" />
+    <Content Include="LayoutDesktop\img\logo-bct.png" />
+    <Content Include="LayoutDesktop\img\logo-jcb.png" />
+    <Content Include="LayoutDesktop\img\logo-kerry.png" />
+    <Content Include="LayoutDesktop\img\logo-master.png" />
+    <Content Include="LayoutDesktop\img\logo-samsungpay.png" />
+    <Content Include="LayoutDesktop\img\logo-text.png" />
+    <Content Include="LayoutDesktop\img\logo-viettel.png" />
+    <Content Include="LayoutDesktop\img\logo-visa.png" />
+    <Content Include="LayoutDesktop\img\logo-vnpay.png" />
+    <Content Include="LayoutDesktop\img\logo.png" />
+    <Content Include="LayoutDesktop\img\Miband 4-01.png" />
+    <Content Include="LayoutDesktop\img\seo-content.png" />
+    <Content Include="LayoutDesktop\img\spin.svg" />
+    <Content Include="LayoutDesktop\img\sub-logo.png" />
+    <Content Include="LayoutDesktop\js\web_v1.1.9.9.js" />
+    <Content Include="LayoutDesktop\js\jquery-3.5.1.min.js" />
+    <Content Include="LayoutDesktop\js\plugins\jquery-scrolltofixed\jquery-scrolltofixed.js" />
+    <Content Include="LayoutDesktop\js\plugins\jssor.slider-28.0.0.min\jssor.slider-28.0.0.min.js" />
+    <Content Include="LayoutDesktop\js\plugins\OwlCarousel2-2.3.4\assets\ajax-loader.gif" />
+    <Content Include="LayoutDesktop\js\plugins\OwlCarousel2-2.3.4\assets\owl.carousel.css" />
+    <Content Include="LayoutDesktop\js\plugins\OwlCarousel2-2.3.4\assets\owl.carousel.min.css" />
+    <Content Include="LayoutDesktop\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.default.css" />
+    <Content Include="LayoutDesktop\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.default.min.css" />
+    <Content Include="LayoutDesktop\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.green.css" />
+    <Content Include="LayoutDesktop\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.green.min.css" />
+    <Content Include="LayoutDesktop\js\plugins\OwlCarousel2-2.3.4\assets\owl.video.play.png" />
+    <Content Include="LayoutDesktop\js\plugins\OwlCarousel2-2.3.4\owl.carousel.js" />
+    <Content Include="LayoutDesktop\js\plugins\OwlCarousel2-2.3.4\owl.carousel.min.js" />
+    <Content Include="LayoutDesktop\logo\ads-1.png" />
+    <Content Include="LayoutDesktop\logo\ads-2.png" />
+    <Content Include="LayoutDesktop\logo\ads-3.png" />
+    <Content Include="LayoutDesktop\logo\brand %281%29.png" />
+    <Content Include="LayoutDesktop\logo\brand %282%29.png" />
+    <Content Include="LayoutDesktop\logo\brand %283%29.png" />
+    <Content Include="LayoutDesktop\logo\brand %284%29.png" />
+    <Content Include="LayoutDesktop\logo\brand %285%29.png" />
+    <Content Include="LayoutDesktop\logo\brand %286%29.png" />
+    <Content Include="LayoutDesktop\product\airpods.png" />
+    <Content Include="LayoutDesktop\product\deal.png" />
+    <Content Include="LayoutDesktop\product\Mask Group 1.png" />
+    <Content Include="LayoutDesktop\product\Mask Group 2.png" />
+    <Content Include="LayoutDesktop\product\Mask Group 3.png" />
+    <Content Include="LayoutDesktop\product\Mask Group 332.png" />
+    <Content Include="LayoutDesktop\product\Mask Group 4.png" />
+    <Content Include="LayoutDesktop\product\Mask Group 5.png" />
+    <Content Include="LayoutDesktop\product\news-home.png" />
+    <Content Include="LayoutDesktop\product\note-10\01-t.png" />
+    <Content Include="LayoutDesktop\product\note-10\01.jpg" />
+    <Content Include="LayoutDesktop\product\note-10\02-t.png" />
+    <Content Include="LayoutDesktop\product\note-10\02.jpg" />
+    <Content Include="LayoutDesktop\product\note-10\03-t.jpg" />
+    <Content Include="LayoutDesktop\product\note-10\03.jpg" />
+    <Content Include="LayoutDesktop\product\note-10\03.png" />
+    <Content Include="LayoutDesktop\product\note-10\04-t.png" />
+    <Content Include="LayoutDesktop\product\note-10\04.jpg" />
+    <Content Include="LayoutDesktop\product\note-10\05-t.png" />
+    <Content Include="LayoutDesktop\product\note-10\05.jpg" />
+    <Content Include="LayoutDesktop\product\phukien.png" />
+    <Content Include="LayoutDesktop\product\samsung-galaxy-note-10-plus-blue-400x460.png" />
+    <Content Include="LayoutDesktop\product\slider-2.png" />
+    <Content Include="LayoutDesktop\product\slider-3.png" />
+    <Content Include="LayoutDesktop\product\slider-4.png" />
+    <Content Include="LayoutDesktop\product\slider-5.png" />
+    <Content Include="LayoutDesktop\product\slider.png" />
+    <Content Include="LayoutDesktop\product\thaypin.png" />
+    <Content Include="LayoutMobile\etc.clientlibs\clientlib-css\StyleClient.css" />
+    <Content Include="LayoutMobile\etc.clientlibs\clientlib-css\StyleClient_mb.css" />
+    <Content Include="LayoutMobile\etc.clientlibs\clientlib-css\table-css.css" />
+    <Content Include="LayoutMobile\etc.clientlibs\corewcmcomponentscommonssiteclientlibs\container.ACSHASH68e8a508c100f218cc66bb13a94d1002.js" />
+    <Content Include="LayoutMobile\etc.clientlibs\sonyglobalclientlibs\clientlib-base.ACSHASHf3f0e6cff0ab139c656396a517573673.js" />
+    <Content Include="LayoutMobile\etc.clientlibs\sonyglobalclientlibs\clientlib-dependencies.ACSHASHd41d8cd98f00b204e9800998ecf8427e.css" />
+    <Content Include="LayoutMobile\etc.clientlibs\sonyglobalclientlibs\clientlib-dependencies.ACSHASHd41d8cd98f00b204e9800998ecf8427e.js" />
+    <Content Include="LayoutMobile\etc.clientlibs\sonyglobalclientlibs\clientlib-flow.ACSHASHb51809e20bb5ed5b5fd4757ace69d490.css" />
+    <Content Include="LayoutMobile\etc.clientlibs\sonyglobalclientlibs\clientlib-flow.ACSHASHeb4b09f97a3785c0a87915a88e3789e0.js" />
+    <Content Include="LayoutMobile\etc.clientlibs\sonyglobalclientlibs\clientlib-sony-vietnamese.ACSHASH11b1bab1ce3c5880302bc331ed605f72.css" />
+    <Content Include="LayoutMobile\etc.clientlibs\sonyglobalclientlibs\clientlib-sony.ACSHASH45aadc16459012b298f0f86ff5eb7f1b.js" />
+    <Content Include="LayoutMobile\etc.clientlibs\sonyglobalclientlibs\clientlib-sonyresourcesassetsimgGlobalFooter\EN_Grouplink_White.png" />
+    <Content Include="LayoutMobile\etc.clientlibs\sonyglobalclientlibs\clientlib-sonyresourcesassetsimgGlobalFooter\EN_GroupLink_White_hover.png" />
+    <Content Include="LayoutMobile\etc.clientlibs\sonyglobalclientlibs\clientlib-vendor.ACSHASHb52019df31b805d3bae1221f2c327613.js" />
+    <Content Include="LayoutMobile\etc.clientlibs\sonyglobalclientlibs\Slideshow.js" />
+    <Content Include="LayoutMobile\fonts\icon\css\hoangha.css" />
+    <Content Include="LayoutMobile\fonts\icon\eva\eva.min.js" />
+    <Content Include="LayoutMobile\fonts\icon\fonts\hoangha.svg" />
+    <Content Include="LayoutMobile\fonts\SegieUI.css" />
+    <Content Include="LayoutMobile\img\fire.svg" />
+    <Content Include="LayoutMobile\img\logo-atm.png" />
+    <Content Include="LayoutMobile\img\logo-bct.png" />
+    <Content Include="LayoutMobile\img\logo-jcb.png" />
+    <Content Include="LayoutMobile\img\logo-kerry.png" />
+    <Content Include="LayoutMobile\img\logo-master.png" />
+    <Content Include="LayoutMobile\img\logo-samsungpay.png" />
+    <Content Include="LayoutMobile\img\logo-text.png" />
+    <Content Include="LayoutMobile\img\logo-viettel.png" />
+    <Content Include="LayoutMobile\img\logo-visa.png" />
+    <Content Include="LayoutMobile\img\logo-vnpay.png" />
+    <Content Include="LayoutMobile\img\logo.png" />
+    <Content Include="LayoutMobile\img\maycugiatot.png" />
+    <Content Include="LayoutMobile\img\Miband 4-01.png" />
+    <Content Include="LayoutMobile\img\seo-content.png" />
+    <Content Include="LayoutMobile\img\spin.svg" />
+    <Content Include="LayoutMobile\img\sub-logo.png" />
+    <Content Include="LayoutMobile\img\thucugiacao.png" />
+    <Content Include="LayoutMobile\img\zalo.svg" />
+    <Content Include="LayoutMobile\js-css-sony\style.css" />
+    <Content Include="LayoutMobile\js-css\mobile_v1.1.8.6.css" />
+    <Content Include="LayoutMobile\js-css\mobile_v1.1.9.9.js" />
+    <Content Include="LayoutMobile\js\jquery-3.5.1.min.js" />
+    <Content Include="LayoutMobile\js\plugins\jquery-scrolltofixed\jquery-scrolltofixed.js" />
+    <Content Include="LayoutMobile\js\plugins\jssor.slider-28.0.0.min\jssor.slider-28.0.0.min.js" />
+    <Content Include="LayoutMobile\js\plugins\OwlCarousel2-2.3.4\assets\ajax-loader.gif" />
+    <Content Include="LayoutMobile\js\plugins\OwlCarousel2-2.3.4\assets\owl.carousel.css" />
+    <Content Include="LayoutMobile\js\plugins\OwlCarousel2-2.3.4\assets\owl.carousel.min.css" />
+    <Content Include="LayoutMobile\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.default.css" />
+    <Content Include="LayoutMobile\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.default.min.css" />
+    <Content Include="LayoutMobile\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.green.css" />
+    <Content Include="LayoutMobile\js\plugins\OwlCarousel2-2.3.4\assets\owl.theme.green.min.css" />
+    <Content Include="LayoutMobile\js\plugins\OwlCarousel2-2.3.4\assets\owl.video.play.png" />
+    <Content Include="LayoutMobile\js\plugins\OwlCarousel2-2.3.4\owl.carousel.js" />
+    <Content Include="LayoutMobile\js\plugins\OwlCarousel2-2.3.4\owl.carousel.min.js" />
+    <Content Include="LayoutMobile\logo\ads-1.png" />
+    <Content Include="LayoutMobile\logo\ads-2.png" />
+    <Content Include="LayoutMobile\logo\ads-3.png" />
+    <Content Include="LayoutMobile\logo\brand %281%29.png" />
+    <Content Include="LayoutMobile\logo\brand %282%29.png" />
+    <Content Include="LayoutMobile\logo\brand %283%29.png" />
+    <Content Include="LayoutMobile\logo\brand %284%29.png" />
+    <Content Include="LayoutMobile\logo\brand %285%29.png" />
+    <Content Include="LayoutMobile\logo\brand %286%29.png" />
+    <Content Include="LayoutMobile\product\airpods.png" />
+    <Content Include="LayoutMobile\product\deal.png" />
+    <Content Include="LayoutMobile\product\Mask Group 1.png" />
+    <Content Include="LayoutMobile\product\Mask Group 2.png" />
+    <Content Include="LayoutMobile\product\Mask Group 3.png" />
+    <Content Include="LayoutMobile\product\Mask Group 332.png" />
+    <Content Include="LayoutMobile\product\Mask Group 4.png" />
+    <Content Include="LayoutMobile\product\Mask Group 5.png" />
+    <Content Include="LayoutMobile\product\news-home.png" />
+    <Content Include="LayoutMobile\product\note-10\01-t.png" />
+    <Content Include="LayoutMobile\product\note-10\01.jpg" />
+    <Content Include="LayoutMobile\product\note-10\02-t.png" />
+    <Content Include="LayoutMobile\product\note-10\02.jpg" />
+    <Content Include="LayoutMobile\product\note-10\03-t.jpg" />
+    <Content Include="LayoutMobile\product\note-10\03.jpg" />
+    <Content Include="LayoutMobile\product\note-10\03.png" />
+    <Content Include="LayoutMobile\product\note-10\04-t.png" />
+    <Content Include="LayoutMobile\product\note-10\04.jpg" />
+    <Content Include="LayoutMobile\product\note-10\05-t.png" />
+    <Content Include="LayoutMobile\product\note-10\05.jpg" />
+    <Content Include="LayoutMobile\product\phukien.png" />
+    <Content Include="LayoutMobile\product\samsung-galaxy-note-10-plus-blue-400x460.png" />
+    <Content Include="LayoutMobile\product\slider-2.png" />
+    <Content Include="LayoutMobile\product\slider-3.png" />
+    <Content Include="LayoutMobile\product\slider-4.png" />
+    <Content Include="LayoutMobile\product\slider-5.png" />
+    <Content Include="LayoutMobile\product\slider.png" />
+    <Content Include="LayoutMobile\product\thaypin.png" />
+    <Content Include="LayoutMobile\TYKcSG5WRRSSCogasx3IQnokrEpaDJwrzJ1tGiAcSikDfCB6BnUz\UBA.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\fonts\icon\fonts\hoangha.eot" />
+    <Content Include="Content\fonts\icon\fonts\hoangha.ttf" />
+    <Content Include="Content\fonts\icon\fonts\hoangha.woff" />
+    <Content Include="Content\TYKcSG5WRRSSCogasx3IQnokrEpaDJwrzJ1tGiAcSikDfCB6BnUz\UBA.js" />
+    <Content Include="Content2\Apple\web\icon\fonts\hoangha.woff" />
+    <Content Include="Content2\Apple\web\icon\fonts\hoangha9.woff" />
+    <Content Include="Content3\fonts\icon\fonts\hoangha.eot" />
+    <Content Include="Content3\fonts\icon\fonts\hoangha.ttf" />
+    <Content Include="Content3\fonts\icon\fonts\hoangha.woff" />
+    <Content Include="LayoutDesktop1\fonts\icon\fonts\hoangha.eot" />
+    <Content Include="LayoutDesktop1\fonts\icon\fonts\hoangha.ttf" />
+    <Content Include="LayoutDesktop1\fonts\icon\fonts\hoangha.woff" />
+    <Content Include="LayoutDesktop1\js-css\thu-cu-len-doi-iphone-14-pro-max" />
+    <Content Include="LayoutDesktop\fonts\icon\fonts\hoangha.eot" />
+    <Content Include="LayoutDesktop\fonts\icon\fonts\hoangha.ttf" />
+    <Content Include="LayoutDesktop\fonts\icon\fonts\hoangha.woff" />
+    <Content Include="LayoutMobile\fonts\icon\fonts\hoangha.eot" />
+    <Content Include="LayoutMobile\fonts\icon\fonts\hoangha.ttf" />
+    <Content Include="LayoutMobile\fonts\icon\fonts\Segoe UI\hoangha.woff" />
+    <Content Include="LayoutMobile\fonts\icon\fonts\Segoe UI\Segoe UI Bold Italic.woff2" />
+    <Content Include="LayoutMobile\fonts\icon\fonts\Segoe UI\Segoe UI Bold.woff2" />
+    <Content Include="LayoutMobile\fonts\icon\fonts\Segoe UI\Segoe UI Italic.woff2" />
+    <Content Include="LayoutMobile\fonts\icon\fonts\Segoe UI\Segoe UI Semilight Italic.woff2" />
+    <Content Include="LayoutMobile\fonts\icon\fonts\Segoe UI\Segoe UI Semilight.woff2" />
+    <Content Include="LayoutMobile\fonts\icon\fonts\Segoe UI\Segoe UI.woff2" />
+    <Content Include="LayoutMobile\fonts\Segoe UI\hoangha.woff" />
+    <Content Include="LayoutMobile\fonts\Segoe UI\Segoe UI Bold Italic.woff2" />
+    <Content Include="LayoutMobile\fonts\Segoe UI\Segoe UI Bold.woff2" />
+    <Content Include="LayoutMobile\fonts\Segoe UI\Segoe UI Italic.woff2" />
+    <Content Include="LayoutMobile\fonts\Segoe UI\Segoe UI Semilight Italic.woff2" />
+    <Content Include="LayoutMobile\fonts\Segoe UI\Segoe UI Semilight.woff2" />
+    <Content Include="LayoutMobile\fonts\Segoe UI\Segoe UI.woff2" />
+    <Content Include="LayoutMobile\js-css\thu-cu-len-doi-iphone-14-pro-max" />
+    <Content Include="ContentProject2\css\.scss" />
+    <Content Include="ContentWatch_GT4\fonts\icon\fonts\hoangha.eot" />
+    <Content Include="ContentWatch_GT4\fonts\icon\fonts\hoangha.ttf" />
+    <Content Include="ContentWatch_GT4\fonts\icon\fonts\hoangha.woff" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\BKCustomer\Index.cshtml" />
+    <Content Include="Views\BKCustomer\AddOrUpdate.cshtml" />
+    <Content Include="Views\BKCustomer\Index1.cshtml" />
+    <Content Include="Views\Shared\_Layout2.cshtml" />
+    <Content Include="Views\BKCustomer\Index2.cshtml" />
+    <Content Include="Views\HTC\IndexDesktop_HTC.cshtml" />
+    <Content Include="Views\HTC\IndexMobile_HTC.cshtml" />
+    <Content Include="Views\Shared\_Layout_Mobile.cshtml" />
+    <Content Include="Views\Shared\_layout_Desktop.cshtml" />
+    <Content Include="Views\Landing_projec2\Index.cshtml" />
+    <Content Include="Views\Landing_projec2\indexsosanh.cshtml" />
+    <Content Include="Views\Landing_projec2\Index_Mobile.cshtml" />
+    <Content Include="Views\Landing_projec2\Indexsosanh_Mobile.cshtml" />
+    <Content Include="Views\Landing_project2\Index.cshtml" />
+    <Content Include="Views\Landing_project2\Index_Mobile.cshtml" />
+    <Content Include="Views\Landing_project2\indexsosanh.cshtml" />
+    <Content Include="Views\Landing_project2\Indexsosanh_Mobile.cshtml" />
+    <Content Include="Views\Watch_GT4\Index.cshtml" />
+    <Content Include="Views\Watch_GT4\Index_Mobile.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content2\Apple\Uploads2023\" />
+    <Folder Include="Content2\Apple\web\fonts\Segoe Ui\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64836</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44350/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

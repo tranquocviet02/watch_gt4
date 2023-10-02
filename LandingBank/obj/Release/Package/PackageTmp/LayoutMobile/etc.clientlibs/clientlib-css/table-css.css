@@ -1,0 +1,28 @@
+﻿.Model-Table-Tbody {
+    max-width:3000px;
+    max-height:1641px;
+    display: table-row-group;
+    width: 100%;
+}
+.SpecificationsTable__TableSubhead {
+    padding: 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    vertical-align: top;
+}
+.SpecificationsTable__TableSubhead1 {
+    font-family: SST W01 Roman,sans-serif,Helvetica Neue,Helvetica,Arial;
+    font-weight: 400;
+    font-style: normal;
+    color: #6b6b7b;
+    font-size: .8125rem;
+    line-height: 1.53846;
+    width: 25%;
+    border-color: #e4e7eb;
+    border-style: solid;
+    border-width: 0.0625rem;
+    background-color: #fff;
+    color: inherit;
+    font-weight: 700;
+    text-align: left;
+}

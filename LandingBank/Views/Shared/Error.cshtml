@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HoangHaMobile</title>
+    <!--
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    -->
+    <link href="/Content/fonts/SegieUI.css" rel="stylesheet" type="text/css">
+    <link href="/Content/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="/Content/css/1000px.css" rel="stylesheet" type="text/css">
+    <link href="/Content/fonts/icon/css/hoangha.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/Content/js/jquery-3.5.1.min.js"></script>
+
+    <script type="text/javascript" src="/Content/js/plugins/OwlCarousel2-2.3.4/owl.carousel.min.js"></script>
+    <link href="/Content/js/plugins/OwlCarousel2-2.3.4/assets/owl.carousel.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/Content/js/plugins/jssor.slider-28.0.0.min/jssor.slider-28.0.0.min.js"></script>
+    <script type="text/javascript" src="/Content/js/plugins/jquery-scrolltofixed/jquery-scrolltofixed.js"></script>
+    <style></style>
+    <link href="~/Content/js-css/web_v1.1.8.6.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="~/Content/js-css/web_v1.1.8.6.js"></script>
+    <link href="/Content/js-css/web_v1.1.8.6.css" rel="stylesheet" type="text/css">
+    <link href="/Content/Bank/web.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="ticker">
+        <ul>
+            <li>
+                <div class="top-link">
+                    <span class="pulse"></span> <p><strong>Sale rẻ hết cỡ - OPPO A78 - 8GB/256GB, Sốc chỉ c&#242;n 5.990.000đ</strong> <a href="https://hoanghamobile.com/dien-thoai-di-dong/oppo-a78-chinh-hang" target="_blank">Xem chi tiết</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="top-link">
+                    <span class="pulse"></span> <p><strong>Sale rẻ hết cỡ - Xiaomi Redmi Note 12 Series, Gi&#225; chỉ hơn 4.000.000đ</strong> <a href="https://hoanghamobile.com/dien-thoai-di-dong/redmi-note-12-4gb-128gb-chinh-hang" target="_top">Xem chi tiết</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="top-link">
+                    <span class="pulse"></span> <p><strong>Cơ hội sở hữu Samsung S20 FE 256GB chỉ với 6.990.000đ - SL c&#243; hạn</strong> <a href="https://hoanghamobile.com/dien-thoai-di-dong/samsung-galaxy-s20-fe-256gb-chinh-hang" target="_top">Xem chi tiết</a></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <header>
+        <div class="top-navigation">
+            <div class="container2">
+                <ul>
+                    <li><a href="/mobileswitch?mobile=true">Bản mobile</a></li>
+                    <li><a href="/gioi-thieu-cong-ty">Giới thiệu</a></li>
+                    <li><a href="/san-pham-da-xem">Sản phẩm đ&#227; xem</a></li>
+                    <li><a href="/trung-tam-bao-hanh">Trung t&#226;m bảo h&#224;nh</a></li>
+                    <li><a href="/he-thong-cua-hang">Hệ thống 127 si&#234;u thị</a></li>
+                    <li><a href="https://tuyendung.hoanghamobile.com/">Tuyển dụng</a></li>
+                    <li><a href="/order/check">Tra cứu đơn h&#224;ng</a></li>
+                    <li><a id="login-modal" href="/Account/Login?ReturnUrl=/Bank/VP">Đăng nhập</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- logo and search box -->
+        <div class="heading">
+            <div class="container2">
+                <div class="logo">
+                    <a href="/" title="C&#212;NG TY CỔ PHẦN X&#194;Y DỰNG V&#192; ĐẦU TƯ THƯƠNG MẠI HO&#192;NG H&#192;">
+                        <img src="/Content/web/img/logo-text.png" alt="C&#212;NG TY CỔ PHẦN X&#194;Y DỰNG V&#192; ĐẦU TƯ THƯƠNG MẠI HO&#192;NG H&#192;">
+                    </a>
+                </div>
+
+                <div class="search-box">
+                    <form method="get" action="/tim-kiem" onsubmit="return submitSearch(this);" enctype="application/x-www-form-urlencoded">
+                        <div class="border">
+                            <input type="text" id="kwd" name="kwd" placeholder="Hôm nay bạn cần tìm gì?" />
+                            <button type="submit" class="search"><i class="icon-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="order-tools">
+                    <div class="item check-order">
+                        <a id="btnCheckOrder" href="/order/check">
+                            <span class="icon"><i class="icon-truck"></i></span>
+                            <span class="text">Kiểm tra đơn hàng</span>
+                        </a>
+                    </div>
+                    <div class="item cart">
+                        <a href="/gio-hang"><i class="icon-cart"></i><label><i class="icon-left"></i><span id="cart-total">0</span></label></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+    @RenderBody()
+
+    <footer>
+        <div class="container2">
+
+
+
+
+            <div class="bg">
+                <div class="col-content">
+                    <div class="link-content">
+                        <h4><a>Hỗ Trợ - Dịch Vụ</a></h4>
+                        <ul>
+                            <li><a href="/mua-hang-tra-gop">Mua h&#224;ng trả g&#243;p</a></li>
+                            <li><a href="/huong-dan-dat-hang">Hướng dẫn đặt h&#224;ng v&#224; thanh to&#225;n</a></li>
+                            <li><a href="/order/check">Tra cứu đơn h&#224;ng</a></li>
+                            <li><a href="/chinh-sach-bao-hanh">Ch&#237;nh s&#225;ch bảo h&#224;nh</a></li>
+                            <li><a href="/dat-hang/bao-hanh-mo-rong">Phạm vi, điều khoản g&#243;i bảo h&#224;nh mở rộng</a></li>
+                            <li><a href="/chinh-sach-bao-mat">Ch&#237;nh s&#225;ch bảo mật</a></li>
+                            <li><a href="/chinh-sach-giai-quyet-khieu-nai">Ch&#237;nh s&#225;ch giải quyết khiếu nại</a></li>
+                            <li><a href="/dieu-khoan-mua-ban-hang-hoa">Điều khoản mua b&#225;n h&#224;ng h&#243;a</a></li>
+                            <li><a href="/cau-hoi-thuong-gap">C&#226;u hỏi thường gặp</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-content">
+                        <h4><a>Th&#244;ng Tin Li&#234;n Hệ</a></h4>
+                        <ul>
+                            <li><a href="/mua-hang-online">B&#225;n h&#224;ng Online</a></li>
+                            <li><a href="/cham-soc-khach-hang">Chăm s&#243;c kh&#225;ch h&#224;ng</a></li>
+                            <li><a href="/tin-tuc/hoang-ha-care-dich-vu-sua-chua-dien-thoai-may-tinh-bang-voi-gia-tot-nhat-thi-truong">Dịch vụ sửa chữa Ho&#224;ng H&#224; Care</a></li>
+                            <li><a href="/lien-he-khoi-van-phong">Li&#234;n hệ khối văn ph&#242;ng</a></li>
+                            <li><a href="/hop-tac-kinh-doanh">Hợp t&#225;c kinh doanh</a></li>
+                            <li><a href="/trung-tam-bao-hanh">Tra cứu bảo h&#224;nh</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-content">
+                        <h4><a href="/he-thong-cua-hang">Hệ thống 127 si&#234;u thị tr&#234;n to&#224;n quốc</a></h4>
+                        <ul>
+                            <li><a href="/he-thong-cua-hang">Danh s&#225;ch 127 si&#234;u thị tr&#234;n to&#224;n quốc</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Tổng đài</h4>
+                        <a class="hotline" href="tel:1900.2091">1900.2091</a>
+                    </div>
+
+                    <div>
+                        <h4>Thanh toán miễn phí</h4>
+                        <ul class="list-logo">
+                            <li>
+                                <img src="/Content/web/img/logo-visa.png">
+                                <img src="/Content/web/img/logo-master.png">
+                            </li>
+                            <li>
+                                <img src="/Content/web/img/logo-jcb.png">
+                                <img src="/Content/web/img/logo-samsungpay.png">
+                            </li>
+                            <li>
+                                <img src="/Content/web/img/logo-atm.png">
+                                <img src="/Content/web/img/logo-vnpay.png">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Hình thức vận chuyển</h4>
+                        <ul class="list-logo">
+                            <li>
+                                <img src="/Content/web/img/nhattin.jpg">
+                                <img src="/Content/web/img/vnpost.jpg">
+                            </li>
+                        </ul>
+                        <div class="mg-top20">
+                            <a href="http://online.gov.vn/Home/WebDetails/28738" target="_blank"><img src="/Content/web/img/logo-bct.png"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info">
+                    <p>© 2020. C&#212;NG TY CỔ PHẦN X&#194;Y DỰNG V&#192; ĐẦU TƯ THƯƠNG MẠI HO&#192;NG H&#192;. MST:  0106713191. (Đăng k&#253; lần đầu: Ng&#224;y 15 th&#225;ng 12 năm 2014, Đăng k&#253; thay đổi ng&#224;y 24/11/2022)</p>
+                    <p><strong>GP số 426/GP-TTĐT do sở TTTT Hà Nội cấp ngày 22/01/2021</strong></p>
+                    <p>Địa chỉ: Số 89 Đường Tam Trinh, Phường Mai Động, Quận Ho&#224;ng Mai, Th&#224;nh Phố H&#224; Nội, Việt Nam. Điện thoại: 1900.2091. Chịu trách nhiệm nội dung: <strong>Hoàng Ngọc Chiến</strong>. </p>
+
+                </div>
+            </div>
+
+
+
+
+            <div id="navSocial">
+                <div class="social">
+                    <ul>
+                        <li><a href="https://www.facebook.com/hoanghamobilecom" title="Facebook Ho&#224;ng H&#224; Mobile" target="_blank" class="blue"><span><i class="icon-facebook"></i></span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCJm_GdFJzT8h1odq1oMu_7Q?sub_confirmation=1" title="Youtube Ho&#224;ng H&#224; Mobile Channel" target="_blank" class="red"><span><i class="icon-youtube"></i></span></a></li>
+                        <li><a href="https://www.instagram.com/hoanghamobile/?hl=vi" title="Ho&#224;ng H&#224; Mobile Instagram" target="_blank" class="rainbow"><span><i class="icon-instagram"></i></span></a></li>
+                        <li><a href="https://www.tiktok.com/" title="Tiktok" target="_blank" class="black"><span><i class="icon-tiktok"></i></span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="backtoTop">
+                <a id="top" href="javascript:;">
+                    <i class="icon-left"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <div id="popup-modal"></div>
+    <div id="sticker-modal"></div>
+    <div class="search-bg"></div>
+
+    <div class="footer-stick-right" style="position: fixed; bottom: 175px; right: 33px;">
+        <div style="padding-bottom:10px;">
+            <a href="/kho-san-pham-cu">
+                <img src="/Content/web/img/maycugiatot.png" />
+            </a>
+        </div>
+        <div>
+            <a href="/dat-hang/thu-cu-doi-moi-iphone-chinh-hang-vn-a-hoanghamobile">
+                <img src="/Content/web/img/thucugiacao.png" />
+            </a>
+        </div>
+    </div>
+
+
+    <div class="footer-zalo" style="position: fixed; bottom: 110px; right: 33px;">
+        <a href="https://oa.zalo.me/262829019064124420" target="_blank"><img src="/Content/web/img/zalo.svg" /></a>
+    </div>
+
+
+    @*<script type='application/ld+json'>
+        {"@context":"https:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/hoanghamobile.com\/","name":"Ho&#224;ng H&#224; Mobile - Hệ thống b&#225;n lẻ thiết bị di động v&#224; c&#244;ng nghệ ch&#237;nh h&#227;ng gi&#225; tốt","potentialAction":{"@type":"SearchAction","target":"https:\/\/hoanghamobile.com\/tim-kiem?kwd={search_term_string}","query-input":"required name=search_term_string"}}
+        </script>*@
+
+    <!-- analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-1415779-10', 'auto');
+        ga('require', 'GTM-KXZQBMD');
+        ga('require', 'GTM-WPLRWHK');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- analytics -->
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5QM3X2');</script>
+    <!-- End Google Tag Manager -->
+    <!-- subiz -->
+    <script>!function (s, u, b, i, z) { var o, t, r, y; s[i] || (s._sbzaccid = z, s[i] = function () { s[i].q.push(arguments) }, s[i].q = [], s[i]("setAccount", z), r = ["widget.subiz.net", "storage.googleapis" + (t = ".com"), "app.sbz.workers.dev", i + "a" + (o = function (k, t) { var n = t <= 6 ? 5 : o(k, t - 1) + o(k, t - 3); return k !== t ? n : n.toString(32) })(20, 20) + t, i + "b" + o(30, 30) + t, i + "c" + o(40, 40) + t], (y = function (k) { var t, n; s._subiz_init_2094850928430 || r[k] && (t = u.createElement(b), n = u.getElementsByTagName(b)[0], t.async = 1, t.src = "https://" + r[k] + "/sbz/app.js?accid=" + z, n.parentNode.insertBefore(t, n), setTimeout(y, 2e3, k + 1)) })(0)) }(window, document, "script", "subiz", "acqqrmpwwuqeianonpxt")</script>
+    <!-- subiz -->
+    <!-- accesstrade-->
+    <script src="//static.accesstrade.vn/js/trackingtag/tracking.min.js "></script>
+    <script type="text/javascript">
+        AT.init({ "campaign_id": 626, "is_reoccur": 1, "is_lastclick": 1 });
+        AT.track();
+    </script>
+    <!-- accesstrade-->
+
+
+
+    <script src="/Content/js-css/web_v1.1.8.6.js"></script>
+
+
+    <script src="/Content/Bank/web.min.js?s=638252945065685640"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            showSticker(76);
+        });
+    </script>
+
+</body>
+</html>

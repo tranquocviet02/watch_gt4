@@ -1,0 +1,591 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HoangHaMobile</title>
+    <!--
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    -->
+    <link href="/Content/fonts/SegieUI.css" rel="stylesheet" type="text/css">
+    <link href="/Content/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="/Content/css/1000px.css" rel="stylesheet" type="text/css">
+    <link href="/Content/fonts/icon/css/hoangha.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/Content/js/jquery-3.5.1.min.js"></script>
+
+    <script type="text/javascript" src="/Content/js/plugins/OwlCarousel2-2.3.4/owl.carousel.min.js"></script>
+    <link href="/Content/js/plugins/OwlCarousel2-2.3.4/assets/owl.carousel.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/Content/js/plugins/jssor.slider-28.0.0.min/jssor.slider-28.0.0.min.js"></script>
+    <script type="text/javascript" src="/Content/js/plugins/jquery-scrolltofixed/jquery-scrolltofixed.js"></script>
+    <style></style>
+    <link rel="preload" as="script" href="/js-css/web_v1.1.8.6.js">
+    <link rel="preload" as="style" href="/js-css/web_v1.1.8.6.css">
+    <link href="/Content/js-css/web_v1.1.8.6.css" rel="stylesheet" type="text/css">
+    <link href="/Content/Bank/web.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="ticker">
+        <ul>
+            <li>
+                <div class="top-link">
+                    <span class="pulse"></span> <p><strong>Sale rẻ hết cỡ - OPPO A78 - 8GB/256GB, Sốc chỉ c&#242;n 5.990.000đ</strong> <a href="https://hoanghamobile.com/dien-thoai-di-dong/oppo-a78-chinh-hang" target="_blank">Xem chi tiết</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="top-link">
+                    <span class="pulse"></span> <p><strong>Sale rẻ hết cỡ - Xiaomi Redmi Note 12 Series, Gi&#225; chỉ hơn 4.000.000đ</strong> <a href="https://hoanghamobile.com/dien-thoai-di-dong/redmi-note-12-4gb-128gb-chinh-hang" target="_top">Xem chi tiết</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="top-link">
+                    <span class="pulse"></span> <p><strong>Cơ hội sở hữu Samsung S20 FE 256GB chỉ với 6.990.000đ - SL c&#243; hạn</strong> <a href="https://hoanghamobile.com/dien-thoai-di-dong/samsung-galaxy-s20-fe-256gb-chinh-hang" target="_top">Xem chi tiết</a></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <header>
+        <div class="top-navigation">
+            <div class="container">
+                <ul>
+                    <li><a href="/mobileswitch?mobile=true">Bản mobile</a></li>
+                    <li><a href="/gioi-thieu-cong-ty">Giới thiệu</a></li>
+                    <li><a href="/san-pham-da-xem">Sản phẩm đ&#227; xem</a></li>
+                    <li><a href="/trung-tam-bao-hanh">Trung t&#226;m bảo h&#224;nh</a></li>
+                    <li><a href="/he-thong-cua-hang">Hệ thống 127 si&#234;u thị</a></li>
+                    <li><a href="https://tuyendung.hoanghamobile.com/">Tuyển dụng</a></li>
+                    <li><a href="/order/check">Tra cứu đơn h&#224;ng</a></li>
+                    <li><a id="login-modal" href="/Account/Login?ReturnUrl=/Bank/VP">Đăng nhập</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- logo and search box -->
+        <div class="heading">
+            <div class="container">
+                <div class="logo">
+                    <a href="/" title="C&#212;NG TY CỔ PHẦN X&#194;Y DỰNG V&#192; ĐẦU TƯ THƯƠNG MẠI HO&#192;NG H&#192;">
+                        <img src="/Content/web/img/logo-text.png" alt="C&#212;NG TY CỔ PHẦN X&#194;Y DỰNG V&#192; ĐẦU TƯ THƯƠNG MẠI HO&#192;NG H&#192;">
+                    </a>
+                </div>
+
+                <div class="search-box">
+                    <form method="get" action="/tim-kiem" onsubmit="return submitSearch(this);" enctype="application/x-www-form-urlencoded">
+                        <div class="border">
+                            <input type="text" id="kwd" name="kwd" placeholder="Hôm nay bạn cần tìm gì?" />
+                            <button type="submit" class="search"><i class="icon-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="order-tools">
+                    <div class="item check-order">
+                        <a id="btnCheckOrder" href="/order/check">
+                            <span class="icon"><i class="icon-truck"></i></span>
+                            <span class="text">Kiểm tra đơn hàng</span>
+                        </a>
+                    </div>
+                    <div class="item cart">
+                        <a href="/gio-hang"><i class="icon-cart"></i><label><i class="icon-left"></i><span id="cart-total">0</span></label></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+
+    <div class="nav-bank">
+        <div class="container">
+            <ul>
+                <li><a href="/Bank/VIB">Đặc quyền thẻ VIB</a></li>
+                <li><a class="actived" href="/Bank/VP">Đặc quyền thẻ VP Bank</a></li>
+                <li><a href="/Bank/TP">Đặc quyền thẻ TP Bank Evo</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bank-cover bank-vp">
+        <div class="container">
+            <img src="/Content/Bank/VPBank/top.png" />
+        </div>
+    </div>
+
+    <section class="vib-info">
+        <div class="container">
+            <h1>Ưu đãi lớn khi mở thẻ</h1>
+            <div class="vib-hight-light">
+                <div class="img">
+                    <img src="/Content/Bank/VPBank/uudai.png" />
+                </div>
+
+                <div class="vib-items vp-items">
+                    <div class="item">
+                        <label>Nhận E-Voucher giảm giá 30% tới</label>
+                        <strong>250.000đ</strong>
+                        <span>khi kích hoạt thẻ thành công</span>
+                    </div>
+
+
+                    <div class="item">
+                        <label>Khi chi tiêu 2.000.000đ trong 30 ngày đầu</label>
+                        <strong>1.000.000đ</strong>
+                        <span>Hoàn thêm ngay (Số lượng có hạn)</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <h2 style="margin:35px 20px;">Đa dạng loại thẻ để bạn lựa chọn</h2>
+
+            <div class="VpBank-Cards">
+                <div class="item">
+                    <div class="img">
+                        <img src="/Content/Bank/VPBank/the1.png" />
+                    </div>
+                    <ul>
+                        <li><strong>Hoàn đến</strong> <label>15%</label> cho các chi tiêu bảo hiểm trực tuyến, giáo dục</li>
+                        <li><strong>Hoàn đến</strong> <label>10%</label> cho các chi tiêu sắc đẹp, y tế</li>
+                        <li><strong>Hoàn đến</strong> <label>5%</label> cho chi tiêu siêu thị</li>
+                    </ul>
+                    <a class="btn-open-card" href="#openAccForm">Mở thẻ ngay</a>
+                </div>
+
+
+                <div class="item">
+                    <div class="img">
+                        <img src="/Content/Bank/VPBank/the2.png" />
+                    </div>
+                    <ul>
+                        <li><strong>Hoàn đến</strong> <label>2.000.000đ/kỳ sao kê</label> cho mọi lĩnh vực chi tiêu</li>
+                        <li><strong>Chi tiêu nước ngoài</strong> được hoàn tiền nhân đôi</li>
+                    </ul>
+                    <a class="btn-open-card" href="#openAccForm">Mở thẻ ngay</a>
+                </div>
+
+                <div class="item">
+                    <div class="img">
+                        <img src="/Content/Bank/VPBank/the3.png" />
+                    </div>
+                    <ul>
+                        <li><strong>Đổi Travel Miles</strong> nhiều Hàng không và khách sạn trên toàn cầu</li>
+                        <li><strong>Cộng dặm</strong> lên đến 4.000.000 VP Travel Miles/kỳ sao kê</li>
+                    </ul>
+                    <a class="btn-open-card" href="#openAccForm">Mở thẻ ngay</a>
+                </div>
+
+
+
+                <div class="item">
+                    <div class="img">
+                        <img src="/Content/Bank/VPBank/the4.png" />
+                    </div>
+                    <ul>
+                        <li><strong>Đổi Travel Miles</strong> nhiều Hàng không và khách sạn trên toàn cầu</li>
+                        <li><strong>Cộng dặm</strong> lên đến 6.000.000 VP Travel Miles/kỳ sao kê</li>
+                    </ul>
+                    <a class="btn-open-card" href="#openAccForm">Mở thẻ ngay</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bank-form vib-form">
+        <a name="openAccForm"></a>
+        <div class="container">
+            <div class="top">
+                <h4>Đăng ký mở thẻ ngay để nhận thêm nhiều ưu đãi</h4>
+                <div class="logo">
+                    <img src="/Content/Bank/VPBank/vpbank.png" style="width:160px; margin-bottom:10px;" />
+                </div>
+            </div>
+
+            <div class="border border-vpbank">
+                <div class="heading">Nhập thông tin mở thẻ</div>
+
+                <div class="border-lr">
+                    <div class="note">
+                        <div>
+                            <p class="head">Điều kiện mở thẻ</p>
+                            <p><i class="icon icon-member"></i> <strong>Chỉ cần trong độ tuổi từ 22 - 60</strong></p>
+                            <p><i class="icon icon-localtion"></i> <strong>Lưu trú trong 29 tỉnh/thành:</strong></p>
+                            <p>
+                                Hồ Chí Minh, Hà Nội, Bình Dương, Đồng Nai, Khánh Hòa, Cần Thơ, Bà Rịa Vũng Tàu, Đà Nẵng, Hải Phòng, Cà Mau, Tây Ninh, Quảng Ngãi, Huế, Thanh Hóa, Đăk Lăk, Nghệ An, Hải Dương, Thái Nguyên, Thái Bình, Tây Ninh, Phú Thọ, Vĩnh Phúc, Đồng Tháp, An Giang, Lâm Đồng, Quảng Ninh, Kiên Giang, Bình Định
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="form">
+                        <form onsubmit="return ValidBankForm(this, '/Bank/VP/Submit');">
+                            <input type="hidden" name="BankID" id="BankID" value="2" />
+                            <div class="row">
+                                <input type="text" placeholder="Nhập họ tên của bạn" name="Title" id="Title" />
+                            </div>
+
+                            <div class="row">
+                                <input type="text" placeholder="Nhập số điện thoại của bạn" name="Phone" id="Phone" />
+                            </div>
+
+                            <div class="row">
+                                <div class="cel">
+                                    <select placeholder="Chọn tỉnh/thành lưu trú" name="SystemCityID" id="SystemCityID">
+                                        <option value="">Chọn tỉnh/thành lưu trú</option>
+                                        <option value="1">H&#224; Nội</option>
+                                        <option value="50">TP HCM</option>
+                                        <option value="57">An Giang</option>
+                                        <option value="49">B&#224; Rịa - Vũng T&#224;u</option>
+                                        <option value="15">Bắc Giang</option>
+                                        <option value="4">Bắc Kạn</option>
+                                        <option value="62">Bạc Li&#234;u</option>
+                                        <option value="18">Bắc Ninh</option>
+                                        <option value="53">Bến Tre</option>
+                                        <option value="35">B&#236;nh Định</option>
+                                        <option value="47">B&#236;nh Dương</option>
+                                        <option value="45">B&#236;nh Phước</option>
+                                        <option value="39">B&#236;nh Thuận</option>
+                                        <option value="63">C&#224; Mau</option>
+                                        <option value="59">Cần Thơ</option>
+                                        <option value="3">Cao Bằng</option>
+                                        <option value="32">Đ&#224; Nẵng</option>
+                                        <option value="42">Đắk Lắk</option>
+                                        <option value="43">Đắk N&#244;ng</option>
+                                        <option value="7">Điện Bi&#234;n</option>
+                                        <option value="48">Đồng Nai</option>
+                                        <option value="56">Đồng Th&#225;p</option>
+                                        <option value="41">Gia Lai</option>
+                                        <option value="2">H&#224; Giang</option>
+                                        <option value="23">H&#224; Nam</option>
+                                        <option value="28">H&#224; Tĩnh</option>
+                                        <option value="19">Hải Dương</option>
+                                        <option value="20">Hải Ph&#242;ng</option>
+                                        <option value="60">Hậu Giang</option>
+                                        <option value="11">Ho&#224; B&#236;nh</option>
+                                        <option value="21">Hưng Y&#234;n</option>
+                                        <option value="37">Kh&#225;nh H&#242;a</option>
+                                        <option value="58">Ki&#234;n Giang</option>
+                                        <option value="40">Kon Tum</option>
+                                        <option value="8">Lai Ch&#226;u</option>
+                                        <option value="44">L&#226;m Đồng</option>
+                                        <option value="13">Lạng Sơn</option>
+                                        <option value="6">L&#224;o Cai</option>
+                                        <option value="51">Long An</option>
+                                        <option value="24">Nam Định</option>
+                                        <option value="27">Nghệ An</option>
+                                        <option value="25">Ninh B&#236;nh</option>
+                                        <option value="38">Ninh Thuận</option>
+                                        <option value="16">Ph&#250; Thọ</option>
+                                        <option value="36">Ph&#250; Y&#234;n</option>
+                                        <option value="29">Quảng B&#236;nh</option>
+                                        <option value="33">Quảng Nam</option>
+                                        <option value="34">Quảng Ng&#227;i</option>
+                                        <option value="14">Quảng Ninh</option>
+                                        <option value="30">Quảng Trị</option>
+                                        <option value="61">S&#243;c Trăng</option>
+                                        <option value="9">Sơn La</option>
+                                        <option value="46">T&#226;y Ninh</option>
+                                        <option value="22">Th&#225;i B&#236;nh</option>
+                                        <option value="12">Th&#225;i Nguy&#234;n</option>
+                                        <option value="26">Thanh H&#243;a</option>
+                                        <option value="31">Thừa Thi&#234;n Huế</option>
+                                        <option value="52">Tiền Giang</option>
+                                        <option value="54">Tr&#224; Vinh</option>
+                                        <option value="5">Tuy&#234;n Quang</option>
+                                        <option value="55">Vĩnh Long</option>
+                                        <option value="17">Vĩnh Ph&#250;c</option>
+                                        <option value="10">Y&#234;n B&#225;i</option>
+                                    </select>
+                                </div>
+                                <div class="cel" style="margin-left:15px;">
+                                    <input type="text" placeholder="Nhập mã giới thiệu (Nếu có)" name="RefCode" id="RefCode" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <input type="checkbox" name="Agree" id="Agree" /><span>Tôi trong độ tuổi 22 - 60</span>
+                            </div>
+
+                            <div class="row">
+                                <button type="submit">MỞ THẺ NGAY</button>
+                            </div>
+
+                            <div class="row">
+                                <p>
+                                    Bằng việc nhấn chọn đăng ký, tôi đồng ý cho Hoàng Hà Mobile
+                                    được chuyển thông tin đăng ký thẻ tín dụng cho VIB
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bank-QnA">
+                <div class="head"><strong>Câu hỏi thường gặp</strong></div>
+
+                <ul id="QnAList">
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon icon-help"></i>
+                            <span>T&#244;i c&#243; mất ph&#237; g&#236; khi mở thẻ kh&#244;ng?</span>
+                            <i class="open-close open">+</i>
+                        </a>
+                        <div>
+                            Không. </br>Việc mở thẻ là hoàn toàn miễn phí
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon icon-help"></i>
+                            <span>T&#244;i cần những điều kiện g&#236; để được mở thẻ?</span>
+                            <i class="open-close open">+</i>
+                        </a>
+                        <div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon icon-help"></i>
+                            <span>Nếu t&#244;i lỡ tắt m&#224;n h&#236;nh khi đang thao t&#225;c mở thẻ, cần l&#224;m g&#236; để c&#243; thể thao t&#225;c tiếp để ho&#224;n thiện hồ sơ?</span>
+                            <i class="open-close open">+</i>
+                        </a>
+                        <div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon icon-help"></i>
+                            <span>T&#244;i muốn sử dụng m&#227; voucher cần l&#224;m như thế n&#224;o?</span>
+                            <i class="open-close open">+</i>
+                        </a>
+                        <div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon icon-help"></i>
+                            <span>Khi c&#243; voucher, t&#244;i c&#243; cần bắt buộc phải d&#249;ng thẻ vừa đăng k&#237; mới mua h&#224;ng kh&#244;ng?</span>
+                            <i class="open-close open">+</i>
+                        </a>
+                        <div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon icon-help"></i>
+                            <span>Sau khi ho&#224;n tất việc đăng k&#237; mở thẻ, t&#244;i phải l&#224;m thế n&#224;o để biết định mức vay ti&#234;u d&#249;ng?</span>
+                            <i class="open-close open">+</i>
+                        </a>
+                        <div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="container">
+
+
+
+
+            <div class="bg">
+                <div class="col-content">
+                    <div class="link-content">
+                        <h4><a>Hỗ Trợ - Dịch Vụ</a></h4>
+                        <ul>
+                            <li><a href="/mua-hang-tra-gop">Mua h&#224;ng trả g&#243;p</a></li>
+                            <li><a href="/huong-dan-dat-hang">Hướng dẫn đặt h&#224;ng v&#224; thanh to&#225;n</a></li>
+                            <li><a href="/order/check">Tra cứu đơn h&#224;ng</a></li>
+                            <li><a href="/chinh-sach-bao-hanh">Ch&#237;nh s&#225;ch bảo h&#224;nh</a></li>
+                            <li><a href="/dat-hang/bao-hanh-mo-rong">Phạm vi, điều khoản g&#243;i bảo h&#224;nh mở rộng</a></li>
+                            <li><a href="/chinh-sach-bao-mat">Ch&#237;nh s&#225;ch bảo mật</a></li>
+                            <li><a href="/chinh-sach-giai-quyet-khieu-nai">Ch&#237;nh s&#225;ch giải quyết khiếu nại</a></li>
+                            <li><a href="/dieu-khoan-mua-ban-hang-hoa">Điều khoản mua b&#225;n h&#224;ng h&#243;a</a></li>
+                            <li><a href="/cau-hoi-thuong-gap">C&#226;u hỏi thường gặp</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-content">
+                        <h4><a>Th&#244;ng Tin Li&#234;n Hệ</a></h4>
+                        <ul>
+                            <li><a href="/mua-hang-online">B&#225;n h&#224;ng Online</a></li>
+                            <li><a href="/cham-soc-khach-hang">Chăm s&#243;c kh&#225;ch h&#224;ng</a></li>
+                            <li><a href="/tin-tuc/hoang-ha-care-dich-vu-sua-chua-dien-thoai-may-tinh-bang-voi-gia-tot-nhat-thi-truong">Dịch vụ sửa chữa Ho&#224;ng H&#224; Care</a></li>
+                            <li><a href="/lien-he-khoi-van-phong">Li&#234;n hệ khối văn ph&#242;ng</a></li>
+                            <li><a href="/hop-tac-kinh-doanh">Hợp t&#225;c kinh doanh</a></li>
+                            <li><a href="/trung-tam-bao-hanh">Tra cứu bảo h&#224;nh</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-content">
+                        <h4><a href="/he-thong-cua-hang">Hệ thống 127 si&#234;u thị tr&#234;n to&#224;n quốc</a></h4>
+                        <ul>
+                            <li><a href="/he-thong-cua-hang">Danh s&#225;ch 127 si&#234;u thị tr&#234;n to&#224;n quốc</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Tổng đài</h4>
+                        <a class="hotline" href="tel:1900.2091">1900.2091</a>
+                    </div>
+
+                    <div>
+                        <h4>Thanh toán miễn phí</h4>
+                        <ul class="list-logo">
+                            <li>
+                                <img src="/Content/web/img/logo-visa.png">
+                                <img src="/Content/web/img/logo-master.png">
+                            </li>
+                            <li>
+                                <img src="/Content/web/img/logo-jcb.png">
+                                <img src="/Content/web/img/logo-samsungpay.png">
+                            </li>
+                            <li>
+                                <img src="/Content/web/img/logo-atm.png">
+                                <img src="/Content/web/img/logo-vnpay.png">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Hình thức vận chuyển</h4>
+                        <ul class="list-logo">
+                            <li>
+                                <img src="/Content/web/img/nhattin.jpg">
+                                <img src="/Content/web/img/vnpost.jpg">
+                            </li>
+                        </ul>
+                        <div class="mg-top20">
+                            <a href="http://online.gov.vn/Home/WebDetails/28738" target="_blank"><img src="/Content/web/img/logo-bct.png"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info">
+                    <p>© 2020. C&#212;NG TY CỔ PHẦN X&#194;Y DỰNG V&#192; ĐẦU TƯ THƯƠNG MẠI HO&#192;NG H&#192;. MST:  0106713191. (Đăng k&#253; lần đầu: Ng&#224;y 15 th&#225;ng 12 năm 2014, Đăng k&#253; thay đổi ng&#224;y 24/11/2022)</p>
+                    <p><strong>GP số 426/GP-TTĐT do sở TTTT Hà Nội cấp ngày 22/01/2021</strong></p>
+                    <p>Địa chỉ: Số 89 Đường Tam Trinh, Phường Mai Động, Quận Ho&#224;ng Mai, Th&#224;nh Phố H&#224; Nội, Việt Nam. Điện thoại: 1900.2091. Chịu trách nhiệm nội dung: <strong>Hoàng Ngọc Chiến</strong>. </p>
+
+                </div>
+            </div>
+
+
+
+
+            <div id="navSocial">
+                <div class="social">
+                    <ul>
+                        <li><a href="https://www.facebook.com/hoanghamobilecom" title="Facebook Ho&#224;ng H&#224; Mobile" target="_blank" class="blue"><span><i class="icon-facebook"></i></span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCJm_GdFJzT8h1odq1oMu_7Q?sub_confirmation=1" title="Youtube Ho&#224;ng H&#224; Mobile Channel" target="_blank" class="red"><span><i class="icon-youtube"></i></span></a></li>
+                        <li><a href="https://www.instagram.com/hoanghamobile/?hl=vi" title="Ho&#224;ng H&#224; Mobile Instagram" target="_blank" class="rainbow"><span><i class="icon-instagram"></i></span></a></li>
+                        <li><a href="https://www.tiktok.com/" title="Tiktok" target="_blank" class="black"><span><i class="icon-tiktok"></i></span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="backtoTop">
+                <a id="top" href="javascript:;">
+                    <i class="icon-left"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <div id="popup-modal"></div>
+    <div id="sticker-modal"></div>
+    <div class="search-bg"></div>
+
+    <div class="footer-stick-right" style="position: fixed; bottom: 175px; right: 33px;">
+        <div style="padding-bottom:10px;">
+            <a href="/kho-san-pham-cu">
+                <img src="/Content/web/img/maycugiatot.png" />
+            </a>
+        </div>
+        <div>
+            <a href="/dat-hang/thu-cu-doi-moi-iphone-chinh-hang-vn-a-hoanghamobile">
+                <img src="/Content/web/img/thucugiacao.png" />
+            </a>
+        </div>
+    </div>
+
+
+    <div class="footer-zalo" style="position: fixed; bottom: 110px; right: 33px;">
+        <a href="https://oa.zalo.me/262829019064124420" target="_blank"><img src="/Content/web/img/zalo.svg" /></a>
+    </div>
+
+
+
+
+    @*<script type='application/ld+json'>
+    {"@context":"https:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/hoanghamobile.com\/","name":"Ho&#224;ng H&#224; Mobile - Hệ thống b&#225;n lẻ thiết bị di động v&#224; c&#244;ng nghệ ch&#237;nh h&#227;ng gi&#225; tốt","potentialAction":{"@type":"SearchAction","target":"https:\/\/hoanghamobile.com\/tim-kiem?kwd={search_term_string}","query-input":"required name=search_term_string"}}
+    </script>*@
+
+    <!-- analytics -->
+    <script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-1415779-10', 'auto');
+    ga('require', 'GTM-KXZQBMD');
+    ga('require', 'GTM-WPLRWHK');
+    ga('send', 'pageview');
+
+    </script>
+    <!-- analytics -->
+    <!-- Google Tag Manager -->
+    <script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5QM3X2');</script>
+    <!-- End Google Tag Manager -->
+    <!-- subiz -->
+    <script>!function (s, u, b, i, z) { var o, t, r, y; s[i] || (s._sbzaccid = z, s[i] = function () { s[i].q.push(arguments) }, s[i].q = [], s[i]("setAccount", z), r = ["widget.subiz.net", "storage.googleapis" + (t = ".com"), "app.sbz.workers.dev", i + "a" + (o = function (k, t) { var n = t <= 6 ? 5 : o(k, t - 1) + o(k, t - 3); return k !== t ? n : n.toString(32) })(20, 20) + t, i + "b" + o(30, 30) + t, i + "c" + o(40, 40) + t], (y = function (k) { var t, n; s._subiz_init_2094850928430 || r[k] && (t = u.createElement(b), n = u.getElementsByTagName(b)[0], t.async = 1, t.src = "https://" + r[k] + "/sbz/app.js?accid=" + z, n.parentNode.insertBefore(t, n), setTimeout(y, 2e3, k + 1)) })(0)) }(window, document, "script", "subiz", "acqqrmpwwuqeianonpxt")</script>
+    <!-- subiz -->
+    <!-- accesstrade-->
+    <script src="//static.accesstrade.vn/js/trackingtag/tracking.min.js "></script>
+    <script type="text/javascript">
+    AT.init({ "campaign_id": 626, "is_reoccur": 1, "is_lastclick": 1 });
+    AT.track();
+    </script>
+    <!-- accesstrade-->
+
+
+
+    <script src="/js-css/web_v1.1.8.6.js"></script>
+
+
+    <script src="/Content/Bank/web.min.js?s=638252945065685640"></script>
+
+
+    <script type="text/javascript">
+            $(document).ready(function () {
+                showSticker(76);
+            });
+    </script>
+
+
+</body>
+</html>
+
