@@ -1097,11 +1097,11 @@ function showPopup(n) {
             })
         }))
 }
-//function scrollTo(n) {
-//    $("html, body").animate({
-//        scrollTop: $(n).offset().top - 50
-//    }, 500)
-//}
+function scrollto(n) {
+    $("html, body").animate({
+        scrolltop: $(n).offset().top - 50
+    }, 500)
+}
 function flyToElement(n, t) {
     var e = $(this), r = 3, i = $(n).clone(), u, f;
     $(i).css({

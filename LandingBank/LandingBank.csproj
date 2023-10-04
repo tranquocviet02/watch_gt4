@@ -129,6 +129,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BKCustomerController.cs" />
+    <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HTCController.cs" />
     <Compile Include="Controllers\Landing_project2Controller.cs" />
@@ -158,9 +159,12 @@
     <Content Include="ContentWatch_GT4\fonts\icon\css\hoangha.css" />
     <Content Include="ContentWatch_GT4\fonts\icon\fonts\hoangha.svg" />
     <Content Include="ContentWatch_GT4\fonts\SegieUI.css" />
+    <Content Include="ContentWatch_GT4\img\Asset 12%403x.png" />
+    <Content Include="ContentWatch_GT4\img\Asset-10%403x.png" />
     <Content Include="ContentWatch_GT4\img\Huawei-Mobile.png" />
     <Content Include="ContentWatch_GT4\img\Huawei.png" />
     <Content Include="ContentWatch_GT4\img\Huawei_price.png" />
+    <Content Include="ContentWatch_GT4\js-css\jquery_box.css" />
     <Content Include="ContentWatch_GT4\js-css\glightbox.min.css" />
     <Content Include="ContentWatch_GT4\js-css\index_Mobile.js" />
     <Content Include="ContentWatch_GT4\js-css\lightbox.init.js" />
@@ -431,6 +435,7 @@
     <Content Include="ContentProject2\javascript\model.js" />
     <Content Include="ContentProject2\javascript\swiper.js" />
     <Content Include="ContentProject2\javascript\ww3school.js" />
+    <Content Include="ContentWatch_GT4\video\huawei-watch-gt4-fashion-forward.mp4" />
     <Content Include="Content\Apple\apple.min.css" />
     <Content Include="Content\Apple\fonts\apple.min.css" />
     <Content Include="Content\Apple\iphone14\app.min.js" />
@@ -897,6 +902,7 @@
     <Content Include="Views\Landing_project2\Indexsosanh_Mobile.cshtml" />
     <Content Include="Views\Watch_GT4\Index.cshtml" />
     <Content Include="Views\Watch_GT4\Index_Mobile.cshtml" />
+    <Content Include="Views\Detail\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

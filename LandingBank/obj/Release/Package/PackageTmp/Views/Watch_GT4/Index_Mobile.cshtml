@@ -17,8 +17,8 @@
 <link href="~/ContentWatch_GT4/js-css/glightbox.min.css?v1"
       type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="https://consumer.huawei.com/etc/designs/huawei-cbg-site/statics/jquery/jquery.min.js"></script>
-
-
+<link href="~/ContentWatch_GT4/js-css/jquery_box.css?v1"
+      type="text/css" rel="stylesheet" />
 <style>
     .header-tag-title.seo {
         position: absolute;
@@ -43,11 +43,18 @@
                     <div class="stass_css kv-bg">
                         <picture class="stass_css">
                             <img class="stass_css blur-up lazyload"
-                                 src="~/ContentWatch_GT4/img/Huawei-Mobile.png"
+                                 src="~/Content/ContentWatch_GT4/img/Huawei.png"
                                  alt="HUAWEI WATCH GT 4" />
                         </picture>
-                        <div class="btn-cart">
-                            <button>Mua ngay</button>
+                        <div class="Reserve">
+                            <picture class="stass_css">
+                                <img class="stass_css blur-up lazyload"
+                                     src="~/Content/ContentWatch_GT4/img/Asset 12@3x.png"
+                                     alt="HUAWEI WATCH GT 4" />
+                            </picture>
+                            <div class="btn-cart">
+                                <button>Đặt ngay</button>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -90,9 +97,8 @@
                                     Phá Ngay <img src="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-gt4/watch-gt4-g/images/sec1/huawei-watch-gt4-fashion-forward-click.svg"
                                                   alt="HUAWEI WATCH GT 4 fashion forward">
                                 </a>*@
-                            <a class="stass_css image-popup-video-map btn btn-light mo-mb-2" data-title="YouTube Video" data-description="YouTube Video Popup" href="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-gt4/watch-gt4-g/video/huawei-watch-gt4-fashion-forward.mp4">Open YouTube Video</a>
                             @*<a class="stass_css image-popup-video-map btn btn-light mo-mb-2" data-title="YouTube Video" data-description="YouTube Video Popup" href="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-gt4/watch-gt4-g/video/huawei-watch-gt4-fashion-forward.mp4">Open YouTube Video</a>*@
-
+                            <a class="stass_css btn btn-light mo-mb-2" id="openPopup">Open YouTube Video</a>
                         </div>
                     </div>
                 </section>
@@ -1799,8 +1805,6 @@
         <div class="stass_css par iparys_inherited">
         </div>
 
-
-
     </div>
 
 </div>
@@ -1809,14 +1813,92 @@
 
 </div>
 
+<div class="fancybox-overlay fancybox-overlay-fixed" style="width: auto; height: auto; display: none;" id="videoPopup">
+    <div class="fancybox-wrap fancybox-desktop fancybox-type-html fancybox-opened" tabindex="-1">
+        <div class="fancybox-skin" style="padding: 0px; width: auto; height: auto;">
+            <div class="fancybox-outer">
+                <div class="fancybox-inner" style="overflow: hidden; width: 100%; height: auto;">
+                    <div class="cbg-jwplayer" style="display: flex;height:auto;align-items: center;background:#000;">
+                        <video autoplay controls id="myVideo" playsinline="true" webkit-playsinline="true" controlslist="nodownload"
+                               poster="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-gt4/watch-gt4-g/video/huawei-watch-gt4-fashion-forward.jpg"
+                               style="width:100%;max-height:100%;max-width:640px"
+                               src="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-gt4/watch-gt4-g/video/huawei-watch-gt4-fashion-forward.mp4"></video>
+                    </div>
+                    <div class="cbg-video-mask"></div>
+                </div>
+            </div><a title="Close" id="closePopup" class="fancybox-item fancybox-close" href="javascript:;"></a>
+        </div>
+    </div>
+</div>
+
 @section scripts {
+    <script>
+        window.onload = function () {
+            const easeInCubic = function (t) { return t * t * t };
+            const scrollElems = document.getElementsByClassName('scroll');
+
+            const scrollToElem = (start, stamp, duration, scrollEndElemTop, startScrollOffset) => {
+                const runtime = stamp - start;
+                let progress = runtime / duration;
+                const ease = easeInCubic(progress);
+
+                progress = Math.min(progress, 1);
+
+                const newScrollOffset = startScrollOffset + (scrollEndElemTop * ease);
+                window.scroll(0, startScrollOffset + (scrollEndElemTop * ease));
+
+                if (runtime < duration) {
+                    requestAnimationFrame((timestamp) => {
+                        const stamp = new Date().getTime();
+                        scrollToElem(start, stamp, duration, scrollEndElemTop, startScrollOffset);
+                    });
+                }
+            }
+
+            for (let i = 0; i < scrollElems.length; i++) {
+                const elem = scrollElems[i];
+
+                elem.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const scrollElemId = e.target.href.split('#')[1];
+                    const scrollEndElem = document.getElementById(scrollElemId);
+
+                    const anim = requestAnimationFrame(() => {
+                        const stamp = new Date().getTime();
+                        const duration = 1200;
+                        const start = stamp;
+                        const startScrollOffset = window.pageYOffset;
+                        const scrollEndElemTop = scrollEndElem.getBoundingClientRect().top;
+                        scrollToElem(start, stamp, duration, scrollEndElemTop, startScrollOffset);
+                    });
+                });
+            }
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Bắt sự kiện click cho các liên kết trong menu
+            $('div').click(function (e) {
+                e.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+                var targetId = $(this).attr('data-href'); // Lấy id của mục tiêu từ thuộc tính href
+                var targetOffset = $(targetId).offset().top; // Lấy vị trí của mục tiêu từ đầu trang
+
+                // Cuộn đến vị trí của mục tiêu trong thời gian 800ms (0.8 giây)
+                $('html, body').animate({
+                    scrollTop: targetOffset
+                }, 100);
+            });
+        });
+
+    </script>
+
     <script type="text/javascript"
             src="https://consumer.huawei.com/etc/designs/huawei-cbg-site/clientlib-campaign-v4/common-v4/js/base.built.js"></script>
 
     <script src="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-gt4/watch-gt4-g/js/utilsPlugin.js"
             type="text/javascript"></script>
-    <script src="~/ContentWatch_GT4/js-css/index_Mobile.js?v1" type="text/javascript"></script>
-    <script src="~/ContentWatch_GT4/js-css/glightbox.min.js?v1" type="text/javascript"></script>
-    <script src="~/ContentWatch_GT4/js-css/lightbox.init.js?v1" type="text/javascript"></script>
+    <script src="~//ContentWatch_GT4/js-css/index_Mobile.js?v1" type="text/javascript"></script>
+    @*<script src="~/ContentWatch_GT4/js-css/glightbox.min.js?v1" type="text/javascript"></script>
+        <script src="~/ContentWatch_GT4/js-css/lightbox.init.js?v1" type="text/javascript"></script>*@
 
 }

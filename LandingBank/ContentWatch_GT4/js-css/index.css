@@ -206,6 +206,9 @@
             display: inline-flex;
             margin: 20px 0px;
         }
+            .phoinix-container .phoinix-section-kv .kv-bg .Reserve {
+            padding:30px
+            }
             .phoinix-container .phoinix-section-kv .kv-bg .btn-cart {
                 width: 100%;
                 /* height: 100%; */
@@ -269,7 +272,7 @@
     .phoinix-container .phoinix-section-s2 {
         position: relative;
         width: 100%;
-        height: 200vh;
+        height: auto;
     }
 
         .phoinix-container .phoinix-section-s2 .s2-sticky .s2-bg {
@@ -320,6 +323,10 @@
             transform: translate(-50%, 20vw);
             background: #3E6330;
             z-index: 3;
+        }
+
+        .phoinix-container .phoinix-section-s2 .s2-sticky .s2-click-btn:hover {
+        cursor:pointer;
         }
 
             .phoinix-container .phoinix-section-s2 .s2-sticky .s2-click-btn a {
@@ -3503,5 +3510,8 @@
     padding: 0;
     border: 0;
     vertical-align: baseline
+}
+.width-50{
+    width:50% !important;
 }
 /*# sourceMappingURL=index.css.map */
