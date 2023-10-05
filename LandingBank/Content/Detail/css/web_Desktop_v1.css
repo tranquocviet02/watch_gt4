@@ -1,0 +1,14 @@
+﻿.element::after {
+    /* Thuộc tính và giá trị cho pseudo-element ::after */
+    content: "Thêm nội dung sau";
+    display: inline-block; /* hoặc block, tùy theo mục đích */
+    color: black; /* Màu văn bản */
+    font-weight: bold; /* Độ đậm của văn bản */
+}
+.element::before {
+    /* Thuộc tính và giá trị cho pseudo-element ::before */
+    content: "Thêm nội dung trước";
+    display: inline-block; /* hoặc block, tùy theo mục đích */
+    color: red; /* Màu văn bản */
+    font-weight: bold; /* Độ đậm của văn bản */
+}

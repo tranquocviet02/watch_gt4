@@ -408,7 +408,6 @@ C:\Users\Admin\Documents\GitHub\watch_gt4\LandingBank\bin\System.Web.WebPages.Ra
 C:\Users\Admin\Documents\GitHub\watch_gt4\LandingBank\bin\Newtonsoft.Json.xml
 C:\Users\Admin\Documents\GitHub\watch_gt4\LandingBank\bin\Antlr3.Runtime.pdb
 C:\Users\Admin\Documents\GitHub\watch_gt4\LandingBank\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Admin\Documents\GitHub\watch_gt4\LandingBank\obj\Debug\LandingBank.csproj.AssemblyReference.cache
 C:\Users\Admin\Documents\GitHub\watch_gt4\LandingBank\obj\Debug\LandingBank.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\GitHub\watch_gt4\LandingBank\obj\Debug\LandingBank.csproj.CopyComplete
 C:\Users\Admin\Documents\GitHub\watch_gt4\LandingBank\obj\Debug\LandingBank.dll

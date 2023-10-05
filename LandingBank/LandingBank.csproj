@@ -451,6 +451,7 @@
     <Content Include="Content\Bank\web.min.js" />
     <Content Include="Content\css\1000px.css" />
     <Content Include="Content\css\styles.css" />
+    <Content Include="Content\Detail\css\web_Desktop_v1.css" />
     <Content Include="Content\etc.clientlibs\corewcmcomponentscommonssiteclientlibs\container.ACSHASH68e8a508c100f218cc66bb13a94d1002.js" />
     <Content Include="Content\etc.clientlibs\sonyglobalclientlibs\clientlib-base.ACSHASHf3f0e6cff0ab139c656396a517573673.js" />
     <Content Include="Content\etc.clientlibs\sonyglobalclientlibs\clientlib-dependencies.ACSHASHd41d8cd98f00b204e9800998ecf8427e.css" />
@@ -903,11 +904,17 @@
     <Content Include="Views\Watch_GT4\Index.cshtml" />
     <Content Include="Views\Watch_GT4\Index_Mobile.cshtml" />
     <Content Include="Views\Detail\Index.cshtml" />
+    <Content Include="Views\Shared\_layout_DesktopDetail.cshtml" />
+    <Content Include="Views\Shared\_layout_DesktopMobile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content2\Apple\Uploads2023\" />
     <Folder Include="Content2\Apple\web\fonts\Segoe Ui\" />
+    <Folder Include="Content\Detail\img\" />
+    <Folder Include="Content\Detail\js-css\" />
+    <Folder Include="Content\Detail\js\" />
+    <Folder Include="Content\Detail\logo\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
