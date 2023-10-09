@@ -13,5 +13,9 @@ namespace LandingBank.Controllers
         {
             return View();
         }
+        public ActionResult Index_Mobile()
+        {
+            return View();
+        }
     }
 }

@@ -162,6 +162,7 @@
     <Content Include="ContentWatch_GT4\img\Asset 12%403x.png" />
     <Content Include="ContentWatch_GT4\img\Asset-10%403x.png" />
     <Content Include="ContentWatch_GT4\img\Huawei-Mobile.png" />
+    <Content Include="ContentWatch_GT4\img\huawei-watch-gt4.jpg" />
     <Content Include="ContentWatch_GT4\img\Huawei.png" />
     <Content Include="ContentWatch_GT4\img\Huawei_price.png" />
     <Content Include="ContentWatch_GT4\js-css\jquery_box.css" />
@@ -451,7 +452,35 @@
     <Content Include="Content\Bank\web.min.js" />
     <Content Include="Content\css\1000px.css" />
     <Content Include="Content\css\styles.css" />
+    <Content Include="Content\Detail\css\bootstrap.min.css" />
+    <Content Include="Content\Detail\css\icon.min.css" />
     <Content Include="Content\Detail\css\web_Desktop_v1.css" />
+    <Content Include="Content\Detail\img\apple.png" />
+    <Content Include="Content\Detail\img\Cell ⏵ Img - iPhone 14 Pro Max.png" />
+    <Content Include="Content\Detail\img\gia soc.png" />
+    <Content Include="Content\Detail\img\hot.png" />
+    <Content Include="Content\Detail\img\Khung Apple.png" />
+    <Content Include="Content\Detail\img\khung none 178.png" />
+    <Content Include="Content\Detail\img\khung none 200.png" />
+    <Content Include="Content\Detail\img\Khung Sản phẩm giá sốc.png" />
+    <Content Include="Content\Detail\img\Khung Sản phẩm hot.png" />
+    <Content Include="Content\Detail\img\memory-black.png" />
+    <Content Include="Content\Detail\img\memory-card.png" />
+    <Content Include="Content\Detail\img\No content.png" />
+    <Content Include="Content\Detail\img\re het co.png" />
+    <Content Include="Content\Detail\img\Rectangle 49.png" />
+    <Content Include="Content\Detail\img\Rẻ hết cỡ.png" />
+    <Content Include="Content\Detail\img\smartphone.png" />
+    <Content Include="Content\Detail\img\voucher.png" />
+    <Content Include="Content\Detail\js-css\click_all.js" />
+    <Content Include="Content\Detail\js-css\select_option.css" />
+    <Content Include="Content\Detail\js-css\select_option.js" />
+    <Content Include="Content\Detail\js-css\slouslide.min.css" />
+    <Content Include="Content\Detail\js-css\web_Desktop_v1.css" />
+    <Content Include="Content\Detail\js-css\web_Desktop_v1.js" />
+    <Content Include="Content\Detail\js-css\web_Mobile_v1.css" />
+    <Content Include="Content\Detail\js-css\web_Mobile_v1.js" />
+    <Content Include="Content\Detail\js-css\xem_them.js" />
     <Content Include="Content\etc.clientlibs\corewcmcomponentscommonssiteclientlibs\container.ACSHASH68e8a508c100f218cc66bb13a94d1002.js" />
     <Content Include="Content\etc.clientlibs\sonyglobalclientlibs\clientlib-base.ACSHASHf3f0e6cff0ab139c656396a517573673.js" />
     <Content Include="Content\etc.clientlibs\sonyglobalclientlibs\clientlib-dependencies.ACSHASHd41d8cd98f00b204e9800998ecf8427e.css" />
@@ -536,6 +565,12 @@
     <Content Include="Content\product\slider-5.png" />
     <Content Include="Content\product\slider.png" />
     <Content Include="Content\product\thaypin.png" />
+    <Content Include="D:\Detail_project4\Content\Detail\js\bootstrap.bundle.min.js">
+      <Link>Content\Detail\js\bootstrap.bundle.min.js</Link>
+    </Content>
+    <Content Include="D:\Detail_project4\Content\Detail\js\nouislider.min.js">
+      <Link>Content\Detail\js\nouislider.min.js</Link>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -906,14 +941,12 @@
     <Content Include="Views\Detail\Index.cshtml" />
     <Content Include="Views\Shared\_layout_DesktopDetail.cshtml" />
     <Content Include="Views\Shared\_layout_DesktopMobile.cshtml" />
+    <Content Include="Views\Detail\Index_Mobile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content2\Apple\Uploads2023\" />
     <Folder Include="Content2\Apple\web\fonts\Segoe Ui\" />
-    <Folder Include="Content\Detail\img\" />
-    <Folder Include="Content\Detail\js-css\" />
-    <Folder Include="Content\Detail\js\" />
     <Folder Include="Content\Detail\logo\" />
   </ItemGroup>
   <ItemGroup>
