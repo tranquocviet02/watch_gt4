@@ -133,6 +133,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HTCController.cs" />
     <Compile Include="Controllers\Landing_project2Controller.cs" />
+    <Compile Include="Controllers\OppoN3Controller.cs" />
     <Compile Include="Controllers\Watch_GT4Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -537,6 +538,22 @@
     <Content Include="Content\logo\brand %284%29.png" />
     <Content Include="Content\logo\brand %285%29.png" />
     <Content Include="Content\logo\brand %286%29.png" />
+    <Content Include="Content\Oppon3\css\bootstrap.min.css" />
+    <Content Include="Content\Oppon3\css\icon.min.css" />
+    <Content Include="Content\Oppon3\img\FIND N3 Flip - GOLD BLACK - MASTER KV - H - RGB 2.png" />
+    <Content Include="Content\Oppon3\img\Rectangle 240648071 %281%29.png" />
+    <Content Include="Content\Oppon3\img\Rectangle 240648071 %282%29.png" />
+    <Content Include="Content\Oppon3\img\Rectangle 240648071 %283%29.png" />
+    <Content Include="Content\Oppon3\img\Rectangle 240648071 %284%29.png" />
+    <Content Include="Content\Oppon3\img\Rectangle 240648071.png" />
+    <Content Include="Content\Oppon3\img\Rectangle 240648071_1.png" />
+    <Content Include="Content\Oppon3\img\Rectangle 240648071_2.png" />
+    <Content Include="Content\Oppon3\img\Rectangle 240648071_3.png" />
+    <Content Include="Content\Oppon3\img\Rectangle 240648071_4.png" />
+    <Content Include="Content\Oppon3\js-css\swipper-3d.css" />
+    <Content Include="Content\Oppon3\js-css\swipper-3d.js" />
+    <Content Include="Content\Oppon3\js-css\web_Desktop_v1.css" />
+    <Content Include="Content\Oppon3\js-css\web_Desktop_v1.js" />
     <Content Include="Content\product\airpods.png" />
     <Content Include="Content\product\deal.png" />
     <Content Include="Content\product\Mask Group 1.png" />
@@ -942,12 +959,15 @@
     <Content Include="Views\Shared\_layout_DesktopDetail.cshtml" />
     <Content Include="Views\Shared\_layout_DesktopMobile.cshtml" />
     <Content Include="Views\Detail\Index_Mobile.cshtml" />
+    <Content Include="Views\OppoN3\Index.cshtml" />
+    <Content Include="Views\OppoN3\Index_Mobile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content2\Apple\Uploads2023\" />
     <Folder Include="Content2\Apple\web\fonts\Segoe Ui\" />
     <Folder Include="Content\Detail\logo\" />
+    <Folder Include="Content\Oppon3\js\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

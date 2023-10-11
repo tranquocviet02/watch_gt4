@@ -1,0 +1,133 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_layout_Desktop.cshtml";
+}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="~/Content/Oppon3/js-css/web_Desktop_v1.css?@DateTime.Now" type="text/css" rel="stylesheet" />
+<link href="~/Content/Oppon3/js-css/swipper-3d.css?@DateTime.Now" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="~/Content/Oppon3/css/icon.min.css">
+<link rel="stylesheet" href="~/Content/Oppon3/css/bootstrap.min.css?@DateTime.Now">
+
+<main class="main-content">
+    <div class="Content-v1 resetfont">
+        <section class="hero-banner">
+            <svg xmlns="http://www.w3.org/2000/svg" width="114" height="27" viewBox="0 0 114 27" fill="none">
+                <g clip-path="url(#clip0_269_102)">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M13.5325 17.2207C7.79224 17.1539 4.07718 14.4419 4.07718 10.287C4.07718 6.13211 7.79224 3.42009 13.5325 3.35329C19.2727 3.42009 22.9878 6.13211 22.9878 10.287C22.9878 14.4419 19.2727 17.1539 13.5325 17.2207ZM13.7068 0C13.7068 0 13.5861 0 13.5325 0C13.4788 0 13.3581 0 13.3581 0C5.48541 0.133597 0 4.35527 0 10.287C0 16.2187 5.48541 20.4404 13.3581 20.574C13.3581 20.574 13.4788 20.574 13.5325 20.574C13.5861 20.574 13.7068 20.574 13.7068 20.574C21.5661 20.4404 27.0649 16.2187 27.0649 10.287C27.0649 4.35527 21.5661 0.133597 13.7068 0Z"
+                          fill="#201F1C" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M100.481 17.2207C94.7407 17.1539 91.0257 14.4419 91.0257 10.287C91.0257 6.13211 94.7407 3.42009 100.481 3.35329C106.221 3.42009 109.936 6.13211 109.936 10.287C109.936 14.4419 106.221 17.1539 100.481 17.2207ZM100.642 0C100.642 0 100.521 0 100.468 0C100.414 0 100.293 0 100.293 0C92.4339 0.133597 86.9351 4.35527 86.9351 10.287C86.9351 16.2187 92.4205 20.4404 100.293 20.574C100.293 20.574 100.414 20.574 100.468 20.574C100.521 20.574 100.642 20.574 100.642 20.574C108.501 20.4404 114 16.2187 114 10.287C114 4.35527 108.515 0.133597 100.642 0Z"
+                          fill="#201F1C" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M71.552 17.2207C65.8118 17.1539 62.0967 14.4419 62.0967 10.287C62.0967 6.13211 65.8118 3.42009 71.552 3.35329C77.2922 3.42009 81.0073 6.13211 81.0073 10.287C81.0073 14.4419 77.2922 17.1539 71.552 17.2207ZM71.7129 0C71.7129 0 71.5922 0 71.5386 0C71.4849 0 71.3642 0 71.3642 0C67.6224 0.0667986 64.4169 1.05542 62.0833 2.71202V0.9619H58.0195V27H62.0833V17.8619C64.4169 19.5186 67.6224 20.5205 71.3642 20.574C71.3642 20.574 71.4849 20.574 71.5386 20.574C71.6057 20.574 71.7129 20.574 71.7129 20.574C79.5722 20.4404 85.0711 16.2187 85.0711 10.287C85.0711 4.35527 79.5857 0.133597 71.7129 0Z"
+                          fill="#201F1C" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M42.542 17.2207C36.8018 17.1539 33.0867 14.4419 33.0867 10.287C33.0867 6.13211 36.8018 3.42009 42.542 3.35329C48.2822 3.42009 51.9973 6.13211 51.9973 10.287C51.9973 14.4419 48.2822 17.1539 42.542 17.2207ZM42.7164 0C42.7164 0 42.5957 0 42.542 0C42.4884 0 42.3677 0 42.3677 0C38.6258 0.0667986 35.4204 1.05542 33.0867 2.71202V0.9619H29.0229V27H33.0867V17.8619C35.4204 19.5186 38.6258 20.5205 42.3677 20.574C42.3677 20.574 42.4884 20.574 42.542 20.574C42.6091 20.574 42.7164 20.574 42.7164 20.574C50.5757 20.4404 56.0745 16.2187 56.0745 10.287C56.0745 4.35527 50.5757 0.133597 42.7164 0Z"
+                          fill="#201F1C" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_269_102">
+                        <rect width="114" height="27" fill="white" />
+                    </clipPath>
+                </defs>
+            </svg>
+            <picture>
+                <!-- Hình ảnh mặc định khi không có điều kiện nào được đáp ứng -->
+                <img src="~/Content/Oppon3/img/Rectangle 240648071.png"
+                     alt="hình ảnh banner">
+            </picture>
+            <div class="resetfont feature-banner-text">
+                <h1 class="resetfont text-headline-n1">Find N3 Flip</h1>
+                <h3 class="resetfont text-headline-n2">Gập để toả sáng</h3>
+            </div>
+        </section>
+        <section class="feature-two">
+            <div class="div-banner" id="">
+                <div class="d-flex gap-48px text-align-center height-48px align-items-center">
+                    <div class="div-banner-item d-flex h-100 align-items-center">
+                        <p class="resetfont text-banner">Find N3</p>
+                    </div>
+                    <div class="d-flex gap-20px h-100 text-align-center align-items-center">
+                        <div class="div-banner-item d-flex h-100 align-items-center">
+                            <p class="resetfont text-banner">Find N3</p>
+                        </div>
+                        <div class="div-banner-item d-flex h-100 align-items-center">
+                            <p class="resetfont text-banner">Find N3</p>
+                        </div>
+                        <div class="div-banner-item d-flex h-100 align-items-center">
+                            <p class="resetfont text-banner">Find N3</p>
+                        </div>
+                        <div class="div-banner-item d-flex h-100 align-items-center">
+                            <p class="resetfont text-banner">Find N3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex gap-20px text-align-center">
+                    <button class="resetfont btn-add color--n-3-black text-btn-add Reserve background-2CFF73">
+                        Đặt
+                        Trước
+                    </button>
+                    <button class="resetfont btn-add  color--n-3-white text-btn-add installment background-1D1D1F">
+                        Trả
+                        Góp 0%
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="feature-three w-100 h-auto">
+            <h1 class="resetfont text-headline-n1">Find N3 Flip</h1>
+            <div>
+
+                <div class="swiper tranding-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Slide-start -->
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img src="~/Content/Oppon3/img/Rectangle 240648071.png"
+                                     alt="hình ảnh swiper3d">
+                            </div>
+                        </div>
+                        <!-- Slide-end -->
+                        <!-- Slide-start -->
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img src="~/Content/Oppon3/img/Rectangle 240648071_1.png"
+                                     alt="hình ảnh swiper3d">
+                            </div>
+                        </div>
+                        <!-- Slide-end -->
+                        <!-- Slide-start -->
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img src="~/Content/Oppon3/img/Rectangle 240648071_2.png"
+                                     alt="hình ảnh swiper3d">
+                            </div>
+                        </div>
+                        <!-- Slide-end -->
+                        <!-- Slide-start -->
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img src="~/Content/Oppon3/img/Rectangle 240648071_3.png"
+                                     alt="hình ảnh swiper3d">
+                            </div>
+                        </div>
+                        <!-- Slide-end -->
+                        <!-- Slide-start -->
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img src="~/Content/Oppon3/img/Rectangle 240648071_4.png"
+                                     alt="hình ảnh swiper3d">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="resetfont text-headline-"></p>
+        </section>
+    </div>
+</main>
+<script src="~/Content/Oppon3/js-css/web_Desktop_v1.js?@DateTime.Now"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?@DateTime.Now"></script>
+<script src="~/Content/Oppon3/js-css/swipper-3d.js?@DateTime.Now"></script>
