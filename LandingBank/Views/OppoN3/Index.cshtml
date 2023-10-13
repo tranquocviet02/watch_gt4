@@ -2,66 +2,63 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_layout_Desktop.cshtml";
 }
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="~/Content/Oppon3/js-css/swiper-bundle.min.css" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link href="~/Content/Oppon3/js-css/web_Desktop_v1.css?@DateTime.Now" type="text/css" rel="stylesheet" />
+<link href="~/Content/Oppon3/js-css/web_Desktop_n3.css?@DateTime.Now" type="text/css" rel="stylesheet" />
 <link href="~/Content/Oppon3/js-css/swipper-3d.css?@DateTime.Now" type="text/css" rel="stylesheet" />
 <link rel="stylesheet" href="~/Content/Oppon3/css/icon.min.css">
 <link rel="stylesheet" href="~/Content/Oppon3/css/bootstrap.min.css?@DateTime.Now">
-
 <main class="main-content">
     <div class="Content-v1 resetfont">
-        <section class="hero-banner">
-            <svg xmlns="http://www.w3.org/2000/svg" width="114" height="27" viewBox="0 0 114 27" fill="none">
-                <g clip-path="url(#clip0_269_102)">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M13.5325 17.2207C7.79224 17.1539 4.07718 14.4419 4.07718 10.287C4.07718 6.13211 7.79224 3.42009 13.5325 3.35329C19.2727 3.42009 22.9878 6.13211 22.9878 10.287C22.9878 14.4419 19.2727 17.1539 13.5325 17.2207ZM13.7068 0C13.7068 0 13.5861 0 13.5325 0C13.4788 0 13.3581 0 13.3581 0C5.48541 0.133597 0 4.35527 0 10.287C0 16.2187 5.48541 20.4404 13.3581 20.574C13.3581 20.574 13.4788 20.574 13.5325 20.574C13.5861 20.574 13.7068 20.574 13.7068 20.574C21.5661 20.4404 27.0649 16.2187 27.0649 10.287C27.0649 4.35527 21.5661 0.133597 13.7068 0Z"
-                          fill="#201F1C" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M100.481 17.2207C94.7407 17.1539 91.0257 14.4419 91.0257 10.287C91.0257 6.13211 94.7407 3.42009 100.481 3.35329C106.221 3.42009 109.936 6.13211 109.936 10.287C109.936 14.4419 106.221 17.1539 100.481 17.2207ZM100.642 0C100.642 0 100.521 0 100.468 0C100.414 0 100.293 0 100.293 0C92.4339 0.133597 86.9351 4.35527 86.9351 10.287C86.9351 16.2187 92.4205 20.4404 100.293 20.574C100.293 20.574 100.414 20.574 100.468 20.574C100.521 20.574 100.642 20.574 100.642 20.574C108.501 20.4404 114 16.2187 114 10.287C114 4.35527 108.515 0.133597 100.642 0Z"
-                          fill="#201F1C" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M71.552 17.2207C65.8118 17.1539 62.0967 14.4419 62.0967 10.287C62.0967 6.13211 65.8118 3.42009 71.552 3.35329C77.2922 3.42009 81.0073 6.13211 81.0073 10.287C81.0073 14.4419 77.2922 17.1539 71.552 17.2207ZM71.7129 0C71.7129 0 71.5922 0 71.5386 0C71.4849 0 71.3642 0 71.3642 0C67.6224 0.0667986 64.4169 1.05542 62.0833 2.71202V0.9619H58.0195V27H62.0833V17.8619C64.4169 19.5186 67.6224 20.5205 71.3642 20.574C71.3642 20.574 71.4849 20.574 71.5386 20.574C71.6057 20.574 71.7129 20.574 71.7129 20.574C79.5722 20.4404 85.0711 16.2187 85.0711 10.287C85.0711 4.35527 79.5857 0.133597 71.7129 0Z"
-                          fill="#201F1C" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M42.542 17.2207C36.8018 17.1539 33.0867 14.4419 33.0867 10.287C33.0867 6.13211 36.8018 3.42009 42.542 3.35329C48.2822 3.42009 51.9973 6.13211 51.9973 10.287C51.9973 14.4419 48.2822 17.1539 42.542 17.2207ZM42.7164 0C42.7164 0 42.5957 0 42.542 0C42.4884 0 42.3677 0 42.3677 0C38.6258 0.0667986 35.4204 1.05542 33.0867 2.71202V0.9619H29.0229V27H33.0867V17.8619C35.4204 19.5186 38.6258 20.5205 42.3677 20.574C42.3677 20.574 42.4884 20.574 42.542 20.574C42.6091 20.574 42.7164 20.574 42.7164 20.574C50.5757 20.4404 56.0745 16.2187 56.0745 10.287C56.0745 4.35527 50.5757 0.133597 42.7164 0Z"
-                          fill="#201F1C" />
-                </g>
-                <defs>
-                    <clipPath id="clip0_269_102">
-                        <rect width="114" height="27" fill="white" />
-                    </clipPath>
-                </defs>
-            </svg>
-            <picture>
-                <!-- Hình ảnh mặc định khi không có điều kiện nào được đáp ứng -->
-                <img src="~/Content/Oppon3/img/Rectangle 240648071.png"
-                     alt="hình ảnh banner">
-            </picture>
-            <div class="resetfont feature-banner-text">
-                <h1 class="resetfont text-headline-n1">Find N3 Flip</h1>
-                <h3 class="resetfont text-headline-n2">Gập để toả sáng</h3>
+        <section class="feature-banner d-flex justify-content-center padding-100px-0 ">
+            <div class="max-w-1200px w-100 d-flex justify-content-space-between align-items-center">
+                <div class="w-50">
+                    <img class="w-100" src="https://hoanghamobile.com/Content/ContentWatch_GT4/img/Huawei.png" alt="hình ảnh banner">
+                </div>
+                <div class="w-50 padding-30px">
+                    <img class="w-100" src="https://hoanghamobile.com/Content/ContentWatch_GT4/img/Asset%2012@3x.png" alt="hình ảnh banner">
+                    <div class="btn-cart">
+                        <a href="~/Oppon3/index_Flip">Xem chi tiết OPPO Find N3 Flip</a>
+                        <a href="~/Oppon3/index">Xem chi tiết OPPO Find N3</a>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="feature-two">
+        <section class="feature-one">
+            <div class="hero-banner d-flex">
+                <img class="hero-banner-logo" src="~/Content/Oppon3/img_n3/Oppo-Logo.png"
+                     alt="hình ảnh banner">
+                <picture>
+                    <!-- Hình ảnh mặc định khi không có điều kiện nào được đáp ứng -->
+                    <img class="feature-one-banner" src="~/Content/Oppon3/img_n3/kv-oppo-gold 2.png" alt="hình ảnh banner">
+                </picture>
+                <div class="resetfont feature-banner-text">
+                    <h1 class="resetfont text-headline-n1">Find N3</h1>
+                    <h3 class="resetfont text-headline-n2">Ultra Thin. Ultra Light. Ultra Powerful.</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-two background-banner">
             <div class="div-banner" id="">
-                <div class="d-flex gap-48px text-align-center height-48px align-items-center">
+                <div class="d-flex gap-48px text-align-center height-48px align-items-center feature-item">
                     <div class="div-banner-item d-flex h-100 align-items-center">
-                        <p class="resetfont text-banner">Find N3</p>
+                        <p class="resetfont text-banner font-size-16">Find N3</p>
                     </div>
-                    <div class="d-flex gap-20px h-100 text-align-center align-items-center">
-                        <div class="div-banner-item d-flex h-100 align-items-center">
-                            <p class="resetfont text-banner">Find N3</p>
+                    <div class="d-flex gap-20px h-100 text-align-center align-items-center feature-item">
+                        <div class="div-banner-item d-flex h-100 align-items-center" data-href="#section1">
+                            <p class="resetfont text-banner">Design</p>
                         </div>
-                        <div class="div-banner-item d-flex h-100 align-items-center">
-                            <p class="resetfont text-banner">Find N3</p>
+                        <div class="div-banner-item d-flex h-100 align-items-center feature-item" data-href="#section2">
+                            <p class="resetfont text-banner">Experience</p>
                         </div>
-                        <div class="div-banner-item d-flex h-100 align-items-center">
-                            <p class="resetfont text-banner">Find N3</p>
+                        <div class="div-banner-item d-flex h-100 align-items-center feature-item" data-href="#section3">
+                            <p class="resetfont text-banner">Camera</p>
                         </div>
-                        <div class="div-banner-item d-flex h-100 align-items-center">
-                            <p class="resetfont text-banner">Find N3</p>
+                        <div class="div-banner-item d-flex h-100 align-items-center feature-item" data-href="#section4">
+                            <p class="resetfont text-banner">Performance</p>
                         </div>
                     </div>
                 </div>
@@ -77,57 +74,352 @@
                 </div>
             </div>
         </section>
-        <section class="feature-three w-100 h-auto">
-            <h1 class="resetfont text-headline-n1">Find N3 Flip</h1>
-            <div>
-
-                <div class="swiper tranding-slider">
-                    <div class="swiper-wrapper">
-                        <!-- Slide-start -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="~/Content/Oppon3/img/Rectangle 240648071.png"
-                                     alt="hình ảnh swiper3d">
-                            </div>
+        <section class="feature-three background-div d-flex justify-content-center padding-100px-0" id="section1">
+            <div class="max-w-1200px w-100 d-flex justify-content-space-between align-items-center">
+                <div class="d-flex flex-direction-column align-items-start gap-32px w-100 max-w-387px">
+                    <div class="d-flex align-self-stretch flex-direction-column align-items-start gap-8px">
+                        <h1 class="resetfont feature-title-h1-40px letter-spacing-004-">Bậc Thầy Thiết Kế</h1>
+                        <h3 class="resetfont feature-title-h3-24px background-gradient-gold letter-spacing-024- font-size-24">
+                            Mỏng nhẹ bậc nhất
+                        </h3>
+                    </div>
+                    <p class="resetfont feature-title-p-18px letter-spacing-009">
+                        Sở hữu trọng lượng và độ mỏng vượt trội
+                        ở thời điểm hiện tại. Bên cạnh đó,
+                        kết hợp cùng sự tinh tế trong từng chi tiết mang tính biểu tượng khiến Find N3 trở thành một
+                        tuyệt tác thiết kế đúng nghĩa.
+                    </p>
+                </div>
+                <img src="~/Content/Oppon3/img_n3/Couple-camera 1.png" alt="hình ảnh banner">
+                <div class="d-flex flex-direction-column align-items-start gap-24px">
+                    <div class="d-flex flex-direction-column align-items-start gap-8px">
+                        <p class="resetfont feature-title-p-18px letter-spacing-009">Nhẹ chỉ</p>
+                        <h3 class="resetfont feature-title-h3-24px background-gradient-gold letter-spacing-096">
+                            239g
+                        </h3>
+                    </div>
+                    <div class="d-flex flex-direction-column align-items-start gap-8px">
+                        <p class="resetfont feature-title-p-18px letter-spacing-009">Mỏng chỉ</p>
+                        <h3 class="resetfont feature-title-h3-24px background-gradient-gold letter-spacing-024- font-size-24">
+                            5.8mm
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="feature-four background-div d-flex justify-content-center padding-top-100px" id="section2">
+            <div class="position-relative feature-four-detail w-100 d-flex justify-content-space-between align-items-center">
+                <img src="~/Content/Oppon3/img_n3/image-feature-four.png" alt="hình ảnh feature-four">
+                <div class="feature-four-text d-flex position-absolute gap-50px flex-direction-column align-items-start w-100 max-w-500px">
+                    <div class="d-flex w-100 gap-32px flex-direction-column align-items-start">
+                        <div class="d-flex align-self-stretch flex-direction-column align-items-start gap-8px">
+                            <h1 class="resetfont feature-title-h1-40px letter-spacing-004-">Bậc Thầy Trải Nghiệm</h1>
+                            <h3 class="resetfont feature-title-h3-24px background-gradient-gold letter-spacing-024- font-size-24">
+                                Hệ điều hành hàng đầu cho điện thoại gập
+                            </h3>
                         </div>
-                        <!-- Slide-end -->
-                        <!-- Slide-start -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="~/Content/Oppon3/img/Rectangle 240648071_1.png"
-                                     alt="hình ảnh swiper3d">
-                            </div>
+                        <p class="resetfont feature-title-p-18px letter-spacing-009">
+                            Hàng loạt các cử chỉ thông minh
+                            như: đa nhiệm nhiều cửa sổ,
+                            chia đôi màn hình linh hoạt … được tuỳ biến độc quyền giúp tận dụng màn hình siêu lớn trên
+                            Find N3 để nâng cao tối đa hiệu suất công việc như một chuyên gia.
+                        </p>
+                    </div>
+                    <div class=" d-flex w-100 gap-12px flex-direction-column align-items-start max-w-282px ">
+                        <div class="d-flex gap-21px">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"
+                                 fill="none">
+                                <g clip-path="url(#clip0_294_78)">
+                                    <path opacity="0.1"
+                                          d="M5.91042 1H58.0896C60.8015 1 63 3.19847 63 5.91042V58.0896C63 60.8015 60.8015 63 58.0896 63H5.91042C3.19847 63 1 60.8015 1 58.0896V5.91042C1 3.19847 3.19847 1 5.91042 1Z"
+                                          fill="url(#paint0_linear_294_78)" stroke="url(#paint1_linear_294_78)"
+                                          stroke-width="2" />
+                                    <path d="M18.0014 49V52.61M45.0021 49V52.61M11.6002 48.43H14.0202C14.6663 48.43 15.1902 48.9538 15.1902 49.6V52.02C15.1902 52.6662 14.6663 53.19 14.0202 53.19H11.6002C10.954 53.19 10.4302 52.6662 10.4302 52.02V49.6C10.4302 48.9538 10.954 48.43 11.6002 48.43ZM22.1697 48.43H24.5897C25.2359 48.43 25.7597 48.9538 25.7597 49.6V52.02C25.7597 52.6662 25.2359 53.19 24.5897 53.19H22.1697C21.5235 53.19 20.9997 52.6662 20.9997 52.02V49.6C20.9997 48.9538 21.5235 48.43 22.1697 48.43ZM30.1694 48.43H32.5894C33.2356 48.43 33.7594 48.9538 33.7594 49.6V52.02C33.7594 52.6662 33.2356 53.19 32.5894 53.19H30.1694C29.5232 53.19 28.9994 52.6662 28.9994 52.02V49.6C28.9994 48.9538 29.5232 48.43 30.1694 48.43ZM38.1708 48.43H40.5908C41.237 48.43 41.7608 48.9538 41.7608 49.6V52.02C41.7608 52.6662 41.237 53.19 40.5908 53.19H38.1708C37.5246 53.19 37.0008 52.6662 37.0008 52.02V49.6C37.0008 48.9538 37.5246 48.43 38.1708 48.43ZM49.1711 48.43H51.5911C52.2373 48.43 52.7611 48.9538 52.7611 49.6V52.02C52.7611 52.6662 52.2373 53.19 51.5911 53.19H49.1711C48.5249 53.19 48.0011 52.6662 48.0011 52.02V49.6C48.0011 48.9538 48.5249 48.43 49.1711 48.43Z"
+                                          stroke="url(#paint2_linear_294_78)" stroke-width="0.85" stroke-miterlimit="10"
+                                          stroke-linecap="round" />
+                                </g>
+                                <defs>
+                                    <linearGradient id="paint0_linear_294_78" x1="0" y1="0" x2="64" y2="0"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#C7D3FF" />
+                                        <stop offset="1" stop-color="#B8C8FF" stop-opacity="0.4" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_294_78" x1="0" y1="0" x2="64" y2="0"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white" stop-opacity="0.56" />
+                                        <stop offset="1" stop-color="#89A3FF" />
+                                    </linearGradient>
+                                    <linearGradient id="paint2_linear_294_78" x1="10.4302" y1="53.19" x2="52.7611"
+                                                    y2="53.19" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#F0E1C7" />
+                                        <stop offset="1" stop-color="#8E8265" />
+                                    </linearGradient>
+                                    <clipPath id="clip0_294_78">
+                                        <rect width="64" height="64" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <p class="resetfont feature-title-p-18px letter-spacing-009">
+                                Hiển thị mở rộng với 3 app cùng
+                                lúc
+                            </p>
                         </div>
-                        <!-- Slide-end -->
-                        <!-- Slide-start -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="~/Content/Oppon3/img/Rectangle 240648071_2.png"
-                                     alt="hình ảnh swiper3d">
-                            </div>
+                        <div class="d-flex gap-21px">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"
+                                 fill="none">
+                                <path opacity="0.1"
+                                      d="M5.91042 1H58.0896C60.8015 1 63 3.19847 63 5.91042V58.0896C63 60.8015 60.8015 63 58.0896 63H5.91042C3.19847 63 1 60.8015 1 58.0896V5.91042C1 3.19847 3.19847 1 5.91042 1Z"
+                                      fill="url(#paint0_linear_294_84)" stroke="url(#paint1_linear_294_84)"
+                                      stroke-width="2" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_294_84" x1="0" y1="0" x2="64" y2="0"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#C7D3FF" />
+                                        <stop offset="1" stop-color="#B8C8FF" stop-opacity="0.4" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_294_84" x1="0" y1="0" x2="64" y2="0"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white" stop-opacity="0.56" />
+                                        <stop offset="1" stop-color="#89A3FF" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <p class="resetfont feature-title-p-18px letter-spacing-009">
+                                Thanh tác vụ
+                                tương tác thông minh
+                            </p>
                         </div>
-                        <!-- Slide-end -->
-                        <!-- Slide-start -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="~/Content/Oppon3/img/Rectangle 240648071_3.png"
-                                     alt="hình ảnh swiper3d">
-                            </div>
-                        </div>
-                        <!-- Slide-end -->
-                        <!-- Slide-start -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="~/Content/Oppon3/img/Rectangle 240648071_4.png"
-                                     alt="hình ảnh swiper3d">
-                            </div>
+                        <div class="d-flex gap-21px">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"
+                                 fill="none">
+                                <g clip-path="url(#clip0_294_90)">
+                                    <path opacity="0.1"
+                                          d="M5.91042 1H58.0896C60.8015 1 63 3.19847 63 5.91042V58.0896C63 60.8015 60.8015 63 58.0896 63H5.91042C3.19847 63 1 60.8015 1 58.0896V5.91042C1 3.19847 3.19847 1 5.91042 1Z"
+                                          fill="url(#paint0_linear_294_90)" stroke="url(#paint1_linear_294_90)"
+                                          stroke-width="2" />
+                                    <path d="M36.06 53.84C33.55 53.61 32.14 50.73 31.54 49.5C31.45 49.32 31.39 49.19 31.35 49.13C30.87 48.33 27.37 40.98 26.31 38.75C24.73 36.5 24.24 34.97 24.77 33.94C25.11 33.29 25.84 32.93 26.84 32.93C27.24 32.93 27.59 32.99 27.82 33.04C29.16 33.33 30.22 34.16 30.97 35.52C31.33 36.16 32.21 37.91 32.4 38.29C32.54 38.24 32.72 38.11 32.72 37.91V22.64C32.72 21.31 33.8 20.23 35.13 20.23C36.46 20.23 37.54 21.31 37.54 22.64V26.94C37.66 26.91 37.79 26.89 37.92 26.89C39.76 26.89 41.26 28.39 41.26 30.23V30.25C41.38 30.22 41.51 30.2 41.64 30.2C43.45 30.2 44.93 31.64 44.98 33.44C45.1 33.41 45.23 33.39 45.36 33.39C47.2 33.39 48.69 34.87 48.69 36.68V44.43C48.69 47.08 48.2 49.34 47.28 50.96C46.21 52.84 44.58 53.84 42.56 53.84H36.06ZM26.84 34.04C26.45 34.04 25.94 34.11 25.76 34.45C25.65 34.67 25.42 35.57 27.22 38.1C27.25 38.15 27.47 38.61 27.81 39.33C29.03 41.89 31.89 47.89 32.3 48.55C32.36 48.65 32.43 48.8 32.54 49.01C33.06 50.07 34.27 52.55 36.1 52.73H42.56C45.7 52.73 47.58 49.62 47.58 44.43V36.68C47.58 35.48 46.6 34.5 45.4 34.5C45.16 34.5 44.98 34.65 44.98 34.87V38.43C44.98 38.74 44.73 38.99 44.42 38.99C44.11 38.99 43.86 38.74 43.86 38.43V33.54C43.86 32.31 42.86 31.31 41.63 31.31C41.42 31.31 41.25 31.48 41.25 31.68V36.56C41.25 36.87 41 37.12 40.69 37.12C40.38 37.12 40.13 36.87 40.13 36.56V30.22C40.13 28.99 39.13 27.99 37.9 27.99C37.69 27.99 37.52 28.16 37.52 28.36V34.7C37.52 35.01 37.27 35.26 36.96 35.26C36.65 35.26 36.4 35.01 36.4 34.7V22.62C36.4 21.9 35.82 21.32 35.1 21.32C34.38 21.32 33.8 21.9 33.8 22.62V37.89C33.8 38.69 33.15 39.33 32.36 39.34C32.13 39.34 31.91 39.29 31.71 39.18C31.6 39.13 31.52 39.04 31.46 38.93C31.42 38.86 30.35 36.73 29.97 36.04C29.38 34.98 28.56 34.33 27.55 34.11C27.38 34.07 27.11 34.03 26.81 34.03L26.84 34.04Z"
+                                          fill="url(#paint2_linear_294_90)" />
+                                    <path d="M19.34 31.55C19.03 31.55 18.78 31.3 18.78 30.99V10.56C18.78 10.25 19.03 10 19.34 10C19.65 10 19.9 10.25 19.9 10.56V31C19.9 31.31 19.65 31.56 19.34 31.56V31.55Z"
+                                          fill="url(#paint3_linear_294_90)" />
+                                    <path d="M19.34 31.55C19.19 31.55 19.05 31.49 18.95 31.39L16.16 28.6C16.05 28.49 16 28.35 16 28.21C16 28.07 16.06 27.92 16.16 27.82C16.27 27.71 16.41 27.66 16.55 27.66C16.69 27.66 16.84 27.72 16.94 27.82L19.33 30.21L21.72 27.82C21.83 27.72 21.97 27.66 22.11 27.66C22.25 27.66 22.4 27.72 22.5 27.82C22.72 28.04 22.72 28.39 22.5 28.61L19.71 31.4C19.61 31.5 19.46 31.56 19.32 31.56L19.34 31.55Z"
+                                          fill="url(#paint4_linear_294_90)" />
+                                </g>
+                                <defs>
+                                    <linearGradient id="paint0_linear_294_90" x1="0" y1="0" x2="64" y2="0"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#C7D3FF" />
+                                        <stop offset="1" stop-color="#B8C8FF" stop-opacity="0.4" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_294_90" x1="0" y1="0" x2="64" y2="0"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white" stop-opacity="0.56" />
+                                        <stop offset="1" stop-color="#89A3FF" />
+                                    </linearGradient>
+                                    <linearGradient id="paint2_linear_294_90" x1="16" y1="53.84" x2="48.69" y2="53.84"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#F0E1C7" />
+                                        <stop offset="1" stop-color="#8E8265" />
+                                    </linearGradient>
+                                    <linearGradient id="paint3_linear_294_90" x1="16" y1="53.84" x2="48.69" y2="53.84"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#F0E1C7" />
+                                        <stop offset="1" stop-color="#8E8265" />
+                                    </linearGradient>
+                                    <linearGradient id="paint4_linear_294_90" x1="16" y1="53.84" x2="48.69" y2="53.84"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#F0E1C7" />
+                                        <stop offset="1" stop-color="#8E8265" />
+                                    </linearGradient>
+                                    <clipPath id="clip0_294_90">
+                                        <rect width="64" height="64" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <p class="resetfont feature-title-p-18px letter-spacing-009">
+                                Cử chỉ tương tác tiện lợi với
+                                ngón tay
+                            </p>
                         </div>
                     </div>
                 </div>
-                <p class="resetfont text-headline-"></p>
+            </div>
+        </section>
+        <section class="feature-four background-div d-flex justify-content-center padding-bottom-100px">
+            <div class="max-w-1200px w-100 d-flex gap-50px align-items-center flex-direction-column">
+                <div class="d-flex flex-direction-column align-items-center justify-content-center gap-32px w-100 max-w-791px">
+                    <div class="d-flex align-self-stretch flex-direction-column align-items-center gap-8px">
+                        <h1 class="resetfont feature-title-h1-40px letter-spacing-004-">Bậc Thầy Trải nghiệm</h1>
+                        <h3 class="resetfont feature-title-h3-24px background-gradient-gold letter-spacing-024- font-size-32">
+                            Rực rỡ mọi màn hình hiển thị
+                        </h3>
+                    </div>
+                    <p class="resetfont feature-title-p-18px letter-spacing-009">
+                        Khả năng hiển thị cao cấp được thể hiện
+                        liền mạch trên cả 2 màn hình của Find N3.
+                        Với công nghệ bản lề hàng đầu không tạo nếp gấp cùng một tỷ lệ màn hình tối ưu cho hầu hết người
+                        dùng đem lại chất lượng hiển thị tột đỉnh đến không tưởng.
+                    </p>
+                </div>
+                <div class=" w-100 d-flex justify-content-space-between align-items-center">
+                    <div class="d-flex flex-direction-column align-items-start gap-24px">
+                        <p class="resetfont feature-title-p-18px letter-spacing-009 background-gradient-white-2">
+                            Màn
+                            Hình Chính
+                        </p>
+                        <div class="d-flex flex-direction-column align-items-start gap-8px">
+                            <p class="resetfont feature-title-p-18px letter-spacing-009 color-ABB0BE">Tỷ lệ</p>
+                            <h3 class="resetfont feature-title-h3-24px background-gradient-gold font-size-24 letter-spacing-032-">
+                                1:1
+                            </h3>
+                        </div>
+                        <div class="d-flex flex-direction-column align-items-start gap-8px">
+                            <p class="resetfont feature-title-p-18px letter-spacing-009 color-ABB0BE">Kích thước</p>
+                            <h3 class="resetfont feature-title-h3-24px background-gradient-gold font-size-24 letter-spacing-032-">
+                                7.8''
+                            </h3>
+                        </div>
+                        <div class="d-flex flex-direction-column align-items-start gap-8px">
+                            <p class="resetfont feature-title-p-18px letter-spacing-009 color-ABB0BE">Độ phân giải</p>
+                            <h3 class="resetfont feature-title-h3-24px background-gradient-gold font-size-24 letter-spacing-032-">
+                                2K+
+                            </h3>
+                        </div>
+                        <div class="d-flex flex-direction-column align-items-start gap-8px">
+                            <p class="resetfont feature-title-p-18px letter-spacing-009 color-ABB0BE">Độ sáng tối đa</p>
+                            <h3 class="resetfont feature-title-h3-24px background-gradient-gold font-size-24 letter-spacing-032-">
+                                2800 nits
+                            </h3>
+                        </div>
+                    </div>
+                    <img src="~/Content/Oppon3/img_n3/N3-Double-Final2 1.png" alt="hình ảnh feature-four">
+                    <div class="d-flex flex-direction-column align-items-end gap-24px">
+                        <p class="resetfont feature-title-p-18px letter-spacing-009 background-gradient-white-2">
+                            Màn
+                            Hình Ngoài
+                        </p>
+                        <div class="d-flex flex-direction-column align-items-end gap-8px">
+                            <p class="resetfont feature-title-p-18px letter-spacing-009 color-ABB0BE">Tỷ lệ</p>
+                            <h3 class="resetfont feature-title-h3-24px background-gradient-gold font-size-24 letter-spacing-032-">
+                                20:9
+                            </h3>
+                        </div>
+                        <div class="d-flex flex-direction-column align-items-end gap-8px">
+                            <p class="resetfont feature-title-p-18px letter-spacing-009 color-ABB0BE">Kích thước</p>
+                            <h3 class="resetfont feature-title-h3-24px background-gradient-gold font-size-24 letter-spacing-032-">
+                                6.3''
+                            </h3>
+                        </div>
+                        <div class="d-flex flex-direction-column align-items-end gap-8px">
+                            <p class="resetfont feature-title-p-18px letter-spacing-009 color-ABB0BE">Độ phân giải</p>
+                            <h3 class="resetfont feature-title-h3-24px background-gradient-gold font-size-24 letter-spacing-032-">
+                                2K
+                            </h3>
+                        </div>
+                        <div class="d-flex flex-direction-column align-items-end gap-8px">
+                            <p class="resetfont feature-title-p-18px letter-spacing-009 color-ABB0BE">Độ sáng tối đa</p>
+                            <h3 class="resetfont feature-title-h3-24px background-gradient-gold font-size-24 letter-spacing-032-">
+                                2800 nits
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="feature-five background-div d-flex justify-content-center align-items-center padding-bottom-100px" id="section3">
+            <div class="position-relative feature-five-detail w-auto d-flex justify-content-space-between align-items-center">
+                <img src="~/Content/Oppon3/img_n3/image-feature-five.png" alt="hình ảnh feature-five">
+                <div class="feature-five-text position-absolute d-inline-flex align-items-start flex-direction-column gap-18px max-w-224px">
+                    <div class="d-flex align-items-start flex-direction-column gap-4px">
+                        <p class="resetfont feature-title-p-18px letter-spacing-009 background-gradient-white-2">
+                            Camera
+                            góc rộng
+                        </p>
+                        <div class="d-flex align-item-end gap-8px">
+                            <h3 class="resetfont feature-title-h3-24px background-gradient-gold letter-spacing-072 font-size-24">
+                                48MP
+                            </h3>
+                            <p class="resetfont feature-title-p-18px letter-spacing-009 color-E7CDA5 ">
+                                hỗ trợ Pixel
+                                Stack
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start flex-direction-column gap-4px">
+                        <p class="resetfont feature-title-p-18px letter-spacing-009 background-gradient-white-2">
+                            Camera
+                            góc siêu rộng
+                        </p>
+                        <div class="d-flex align-item-end gap-8px">
+                            <h3 class="resetfont feature-title-h3-24px background-gradient-gold letter-spacing-072 font-size-24">
+                                48MP
+                            </h3>
+                            <p class="resetfont feature-title-p-18px letter-spacing-009 color-E7CDA5 ">Sony IMX581</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start flex-direction-column gap-4px">
+                        <p class="resetfont feature-title-p-18px letter-spacing-009 background-gradient-white-2">
+                            Camera
+                            tele kính tiềm vọng
+                        </p>
+                        <div class="d-flex align-item-end gap-8px">
+                            <h3 class="resetfont feature-title-h3-24px background-gradient-gold letter-spacing-072 font-size-24">
+                                64MP
+                            </h3>
+                            <p class="resetfont feature-title-p-18px letter-spacing-009 color-E7CDA5 ">Zoom quang 3x</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex align-items-start flex-direction-column gap-50px max-w-500px margin-bottom-10-pt">
+                <div class="d-flex align-items-start flex-direction-column gap-32px">
+                    <div class="d-flex align-items-start flex-direction-column gap-8px">
+                        <h1 class="resetfont feature-title-h1-40px letter-spacing-004-">Bậc Thầy Nhiếp Ảnh</h1>
+                        <h3 class="resetfont feature-title-h3-24px background-gradient-gold letter-spacing-024- font-size-32">
+                            Mỗi ống kính đều là một camera chính
+                        </h3>
+                    </div>
+                    <p class="resetfont feature-title-p-18px letter-spacing-009 color-ABB0BE">
+                        Từng thấu kính trên Find N3 đều được trang bị những thông số hàng đầu kết hợp với huyền thoại nhiếp ảnh Hasselblad đem đến độ chi tiết,
+                        màu sắc đậm chất điện ảnh hơn bất kỳ chiếc điện thoại nào ở thời điểm hiện tại.
+                    </p>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="190" height="12" viewBox="0 0 190 12" fill="none">
+                    <path d="M103.608 0.010128L99.1172 11.7494H106.454L106.903 10.7602H102.412L106.451 0.010128H103.608ZM142.834 0.010128L138.34 11.7494H145.677L146.126 10.7602H141.484L145.53 0.010128H142.834ZM80.1 5.66883L79.6513 6.79985H81.7476L79.7985 11.7494H87.8857L88.3343 10.7602H82.9464L84.5905 6.79985H88.0364L88.4851 5.66883H84.892L86.6903 1.14114H92.0782L92.3797 0.010128H84.296L82.1963 5.66883H80.1035H80.1ZM6.43604 5.66883L8.53582 0.010128H5.84011L3.59311 5.66883H0.4487L0 6.79985H3.29514L1.34961 11.7494H4.19605L5.99085 6.79985H10.9336L8.98803 11.7494H11.8345L16.318 0.010128H13.4715L11.3788 5.66883H6.43955H6.43604ZM26.7993 6.79985H23.8057L23.2062 7.78903H26.0491L23.5077 11.7494H24.8538L27.5495 7.78903H31.2933L31.1426 6.79985H28.1524L30.5467 3.12314L32.0435 11.7494H34.7392L32.7902 0.010128H31.1391L26.7993 6.79985ZM159.005 6.79985H156.011L155.412 7.78903H158.254L155.706 11.7494H157.052L159.751 7.78903H163.495L163.344 6.79985H160.351L162.745 3.12314L164.242 11.7494H166.934L164.992 0.010128H163.344L159.001 6.79985H159.005ZM121.275 0.010128L119.028 5.66883H117.083L116.785 6.79985H118.73L116.785 11.7494H121.577C125.576 11.7712 127.82 10.0474 127.866 8.07269C127.974 6.90531 126.979 5.93795 125.769 5.81066C127.729 5.40699 129.271 3.90503 129.212 2.69765C129.271 0.410165 126.134 0.0537684 124.122 0.010128H121.275ZM120.076 10.7602L121.615 6.63619L121.573 6.79985H123.368C124.122 6.73075 125.475 6.55619 125.464 8.21452C125.384 10.0001 122.856 10.7529 121.272 10.7602H120.073H120.076ZM121.976 5.66883L123.669 1.14114C124.683 1.03204 126.649 1.07568 126.663 2.83948C126.646 4.61055 124.542 5.71611 123.07 5.66883H121.976ZM181.313 0.010128L176.823 11.7494H179.967C187.616 11.7712 189.909 7.65811 190 4.53418C190 1.29388 187.196 0.0537684 184.16 0.010128H181.317H181.313ZM179.967 10.7602L183.711 1.14114C187.101 0.984763 187.476 3.06132 187.154 5.38517C186.726 9.65102 182.327 10.7529 179.967 10.7602ZM63.6313 2.69765C62.9232 4.36689 64.0204 5.60337 64.8267 6.23616C65.7065 6.84349 67.2244 7.53082 67.6731 8.07633C68.0692 8.59274 68.1639 9.74193 67.5224 10.3384C66.7196 11.0111 64.6304 11.4876 62.131 9.77103L61.6823 10.902C62.776 11.7494 65.3315 12.6549 68.4198 11.3275C69.843 10.7129 71.9252 7.10896 69.3172 5.38517C68.581 4.80693 66.6144 3.79229 66.022 3.40317C65.5383 3.08314 65.349 2.06486 66.32 1.42117C67.3611 0.737468 69.6327 1.05022 70.6633 1.84666L71.112 0.857479C69.8465 0.0319482 68.9105 -0.0335124 67.8238 0.010128C66.8528 -0.0335124 64.5182 0.22833 63.6313 2.69765ZM45.813 2.69765C45.189 4.36689 46.2862 5.60337 47.1591 6.23616C47.9724 6.84349 49.4937 7.53082 49.8548 8.07633C50.335 8.59274 50.4297 9.74193 49.7041 10.3384C48.9854 11.0111 46.8927 11.4876 44.4634 9.77103L44.0147 10.902C45.0488 11.7494 47.5973 12.6549 50.6015 11.3275C52.1123 10.7129 54.1911 7.10896 51.6496 5.38517C50.8468 4.80693 48.8838 3.79229 48.3545 3.40317C47.8041 3.08314 47.6183 2.06486 48.6524 1.42117C49.6269 0.737468 51.895 1.05022 52.845 1.84666L53.2937 0.857479C52.1158 0.0319482 51.1799 -0.0335124 50.1563 0.010128C49.1222 -0.0335124 46.784 0.22833 45.813 2.69765Z"
+                          fill="white" />
+                </svg>
+            </div>
+        </section>
+        <section class="feature-six background-div d-flex justify-content-center padding-bottom-100px" id="section4">
+            <div class="feature-six-detail max-w-1200px w-100 d-flex gap-50px align-items-center justify-content-space-between">
+                <div class="d-flex align-items-start flex-direction-column gap-32px">
+                    <div class="d-flex align-items-start flex-direction-column gap-8px">
+                        <h1 class="resetfont feature-title-h1-40px letter-spacing-004-">Bậc Thầy Hiệu Năng</h1>
+                        <h3 class="resetfont feature-title-h3-24px background-gradient-gold letter-spacing-024- font-size-32">
+                            Dẫn đầu trang bị phần cứng
+                        </h3>
+                    </div>
+                    <p class="resetfont feature-title-p-18px letter-spacing-009 color-ABB0BE">
+                        Find N3 sở hữu một vi xử lý mạnh mẽ nhất ở thời điểm hiện tại và trang bị đồng thời
+                        những phần cứng tốt nhất giúp đem lại một trải nghiệm mượt mà, tốc độ vượt trội cho mỗi thao tác bạn thực hiện.
+                    </p>
+                </div>
+                <img src="~/Content/Oppon3/img_n3/image-feature-six.png" alt="hình ảnh feature-six">
+            </div>
         </section>
     </div>
 </main>
+<script>
+    $(document).ready(function () {
+        $('.feature-item').click(function (e) {
+            e.preventDefault();
+            var targetId = $(this).attr('data-href');
+            var targetOffset = $(targetId).position().top;
+            $('html, body').animate({
+                scrollTop: targetOffset
+            }, 400);
+        });
+    });
+</script>
 <script src="~/Content/Oppon3/js-css/web_Desktop_v1.js?@DateTime.Now"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?@DateTime.Now"></script>
 <script src="~/Content/Oppon3/js-css/swipper-3d.js?@DateTime.Now"></script>

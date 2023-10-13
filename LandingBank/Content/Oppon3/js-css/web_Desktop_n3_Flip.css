@@ -1,0 +1,533 @@
+﻿@font-face {
+    font-family: "OPPO Sans 3.0 230625";
+    src: url('path-to-font/OPPOSans-3.0-230625.woff') format('woff');
+}
+
+main {
+    font-family: "OPPO Sans 3.0 230625", sans-serif;
+    /* Font sau dấu phẩy là một font thay thế trong trường hợp font chính không được tải thành công */
+}
+
+.main-content {
+    /* background: linear-gradient(180deg, #FBFBFB 19.87%, #F8F8F8 100%); */
+    /* background-image: url("img-background/Background.png"); */
+    background: var(--n-3-white, #FFF);
+}
+
+/* .background-div{
+    background: #020304;
+}
+.background-banner{
+    background: #000;
+} */
+h1 {
+    font-family: "OPPO Sans 3.0 230625", sans-serif;
+}
+
+.resetfont {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "OPPO Sans 3.0 230625", sans-serif;
+}
+
+.feature-one {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.hero-banner {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    position: relative;
+}
+
+
+.hero-banner-logo {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    /* width: 100%; */
+    top: 5px;
+    /* bottom: 50%; */
+    left: 0;
+    /* transform: translateX(-126%); */
+    z-index: 2;
+}
+
+.feature-one-banner {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.feature-banner-text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    /* top: 0; */
+    bottom: 37%;
+    left: 50%;
+    transform: translateX(-77%);
+    z-index: 2;
+}
+
+.text-headline-n1 {
+    color: #000;
+    /* Display */
+    font-family: OPPO Sans 3.0 230625;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.46px;
+}
+
+.text-headline-n2 {
+    color: #000;
+    font-family: OPPO Sans 3.0 230625;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.24px;
+    text-transform: capitalize;
+}
+
+.feature-two {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #DDD6C8;
+    background: #FFF;
+}
+
+.div-banner {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-add {
+    display: flex;
+    padding: 7px 21px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+}
+
+.background-2CFF73 {
+    background: #2CFF73;
+}
+
+.background-1D1D1F {
+    background: #1D1D1F;
+}
+
+.text-btn-add {
+    font-family: OPPO Sans 3.0 230625;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* 157.143% */
+    letter-spacing: 0.039px;
+    text-transform: capitalize;
+}
+
+.div-banner-item:hover,
+.div-banner-item.active {
+    box-shadow: inset 0 -2px 0px #2CFF73;
+    cursor: pointer;
+}
+
+.feature-three-item h1 {
+    text-align: center;
+    font-family: OPPO Sans 3.0 230625;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.46px;
+    text-transform: capitalize;
+    background: radial-gradient(9206.91% 125.66% at -1.81% -45.45%, #000 0%, #515151 18.65%, #000 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.feature-three-item p {
+    width: 794px;
+    text-align: center;
+    font-family: OPPO Sans 3.0 230625;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    /* 130% */
+    letter-spacing: 0.1px;
+    background: linear-gradient(92deg, #000 45.83%, rgba(0, 0, 0, 0.66) 84.45%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tranding-slide p {
+    text-align: center;
+    font-family: OPPO Sans 3.0 230625;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* 157.143% */
+    letter-spacing: 0.07px;
+    background: linear-gradient(180deg, #000 0%, #6B613E 64.58%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tranding-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.feature-four {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.feature-four-title {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 1042px;
+}
+
+    .feature-four-title p,
+    .feature-five-text p,
+    .feature-six-text p {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0.09px;
+        background: linear-gradient(103deg, #000 40.45%, #0E84E5 141.16%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        float: left;
+        display: flex;
+        justify-content: left;
+        text-align: left;
+    }
+
+.Gradient-Grey-gold {
+    background: var(--Gradient-Grey-gold, linear-gradient(275deg, #AA8E65 -29.34%, #5F5F5F 116.98%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.feature-four-img {
+    display: inline-flex;
+    gap: 20px;
+}
+
+.four-img-item {
+    position: relative;
+}
+
+.four-img-detail {
+    position: absolute;
+    right: 15.5%;
+    bottom: 14%;
+}
+
+.four-item-item-img {
+    position: absolute;
+    bottom: 4%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.four-item-detail {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: right;
+    align-items: center;
+}
+
+.four-item-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+    .four-item-text h3 {
+        color: var(--n-3-white, #FFF);
+        text-align: center;
+        font-family: Roboto;
+        font-size: 9.599px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.096px;
+    }
+
+    .four-item-text h2 {
+        color: var(--n-3-white, #FFF);
+        text-align: center;
+        font-family: Roboto;
+        font-size: 9.599px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.096px;
+    }
+
+.color-F88C47 {
+    color: #F88C47;
+}
+
+.four-item-text img {
+    width: 56.061px;
+    height: 11.441px;
+    flex-shrink: 0;
+}
+
+.with170-height296px {
+    width: 170px;
+    height: 296px;
+    justify-content: center;
+}
+
+.context-four-end {
+    display: flex;
+    width: 100%;
+    height: 35px;
+    padding: 0px 17.5px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+    .context-four-end h3 {
+        color: var(--n-3-black, #000);
+        font-family: OPPO Sans 3.0 230625;
+        font-size: 7px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 10.5px;
+        /* 150% */
+        letter-spacing: 0.035px;
+    }
+
+.gap4375px {
+    gap: 4.375px;
+}
+
+.gap35px {
+    gap: 3.5px;
+}
+
+    .gap35px svg {
+        width: 4.375px;
+        height: 4.375px;
+    }
+
+    .gap35px p {
+        color: var(--n-3-black, #000);
+        font-family: OPPO Sans 3.0 230625;
+        font-size: 4.375px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.022px;
+    }
+
+.five-item-detail {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 132px;
+    max-height: 106px;
+    padding: 20px 16px;
+    margin-top: 50px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid #E3E3E3;
+    background: linear-gradient(128deg, rgba(225, 213, 169, 0.16) -12.33%, rgba(119, 119, 119, 0.07) 109.18%);
+    backdrop-filter: blur(19px);
+    justify-content: space-between;
+    gap: 13px;
+    flex-direction: column;
+}
+
+    .five-item-detail h3 {
+        color: var(--n-3-black, #000);
+        /* Body 2 */
+        font-family: OPPO Sans 3.0 230625;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        /* 150% */
+        letter-spacing: 0.08px;
+    }
+
+    .five-item-detail h1 {
+        /* Display-Sub */
+        font-family: OPPO Sans 3.0 230625;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.24px;
+        background: linear-gradient(137deg, #000 -44.95%, #817661 109.28%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+.feature-five-detail {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    /* justify-content: center; */
+    align-items: center;
+    display: flex;
+}
+
+.feature-five-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 541px;
+    gap: 40px;
+    margin-left: -126px;
+    text-align: left;
+}
+
+.feature-six-detail {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature-six-detail-one {
+    float: left;
+    width: 60%;
+}
+
+.feature-six-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+}
+
+.feature-six-detail-one img {
+    margin-left: -15%;
+}
+
+.feature-six-detail-two {
+    gap: 23px;
+}
+
+.feature-six-detail-three {
+    gap: 23px;
+    margin-top: 37px;
+}
+
+.btn-cart {
+    width: 100%;
+    max-width: 540px;
+    /* height: 100%; */
+    text-align: center;
+    margin: 25px 0px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+    .btn-cart a {
+        width: 50%;
+        padding: 0.5rem 1rem;
+        font-size: 1.15625rem;
+        border-radius: 0.6rem;
+        background: transparent linear-gradient(180deg, #ff990e 0%, #ff6801 100%) 0% 0% no-repeat padding-box;
+        /*                    background: var(--green-green-1, #009981);*/
+        color: var(--white-white-1, #FFF);
+        font-feature-settings: 'clig' off, 'liga' off;
+        /* H7/Semibold (13) */
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        box-shadow: 0 4px 6px #00000029;
+        border-radius: 5px;
+        border: none;
+    }
+
+        .btn-cart a:hover {
+            background: transparent linear-gradient(0deg, #ff990e 0%, #ff6801 100%) 0% 0% no-repeat padding-box;
+        }
+
+.max-w-1200px {
+    max-width: 1200px;
+}
+
+.max-w-387px {
+    max-width: 387px;
+}
+
+.max-w-500px {
+    max-width: 500px;
+}
+
+.max-w-282px {
+    max-width: 282px;
+}
+
+.max-w-791px {
+    max-width: 791px;
+}
+
+.max-w-224px {
+    max-width: 224px;
+}

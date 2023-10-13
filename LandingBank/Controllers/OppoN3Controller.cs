@@ -13,7 +13,16 @@ namespace LandingBank.Controllers
         {
             return View();
         }
+        public ActionResult Index_Flip()
+        {
+            return View();
+        }
+
         public ActionResult Index_Mobile()
+        {
+            return View();
+        }
+        public ActionResult Index_Mobile_Flip()
         {
             return View();
         }
