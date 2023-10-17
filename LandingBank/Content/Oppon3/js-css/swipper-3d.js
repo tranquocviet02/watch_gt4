@@ -1,4 +1,4 @@
-var TrandingSlider = new Swiper('.tranding-slider', {
+﻿var TrandingSlider = new Swiper('.tranding-slider', {
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
@@ -17,5 +17,8 @@ var TrandingSlider = new Swiper('.tranding-slider', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 3000, // Đặt thời gian trễ tự động chuyển slide (3 giây trong ví dụ này)
     }
 });

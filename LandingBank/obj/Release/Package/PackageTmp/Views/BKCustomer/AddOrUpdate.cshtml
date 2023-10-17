@@ -1,0 +1,293 @@
+﻿@*@model LandingBank.Models.Client*@
+@using LandingBank.Models
+@model Client
+
+<div class="nav-bank">
+    <div class="container">
+        <ul>
+            <li><a href="/Bank/VIB">Đặc quyền thẻ VIB</a></li>
+            <li><a class="actived" href="/Bank/VP">Đặc quyền thẻ VP Bank</a></li>
+            <li><a href="/Bank/TP">Đặc quyền thẻ TP Bank Evo</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="bank-cover bank-vp">
+    <div class="container">
+        <img src="/Content/Bank/VPBank/top.png" />
+    </div>
+</div>
+
+<section class="vib-info">
+    <div class="container">
+        <h1>Ưu đãi lớn khi mở thẻ</h1>
+        <div class="vib-hight-light">
+            <div class="img">
+                <img src="/Content/Bank/VPBank/uudai.png" />
+            </div>
+
+            <div class="vib-items vp-items">
+                <div class="item">
+                    <label>Nhận E-Voucher giảm giá 30% tới</label>
+                    <strong>250.000đ</strong>
+                    <span>khi kích hoạt thẻ thành công</span>
+                </div>
+
+
+                <div class="item">
+                    <label>Khi chi tiêu 2.000.000đ trong 30 ngày đầu</label>
+                    <strong>1.000.000đ</strong>
+                    <span>Hoàn thêm ngay (Số lượng có hạn)</span>
+                </div>
+
+            </div>
+        </div>
+
+        <h2 style="margin:35px 20px;">Đa dạng loại thẻ để bạn lựa chọn</h2>
+
+        <div class="VpBank-Cards">
+            <div class="item">
+                <div class="img">
+                    <img src="/Content/Bank/VPBank/the1.png" />
+                </div>
+                <ul>
+                    <li><strong>Hoàn đến</strong> <label>15%</label> cho các chi tiêu bảo hiểm trực tuyến, giáo dục</li>
+                    <li><strong>Hoàn đến</strong> <label>10%</label> cho các chi tiêu sắc đẹp, y tế</li>
+                    <li><strong>Hoàn đến</strong> <label>5%</label> cho chi tiêu siêu thị</li>
+                </ul>
+                <a class="btn-open-card" href="#openAccForm">Mở thẻ ngay</a>
+            </div>
+
+
+            <div class="item">
+                <div class="img">
+                    <img src="/Content/Bank/VPBank/the2.png" />
+                </div>
+                <ul>
+                    <li><strong>Hoàn đến</strong> <label>2.000.000đ/kỳ sao kê</label> cho mọi lĩnh vực chi tiêu</li>
+                    <li><strong>Chi tiêu nước ngoài</strong> được hoàn tiền nhân đôi</li>
+                </ul>
+                <a class="btn-open-card" href="#openAccForm">Mở thẻ ngay</a>
+            </div>
+
+            <div class="item">
+                <div class="img">
+                    <img src="/Content/Bank/VPBank/the3.png" />
+                </div>
+                <ul>
+                    <li><strong>Đổi Travel Miles</strong> nhiều Hàng không và khách sạn trên toàn cầu</li>
+                    <li><strong>Cộng dặm</strong> lên đến 4.000.000 VP Travel Miles/kỳ sao kê</li>
+                </ul>
+                <a class="btn-open-card" href="#openAccForm">Mở thẻ ngay</a>
+            </div>
+
+
+
+            <div class="item">
+                <div class="img">
+                    <img src="/Content/Bank/VPBank/the4.png" />
+                </div>
+                <ul>
+                    <li><strong>Đổi Travel Miles</strong> nhiều Hàng không và khách sạn trên toàn cầu</li>
+                    <li><strong>Cộng dặm</strong> lên đến 6.000.000 VP Travel Miles/kỳ sao kê</li>
+                </ul>
+                <a class="btn-open-card" href="#openAccForm">Mở thẻ ngay</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bank-form vib-form">
+    <a name="openAccForm"></a>
+    <div class="container">
+        <div class="top">
+            <h4>Đăng ký mở thẻ ngay để nhận thêm nhiều ưu đãi</h4>
+            <div class="logo">
+                <img src="/Content/Bank/VPBank/vpbank.png" style="width:160px; margin-bottom:10px;" />
+            </div>
+        </div>
+
+        <div class="border border-vpbank">
+            <div class="heading">Nhập thông tin mở thẻ</div>
+
+            <div class="border-lr">
+                <div class="note">
+                    <div>
+                        <p class="head">Điều kiện mở thẻ</p>
+                        <p><i class="icon icon-member"></i> <strong>Chỉ cần trong độ tuổi từ 22 - 60</strong></p>
+                        <p><i class="icon icon-localtion"></i> <strong>Lưu trú trong 29 tỉnh/thành:</strong></p>
+                        <p>
+                            Hồ Chí Minh, Hà Nội, Bình Dương, Đồng Nai, Khánh Hòa, Cần Thơ, Bà Rịa Vũng Tàu, Đà Nẵng, Hải Phòng, Cà Mau, Tây Ninh, Quảng Ngãi, Huế, Thanh Hóa, Đăk Lăk, Nghệ An, Hải Dương, Thái Nguyên, Thái Bình, Tây Ninh, Phú Thọ, Vĩnh Phúc, Đồng Tháp, An Giang, Lâm Đồng, Quảng Ninh, Kiên Giang, Bình Định
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form">
+                    <form asp-action="AddOrUpdate" enctype="multipart/form-data" method="post" onsubmit="return validateForm()" @*onsubmit="return ValidBankForm(this, '/Bank/VP/Submit');"*@>
+                        <input type="hidden" name="BankID" id="BankID" value="2" />
+                        <div class="row">
+                            <input type="text" placeholder="Nhập họ tên của bạn" maxlength="50" id="UserName" name="UserName" asp-for="@Model.UserName" />
+                        </div>
+
+                        <div class="row">
+                            <input type="text" placeholder="Nhập số điện thoại của bạn" id="PhoneNumber" minlength="9" maxlength="13" name="PhoneNumber" asp-for="@Model.PhoneNumber" />
+                        </div>
+
+                        <div class="row">
+                            <div class="cel">
+                                <select placeholder="Chọn tỉnh/thành lưu trú" id="Adress" name="Adress" asp-for="@Model.Adress">
+                                    <option value="">Chọn tỉnh/thành lưu trú</option>
+                                    <option value="1">H&#224; Nội</option>
+                                    <option value="50">TP HCM</option>
+                                    <option value="57">An Giang</option>
+                                    <option value="49">B&#224; Rịa - Vũng T&#224;u</option>
+                                    <option value="15">Bắc Giang</option>
+                                    <option value="4">Bắc Kạn</option>
+                                    <option value="62">Bạc Li&#234;u</option>
+                                    <option value="18">Bắc Ninh</option>
+                                    <option value="53">Bến Tre</option>
+                                    <option value="35">B&#236;nh Định</option>
+                                    <option value="47">B&#236;nh Dương</option>
+                                    <option value="45">B&#236;nh Phước</option>
+                                    <option value="39">B&#236;nh Thuận</option>
+                                    <option value="63">C&#224; Mau</option>
+                                    <option value="59">Cần Thơ</option>
+                                    <option value="3">Cao Bằng</option>
+                                    <option value="32">Đ&#224; Nẵng</option>
+                                    <option value="42">Đắk Lắk</option>
+                                    <option value="43">Đắk N&#244;ng</option>
+                                    <option value="7">Điện Bi&#234;n</option>
+                                    <option value="48">Đồng Nai</option>
+                                    <option value="56">Đồng Th&#225;p</option>
+                                    <option value="41">Gia Lai</option>
+                                    <option value="2">H&#224; Giang</option>
+                                    <option value="23">H&#224; Nam</option>
+                                    <option value="28">H&#224; Tĩnh</option>
+                                    <option value="19">Hải Dương</option>
+                                    <option value="20">Hải Ph&#242;ng</option>
+                                    <option value="60">Hậu Giang</option>
+                                    <option value="11">Ho&#224; B&#236;nh</option>
+                                    <option value="21">Hưng Y&#234;n</option>
+                                    <option value="37">Kh&#225;nh H&#242;a</option>
+                                    <option value="58">Ki&#234;n Giang</option>
+                                    <option value="40">Kon Tum</option>
+                                    <option value="8">Lai Ch&#226;u</option>
+                                    <option value="44">L&#226;m Đồng</option>
+                                    <option value="13">Lạng Sơn</option>
+                                    <option value="6">L&#224;o Cai</option>
+                                    <option value="51">Long An</option>
+                                    <option value="24">Nam Định</option>
+                                    <option value="27">Nghệ An</option>
+                                    <option value="25">Ninh B&#236;nh</option>
+                                    <option value="38">Ninh Thuận</option>
+                                    <option value="16">Ph&#250; Thọ</option>
+                                    <option value="36">Ph&#250; Y&#234;n</option>
+                                    <option value="29">Quảng B&#236;nh</option>
+                                    <option value="33">Quảng Nam</option>
+                                    <option value="34">Quảng Ng&#227;i</option>
+                                    <option value="14">Quảng Ninh</option>
+                                    <option value="30">Quảng Trị</option>
+                                    <option value="61">S&#243;c Trăng</option>
+                                    <option value="9">Sơn La</option>
+                                    <option value="46">T&#226;y Ninh</option>
+                                    <option value="22">Th&#225;i B&#236;nh</option>
+                                    <option value="12">Th&#225;i Nguy&#234;n</option>
+                                    <option value="26">Thanh H&#243;a</option>
+                                    <option value="31">Thừa Thi&#234;n Huế</option>
+                                    <option value="52">Tiền Giang</option>
+                                    <option value="54">Tr&#224; Vinh</option>
+                                    <option value="5">Tuy&#234;n Quang</option>
+                                    <option value="55">Vĩnh Long</option>
+                                    <option value="17">Vĩnh Ph&#250;c</option>
+                                    <option value="10">Y&#234;n B&#225;i</option>
+                                </select>
+                            </div>
+                            <div class="cel" style="margin-left:15px;">
+                                <input type="text" placeholder="Nhập mã giới thiệu (Nếu có)" maxlength="20" id="ReferralCode" name="ReferralCode" asp-for="@Model.ReferralCode" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <input type="checkbox" name="Agree" id="Agree" /><span>Tôi trong độ tuổi 22 - 60</span>
+                        </div>
+
+                        <div class="row">
+                            <button type="submit">MỞ THẺ NGAY</button>
+                        </div>
+
+                        <div class="row">
+                            <p>
+                                Bằng việc nhấn chọn đăng ký, tôi đồng ý cho Hoàng Hà Mobile
+                                được chuyển thông tin đăng ký thẻ tín dụng cho VIB
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bank-QnA">
+            <div class="head"><strong>Câu hỏi thường gặp</strong></div>
+
+            <ul id="QnAList">
+                <li>
+                    <a href="javascript:;">
+                        <i class="icon icon-help"></i>
+                        <span>T&#244;i c&#243; mất ph&#237; g&#236; khi mở thẻ kh&#244;ng?</span>
+                        <i class="open-close open">+</i>
+                    </a>
+                    <div>
+                        Không. </br>Việc mở thẻ là hoàn toàn miễn phí
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="icon icon-help"></i>
+                        <span>T&#244;i cần những điều kiện g&#236; để được mở thẻ?</span>
+                        <i class="open-close open">+</i>
+                    </a>
+                    <div>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="icon icon-help"></i>
+                        <span>Nếu t&#244;i lỡ tắt m&#224;n h&#236;nh khi đang thao t&#225;c mở thẻ, cần l&#224;m g&#236; để c&#243; thể thao t&#225;c tiếp để ho&#224;n thiện hồ sơ?</span>
+                        <i class="open-close open">+</i>
+                    </a>
+                    <div>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="icon icon-help"></i>
+                        <span>T&#244;i muốn sử dụng m&#227; voucher cần l&#224;m như thế n&#224;o?</span>
+                        <i class="open-close open">+</i>
+                    </a>
+                    <div>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="icon icon-help"></i>
+                        <span>Khi c&#243; voucher, t&#244;i c&#243; cần bắt buộc phải d&#249;ng thẻ vừa đăng k&#237; mới mua h&#224;ng kh&#244;ng?</span>
+                        <i class="open-close open">+</i>
+                    </a>
+                    <div>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="icon icon-help"></i>
+                        <span>Sau khi ho&#224;n tất việc đăng k&#237; mở thẻ, t&#244;i phải l&#224;m thế n&#224;o để biết định mức vay ti&#234;u d&#249;ng?</span>
+                        <i class="open-close open">+</i>
+                    </a>
+                    <div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
