@@ -134,6 +134,7 @@
     <Compile Include="Controllers\HTCController.cs" />
     <Compile Include="Controllers\Landing_project2Controller.cs" />
     <Compile Include="Controllers\OppoN3Controller.cs" />
+    <Compile Include="Controllers\Vivo_v29Controller.cs" />
     <Compile Include="Controllers\Watch_GT4Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -540,6 +541,13 @@
     <Content Include="Content\logo\brand %286%29.png" />
     <Content Include="Content\Oppon3\css\bootstrap.min.css" />
     <Content Include="Content\Oppon3\css\icon.min.css" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\1b 1.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\background-end.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Background.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Background2.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\CHÂN DUNG 2.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\FIND N3 Flip - GOLD BLACK - MASTER KV - H - RGB 2.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\FIND N3 Series - KV PRE ORDER - H - RGB.jpg" />
     <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Flip-feature-five.png" />
     <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Flip-feature-four.png" />
     <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Flip-feature-four_1.png" />
@@ -549,11 +557,41 @@
     <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Flip-feature-one1.png" />
     <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Flip-feature-sevent1.png" />
     <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Flip-feature-six-end.png" />
-    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Flip-feature-three.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Flip-feature-three.jpg" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Flip-feature-three_1.jpg" />
     <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Flip-feature-three_1.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Flip-feature-three_2.jpg" />
     <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Flip-feature-three_2.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Flip-feature-three_3.jpg" />
     <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Flip-feature-three_3.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Flip-feature-three_4.jpg" />
     <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Flip-feature-three_4.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Group 2085660946 1.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Group 2085660962.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Group 2085660965.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\IMG_20230818_021438.jpg" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\IMG_20230818_021438.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\IMG_20230818_021458.jpg" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\IMG_20230818_022333.jpg" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Oppo-Logo.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\pet 3D 1.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\pet 3D 1_1.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\pet 3D 1_2.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\pet 3D 1_3.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\pet 3D 1_4.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\pet 3D 1_5.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Rectangle 240648053.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Rectangle 240648071.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Rectangle 240648071_1.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Rectangle 240648071_2.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Rectangle 240648071_3.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Rectangle 240648071_4.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Rectangle 240648072 %284%29.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Rectangle 240648072.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Rectangle 240648072_1.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Rectangle 240648072_2.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\Section - 10.png" />
+    <Content Include="Content\Oppon3\img-Mobile-n3-Flip\火烈鸟 Flamingo 粉色 Pink 背面合起-RGB 1.png" />
     <Content Include="Content\Oppon3\img-Mobile-n3\Default-feature-five.png" />
     <Content Include="Content\Oppon3\img-Mobile-n3\Default-feature-four.png" />
     <Content Include="Content\Oppon3\img-Mobile-n3\Default-feature-four_400x.png" />
@@ -602,6 +640,7 @@
     <Content Include="Content\Oppon3\img_n3_Flip\Rectangle 240648071_2.png" />
     <Content Include="Content\Oppon3\img_n3_Flip\Rectangle 240648071_3.png" />
     <Content Include="Content\Oppon3\img_n3_Flip\Rectangle 240648071_4.png" />
+    <Content Include="Content\Oppon3\img_n3_Flip\Rectangle 240648072 %284%29.png" />
     <Content Include="Content\Oppon3\img_n3_Flip\Rectangle 240648072.png" />
     <Content Include="Content\Oppon3\img_n3_Flip\Rectangle 240648072_1.png" />
     <Content Include="Content\Oppon3\img_n3_Flip\Rectangle 240648072_2.png" />
@@ -650,6 +689,8 @@
     <Content Include="Content\product\slider-5.png" />
     <Content Include="Content\product\slider.png" />
     <Content Include="Content\product\thaypin.png" />
+    <Content Include="Content\vivo_v29\css\bootstrap.min.css" />
+    <Content Include="Content\vivo_v29\css\icon.min.css" />
     <Content Include="D:\Detail_project4\Content\Detail\js\bootstrap.bundle.min.js">
       <Link>Content\Detail\js\bootstrap.bundle.min.js</Link>
     </Content>
@@ -1029,6 +1070,8 @@
     <Content Include="Views\Detail\Index_Mobile.cshtml" />
     <Content Include="Views\OppoN3\Index.cshtml" />
     <Content Include="Views\OppoN3\Index_Mobile.cshtml" />
+    <Content Include="Views\Vivo_v29\Index.cshtml" />
+    <Content Include="Views\Vivo_v29\Index_Mobile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1036,6 +1079,9 @@
     <Folder Include="Content2\Apple\web\fonts\Segoe Ui\" />
     <Folder Include="Content\Detail\logo\" />
     <Folder Include="Content\Oppon3\js\" />
+    <Folder Include="Content\vivo_v29\img\" />
+    <Folder Include="Content\vivo_v29\img_Mobile\" />
+    <Folder Include="Content\vivo_v29\js-css\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

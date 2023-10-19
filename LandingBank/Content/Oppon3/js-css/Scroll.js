@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     try {
         $(".oppo-n3-Flip").css("display", "none");
         $(".oppo-n3-Default").css("display", "block");

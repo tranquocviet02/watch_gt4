@@ -1,17 +1,22 @@
 ﻿@{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "[ 20.10 - 10.11] Đặt trước OPPO Find N3 Series - Nhận bộ quà tới 15 Triệu";
+
     Layout = "~/Views/Shared/_layout_Desktop.cshtml";
 }
 
-<link rel="stylesheet" href="~/Content/Oppon3/js-css/swiper-bundle.min.css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link href="~/Content/Oppon3/js-css/web_Desktop_n3.css?@DateTime.Now" type="text/css" rel="stylesheet" />
-<link href="~/Content/Oppon3/js-css/web_Desktop_n3_Flip.css?@DateTime.Now" type="text/css" rel="stylesheet" />
-<link href="~/Content/Oppon3/js-css/swipper-3d.css?@DateTime.Now" type="text/css" rel="stylesheet" />
-<link rel="stylesheet" href="~/Content/Oppon3/css/icon.min.css">
-<link rel="stylesheet" href="~/Content/Oppon3/css/bootstrap.min.css?@DateTime.Now">
-<link rel="stylesheet" href="~/Content/Oppon3/js-css/jquery_box_video.css?@DateTime.Now">
+
+
+@section header {
+    <link rel="stylesheet" href="~/Content/Oppon3/js-css/swiper-bundle.min.css?@DateTime.Now" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <script src="~/Content/Oppon3/js-css/jquery-3.6.0.min.js?@DateTime.Now"></script>
+    <link href="~/Content/Oppon3/js-css/web_Desktop_n3.css?@DateTime.Now" type="text/css" rel="stylesheet" />
+    <link href="~/Content/Oppon3/js-css/web_Desktop_n3_Flip.css?@DateTime.Now" type="text/css" rel="stylesheet" />
+    <link href="~/Content/Oppon3/js-css/swipper-3d.css?@DateTime.Now" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/Oppon3/css/icon.min.css">
+    <link rel="stylesheet" href="~/Content/Oppon3/css/bootstrap.min.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/Oppon3/js-css/jquery_box_video.css?@DateTime.Now">
+}
 <main class="main-content">
     <div class="Content-v1 resetfont">
         <section class="Flip-feature-banner d-flex justify-content-center padding-100px-0 ">
@@ -20,7 +25,6 @@
             </div>
 
         </section>
-
         <section class="feature-section d-flex justify-content-center position-relative">
             <div class="video_box_pc max-w-1200px w-100">
                 <video autoplay controls loop muted class=" w-100 pc_video lazyloading"
@@ -48,22 +52,7 @@
             </div>
         </section>
         <div class="oppo-n3-Flip d-flex flex-direction-column gap-50px justify-content-center align-items-center  background">
-            <section class="Flip-feature-one d-flex w-100 justify-content-center text-align-center">
-                <div class="hero-banner">
-                    <img class="hero-banner-logo" src="~/Content/Oppon3/img_n3_Flip/Oppo-Logo.png"
-                         alt="hình ảnh banner">
-                    <picture>
-                        <!-- Hình ảnh mặc định khi không có điều kiện nào được đáp ứng -->
-                        <img class="Flip-feature-one-banner"
-                             src="~/Content/Oppon3/img_n3_Flip/FIND N3 Flip - GOLD BLACK - MASTER KV - H - RGB 2.png"
-                             alt="hình ảnh banner">
-                    </picture>
-                    <div class="resetfont Flip-feature-banner-text">
-                        <h1 class="resetfont text-headline-n1">Find N3 Flip</h1>
-                        <h3 class="resetfont text-headline-n2">Gập để toả sáng</h3>
-                    </div>
-                </div>
-            </section>
+
             <section class="Flip-feature-two">
                 <div class="div-banner" id="">
                     <div class="d-flex gap-48px text-align-center height-48px align-items-center Flip-feature-item">
@@ -72,11 +61,11 @@
                         </div>
                         <div class="d-flex gap-20px h-100 text-align-center align-items-center Flip-feature-item">
                             <div class="div-banner-item d-flex h-100 align-items-center" data-href="#Flip-section1">
-                                <p class="resetfont Flip-text-banner">Design</p>
+                                <p class="resetfont Flip-text-banner">Thiết kế</p>
                             </div>
                             <div class="div-banner-item d-flex h-100 align-items-center Flip-feature-item"
                                  data-href="#Flip-section2">
-                                <p class="resetfont Flip-text-banner">Experience</p>
+                                <p class="resetfont Flip-text-banner">Trải nghiệm</p>
                             </div>
                             <div class="div-banner-item d-flex h-100 align-items-center Flip-feature-item"
                                  data-href="#Flip-section3">
@@ -84,7 +73,7 @@
                             </div>
                             <div class="div-banner-item d-flex h-100 align-items-center Flip-feature-item"
                                  data-href="#Flip-section4">
-                                <p class="resetfont Flip-text-banner">Performance</p>
+                                <p class="resetfont Flip-text-banner">Hiệu năng</p>
                             </div>
                         </div>
                     </div>
@@ -113,7 +102,7 @@
                                     Bản lề dòng chảy
                                 </p>
                                 <div class="tranding-slide-img">
-                                    <img src="~/Content/Oppon3/img_n3_Flip/Rectangle 240648071_4.png"
+                                    <img src="~/Content/Oppon3/img_n3_Flip/Rectangle 240648071.png"
                                          alt="hình ảnh swiper3d 1">
                                 </div>
                             </div>
@@ -125,7 +114,7 @@
                                     sáng
                                 </p>
                                 <div class="tranding-slide-img">
-                                    <img src="~/Content/Oppon3/img_n3_Flip/Rectangle 240648071_2.png"
+                                    <img class="w244-h332" src="~/Content/Oppon3/img_n3_Flip/Rectangle 240648071_1.png"
                                          alt="hình ảnh swiper3d 2">
                                 </div>
                             </div>
@@ -136,7 +125,7 @@
                                     Thiết kế cong 3D
                                 </p>
                                 <div class="tranding-slide-img">
-                                    <img src="~/Content/Oppon3/img_n3_Flip/Rectangle 240648071.png"
+                                    <img class="w305-h411" src="~/Content/Oppon3/img_n3_Flip/Rectangle 240648071_2.png"
                                          alt="hình ảnh swiper3d 3">
                                 </div>
                             </div>
@@ -148,7 +137,7 @@
                                     cương
                                 </p>
                                 <div class="tranding-slide-img">
-                                    <img src="~/Content/Oppon3/img_n3_Flip/Rectangle 240648071_1.png"
+                                    <img class="w244-h332" src="~/Content/Oppon3/img_n3_Flip/Rectangle 240648071_3.png"
                                          alt="hình ảnh swiper3d 4">
                                 </div>
                             </div>
@@ -160,7 +149,7 @@
                                     trụ
                                 </p>
                                 <div class="tranding-slide-img">
-                                    <img src="~/Content/Oppon3/img_n3_Flip/Rectangle 240648071_3.png"
+                                    <img src="~/Content/Oppon3/img_n3_Flip/Rectangle 240648071_4.png"
                                          alt="hình ảnh swiper3d 5">
                                 </div>
                             </div>
@@ -335,11 +324,6 @@
                         Đặt
                         Trước
                     </a>
-                    <a class="resetfont padding-9px-21px btn-add color-n-3-white background-1D1D1F color-s18-w400 s-18">
-                        Trả
-                        Góp
-                        0%
-                    </a>
                 </div>
             </section>
             <section id="Flip-section3"
@@ -403,35 +387,19 @@
                     </div>
                 </div>
             </section>
-            <section class="feature-section gap-25px background-add flex-column-center padding-bottom-40px">
+            <section class="feature-section gap-25px background-add flex-column-center padding-40px-0px">
                 <div class="d-flex gap-8px">
                     <a href="https://hoanghamobile.com/dien-thoai-di-dong/oppo-find-n3-flip?buy=1"
                        class="resetfont padding-9px-21px btn-add color-n-3-black background-2CFF73 color-s18-w400 s-18">
                         Đặt
                         Trước
                     </a>
-                    <a class="resetfont padding-9px-21px btn-add color-n-3-white background-1D1D1F color-s18-w400 s-18">
-                        Trả Góp
-                        0%
-                    </a>
+
                 </div>
             </section>
         </div>
         <div class="oppo-n3-Default">
-            <section class="feature-one">
-                <div class="hero-banner-Flip d-flex">
-                    <img class="hero-banner-logo" src="~/Content/Oppon3/img_n3/Oppo-Logo.png" alt="hình ảnh banner">
-                    <picture>
-                        <!-- Hình ảnh mặc định khi không có điều kiện nào được đáp ứng -->
-                        <img class="feature-one-banner" src="~/Content/Oppon3/img_n3/kv-oppo-gold 2.png"
-                             alt="hình ảnh banner">
-                    </picture>
-                    <div class="resetfont feature-banner-text">
-                        <h1 class="resetfont text-headline-n1">Find N3</h1>
-                        <h3 class="resetfont text-headline-n2">Ultra Thin. Ultra Light. Ultra Powerful.</h3>
-                    </div>
-                </div>
-            </section>
+
 
             <section class="feature-two background-banner">
                 <div class="div-banner" id="">
@@ -441,11 +409,11 @@
                         </div>
                         <div class="d-flex gap-20px h-100 text-align-center align-items-center feature-item">
                             <div class="div-banner-item d-flex h-100 align-items-center" data-href="#section1">
-                                <p class="resetfont text-banner">Design</p>
+                                <p class="resetfont text-banner">Thiết kế</p>
                             </div>
                             <div class="div-banner-item d-flex h-100 align-items-center feature-item"
                                  data-href="#section2">
-                                <p class="resetfont text-banner">Experience</p>
+                                <p class="resetfont text-banner">Trải nghiệm</p>
                             </div>
                             <div class="div-banner-item d-flex h-100 align-items-center feature-item"
                                  data-href="#section3">
@@ -453,7 +421,7 @@
                             </div>
                             <div class="div-banner-item d-flex h-100 align-items-center feature-item"
                                  data-href="#section4">
-                                <p class="resetfont text-banner">Performance</p>
+                                <p class="resetfont text-banner">Hiệu năng</p>
                             </div>
                         </div>
                     </div>
@@ -649,11 +617,6 @@
                         Đặt
                         Trước
                     </a>
-                    <a href="https://hoanghamobile.com/dien-thoai-di-dong/oppo-find-n3?buy=1"
-                       class="resetfont padding-9px-21px btn-add color-n-3-white background-1D1D1F color-s18-w400 s-18">
-                        Trả Góp
-                        0%
-                    </a>
                 </div>
             </section>
             <section class="feature-five background-div d-flex justify-content-center align-items-center padding-bottom-100px"
@@ -745,17 +708,12 @@
                     <img src="~/Content/Oppon3/img_n3/image-feature-six.png" alt="hình ảnh feature-six">
                 </div>
             </section>
-            <section class="feature-section gap-25px background-add flex-column-center padding-40px-0px">
+            <section class="feature-section gap-25px background-add flex-column-center padding-bottom-40px">
                 <div class="d-flex gap-8px">
                     <a href="https://hoanghamobile.com/dien-thoai-di-dong/oppo-find-n3?buy=1"
                        class="resetfont padding-9px-21px btn-add color-n-3-black background-2CFF73 color-s18-w400 s-18">
                         Đặt
                         Trước
-                    </a>
-                    <a href="https://hoanghamobile.com/dien-thoai-di-dong/oppo-find-n3?buy=1"
-                       class="resetfont padding-9px-21px btn-add color-n-3-white background-1D1D1F color-s18-w400 s-18">
-                        Trả Góp
-                        0%
                     </a>
                 </div>
             </section>
@@ -785,10 +743,26 @@
 </main>
 
 
+@*@{
+    var commentModel = new QStore.Models.Review.ReviewListReq()
 
+    {
 
-<script src="~/Content/Oppon3/js-css/Scroll.js?@DateTime.Now"></script>
-<script src="~/Content/Oppon3/js-css/web_Desktop_v1.js?@DateTime.Now"></script>
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?@DateTime.Now"></script>
-<script src="~/Content/Oppon3/js-css/swipper-3d.js?@DateTime.Now"></script>
-<script src="~/Content/Oppon3/js-css/jquery_box_video.js?@DateTime.Now"></script>
+        ModelID = 3794, //ID của sản phẩm. VD 3794 = OPPO Find N3
+
+        SystemTypeID = ((int)QStore.Models.Enum.SystemType.Product),
+
+        Title = "Tên sản phẩm",
+
+    };
+}
+@Html.Partial("_Comment", commentModel)*@
+
+@section scripts {
+    <script src="~/Content/Oppon3/js-css/jquery_box_video.js?@DateTime.Now"></script>
+    <script src="~/Content/Oppon3/js-css/Scroll.js?@DateTime.Now"></script>
+    <script src="~/Content/Oppon3/js-css/web_Desktop_v1.js?@DateTime.Now"></script>
+    @* <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js?@DateTime.Now"></script> *@
+    @* <script src="~/Content/Oppon3/js-css/swiper-bundle.min.js?@DateTime.Now"></script>
+        <script src="~/Content/Oppon3/js-css/swipper-3d.js?@DateTime.Now"></script> *@
+}

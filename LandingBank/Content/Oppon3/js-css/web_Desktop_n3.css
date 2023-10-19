@@ -3,14 +3,6 @@
     src: url('path-to-font/OPPOSans-3.0-230625.woff') format('woff');
 }
 
-.resetfont {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-family: "OPPO Sans 3.0 230625", sans-serif;
-}
-
-
 main {
     font-family: "OPPO Sans 3.0 230625", sans-serif;
     /* Font sau dấu phẩy là một font thay thế trong trường hợp font chính không được tải thành công */
@@ -22,54 +14,172 @@ main {
     background: var(--n-3-white, #FFF);
 }
 
-.content_mobile {
-    width: 100%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
+.background-div {
+    background: #020304;
 }
 
-.feature-section {
-    width: 100%;
-    max-width: 640px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 30px 0;
-    flex-direction: column;
+.background-banner {
+    background: #000;
+}
+
+.background-banner-Flip {
+    background: #FFF;
+}
+
+.background-div-Flip {
+    background: var(--n-3-white, #FFF);
+}
+
+
+h1 {
+    font-family: "OPPO Sans 3.0 230625", sans-serif;
+}
+
+.resetfont {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "OPPO Sans 3.0 230625", sans-serif;
+}
+
+.feature-one {
     display: flex;
-    gap: 5.125rem;
+    width: 100%;
+    justify-content: center;
 }
 
-.color-s36-w400 {
+.hero-banner {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: right;
+    gap: 8px;
     text-align: center;
-    /* Display-Mobile */
-    font-family: OPPO Sans 3.0 230625;
-    /* font-size: 36px; */
-    font-size: 3.6rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    position: relative;
 }
 
-.color-s40-w400 {
+
+.hero-banner-logo {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    /* width: 100%; */
+    top: 5px;
+    /* bottom: 50%; */
+    left: 0;
+    /* transform: translateX(-126%); */
+    z-index: 2;
+}
+
+.feature-one-banner {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.feature-banner-text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    /* top: 0; */
+    bottom: 37%;
+    left: 50%;
+    transform: translateX(-77%);
+    z-index: 2;
+}
+
+.text-headline-n1 {
     color: #000;
-    text-align: center;
+    /* Display */
     font-family: OPPO Sans 3.0 230625;
-    font-size: 4rem;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.46px;
+}
+
+.text-headline-n2 {
+    color: #000;
+    font-family: OPPO Sans 3.0 230625;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.24px;
+    text-transform: capitalize;
+}
+
+.feature-two {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #313135;
+    background: #000;
+}
+
+.div-banner {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-add {
+    display: flex;
+    padding: 7px 21px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+}
+
+.background-2CFF73 {
+    background: #2CFF73;
+}
+
+.background-1D1D1F {
+    background: #1D1D1F;
+}
+
+.text-btn-add {
+    font-family: OPPO Sans 3.0 230625;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+    letter-spacing: 0.039px;
+    text-transform: capitalize;
+}
+
+.div-banner-item:hover, .div-banner-item.active {
+    box-shadow: inset 0 -2px 0px #2CFF73;
+    cursor: pointer;
+}
+
+.feature-title-h1-40px {
+    color: var(--n-3-white, #FFF);
+    font-family: OPPO Sans 3.0 230625;
+    font-size: 40px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 
-.flex-column-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.feature-title-h3-18px {
+    /* Display-Sub */
+    font-family: OPPO Sans 3.0 230625;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .background-gradient-gold {
@@ -86,378 +196,148 @@ main {
     -webkit-text-fill-color: transparent;
 }
 
-.color-center {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.Default-feature-two {
-    padding: 14px 12px 0px 12px;
-    align-items: flex-start;
-    gap: 8px;
-    border-bottom: 1px solid #313135;
-    background: var(--n-3-black, #000);
-    width: auto !important;
-}
-
-.Flip-feature-two {
-    padding: 14px 12px 0px 12px;
-    align-items: flex-start;
-    gap: 8px;
-    border-bottom: 1px solid #DDD6C8;
-    background: #FFF;
-}
-
-
-.btn-add {
-    display: flex;
-    padding: 7px 21px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 18px;
-}
-
-.feature-item:hover, .feature-item.active {
-    box-shadow: inset 0 -2px 0px #2CFF73;
-    cursor: pointer;
-}
-
-.margin-icon {
-    margin: 10px 11.65px 10.22px 12px;
-}
-
-.feature-four-img {
-    display: inline-flex;
-    gap: 9px;
-}
-
-.four-img-item {
-    position: relative;
-}
-
-.four-img-detail {
-    position: absolute;
-    right: 15.5%;
-    bottom: 14.5%;
-}
-
-.four-item-item-img {
-    position: absolute;
-    bottom: 4%;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.four-item-detail {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    text-align: right;
-    align-items: center;
-}
-
-.four-item-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-}
-
-    .four-item-text h3 {
-        color: var(--n-3-white, #FFF);
-        text-align: center;
-        font-family: Roboto;
-        font-size: 3.791px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        letter-spacing: -0.038px;
-    }
-
-    .four-item-text h2 {
-        color: #FFF;
-        text-align: center;
-        font-family: Roboto;
-        font-size: 3.789px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        letter-spacing: -0.038px;
-    }
-
-.color-F88C47 {
-    color: #F88C47;
-}
-
-.four-item-text img {
-    width: 26.26px;
-    height: 2.246px;
-    flex-shrink: 0;
-}
-
-.with170-height296px {
-    width: 67.131px;
-    height: 118.27px;
-    justify-content: center;
-}
-
-.context-four-end {
-    display: flex;
-    width: 100%;
-    /* height: 13.821px; */
-    padding: 0px 6.911px;
-    justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-    .context-four-end h3 {
-        font-size: 0.166vw;
-        color: var(--n-3-black, #000);
-        font-family: OPPO Sans 3.0 230625;
-        font-size: 3.764px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 4.146px; /* 150% */
-        letter-spacing: 0.014px;
-    }
-
-.color-detail-item-four {
-    color: var(--n-3-black, #000);
+.feature-title-p-18px {
+    color: #ABB0BE;
+    /* Body */
     font-family: OPPO Sans 3.0 230625;
-    font-size: 0.266vw;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.009px;
+    line-height: 26px; /* 144.444% */
 }
 
-.minw-85 {
-    min-width: 85%;
+.text-banner {
+    color: #FFF;
+    font-family: OPPO Sans 3.0 230625;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+    text-transform: capitalize;
 }
 
-.minw-75 {
-    min-width: 75%;
+
+.feature-three img {
+    width: 100%;
+    height: 100%;
+    max-width: 528px;
+    max-height: 510px;
+    flex-shrink: 0;
 }
 
-.minw-100 {
-    min-width: 100%;
+.letter-spacing-024- {
+    letter-spacing: -0.24px;
 }
 
-.w-42-5 {
-    width: 42.5%
+.letter-spacing-096- {
+    letter-spacing: 0.96px;
 }
 
-.w-31 {
-    width: 31%;
+.letter-spacing-039 {
+    letter-spacing: 0.039px;
 }
 
-.margin-left-104pt {
-    margin-left: -10.4%;
+.letter-spacing-009 {
+    letter-spacing: 0.09px;
 }
 
-.padding-48px-12px {
-    padding: 48px 12px;
+.letter-spacing-004- {
+    letter-spacing: -0.4px;
 }
 
-.five-detail {
+.letter-spacing-024- {
+    letter-spacing: -0.24px;
+}
+
+.letter-spacing-032- {
+    letter-spacing: -0.32px;
+}
+
+.letter-spacing-072 {
+    letter-spacing: 0.72px;
+}
+
+.max-w-1200px {
+    max-width: 1200px;
+}
+
+.max-w-387px {
+    max-width: 387px;
+}
+
+.max-w-500px {
+    max-width: 500px;
+}
+
+.max-w-282px {
+    max-width: 282px;
+}
+
+.max-w-791px {
+    max-width: 791px;
+}
+
+.max-w-224px {
+    max-width: 224px;
+}
+
+.feature-four-detail img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.feature-four-text {
+    left: 60%;
+    bottom: 35%;
+}
+
+.feature-five-detail img {
+    width: 100%;
+    max-width: 1167px;
+}
+
+.feature-five-text {
+    right: 55%;
+    bottom: 20%;
+}
+
+.feature-six-detail img {
+    width: 100%;
+    max-width: 641px;
+}
+
+.btn-cart {
+    width: 100%;
+    max-width: 540px;
+    /* height: 100%; */
+    text-align: center;
+    margin: 25px 0px 0px 0px;
     display: flex;
-    flex-direction: column;
-    padding: 20px 16px;
     justify-content: space-between;
-    align-items: flex-start;
-    flex: 1 0 0;
-    border-radius: 8px;
-    border: 1px solid #E3E3E3;
-    background: linear-gradient(128deg, rgba(225, 213, 169, 0.16) -12.33%, rgba(119, 119, 119, 0.07) 109.18%);
-    backdrop-filter: blur(19px);
+    gap: 20px;
 }
 
-    .five-detail h3 {
-        color: var(--n-3-black, #000);
-        /* Body 2 */
-        font-family: OPPO Sans 3.0 230625;
-        font-size: 16px;
+    .btn-cart a {
+        width: 50%;
+        padding: 0.5rem 1rem;
+        font-size: 1.15625rem;
+        border-radius: 0.6rem;
+        background: transparent linear-gradient(180deg,#ff990e 0%,#ff6801 100%) 0% 0% no-repeat padding-box;
+        /*                    background: var(--green-green-1, #009981);*/
+        color: var(--white-white-1, #FFF);
+        font-feature-settings: 'clig' off, 'liga' off;
+        /* H7/Semibold (13) */
+        font-family: Inter;
+        font-size: 18px;
         font-style: normal;
-        font-weight: 400;
-        line-height: 24px; /* 150% */
-        letter-spacing: 0.08px;
-    }
-
-    .five-detail p {
-        /* Display-Sub */
-        font-family: OPPO Sans 3.0 230625;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
+        font-weight: 600;
         line-height: normal;
-        letter-spacing: -0.24px;
-        background: linear-gradient(137deg, #000 -44.95%, #817661 109.28%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        box-shadow: 0 4px 6px #00000029;
+        border-radius: 5px;
+        border: none;
     }
 
-.m-w-300px {
-    max-width: 300px;
-}
-
-
-.cp-img-modal {
-    opacity: 0;
-    transition: all .5s;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0
-}
-
-    .cp-img-modal.img-mask {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 1000;
-        background-color: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 1
-    }
-
-        .cp-img-modal.img-mask .close-video-btn {
-            display: block
+        .btn-cart a:hover {
+            background: transparent linear-gradient(0deg,#ff990e 0%,#ff6801 100%) 0% 0% no-repeat padding-box;
         }
-
-    .cp-img-modal img {
-        max-width: 90%;
-        max-height: 90%
-    }
-
-    .cp-img-modal .close-video-btn {
-        display: none;
-        position: fixed;
-        top: 20px;
-        right: 20px
-    }
-
-        .cp-img-modal .close-video-btn i {
-            color: #fff;
-            font-size: 20px
-        }
-
-.cp-video-modal {
-    opacity: 0;
-    transition: all .5s;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0
-}
-
-    .cp-video-modal.video-mask {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 1000;
-        background-color: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 1
-    }
-
-        .cp-video-modal.video-mask .close-video-btn {
-            display: block
-        }
-
-    .cp-video-modal .video {
-        display: block;
-        max-height: 100%;
-        max-width: 100%;
-        cursor: pointer
-    }
-
-        .cp-video-modal .video:focus {
-            border: 0;
-            outline: 0
-        }
-
-    .cp-video-modal .close-video-btn {
-        display: none;
-        position: fixed;
-        top: 20px;
-        right: 20px
-    }
-
-.s2-click-btn {
-    width: -moz-fit-content;
-    width: fit-content;
-    height: 2.8125vw;
-    padding: 0 0.9375vw;
-    position: absolute;
-    left: 50%;
-    bottom: 4.166667vw;
-    transform: translate(-50%, 20vw);
-    /* background: #3E6330; */
-    z-index: 3;
-}
-
-    .s2-click-btn:hover {
-        cursor: pointer;
-    }
-
-    .s2-click-btn a {
-        width: 100%;
-        height: 100%;
-        color: white;
-        font-size: 2.041667vw;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-weight: bold;
-        line-height: 1.25;
-    }
-
-@media screen and (min-aspect-ratio: 16/9) {
-    .s2-click-btn a {
-        width: 100%;
-        height: auto;
-        color: white;
-        font-size: 0.9vw;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-weight: bold;
-        line-height: 1.25;
-    }
-}
-
-
-.s2-click-btn a img {
-    width: 0.677083vw;
-    margin-left: 0.520833vw;
-}
-
-.btn-light-oppo {
-    color: #000;
-    /* background-color: #f5f6f8; */
-    border-color: #f5f6f8
-}
-
-    .btn-light-oppo:hover {
-        color: #f5f6f8;
-        background-color: #3E6330;
-        border-color: #f6f7f9
-    }
