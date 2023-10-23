@@ -17,8 +17,26 @@
     <link rel="stylesheet" href="~/Content/Oppon3/js-css/jquery_box_video.css?@DateTime.Now">
 }
 <main class="content_mobile">
-    <section class="Default-feature-one feature-section">
-        <img class="w-100" src="~/Content/Oppon3/img_n3_Flip/FIND N3 Series - KV PRE ORDER - H - RGB.jpg">
+    @*<section class="Default-feature-one feature-section position-relative">
+            <img class="w-100" src="~/Content/Oppon3/img_n3/OPPO-Find-N3-Series_Mobile.png">
+            <div class="d-flex">
+                <a href="https://hoanghamobile.com/dien-thoai-di-dong/oppo-find-n3?buy=1">Đặt ngay OPPO Find N3</a>
+                <a href="https://hoanghamobile.com/dien-thoai-di-dong/oppo-find-n3-flip?buy=1">Đặt ngay OPPO Find N3 Flip</a>
+            </div>
+        </section>*@
+    <section class="Default-feature-one feature-section position-relative w-100 flex-column-center">
+        <div class=" max-w-1200px w-100 flex-column-center  position-relative">
+            <img class="w-100" src="~/Content/Oppon3/img_n3/OPPO-Find-N3-Series_Mobile.png">
+            <div class="flex-column-center gap-20px  padding-20px-0px w-80 gap-10px h-100">
+                <div class="d-flex div-btn-add-mb gap-10px w-100">
+                    <a class="button-add" href="https://hoanghamobile.com/dien-thoai-di-dong/oppo-find-n3?buy=1">Đặt ngay OPPO Find N3</a>
+                    <a class="button-add" href="https://hoanghamobile.com/dien-thoai-di-dong/oppo-find-n3-flip?buy=1">Đặt ngay OPPO Find N3 Flip</a>
+                </div>
+                <div class="d-flex div-btn-add-mb Flip-feature-item w-100 h-100 min-h-42px" data-href="#Flip-section-minigame">
+                    <a class="button-add w-100 justify-content-center">Tham gia vòng quay tặng voucher tới 10% giá trị máy</a>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="feature-section position-relative">
         <div class="video_box_pc w-100">
@@ -57,10 +75,10 @@
                         Đặt
                         Trước
                     </a>
-                    <a class="resetfont btn-add color-n-3-white background-1D1D1F color-s18-w400 s-14">
+                    @*<a class="resetfont btn-add color-n-3-white background-1D1D1F color-s18-w400 s-14">
                         Trả Góp
                         0%
-                    </a>
+                    </a>*@
                 </div>
             </div>
             <div class="d-flex w-100 justify-content-between h-35px">
@@ -459,14 +477,11 @@
             <div class="d-flex w-100 justify-content-between">
                 <h2 class="resetfont color-center color-s18-w400 s-16 color--n-3-black letter-spacing-0051">Find N3</h2>
                 <div class="d-flex gap-8px">
-                    <button class="resetfont btn-add color-n-3-black background-2CFF73 color-s18-w400 s-14">
+                    <a href="https://hoanghamobile.com/dien-thoai-di-dong/oppo-find-n3?buy=1"
+                       class="resetfont btn-add color-n-3-black background-2CFF73 color-s18-w400 s-14">
                         Đặt
                         Trước
-                    </button>
-                    <button class="resetfont btn-add color-white background-1D1D1F color-s18-w400 s-14">
-                        Trả Góp
-                        0%
-                    </button>
+                    </a>
                 </div>
             </div>
             <div class="d-flex w-100 justify-content-between h-35px">
@@ -774,15 +789,56 @@
         </section>
     </div>
 
-    @* <div class="cp-video-modal video-mask" style="padding-top:40px">
-        <div class="feature-section">
-        <video class="video" src="~/Content/Oppon3/video/OPPO N3 Mobile combine 30s 16x9 ending KV master.mp4"
-        x5-video-player-fullscreen="true" preload="auto" controls="controls"></video>
-        <a href="javascript:;" class="close-video-btn">
-        <i class="fas fa-times"></i>
-        </a>
+    <section class="Default-feature-minigame feature-section position-relative w-100 flex-column-center" id="Flip-section-minigame">
+        <div class=" max-w-1200px w-100 d-flex  position-relative">
+            <div class="minigame-item-mb">
+                <div class=" gap-30px flex-column-center-start w-100">
+                    <div class="flex-column-center-start gap-7px">
+                        <h3 class="resetfont feature-title-h3-24px letter-spacing-072 font-size-24">
+                            Thời gian khuyến mãi
+                        </h3>
+                        <p class="resetfont letter-spacing-009 color-s17-545965">
+                            Áp dụng từ: 20/10/2023 đến hết ngày 10/11/2023
+                        </p>
+                    </div>
+                    <div class="flex-column-center-start gap-7px">
+                        <h3 class="resetfont feature-title-h3-24px letter-spacing-072 font-size-24">Thể lệ tham gia</h3>
+                        <p class="resetfont letter-spacing-009 color-s17-545965">
+                            - Tất cả các khách hàng khi đặt trước OPPO Find N3 | OPPO Find N3 Flip từ 20.10 - 10.11 sẽ có cơ hội tham gia vòng quay
+                        </p>
+                        <p class="resetfont letter-spacing-009 color-s17-545965">
+                            - 01 SĐT áp dụng với 01 voucher
+                        </p>
+                        <p class="resetfont letter-spacing-009 color-s17-545965">
+                            - Hạn sử dụng voucher là 20.11
+                        </p>
+                        <p class="resetfont letter-spacing-009 color-s17-545965">
+                            - 100% khách hàng trúng thưởng
+                        </p>
+                    </div>
+                    <div class="flex-column-center-start gap-7px">
+                        <h3 class="resetfont feature-title-h3-24px letter-spacing-072 font-size-24">
+                            Danh sách giải thưởng
+                        </h3>
+                        <p class="resetfont letter-spacing-009 color-s17-545965">
+                            – Giải đặc biệt: Giảm 10% giá trị sản phẩm (Tối đa 4.000.000đ)
+                        </p>
+                        <p class="resetfont letter-spacing-009 color-s17-545965">
+                            - Voucher 1.000.000đ
+                        </p>
+                        <p class="resetfont letter-spacing-009 color-s17-545965">
+                            - Voucher 500.000đ
+                        </p>
+                        <p class="resetfont letter-spacing-009 color-s17-545965">- Voucher 100.000đ</p>
+                    </div>
+                </div>
+
+                <iframe class="w-100 flex-column-center-end" style=" background-color: #fff !important;" src="https://order.hoanghamobile.com/OppoFindN3">
+                </iframe>
+            </div>
         </div>
-        </div> *@
+    </section>
+
 
     <div class="fancybox-overlay fancybox-overlay-fixed" style="width: auto; height: auto; display: none;"
          id="videoPopup">

@@ -22,6 +22,15 @@ main {
     background: #000;
 }
 
+.background-banner-Flip {
+    background: #FFF;
+}
+
+.background-div-Flip {
+    background: var(--n-3-white, #FFF);
+}
+
+
 h1 {
     font-family: "OPPO Sans 3.0 230625", sans-serif;
 }
@@ -206,6 +215,7 @@ h1 {
     line-height: 22px; /* 157.143% */
     text-transform: capitalize;
 }
+
 
 .feature-three img {
     width: 100%;

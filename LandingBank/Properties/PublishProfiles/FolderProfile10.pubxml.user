@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>D:\oppo_n3</_PublishTargetUrl>
-    <History>True|2023-10-13T07:53:13.2329544Z;</History>
+    <History>True|2023-10-19T06:57:38.5913076Z;True|2023-10-19T13:51:24.1567158+07:00;True|2023-10-13T14:53:13.2329544+07:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -21,10 +21,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/22/2023 12:01:57</publishTime>
     </File>
     <File Include="bin/LandingBank.dll">
-      <publishTime>10/13/2023 14:53:10</publishTime>
+      <publishTime>10/19/2023 13:48:03</publishTime>
     </File>
     <File Include="bin/LandingBank.pdb">
-      <publishTime>10/13/2023 14:53:10</publishTime>
+      <publishTime>10/19/2023 13:48:03</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>08/22/2023 12:01:57</publishTime>
@@ -522,133 +522,370 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/29/2023 18:51:15</publishTime>
     </File>
     <File Include="Content/Oppon3/css/bootstrap.min.css">
-      <publishTime>10/13/2023 14:44:08</publishTime>
+      <publishTime>10/19/2023 11:13:15</publishTime>
     </File>
     <File Include="Content/Oppon3/css/icon.min.css">
       <publishTime>10/09/2023 11:53:56</publishTime>
     </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/1b 1.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/background-end.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Background.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Background2.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/CHÂN DUNG 2.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/FIND N3 Flip - GOLD BLACK - MASTER KV - H - RGB 2.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/FIND N3 Series - KV PRE ORDER - H - RGB.jpg">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-five.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-four.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-four_1.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-four_2.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-four_4.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-one.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-one1.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-sevent1.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-six-end.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-three.jpg">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-three_1.jpg">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-three_1.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-three_2.jpg">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-three_2.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-three_3.jpg">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-three_3.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-three_4.jpg">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-three_4.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Group 2085660946 1.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Group 2085660962.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Group 2085660965.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/IMG_20230818_021438.jpg">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/IMG_20230818_021438.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/IMG_20230818_021458.jpg">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/IMG_20230818_022333.jpg">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Oppo-Logo.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/pet 3D 1.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/pet 3D 1_1.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/pet 3D 1_2.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/pet 3D 1_3.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/pet 3D 1_4.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/pet 3D 1_5.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648053.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648071.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648071_1.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648071_2.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648071_3.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648071_4.png">
+      <publishTime>10/19/2023 11:07:39</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648072 %284%29.png">
+      <publishTime>10/19/2023 11:07:39</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648072.png">
+      <publishTime>10/19/2023 11:07:39</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648072_1.png">
+      <publishTime>10/19/2023 11:07:39</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648072_2.png">
+      <publishTime>10/19/2023 11:07:39</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Section - 10.png">
+      <publishTime>10/19/2023 11:07:39</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/火烈鸟 Flamingo 粉色 Pink 背面合起-RGB 1.png">
+      <publishTime>10/19/2023 11:07:39</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Default-feature-five.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Default-feature-four.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Default-feature-four_400x.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Default-feature-one.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Default-feature-one_400x.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Default-feature-sevent.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Default-feature-sevent1.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Default-feature-six.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Default-feature-three.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/FIND N3 Series - KV PRE ORDER - H - RGB.jpg">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Icon-item-five2.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Oppo-Logo.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
     <File Include="Content/Oppon3/img_n3/Couple-camera 1.png">
-      <publishTime>10/13/2023 14:39:20</publishTime>
+      <publishTime>10/19/2023 11:06:36</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3/Icon %281%29.png">
-      <publishTime>10/13/2023 14:39:20</publishTime>
+      <publishTime>10/19/2023 11:06:36</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3/Icon-item-five2.png">
+      <publishTime>10/19/2023 11:06:36</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3/Icon-item-five2_cham.png">
+      <publishTime>10/19/2023 11:06:36</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3/Icon-item-five2_mouse.png">
+      <publishTime>10/19/2023 11:06:36</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3/Icon.png">
-      <publishTime>10/13/2023 14:39:20</publishTime>
+      <publishTime>10/19/2023 11:06:36</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3/image-feature-five.png">
-      <publishTime>10/13/2023 14:39:20</publishTime>
+      <publishTime>10/19/2023 11:06:36</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3/image-feature-four.png">
-      <publishTime>10/13/2023 14:39:20</publishTime>
+      <publishTime>10/19/2023 11:06:36</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3/image-feature-six.png">
-      <publishTime>10/13/2023 14:39:20</publishTime>
+      <publishTime>10/19/2023 11:06:36</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3/kv-oppo-gold 2.png">
-      <publishTime>10/13/2023 14:39:20</publishTime>
+      <publishTime>10/19/2023 11:06:36</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3/N3-Double-Final2 1.png">
-      <publishTime>10/13/2023 14:39:20</publishTime>
+      <publishTime>10/19/2023 11:06:36</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3/Oppo-Logo.png">
-      <publishTime>10/13/2023 14:39:20</publishTime>
+      <publishTime>10/19/2023 11:06:36</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3/Vector %281%29.png">
-      <publishTime>10/13/2023 14:39:20</publishTime>
+      <publishTime>10/19/2023 11:06:36</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/1b 1.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/background-end.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/Background.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/Background2.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/CHÂN DUNG 2.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/FIND N3 Flip - GOLD BLACK - MASTER KV - H - RGB 2.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/FIND N3 Series - KV PRE ORDER - H - RGB.jpg">
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/Group 2085660946 1.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/Group 2085660962.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/Group 2085660965.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/Oppo-Logo.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/pet 3D 1.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/pet 3D 1_1.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/pet 3D 1_2.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/pet 3D 1_3.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/pet 3D 1_4.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/pet 3D 1_5.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648053.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648071.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648071_1.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648071_2.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648071_3.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648071_4.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648072 %284%29.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648072.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648072_1.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648072_2.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/Section - 10.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
     </File>
     <File Include="Content/Oppon3/img_n3_Flip/火烈鸟 Flamingo 粉色 Pink 背面合起-RGB 1.png">
-      <publishTime>10/13/2023 14:39:33</publishTime>
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/jquery_box_video.css">
+      <publishTime>10/17/2023 14:02:41</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/jquery_box_video.js">
+      <publishTime>10/17/2023 14:02:50</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/Scroll.js">
+      <publishTime>10/17/2023 15:27:35</publishTime>
     </File>
     <File Include="Content/Oppon3/js-css/swiper-bundle.min.css">
-      <publishTime>10/13/2023 14:42:54</publishTime>
+      <publishTime>10/17/2023 14:03:29</publishTime>
     </File>
     <File Include="Content/Oppon3/js-css/swipper-3d.css">
-      <publishTime>10/13/2023 14:42:20</publishTime>
+      <publishTime>10/17/2023 14:03:37</publishTime>
     </File>
     <File Include="Content/Oppon3/js-css/swipper-3d.js">
-      <publishTime>10/13/2023 14:43:12</publishTime>
+      <publishTime>10/17/2023 14:03:46</publishTime>
     </File>
     <File Include="Content/Oppon3/js-css/web_Desktop_n3.css">
-      <publishTime>10/13/2023 14:41:17</publishTime>
+      <publishTime>10/19/2023 11:13:43</publishTime>
     </File>
     <File Include="Content/Oppon3/js-css/web_Desktop_n3_Flip.css">
-      <publishTime>10/13/2023 14:41:35</publishTime>
+      <publishTime>10/19/2023 11:13:34</publishTime>
     </File>
     <File Include="Content/Oppon3/js-css/web_Desktop_v1.js">
-      <publishTime>10/13/2023 14:43:26</publishTime>
+      <publishTime>10/17/2023 14:04:35</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/web_Mobile_n3.css">
+      <publishTime>10/19/2023 11:14:08</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/web_Mobile_n3_Flip.css">
+      <publishTime>10/19/2023 11:13:52</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/web_Mobile_oppo.css">
+      <publishTime>10/19/2023 11:14:18</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/web_Mobile_v1.js">
+      <publishTime>10/17/2023 14:05:01</publishTime>
+    </File>
+    <File Include="Content/Oppon3/video/OPPO N3 Desktop combine 30s 9x16.mp4">
+      <publishTime>10/17/2023 14:09:30</publishTime>
+    </File>
+    <File Include="Content/Oppon3/video/OPPO N3 Mobile combine 30s 16x9 ending KV master.mp4">
+      <publishTime>10/17/2023 14:09:30</publishTime>
     </File>
     <File Include="Content/product/airpods.png">
       <publishTime>08/29/2023 18:51:15</publishTime>
@@ -736,6 +973,12 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="Content/TYKcSG5WRRSSCogasx3IQnokrEpaDJwrzJ1tGiAcSikDfCB6BnUz/UBA.js">
       <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/css/bootstrap.min.css">
+      <publishTime>10/19/2023 13:43:42</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/css/icon.min.css">
+      <publishTime>10/19/2023 13:43:42</publishTime>
     </File>
     <File Include="Content2/Apple/apple.min.css">
       <publishTime>08/29/2023 18:51:15</publishTime>
@@ -1602,7 +1845,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/03/2023 14:58:32</publishTime>
     </File>
     <File Include="ContentWatch_GT4/js-css/jquery_box.css">
-      <publishTime>10/03/2023 13:37:37</publishTime>
+      <publishTime>10/17/2023 14:10:16</publishTime>
     </File>
     <File Include="ContentWatch_GT4/js-css/lightbox.init.js">
       <publishTime>10/02/2023 10:09:34</publishTime>
@@ -2679,16 +2922,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/28/2023 19:35:47</publishTime>
     </File>
     <File Include="Views/Landing_project2/Index_Mobile.cshtml">
-      <publishTime>10/13/2023 14:41:39</publishTime>
+      <publishTime>10/19/2023 10:56:48</publishTime>
     </File>
     <File Include="Views/OppoN3/Index.cshtml">
-      <publishTime>10/13/2023 14:50:46</publishTime>
+      <publishTime>10/19/2023 11:18:55</publishTime>
     </File>
     <File Include="Views/OppoN3/Index_Flip.cshtml">
       <publishTime>10/13/2023 14:49:44</publishTime>
     </File>
     <File Include="Views/OppoN3/Index_Mobile.cshtml">
-      <publishTime>10/11/2023 09:01:10</publishTime>
+      <publishTime>10/19/2023 11:17:02</publishTime>
     </File>
     <File Include="Views/OppoN3/Index_Mobile_Flip.cshtml">
       <publishTime>10/13/2023 14:36:45</publishTime>
@@ -2703,7 +2946,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/29/2023 18:51:15</publishTime>
     </File>
     <File Include="Views/Shared/_layout_Desktop.cshtml">
-      <publishTime>10/13/2023 14:48:42</publishTime>
+      <publishTime>10/19/2023 10:54:38</publishTime>
     </File>
     <File Include="Views/Shared/_layout_DesktopDetail.cshtml">
       <publishTime>10/04/2023 10:24:23</publishTime>
@@ -2712,7 +2955,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/04/2023 10:10:10</publishTime>
     </File>
     <File Include="Views/Shared/_Layout_Mobile.cshtml">
-      <publishTime>10/13/2023 14:48:51</publishTime>
+      <publishTime>10/19/2023 10:56:44</publishTime>
+    </File>
+    <File Include="Views/Vivo_v29/Index.cshtml">
+      <publishTime>10/19/2023 13:48:00</publishTime>
+    </File>
+    <File Include="Views/Vivo_v29/Index_Mobile.cshtml">
+      <publishTime>10/19/2023 13:47:49</publishTime>
     </File>
     <File Include="Views/Watch_GT4/Index.cshtml">
       <publishTime>10/05/2023 15:07:12</publishTime>

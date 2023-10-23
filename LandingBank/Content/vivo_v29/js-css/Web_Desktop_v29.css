@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'VIVOTYPEVN-Heavy';
+    src: url('../font/vivotypeVNHeavy.eot');
+    src: url('../font/vivotypeVNHeavy.eot') format("embedded-opentype"), url('../font/vivotypeVNNMedium.woff2') format("woff2"), url('../font/vivotypeVNMedium.woff') format("woff"), url('../font/vivotypeVNLight.ttf') format("truetype"), url('../font/vivotypeVNHeavy.svg') format("svg");
+    font-weight: 300;
+    /* Các định dạng font khác nếu cần */
+}
+
+@font-face {
+    font-family: 'VIVOTYPEVN-Medium';
+    src: url('../font/vivotypeVNMedium.eot');
+    src: url('../font/vivotypeVNMedium.eot') format("embedded-opentype"), url('../font/vivotypeVNMedium.woff2') format("woff2"), url('../font/vivotypeVNMedium.woff') format("woff"), url('../font/vivotypeVNMedium.ttf') format("truetype"), url('../font/vivotypeVNMedium.svg') format("svg");
+    font-style: normal;
+    font-display: swap;
+    /* Các định dạng font khác nếu cần */
+}
+
+@font-face {
+    font-family: 'VIVOTYPEVN-Light';
+    src: url('../font/vivotypeVNLight.eot');
+    src: url('../font/vivotypeVNLight.eot') format("embedded-opentype"), url('../font/vivotypeVNLight.woff2') format("woff2"), url('../font/vivotypeVNLight.woff') format("woff"), url('../font/vivotypeVNLight.ttf') format("truetype"), url('../font/vivotypeVNLight.svg') format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    /* Các định dạng font khác nếu cần */
+}
+
+@font-face {
+    font-family: 'VIVOTYPEVN-Regular';
+    src: url('../font/vivotypeVNRegular.eot');
+    src: url('../font/vivotypeVNRegular.eot') format("embedded-opentype"), url('../font/vivotypeVNRegular.woff2') format("woff2"), url('../font/vivotypeVNRegular.woff') format("woff"), url('../font/vivotypeVNRegular.ttf') format("truetype"), url('../font/vivotypeVNRegular.svg') format("svg");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    /* Các định dạng font khác nếu cần */
+}
+
+@font-face {
+    font-family: 'VIVOTYPEVN-Bold';
+    src: url('../font/vivotypeVNBold.eot');
+    src: url('../font/vivotypeVNBold.eot') format("embedded-opentype"), url('../font/vivotypeVNBold.woff2') format("woff2"), url('../font/vivotypeVNBold.woff') format("woff"), url('../font/vivotypeVNBold.ttf') format("truetype"), url('../font/vivotypeVNBold.svg') format("svg");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    /* Các định dạng font khác nếu cần */
+}
+
+.main-content {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-v1 {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-title-45px {
+    color: var(--n-3-black, #000);
+    font-family: OPPO Sans 3.0 230625;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.feature-title-24px {
+    color: var(--n-3-black, #000);
+    /* text-align: center; */
+    /* Display-Sub */
+    font-family: 'VIVOTYPEVN-Heavy', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    /* letter-spacing: -0.24px; */
+}
+
+.feature-title-18px {
+    color: var(--n-3-black, #000);
+    /* text-align: center; */
+    /* Display-Sub */
+    font-family: 'VIVOTYPEVN-Heavy', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* letter-spacing: -0.24px; */
+}
+
+.feature-title-16px {
+    color: var(--n-3-black, #000);
+    /* text-align: center; */
+    /* Display-Sub */
+    font-family: 'VIVOTYPEVN-Heavy', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* letter-spacing: -0.24px; */
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+
+.swiper-pagination-bullet {
+    width: 20px;
+    max-width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,20px));
+    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,20px));
+    display: inline-block;
+    border-radius: 50%;
+    /* background: var(--swiper-pagination-bullet-inactive-color,#000); */
+    opacity: var(--swiper-pagination-bullet-inactive-opacity, .2);
+    opacity: 1;
+}
+
+button.swiper-pagination-bullet {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+    cursor: pointer
+}
+
+.swiper-pagination-bullet:only-child {
+    display: none !important
+}
+
+.swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: var(--swiper-pagination-color,var(--swiper-theme-color))
+}

@@ -1,0 +1,473 @@
+﻿@font-face {
+    font-family: "OPPO Sans 3.0 230625";
+    src: url('path-to-font/OPPOSans-3.0-230625.woff') format('woff');
+}
+
+.resetfont {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "OPPO Sans 3.0 230625", sans-serif;
+}
+
+
+main {
+    font-family: "OPPO Sans 3.0 230625", sans-serif;
+    /* Font sau dấu phẩy là một font thay thế trong trường hợp font chính không được tải thành công */
+}
+
+.main-content {
+    /* background: linear-gradient(180deg, #FBFBFB 19.87%, #F8F8F8 100%); */
+    /* background-image: url("img-background/Background.png"); */
+    background: var(--n-3-white, #FFF);
+}
+
+.content_mobile {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.feature-section {
+    width: 100%;
+    max-width: 640px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 0;
+    flex-direction: column;
+    display: flex;
+    gap: 5.125rem;
+}
+
+.color-s36-w400 {
+    text-align: center;
+    /* Display-Mobile */
+    font-family: OPPO Sans 3.0 230625;
+    /* font-size: 36px; */
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.color-s40-w400 {
+    color: #000;
+    text-align: center;
+    font-family: OPPO Sans 3.0 230625;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.background-gradient-gold {
+    background: var(--gradient-gold, linear-gradient(90deg, #F0E1C7 0%, #8E8265 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.background-gradient-white-2 {
+    background: var(--gradient-white-2, linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.40) 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.color-center {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Default-feature-two {
+    padding: 14px 12px 0px 12px;
+    align-items: flex-start;
+    gap: 8px;
+    border-bottom: 1px solid #313135;
+    background: var(--n-3-black, #000);
+    width: auto !important;
+}
+
+.Flip-feature-two {
+    padding: 14px 12px 0px 12px;
+    align-items: flex-start;
+    gap: 8px;
+    border-bottom: 1px solid #DDD6C8;
+    background: #FFF;
+    width: auto;
+}
+
+
+.btn-add {
+    display: flex;
+    padding: 7px 21px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+}
+
+.feature-item:hover, .feature-item.active {
+    box-shadow: inset 0 -2px 0px #2CFF73;
+    cursor: pointer;
+}
+
+.margin-icon {
+    margin: 10px 11.65px 10.22px 12px;
+}
+
+.feature-four-img {
+    display: inline-flex;
+    gap: 9px;
+}
+
+.four-img-item {
+    position: relative;
+}
+
+.four-img-detail {
+    position: absolute;
+    right: 15.5%;
+    bottom: 14.5%;
+}
+
+.four-item-item-img {
+    position: absolute;
+    bottom: 4%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.four-item-detail {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: right;
+    align-items: center;
+}
+
+.four-item-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+    .four-item-text h3 {
+        color: var(--n-3-white, #FFF);
+        text-align: center;
+        font-family: Roboto;
+        font-size: 3.791px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.038px;
+    }
+
+    .four-item-text h2 {
+        color: #FFF;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 3.789px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.038px;
+    }
+
+.color-F88C47 {
+    color: #F88C47;
+}
+
+.four-item-text img {
+    width: 26.26px;
+    height: 2.246px;
+    flex-shrink: 0;
+}
+
+.with170-height296px {
+    width: 67.131px;
+    height: 118.27px;
+    justify-content: center;
+}
+
+.context-four-end {
+    display: flex;
+    width: 100%;
+    /* height: 13.821px; */
+    padding: 0px 6.911px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+    .context-four-end h3 {
+        font-size: 0.166vw;
+        color: var(--n-3-black, #000);
+        font-family: OPPO Sans 3.0 230625;
+        font-size: 3.764px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 4.146px; /* 150% */
+        letter-spacing: 0.014px;
+    }
+
+.color-detail-item-four {
+    color: var(--n-3-black, #000);
+    font-family: OPPO Sans 3.0 230625;
+    font-size: 0.266vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.009px;
+}
+
+.minw-85 {
+    min-width: 85%;
+}
+
+.minw-75 {
+    min-width: 75%;
+}
+
+.minw-100 {
+    min-width: 100%;
+}
+
+.w-42-5 {
+    width: 42.5%
+}
+
+.w-31 {
+    width: 31%;
+}
+
+.margin-left-104pt {
+    margin-left: -10.4%;
+}
+
+.padding-48px-12px {
+    padding: 48px 12px;
+}
+
+.five-detail {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 16px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 0 0;
+    border-radius: 8px;
+    border: 1px solid #E3E3E3;
+    background: linear-gradient(128deg, rgba(225, 213, 169, 0.16) -12.33%, rgba(119, 119, 119, 0.07) 109.18%);
+    backdrop-filter: blur(19px);
+}
+
+    .five-detail h3 {
+        color: var(--n-3-black, #000);
+        /* Body 2 */
+        font-family: OPPO Sans 3.0 230625;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.08px;
+    }
+
+    .five-detail p {
+        /* Display-Sub */
+        font-family: OPPO Sans 3.0 230625;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.24px;
+        background: linear-gradient(137deg, #000 -44.95%, #817661 109.28%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+.m-w-300px {
+    max-width: 300px;
+}
+
+
+.cp-img-modal {
+    opacity: 0;
+    transition: all .5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0
+}
+
+    .cp-img-modal.img-mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1
+    }
+
+        .cp-img-modal.img-mask .close-video-btn {
+            display: block
+        }
+
+    .cp-img-modal img {
+        max-width: 90%;
+        max-height: 90%
+    }
+
+    .cp-img-modal .close-video-btn {
+        display: none;
+        position: fixed;
+        top: 20px;
+        right: 20px
+    }
+
+        .cp-img-modal .close-video-btn i {
+            color: #fff;
+            font-size: 20px
+        }
+
+.cp-video-modal {
+    opacity: 0;
+    transition: all .5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0
+}
+
+    .cp-video-modal.video-mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1
+    }
+
+        .cp-video-modal.video-mask .close-video-btn {
+            display: block
+        }
+
+    .cp-video-modal .video {
+        display: block;
+        max-height: 100%;
+        max-width: 100%;
+        cursor: pointer
+    }
+
+        .cp-video-modal .video:focus {
+            border: 0;
+            outline: 0
+        }
+
+    .cp-video-modal .close-video-btn {
+        display: none;
+        position: fixed;
+        top: 20px;
+        right: 20px
+    }
+
+.s2-click-btn {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 2.8125vw;
+    padding: 0 0.9375vw;
+    position: absolute;
+    left: 50%;
+    bottom: 4.166667vw;
+    transform: translate(-50%, 20vw);
+    /* background: #3E6330; */
+    z-index: 3;
+}
+
+    .s2-click-btn:hover {
+        cursor: pointer;
+    }
+
+    .s2-click-btn a {
+        width: 100%;
+        height: 100%;
+        color: white;
+        font-size: 2.041667vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: bold;
+        line-height: 1.25;
+    }
+
+@media screen and (min-aspect-ratio: 16/9) {
+    .s2-click-btn a {
+        width: 100%;
+        height: auto;
+        color: white;
+        font-size: 0.9vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: bold;
+        line-height: 1.25;
+    }
+}
+
+
+.s2-click-btn a img {
+    width: 0.677083vw;
+    margin-left: 0.520833vw;
+}
+
+.btn-light-oppo {
+    color: #000;
+    /* background-color: #f5f6f8; */
+    border-color: #f5f6f8
+}
+
+    .btn-light-oppo:hover {
+        color: #f5f6f8;
+        background-color: #3E6330;
+        border-color: #f6f7f9
+    }
+
+.Default-feature-six div svg {
+    position: absolute;
+    margin-bottom: 25px;
+    bottom: 0;
+    /* transform: translateX(-100%); */
+    /* transform: translateX(-100%); */
+    right: 25%;
+}

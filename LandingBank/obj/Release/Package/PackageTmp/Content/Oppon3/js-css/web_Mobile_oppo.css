@@ -1,0 +1,356 @@
+﻿@font-face {
+    font-family: "OPPO Sans 3.0 230625";
+    src: url('path-to-font/OPPOSans-3.0-230625.woff') format('woff');
+}
+
+
+
+main {
+    font-family: "OPPO Sans 3.0 230625", sans-serif;
+    /* Font sau dấu phẩy là một font thay thế trong trường hợp font chính không được tải thành công */
+}
+
+.main-content {
+    /* background: linear-gradient(180deg, #FBFBFB 19.87%, #F8F8F8 100%); */
+    /* background-image: url("img-background/Background.png"); */
+    background: var(--n-3-white, #FFF);
+}
+
+.color-white {
+    color: var(--n-3-white, #FFF);
+}
+
+.color-000 {
+    color: #000;
+}
+
+.color-n-3-black {
+    color: var(--n-3-black, #000);
+}
+
+.color-n-3-white {
+    color: var(--n-3-white, #fff);
+}
+
+.color-16px {
+    color: 1.6rem;
+}
+
+.color-s18-w400 {
+    text-align: center;
+    /* Display-Sub-Mobile */
+    font-family: OPPO Sans 3.0 230625;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.s-14 {
+    font-size: 1.4rem;
+}
+
+.s-16 {
+    font-size: 1.6rem;
+}
+
+.s-18 {
+    font-size: 1.8rem;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.flex-column-center-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+}
+
+.flex-column-center-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.background-gradient-gold {
+    background: var(--gradient-gold, linear-gradient(90deg, #F0E1C7 0%, #8E8265 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.background-linear-gradient-92deg {
+    background: linear-gradient(92deg, #000 45.83%, rgba(0, 0, 0, 0.66) 84.45%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.background-linear-gradient-180deg {
+    background: linear-gradient(180deg, #000 0%, #6B613E 64.58%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.background-linear-gradient-103deg {
+    background: linear-gradient(103deg, #000 40.45%, #0E84E5 141.16%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.background--Gradient-Grey-gold {
+    background: var(--Gradient-Grey-gold, linear-gradient(275deg, #AA8E65 -29.34%, #5F5F5F 116.98%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.letter-spacing-024- {
+    letter-spacing: -0.24px;
+}
+
+.letter-spacing-096- {
+    letter-spacing: 0.96px;
+}
+
+.letter-spacing-039 {
+    letter-spacing: 0.039px;
+}
+
+.letter-spacing-009 {
+    letter-spacing: 0.09px;
+}
+
+.letter-spacing-004- {
+    letter-spacing: -0.4px;
+}
+
+
+.letter-spacing-032- {
+    letter-spacing: -0.32px;
+}
+
+.letter-spacing-072 {
+    letter-spacing: 0.72px;
+}
+
+.letter-spacing-036- {
+    letter-spacing: -0.36px;
+}
+
+.letter-spacing-04- {
+    letter-spacing: -0.4px;
+}
+
+.letter-spacing-0117- {
+    letter-spacing: -0.117px;
+}
+
+.letter-spacing-0051 {
+    letter-spacing: 0.051px;
+}
+
+.letter-spacing-008 {
+    letter-spacing: 0.08px;
+}
+
+.letter-spacing-028- {
+    letter-spacing: -0.28px;
+}
+
+.letter-spacing-007 {
+    letter-spacing: 0.07px;
+}
+
+.background-div {
+    background: #020304;
+}
+
+.color-ABB0BE {
+    color: #ABB0BE;
+}
+
+.background-banner {
+    background: #000;
+}
+
+.color-center {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: "OPPO Sans 3.0 230625", sans-serif;
+}
+
+
+.background-020304 {
+    background: #020304;
+}
+
+.background-2CFF73 {
+    background: #2CFF73;
+}
+
+.background-1D1D1F {
+    background: #1D1D1F;
+}
+
+.h-35px {
+    height: 35px;
+}
+
+.line-height-24px {
+    line-height: 24px;
+}
+
+.line-height-22px {
+    line-height: 24px;
+}
+
+img {
+    object-fit: cover;
+}
+
+.color-E7CDA5 {
+    color: #E7CDA5;
+}
+
+.s-24 {
+    font-size: 2.4rem;
+}
+
+.s-28 {
+    font-size: 2.8rem;
+}
+
+.padding-48-12px {
+    padding: 48px 12px;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-41-5 {
+    width: 41.5%;
+}
+
+@media screen and (max-width: 500px) {
+    .w-41-5 {
+        width: 41.6%;
+    }
+}
+
+.background-2CFF73 {
+    background: #2CFF73 !important;
+}
+
+.background-1D1D1F {
+    background: #1D1D1F;
+}
+
+.text-btn-add {
+    font-family: OPPO Sans 3.0 230625;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* 157.143% */
+    letter-spacing: 0.039px;
+    text-transform: capitalize;
+}
+
+.div-banner-item:hover,
+.div-banner-item.active {
+    box-shadow: inset 0 -2px 0px #2CFF73;
+    cursor: pointer;
+}
+
+.btn-add {
+    display: flex;
+    padding: 7px 21px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+}
+
+.btn-add-all {
+    display: flex;
+    padding: 7px 21px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+}
+
+.button-slide {
+    border: 2px solid;
+    background: white;
+    /* background: var(--white-white-2, #F4F4F4); */
+    border-radius: 21px;
+}
+
+.oppo-n3-Flip .background-add {
+    background: var(--n-3-white, #FFF);
+}
+
+.oppo-n3-Default .background-add {
+    background: #020304;
+}
+
+.background-n-3-white {
+    background: var(--n-3-white, #FFF);
+}
+
+.w-30 {
+    /* width: 100%; */
+    /* width: calc(20% - 8px); */
+    /* height: 100%; */
+    min-width: 21%;
+    max-width: 23%;
+}
+
+.w-26-7 {
+    /* width: 25%; */
+    min-width: 21%;
+    max-width: 23%;
+}
+
+.w-four-img-item {
+    width: 101%;
+}
+
+@media screen and (max-width: 456px) {
+    .w-four-img-item {
+        width: 99.8%;
+    }
+}
+
+@media screen and (max-width: 397px) {
+    .w-four-img-item {
+        width: 97.8%;
+    }
+}
+
+.min-21-max-23 {
+    min-width: 21%;
+    max-width: 23%;
+}
+
+.w95-27px {
+    width: calc(95% - 27px);
+}

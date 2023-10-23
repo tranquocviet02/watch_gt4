@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
-*,
+/* *,
 *::before,
 *::after {
     margin: 0;
@@ -8,7 +8,7 @@
     box-sizing: border-box;
     list-style-type: none;
     text-decoration: none;
-}
+} */
 
 :root {
     --primary: #ec994b;
@@ -71,17 +71,17 @@ body {
 
 
 
-#section1 {
+#Flip-section1 {
     padding: 4rem 0;
 }
 
 @media (max-width:1440px) {
-    #section1 {
+    #Flip-section1 {
         padding: 7rem 0;
     }
 }
 
-#section1 .tranding-slider {
+#Flip-section1 .tranding-slider {
     height: 52rem;
     padding: 5rem 0;
     margin-bottom: 2rem;
@@ -89,7 +89,7 @@ body {
 }
 
 @media (max-width:500px) {
-    #section1 .tranding-slider {
+    #Flip-section1 .tranding-slider {
         height: 45rem;
     }
 }
