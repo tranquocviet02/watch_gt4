@@ -481,7 +481,13 @@
         </div>
     </div>
 </main>
-
+@{ var commentModel = new QStore.Models.Review.ReviewListReq()
+                {
+                    ModelID = 3794, //ID của sản phẩm. VD 3794 = OPPO Find N3
+                    SystemTypeID = ((int)QStore.Models.Enum.SystemType.Product),
+                    Title = "Tên sản phẩm",
+                }; }
+@Html.Partial("_Comment", commentModel)
 @section scripts {
     <script src="~/Content/vivo_v29/js/swiper-bundle.min.js"></script>
     <script src="~/Content/vivo_v29/js-css/Web_Desktop_v29.js"></script>
