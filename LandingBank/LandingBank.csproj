@@ -131,11 +131,14 @@
     <Compile Include="Controllers\BKCustomerController.cs" />
     <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\honorn9_testController.cs" />
+    <Compile Include="Controllers\Honor_90Controller.cs" />
     <Compile Include="Controllers\HTCController.cs" />
     <Compile Include="Controllers\Landing_project2Controller.cs" />
     <Compile Include="Controllers\OppoN3Controller.cs" />
     <Compile Include="Controllers\Vivo_v29Controller.cs" />
     <Compile Include="Controllers\Watch_GT4Controller.cs" />
+    <Compile Include="Controllers\XiaomiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -473,8 +476,19 @@
     <Content Include="Content\Detail\img\Rectangle 49.png" />
     <Content Include="Content\Detail\img\Rẻ hết cỡ.png" />
     <Content Include="Content\Detail\img\smartphone.png" />
+    <Content Include="Content\Detail\img\Sort_increase.png" />
+    <Content Include="Content\Detail\img\Sort_reduce.png" />
     <Content Include="Content\Detail\img\voucher.png" />
+    <Content Include="Content\Detail\img_Mobile\Background Apple.png" />
+    <Content Include="Content\Detail\img_Mobile\Background gia soc.png" />
+    <Content Include="Content\Detail\img_Mobile\Background hot.png" />
+    <Content Include="Content\Detail\img_Mobile\Background re het co.png" />
+    <Content Include="Content\Detail\img_Mobile\Cell ⏵ Img - iPhone 14 Pro Max.png" />
+    <Content Include="Content\Detail\img_Mobile\khung none 143 143.png" />
+    <Content Include="Content\Detail\img_Mobile\khung none 173.png" />
     <Content Include="Content\Detail\js-css\click_all.js" />
+    <Content Include="Content\Detail\js-css\gridjs.js" />
+    <Content Include="Content\Detail\js-css\mermaid.css" />
     <Content Include="Content\Detail\js-css\select_option.css" />
     <Content Include="Content\Detail\js-css\select_option.js" />
     <Content Include="Content\Detail\js-css\slouslide.min.css" />
@@ -483,6 +497,8 @@
     <Content Include="Content\Detail\js-css\web_Mobile_v1.css" />
     <Content Include="Content\Detail\js-css\web_Mobile_v1.js" />
     <Content Include="Content\Detail\js-css\xem_them.js" />
+    <Content Include="Content\Detail\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\Detail\js\nouislider.min.js" />
     <Content Include="Content\etc.clientlibs\corewcmcomponentscommonssiteclientlibs\container.ACSHASH68e8a508c100f218cc66bb13a94d1002.js" />
     <Content Include="Content\etc.clientlibs\sonyglobalclientlibs\clientlib-base.ACSHASHf3f0e6cff0ab139c656396a517573673.js" />
     <Content Include="Content\etc.clientlibs\sonyglobalclientlibs\clientlib-dependencies.ACSHASHd41d8cd98f00b204e9800998ecf8427e.css" />
@@ -498,6 +514,7 @@
     <Content Include="Content\fonts\icon\css\hoangha.css" />
     <Content Include="Content\fonts\icon\fonts\hoangha.svg" />
     <Content Include="Content\fonts\SegieUI.css" />
+    <Content Include="Content\honor_90\css\bootstrap.min.css" />
     <Content Include="Content\img\fire.svg" />
     <Content Include="Content\img\logo-atm.png" />
     <Content Include="Content\img\logo-bct.png" />
@@ -724,12 +741,7 @@
     <Content Include="Content\vivo_v29\js-css\Web_vivo_v29.css" />
     <Content Include="Content\vivo_v29\js\jquery-3.6.0.min.js" />
     <Content Include="Content\vivo_v29\js\swiper-bundle.min.js" />
-    <Content Include="D:\Detail_project4\Content\Detail\js\bootstrap.bundle.min.js">
-      <Link>Content\Detail\js\bootstrap.bundle.min.js</Link>
-    </Content>
-    <Content Include="D:\Detail_project4\Content\Detail\js\nouislider.min.js">
-      <Link>Content\Detail\js\nouislider.min.js</Link>
-    </Content>
+    <Content Include="Content\xiaomi\css\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -1130,14 +1142,29 @@
     <Content Include="Views\OppoN3\Index_Mobile.cshtml" />
     <Content Include="Views\Vivo_v29\Index.cshtml" />
     <Content Include="Views\Vivo_v29\Index_Mobile.cshtml" />
+    <Content Include="Views\Honor_90\Index.cshtml" />
+    <Content Include="Views\Honor_90\Index_Mobile.cshtml" />
+    <Content Include="Views\Xiaomi\Index.cshtml" />
+    <Content Include="Views\Xiaomi\Index_Mobile.cshtml" />
+    <Content Include="Views\honorn9_test\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content2\Apple\Uploads2023\" />
     <Folder Include="Content2\Apple\web\fonts\Segoe Ui\" />
-    <Folder Include="Content\Detail\logo\" />
+    <Folder Include="Content\honor_90\font\" />
+    <Folder Include="Content\honor_90\img\" />
+    <Folder Include="Content\honor_90\img_desktop\" />
+    <Folder Include="Content\honor_90\img_mobile\" />
+    <Folder Include="Content\honor_90\js-css\" />
+    <Folder Include="Content\honor_90\js\" />
     <Folder Include="Content\Oppon3\js\" />
     <Folder Include="Content\vivo_v29\img_Mobile\" />
+    <Folder Include="Content\xiaomi\img-desktop\" />
+    <Folder Include="Content\xiaomi\img-mobile\" />
+    <Folder Include="Content\xiaomi\img\" />
+    <Folder Include="Content\xiaomi\js-css\" />
+    <Folder Include="Content\xiaomi\js\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

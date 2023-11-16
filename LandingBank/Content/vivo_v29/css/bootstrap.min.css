@@ -17271,3 +17271,6 @@ a {
     .button-add:hover {
         background: transparent linear-gradient(0deg,#ff990e 0%,#ff6801 100%) 0% 0% no-repeat padding-box;
     }
+.h-31px {
+    height: 31px
+}

@@ -1,7 +1,7 @@
 
     // xử lí sự kiện xem thêm add
 
-    var data = document.getElementsByClassName("feature-item-add");
+    var data = document.getElementsByClassName("btn-add-price");
     const loadMoreButton = document.getElementById("btn-xemthem");
     let currentIndex = 0;
     const itemsPerPage = 6;

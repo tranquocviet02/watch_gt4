@@ -41,7 +41,8 @@
     z-index: 1;
     display: flex;
     transition-property: transform;
-    box-sizing: content-box
+    box-sizing: content-box;
+    gap: 21.5px;
 }
 
 .swiper-android .swiper-slide, .swiper-wrapper {
@@ -672,3 +673,17 @@ button.swiper-pagination-bullet {
         backface-visibility: hidden;
         overflow: hidden
     }
+
+.w244-h332 {
+    min-width: 244px !important;
+    min-height: 332px !important;
+    max-width: 244px !important;
+    max-height: 332px !important;
+}
+
+.w305-h411 {
+    min-width: 305px !important;
+    min-height: 411px !important;
+    max-width: 305px !important;
+    max-height: 411px !important;
+}

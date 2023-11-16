@@ -1,10 +1,852 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_layout_DesktopDetail.cshtml";
+    Layout = "~/Views/Shared/_layout_Desktop.cshtml";
 }
-    <link href="~/Content/Detail/css/web_Desktop_v1.css?v1" type="text/css" rel="stylesheet" />
+@section meta {
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="~/Content/Detail/js-css/web_Desktop_v1.css?@DateTime.Now" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/Detail/js-css/web_Desktop_v1.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/Detail/js-css/slouslide.min.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/Detail/css/icon.min.css">
+    <link rel="stylesheet" href="~/Content/Detail/css/bootstrap.min.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/Detail/js-css/select_option.css?@DateTime.Now">
+}
+<main class="main_Detail">
+    <div class="Content-v1 mb-xxl-3 resetfont">
+        <section class="resetfont detail-left">
+            <div class="w-100 resetfont gap-12px f-direction-column d-flex feature-item-connects">
+                <h5 class="resetfont feature-item-text font-size-15 mb-3">Mức giá</h5>
+                <div id="priceslider" class="resetfont mb-4"></div>
+                <form action="" class="feature-item-input d-flex align-items-start gap-12px w-100 f-direction-column">
+                    <div class="feature-item-input d-flex align-items-start gap-12px w-100">
+                        <input class="resetfont w-50 feature-item-input-text" id="input-min" placeholder="Từ" value=""
+                               type="text">
+                        <input class="resetfont w-50 feature-item-input-text" id="input-max" placeholder="Đến" value=""
+                               type="text">
+                    </div>
+                    <button id="button-add"
+                            class="btn-add d-flex feature-item-add w-100 feature-item-text justify-content-center text-center border-radius-5px border-0 text-white feature-item-input font-size-13 font-weight-700 text-uppercase">
+                        Áp dụng
+                    </button>
+                </form>
+                <button class="btn-add-price feature-item-add  w-100 justify-content-center text-center border-radius-5px border-0 text-black feature-item-btn-price font-size-13">
+                    Dưới 1 triệu
+                </button>
+                <button class="btn-add-price feature-item-add  w-100 justify-content-center text-center border-radius-5px border-0 text-black feature-item-btn-price font-size-13">
+                    Từ 1 đến 2 Triệu
+                </button>
+                <button class="btn-add-price feature-item-add  w-100 justify-content-center text-center border-radius-5px border-0 text-black feature-item-btn-price font-size-13">
+                    Từ 2 triệu đến 3 triệu
+                </button>
+                <button class="btn-add-price feature-item-add  w-100 justify-content-center text-center border-radius-5px border-0 text-black feature-item-btn-price font-size-13">
+                    từ 3 triệu đến 4 triệu
+                </button>
+                <button class="btn-add-price feature-item-add  w-100 justify-content-center text-center border-radius-5px border-0 text-black feature-item-btn-price font-size-13">
+                    từ 4 triệu đến 5 triệu
+                </button>
+                <button class="btn-add-price feature-item-add  w-100 justify-content-center text-center border-radius-5px border-0 text-black feature-item-btn-price font-size-13">
+                    từ 6 triệu đến 7 triệu
+                </button>
+                <button class="btn-xem-them resetfont w-100 justify-content-center text-center border-radius-5px text-black  "
+                        id="btn-xemthem">
+                    <h3 class="resetfont font-size-13 feature-item-btn-price text-black font-weight-600">Xem Thêm</h3>
+                    @* <img src="/landing_detail/ContentProject2/images/Vector.svg" alt=""> *@
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                        <path d="M7 7.10938L0.75 0.890625H13.25L7 7.10938Z" fill="#4B4B4B" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="resetfont custom-accordion w-100 resetfont feature-item-screen gap-20px f-direction-column d-flex align-items-start">
+                <div class="resetfont w-100 gap-12px f-direction-column d-flex align-items-start">
+                    <h5 class="resetfont feature-item-text font-size-15 mb-0 resetfont feature-item-text">
+                        Màn Hình
+                    </h5>
+                    <div class="resetfont collapse resetfont show ">
+                        <div class="resetfont mt-4 d-flex align-items-start gap-12px flex-column resetfont">
+                            <div class="resetfont form-check  mt-2">
+                                <input type="checkbox" class="resetfont  form-check-input" id="screen">
+                                <label class="resetfont form-check-label feature-item-btn-price"
+                                       for="productcolorCheck1">
+                                    Tất
+                                    cả
+                                </label>
+                            </div>
+                            <div class="resetfont form-check  mt-2">
+                                <input type="checkbox" class="resetfont  form-check-input screen-item">
+                                <label class="resetfont form-check-label feature-item-btn-price"
+                                       for="productcolorCheck2">
+                                    Dưới 5.0
+                                    inch
+                                </label>
+                            </div>
+                            <div class="form-check resetfont mt-2 resetfont">
+                                <input type="checkbox" class="resetfont form-check-input screen-item">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck3">Dưới 5.0 inch</label>
+                            </div>
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input screen-item">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck3">trên 6.0 inch</label>
+                            </div>
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input screen-item">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck4">Màn hình gập</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 resetfont gap-12px f-direction-column d-flex align-items-start">
+                    <h5 class="feature-item-text font-size-15 mb-0 resetfont">
+                        Hiệu năng/ bin
+                    </h5>
+                    <div class="collapse resetfont show">
+                        <div class="mt-4 d-flex align-items-start gap-12px flex-column resetfont">
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input" id="bin">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck1">Tất cả</label>
+                            </div>
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input bin-item">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck2">Dưới 5.0 inch</label>
+                            </div>
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input bin-item">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck3">Dưới 5.0 inch</label>
+                            </div>
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input bin-item">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck3">trên 6.0 inch</label>
+                            </div>
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input bin-item">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck4">Màn hình gập</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 resetfont gap-12px f-direction-column d-flex align-items-start">
+                    <h5 class="feature-item-text font-size-15 mb-0 resetfont">
+                        Camera
+                    </h5>
+                    <div class="collapse resetfont show">
+                        <div class="mt-4 d-flex align-items-start gap-12px flex-column resetfont">
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input" id="camera">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck1">Tất cả</label>
+                            </div>
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input camera-item">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck2">Dưới 5.0 inch</label>
+                            </div>
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input camera-item">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck3">Dưới 5.0 inch</label>
+                            </div>
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input camera-item">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck3">trên 6.0 inch</label>
+                            </div>
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input camera-item">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck4">Màn hình gập</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 resetfont gap-12px f-direction-column d-flex align-items-start">
+                    <h5 class="feature-item-text font-size-15 mb-0 resetfont">
+                        Chip xử lý
+                    </h5>
+                    <div class="collapse resetfont show">
+                        <div class="mt-4 d-flex align-items-start gap-12px flex-column resetfont">
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input " id="chip">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck1">Tất cả</label>
+                            </div>
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input chip-item">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck2">Dưới 5.0 inch</label>
+                            </div>
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input chip-item">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck3">Dưới 5.0 inch</label>
+                            </div>
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input chip-item">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck3">trên 6.0 inch</label>
+                            </div>
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input chip-item">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck4">Màn hình gập</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 resetfont gap-12px f-direction-column d-flex align-items-start">
+                    <h5 class="feature-item-text font-size-15 mb-0 resetfont">
+                        Tính năng đặc biệt
+                    </h5>
+                    <div class="collapse resetfont show">
+                        <div class="mt-4 d-flex align-items-start gap-12px flex-column resetfont">
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input" id="feature-specal">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck1">Tất cả</label>
+                            </div>
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input feature-specal-item">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck2">Dưới 5.0 inch</label>
+                            </div>
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input feature-specal-item">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck3">Dưới 5.0 inch</label>
+                            </div>
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input feature-specal-item">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck3">trên 6.0 inch</label>
+                            </div>
+                            <div class="form-check resetfont mt-2">
+                                <input type="checkbox" class="resetfont form-check-input feature-specal-item">
+                                <label class="form-check-label resetfont feature-item-btn-price"
+                                       for="productcolorCheck4">Màn hình gập</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="detail-right resetfont w-100 gap-12px f-direction-column d-flex align-items-start text-align-center">
+            <div class="resetfont w-100">
+                <div class="resetfont gap-12px d-flex border-radius-10px align-items-center feature-right-one feature-item-input">
+                    <button class="btn-arrange feature-item-btn-price font-size-13 font-weight-600">
+                        Liên Quan
+                    </button>
+                    <button class="btn-arrange feature-item-btn-price font-size-13 font-weight-600">
+                        Bán chạy
+                    </button>
+                    <button class="btn-arrange feature-item-btn-price font-size-13 font-weight-600">
+                        Mới nhất
+                    </button>
+                    <div class="resetfont dropdown">
+                        <div class="resetfont feature-item-dropdown" id="dropdownMenuButton">
+                            <h3 class="resetfont feature-item-btn-price sBtn-text-price font-size-13 font-weight-600">
+                                Giá
+                            </h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+                                 fill="none">
+                                <path d="M10 13.5L4 7.5H16L10 13.5Z" fill="#191919" />
+                            </svg>
+                        </div>
+                        <ul class="dropdown-menu" id="feature-dropdow" data-state="visible">
+                            <li class="d-flex text-align-center dropdown-item-li">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                     fill="none">
+                                    <path d="M13.3334 4L6.00008 11.3333L2.66675 8" stroke="#009981" stroke-width="2"
+                                          stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <a class="dropdown-item feature-item-btn-price " href="#">Giá: Thấp đến cao</a>
+                            </li>
+                            <li class="d-flex text-align-center dropdown-item-li">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                     fill="none">
+                                    <path d="M13.3334 4L6.00008 11.3333L2.66675 8" stroke="#009981" stroke-width="2"
+                                          stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <a class="dropdown-item feature-item-btn-price" href="#">Giá: Cao đến thấp</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="no-content ww-100 resetfont padding-top-8px padding-bottom-8px">
+                <img src="~/Content/Detail/img/No content.png" alt="">
+                <div class="no-content-titler one resetfont d-flex align-items-center justify-content-center f-direction-column gap-6px">
+                    <h3 class="resetfont d-flex feature-item-text">
+                        Tiếc quá! Không tìm thấy từ khóa “ <p class="resetfont feature-item-text">FJIFUF</p>”
+                    </h3>
+                    <p class="resetfont feature-item-btn-price">Hãy thử tìm kiếm từ khóa khác nhé</p>
+                </div>
+                <div class="no-content-titler two resetfont d-flex align-items-center justify-content-center f-direction-column gap-6px">
+                    <h3 class="resetfont font-size-15 feature-item-text">Tiếc quá! Không thấy sản phẩm này</h3>
+                    <p class="resetfont font-size-13 feature-item-btn-price">Hãy thử tìm kiếm từ khóa khác nhé</p>
+                </div>
+            </div>
+            <div class="resetfont no-content-banner margin-bottom-8px">
+                <img src="~/Content/Detail/img/Rectangle 49.png" alt="">
+                <h3 class="resetfont font-size-18">SẢN PHẨM GỢI Ý</h3>
+            </div>
+            <div class="resetfont feature-detail align-items-start gap-12px">
+                <div class="resetfont feature-detail-item">
+                    <div class="feature-detail-img w-100 pd-22px position-relative ">
+                        <div class="background-frame"
+                             style=" background-image: url('/Content/Detail/img/Khung Apple.png');">
+                        </div>
+                        <div class="w-100 h-100">
+                            <img class="frame-img" src="~/Content/Detail/img/Cell ⏵ Img - iPhone 14 Pro Max.png" alt="">
+                        </div>
+                    </div>
+                    <div class="resetfont feature-detail-item-one">
+                        <div class="d-flex text-align-center justify-content-center w-100">
+                            <h3 class="resetfont w-100 feature-item-btn-price h-100 font-weight-600">
+                                iPhone 14 Pro Max
+                                128GB iPhone 14
+                                Pro Max 128GB iPhone 14 Pro Max 128GB
+                            </h3>
+                        </div>
+                        <div>
+                            <button class="Reserve resetfont">
+                                <h3 class="resetfont feature-item-price-red font-size-13 text-uppercase">
+                                    Đặt trước
+                                </h3>
+                            </button>
+                        </div>
+                        <div class="resetfont d-flex gap-10px align-items-end ">
+                            <h3 class="resetfont feature-item-price-red w-auto h-auto">24.990.000 ₫</h3>
+                            <p class="resetfont feature-item-input-text text-decoration-line-through">30.990.000 ₫</p>
+                        </div>
+                        <div class="flex-column-center gap-8px w-100">
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">
+                                    Tặng PMH Ưu đãi Youtube Premium Ưu
+                                    đãi
+                                    Youtube Premium
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">Tặng PMH Tặng loa JBL Go 3</p>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">
+                                    Tặng PMH <b class="resetfont font-size-11">700.000đ</b>
+                                </p>
+                            </div>
+                            <div class="justify-content-center align-items-center w-100">
+                                <p class="text-uppercase resetfont text-sale-km">+ 9 Ưu đãi khác</p>
+                            </div>
+                        </div>
 
 
+                        <div class="w-auto resetfont d-flex align-items-start text-align-center justify-content-center box-note ">
+                            <h3 class="resetfont feature-item-input-text text-black2">
+                                Note thêm (Tùy chọn - Max 33 kí
+                                tự)
+                            </h3>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="resetfont feature-detail-item">
+                    <div class="feature-detail-img w-100 pd-22px position-relative ">
+                        <div class="background-frame"
+                             style=" background-image: url('/Content/Detail/img/Khung Apple.png');">
+                        </div>
+                        <div class="w-100 h-100">
+                            <img class="frame-img" src="~/Content/Detail/img/khung none 200.png" alt="">
+                        </div>
+                    </div>
+                    <div class="resetfont feature-detail-item-one">
+                        <div class="d-flex text-align-center justify-content-center w-100">
+                            <h3 class="resetfont w-100 feature-item-btn-price h-100 font-weight-600">
+                                iPhone 14 Pro Max
+                                128GB
+                            </h3>
+                        </div>
+                        <div class="resetfont d-flex gap-10px align-items-end ">
+                            <h3 class="resetfont feature-item-price-red w-auto h-auto">24.990.000 ₫</h3>
+                            <p class="resetfont feature-item-input-text text-decoration-line-through">30.990.000 ₫</p>
+                        </div>
+                        <div class="flex-column-center gap-8px w-100">
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">
+                                    Tặng PMH Ưu đãi Youtube Premium Ưu
+                                    đãi
+                                    Youtube Premium
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">Tặng PMH Tặng loa JBL Go 3</p>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">
+                                    Tặng PMH <b class="resetfont font-size-11">700.000đ</b>
+                                </p>
+                            </div>
+                            <div class="justify-content-center align-items-center w-100">
+                                <p class="text-uppercase resetfont text-sale-km">+ 9 Ưu đãi khác</p>
+                            </div>
+                        </div>
 
+                        <div class="w-auto resetfont d-flex align-items-start text-align-center justify-content-center box-note ">
+                            <h3 class="resetfont feature-item-input-text text-black2">
+                                Note thêm (Tùy chọn - Max 33 kí
+                                tự)
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resetfont feature-detail-item">
+                    <div class="feature-detail-img w-100 pd-22px position-relative img-178">
+                        <div class="background-frame"
+                             style=" background-image: url('/Content/Detail/img/Khung Apple.png');">
+                        </div>
+                        <div class="w-100 h-100 div_img-178">
+                            <img class="" src="~/Content/Detail/img/khung none 178.png" alt="">
+                        </div>
+                    </div>
+                    <div class="resetfont feature-detail-item-one">
+                        <div class="d-flex text-align-center justify-content-center w-100">
+                            <h3 class="resetfont w-100 feature-item-btn-price h-100 font-weight-600">
+                                iPhone 14 Pro Max
+                                128GB
+                            </h3>
+                        </div>
+                        <div class="w-100 resetfont d-flex align-items-start">
+                            <div class="resetfont feature-flash-sale w-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="74" height="13" viewBox="0 0 74 13"
+                                     fill="none">
+                                    <path d="M5.28594 3.45585H2.0596V5.70032H5.02458V7.37101H2.0596V10.9225H0V1.77881H5.28594V3.45585Z"
+                                          fill="white" />
+                                    <path d="M23.2747 10.9225H21.0303L20.3799 8.88848H17.128L16.484 10.9225H14.2523L17.5806 1.77881H20.0228L23.2747 10.9225ZM19.9081 7.3072L18.9261 4.23372C18.8538 4.00408 18.8028 3.73003 18.7731 3.41114H18.7221C18.7008 3.67907 18.6477 3.94456 18.5626 4.20814L17.5679 7.3072H19.9081Z"
+                                          fill="white" />
+                                    <path d="M23.9953 10.5721V8.53171C24.3652 8.84191 24.7668 9.07482 25.2004 9.22973C25.6341 9.38495 26.0719 9.46273 26.514 9.46273C26.7733 9.46273 26.9996 9.43913 27.1931 9.39241C27.3864 9.34586 27.548 9.28092 27.6776 9.19799C27.8073 9.11512 27.904 9.01744 27.9678 8.90478C28.0316 8.79195 28.0634 8.6697 28.0634 8.53787C28.0634 8.3595 28.0124 8.20012 27.9103 8.05964C27.8083 7.91971 27.669 7.78994 27.4927 7.67085C27.3162 7.5519 27.1069 7.43704 26.8647 7.32655C26.6224 7.2158 26.3609 7.1034 26.0803 6.98853C25.3662 6.69085 24.8338 6.32751 24.4831 5.89814C24.1324 5.46879 23.957 4.95029 23.957 4.34241C23.957 3.86635 24.0527 3.45714 24.2439 3.11497C24.4352 2.77265 24.6956 2.49095 25.025 2.26997C25.3544 2.04909 25.736 1.8863 26.1696 1.78224C26.6032 1.67813 27.0623 1.6261 27.5469 1.6261C28.023 1.6261 28.4449 1.65473 28.8127 1.71205C29.1803 1.76946 29.5194 1.85787 29.8297 1.97682V3.88334C29.6766 3.77716 29.5098 3.68337 29.3291 3.60277C29.1484 3.52195 28.9625 3.45503 28.7712 3.40167C28.5799 3.34882 28.3897 3.30933 28.2005 3.28405C28.0114 3.25834 27.8317 3.24553 27.6617 3.24553C27.4279 3.24553 27.2154 3.26784 27.0241 3.31248C26.8328 3.35709 26.6712 3.41992 26.5394 3.50078C26.4076 3.58137 26.3056 3.67815 26.2335 3.79071C26.1611 3.90354 26.1249 4.02991 26.1249 4.17039C26.1249 4.32306 26.1654 4.46029 26.2461 4.58148C26.3268 4.70273 26.4416 4.8175 26.5904 4.92575C26.7392 5.03426 26.9199 5.14044 27.1325 5.24448C27.3449 5.34884 27.5851 5.45605 27.8529 5.56661C28.2186 5.7195 28.5469 5.88225 28.8383 6.05444C29.1292 6.22672 29.3791 6.42105 29.5873 6.63778C29.7955 6.85467 29.955 7.10233 30.0656 7.38066C30.1761 7.65899 30.2314 7.98323 30.2314 8.35308C30.2314 8.86312 30.1346 9.29145 29.9412 9.6377C29.7478 9.98425 29.4854 10.2652 29.1537 10.4795C28.8222 10.6942 28.4364 10.8483 27.9965 10.9419C27.5565 11.0354 27.0919 11.0822 26.6032 11.0822C26.1016 11.0822 25.6244 11.0396 25.1717 10.9548C24.719 10.8698 24.3269 10.7422 23.9953 10.5721Z"
+                                          fill="white" />
+                                    <path d="M39.6493 10.9225H37.5833V7.19882H33.7956V10.9225H31.7361V1.77881H33.7956V5.42617H37.5833V1.77881H39.6493V10.9225Z"
+                                          fill="white" />
+                                    <path d="M44.9226 10.5721V8.53171C45.2925 8.84191 45.6942 9.07482 46.1278 9.22973C46.5613 9.38495 46.9992 9.46273 47.4413 9.46273C47.7006 9.46273 47.9268 9.43913 48.1204 9.39241C48.3138 9.34586 48.4753 9.28092 48.605 9.19799C48.7346 9.11512 48.8314 9.01744 48.8951 8.90478C48.9589 8.79195 48.9907 8.6697 48.9907 8.53787C48.9907 8.3595 48.9397 8.20012 48.8377 8.05964C48.7357 7.91971 48.5964 7.78994 48.4201 7.67085C48.2436 7.5519 48.0343 7.43704 47.7922 7.32655C47.5497 7.2158 47.2883 7.1034 47.0078 6.98853C46.2936 6.69085 45.7612 6.32751 45.4104 5.89814C45.0598 5.46879 44.8844 4.95029 44.8844 4.34241C44.8844 3.86635 44.98 3.45714 45.1713 3.11497C45.3627 2.77265 45.623 2.49095 45.9524 2.26997C46.2817 2.04909 46.6633 1.8863 47.097 1.78224C47.5306 1.67813 47.9897 1.6261 48.4742 1.6261C48.9504 1.6261 49.3723 1.65473 49.7401 1.71205C50.1076 1.76946 50.4467 1.85787 50.7569 1.97682V3.88334C50.604 3.77716 50.437 3.68337 50.2566 3.60277C50.0757 3.52195 49.8898 3.45503 49.6985 3.40167C49.5071 3.34882 49.317 3.30933 49.1279 3.28405C48.9386 3.25834 48.7591 3.24553 48.5891 3.24553C48.3551 3.24553 48.1427 3.26784 47.9513 3.31248C47.7602 3.35709 47.5986 3.41992 47.4668 3.50078C47.335 3.58137 47.2329 3.67815 47.1607 3.79071C47.0884 3.90354 47.0524 4.02991 47.0524 4.17039C47.0524 4.32306 47.0927 4.46029 47.1734 4.58148C47.2543 4.70273 47.3689 4.8175 47.5178 4.92575C47.6667 5.03426 47.8472 5.14044 48.0598 5.24448C48.2723 5.34884 48.5126 5.45605 48.7803 5.56661C49.1459 5.7195 49.4743 5.88225 49.7655 6.05444C50.0566 6.22672 50.3064 6.42105 50.5148 6.63778C50.7229 6.85467 50.8823 7.10233 50.9929 7.38066C51.1034 7.65899 51.1588 7.98323 51.1588 8.35308C51.1588 8.86312 51.062 9.29145 50.8686 9.6377C50.6751 9.98425 50.4128 10.2652 50.0811 10.4795C49.7496 10.6942 49.3638 10.8483 48.9238 10.9419C48.4839 11.0354 48.0193 11.0822 47.5306 11.0822C47.0289 11.0822 46.5518 11.0396 46.0991 10.9548C45.6463 10.8698 45.2542 10.7422 44.9226 10.5721Z"
+                                          fill="white" />
+                                    <path d="M60.7042 10.9225H58.4598L57.8094 8.88848H54.5573L53.9135 10.9225H51.6817L55.01 1.77881H57.4521L60.7042 10.9225ZM57.3375 7.3072L56.3556 4.23372C56.2832 4.00408 56.2322 3.73003 56.2024 3.41114H56.1515C56.1301 3.67907 56.0771 3.94456 55.9921 4.20814L54.9974 7.3072H57.3375Z"
+                                          fill="white" />
+                                    <path d="M67.291 10.9225H61.8456V1.77881H63.9051V9.25194H67.291V10.9225Z"
+                                          fill="white" />
+                                    <path d="M74.0052 10.9225H68.5217V1.77881H73.7945V3.45585H70.5809V5.48994H73.5715V7.16063H70.5809V9.25194H74.0052V10.9225Z"
+                                          fill="white" />
+                                    <path d="M9.2469 7.64142H6.05682C6.80804 5.83171 7.48715 4.1203 8.22793 2.43022C9.24782 0.102175 9.26816 0.107687 12.1297 0.110021H15.0998L11.3299 4.91525H14.8275L7.20935 12.8902L6.94629 12.7784C7.68603 11.13 8.4233 9.48111 9.2469 7.64142Z"
+                                          fill="white" />
+                                </svg>
+                                <h3 class="resetfont feature-item-input-text font-size-11 white-white-1 text-uppercase">
+                                    BẮT
+                                    ĐẦU
+                                    TỪ <b class="resetfont feature-item-input-text font-weight-700 font-size-11 white-white-1">
+                                        00:00,
+                                        12 Th06
+                                    </b>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="resetfont d-flex gap-10px align-items-end ">
+                            <h3 class="resetfont feature-item-price-red w-auto h-auto">24.990.000 ₫</h3>
+                            <p class="resetfont feature-item-input-text text-decoration-line-through">30.990.000 ₫</p>
+                        </div>
+                        <div class="flex-column-center gap-8px w-100">
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">
+                                    Tặng PMH Ưu đãi Youtube Premium Ưu
+                                    đãi
+                                    Youtube Premium
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">Tặng PMH Tặng loa JBL Go 3</p>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">
+                                    Tặng PMH <b class="resetfont font-size-11">700.000đ</b>
+                                </p>
+                            </div>
+                            <div class="justify-content-center align-items-center w-100">
+                                <p class="text-uppercase resetfont text-sale-km">+ 9 Ưu đãi khác</p>
+                            </div>
+                        </div>
+
+                        <div class="w-auto resetfont d-flex align-items-start text-align-center justify-content-center box-note ">
+                            <h3 class="resetfont feature-item-input-text text-black2">
+                                Note thêm (Tùy chọn - Max 33 kí
+                                tự)
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resetfont feature-detail-item">
+                    <div class="feature-detail-img w-100 pd-22px">
+                        <div class="background-frame"
+                             style=" background-image: url('/Content/Detail/img/Khung Sản phẩm hot.png');">
+                        </div>
+                        <div class="w-100 h-100">
+                            <img class="frame-img" src="~/Content/Detail/img/Cell ⏵ Img - iPhone 14 Pro Max.png" alt="">
+                        </div>
+                    </div>
+                    <div class="resetfont feature-detail-item-one">
+                        <div class="d-flex text-align-center justify-content-center w-100">
+                            <h3 class="resetfont w-100 feature-item-btn-price h-100 font-weight-600">
+                                iPhone 14 Pro Max
+                                128GB
+                            </h3>
+                        </div>
+                        <div class="w-100 resetfont d-flex align-items-start">
+                            <div class="resetfont feature-flash-sale w-100">
+
+                                <h3 class="resetfont feature-item-input-text font-size-11 white-white-1 ">
+                                    Đón chờ giá
+                                    <b class="resetfont feature-item-input-text font-weight-700 font-size-11 white-white-1">
+                                        12.000.000đ
+                                    </b>
+                                    từ
+                                    <b class="resetfont feature-item-input-text font-weight-700 font-size-11 white-white-1">
+                                        00:00,12 Th06
+                                    </b>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="resetfont d-flex gap-10px align-items-end ">
+                            <h3 class="resetfont feature-item-price-red w-auto h-auto">24.990.000 ₫</h3>
+                            <p class="resetfont feature-item-input-text text-decoration-line-through">30.990.000 ₫</p>
+                        </div>
+                        <div class="flex-column-center gap-8px w-100">
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">
+                                    Tặng PMH Ưu đãi Youtube Premium Ưu
+                                    đãi
+                                    Youtube Premium
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">Tặng PMH Tặng loa JBL Go 3</p>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">
+                                    Tặng PMH <b class="resetfont font-size-11">700.000đ</b>
+                                </p>
+                            </div>
+                            <div class="justify-content-center align-items-center w-100">
+                                <p class="text-uppercase resetfont text-sale-km">+ 9 Ưu đãi khác</p>
+                            </div>
+                        </div>
+
+                        <div class="w-auto resetfont d-flex align-items-start text-align-center justify-content-center box-note ">
+                            <h3 class="resetfont feature-item-input-text text-black2">
+                                Note thêm (Tùy chọn - Max 33 kí
+                                tự)
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resetfont feature-detail-item">
+                    <div class="feature-detail-img w-100 pd-22px">
+                        <div class="background-frame"
+                             style=" background-image: url('/Content/Detail/img/Rẻ hết cỡ.png');">
+                        </div>
+                        <div class="w-100 h-100">
+                            <img class="frame-img" src="~/Content/Detail/img/Cell ⏵ Img - iPhone 14 Pro Max.png" alt="">
+                        </div>
+                    </div>
+                    <div class="resetfont feature-detail-item-one">
+                        <div class="d-flex text-align-center justify-content-center w-100">
+                            <h3 class="resetfont w-100 feature-item-btn-price h-100 font-weight-600">
+                                iPhone 14 Pro Max
+                                128GB
+                            </h3>
+                        </div>
+                        <div class="w-100 resetfont d-flex align-items-start  text-align-center justify-content-center">
+                            <div class="w-auto resetfont flash-sale">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="95" height="17" viewBox="0 0 95 17"
+                                     fill="none">
+                                    <path d="M7.20957 4.2505H3.11107V7.1017H6.87755V9.22402H3.11107V13.7356H0.494713V2.12012H7.20957V4.2505Z"
+                                          fill="white" />
+                                    <path d="M30.0611 13.7356H27.21L26.3838 11.1517H22.2528L21.4347 13.7356H18.5996L22.8277 2.12012H25.9301L30.0611 13.7356ZM25.7843 9.14297L24.537 5.23864C24.445 4.94693 24.3802 4.5988 24.3426 4.19371H24.2778C24.2507 4.53406 24.1833 4.87132 24.0752 5.20615L22.8116 9.14297H25.7843Z"
+                                          fill="white" />
+                                    <path d="M30.9765 13.2903V10.6984C31.4463 11.0924 31.9565 11.3883 32.5073 11.5851C33.0582 11.7823 33.6144 11.8811 34.1761 11.8811C34.5054 11.8811 34.7929 11.8511 35.0387 11.7918C35.2842 11.7326 35.4895 11.6501 35.6542 11.5448C35.8189 11.4395 35.9418 11.3154 36.0228 11.1723C36.1038 11.029 36.1443 10.8737 36.1443 10.7062C36.1443 10.4796 36.0795 10.2772 35.9498 10.0987C35.8202 9.92095 35.6433 9.75609 35.4193 9.60482C35.1951 9.45371 34.9292 9.3078 34.6215 9.16744C34.3137 9.02675 33.9815 8.88397 33.6251 8.73805C32.7179 8.3599 32.0416 7.89834 31.5961 7.3529C31.1506 6.80749 30.9278 6.14883 30.9278 5.37662C30.9278 4.77187 31.0494 4.25204 31.2923 3.81738C31.5353 3.38251 31.866 3.02466 32.2845 2.74395C32.703 2.46336 33.1878 2.25657 33.7385 2.12437C34.2894 1.99213 34.8725 1.92603 35.4882 1.92603C36.0929 1.92603 36.6289 1.96239 37.0961 2.03521C37.5631 2.10814 37.9939 2.22045 38.388 2.37156V4.79345C38.1935 4.65857 37.9816 4.53942 37.7522 4.43704C37.5225 4.33437 37.2864 4.24936 37.0434 4.18157C36.8004 4.11444 36.5588 4.06428 36.3184 4.03216C36.0782 3.9995 35.8499 3.98323 35.634 3.98323C35.3369 3.98323 35.0671 4.01156 34.824 4.06827C34.581 4.12494 34.3757 4.20476 34.2083 4.30747C34.0408 4.40986 33.9113 4.53279 33.8197 4.67579C33.7277 4.81911 33.6818 4.97964 33.6818 5.1581C33.6818 5.35203 33.7332 5.52637 33.8357 5.68031C33.9383 5.83434 34.0841 5.98014 34.2731 6.11765C34.4621 6.2555 34.6916 6.39037 34.9617 6.52254C35.2315 6.65511 35.5367 6.79131 35.8768 6.93174C36.3414 7.12597 36.7584 7.33272 37.1286 7.55145C37.4982 7.7703 37.8156 8.01716 38.0802 8.29248C38.3446 8.568 38.5472 8.88261 38.6877 9.23618C38.828 9.58975 38.8983 10.0016 38.8983 10.4715C38.8983 11.1194 38.7754 11.6635 38.5297 12.1034C38.284 12.5436 37.9506 12.9004 37.5293 13.1727C37.1082 13.4455 36.6181 13.6412 36.0593 13.7602C35.5003 13.8789 34.9101 13.9383 34.2894 13.9383C33.6521 13.9383 33.046 13.8842 32.4709 13.7764C31.8958 13.6685 31.3976 13.5065 30.9765 13.2903Z"
+                                          fill="white" />
+                                    <path d="M50.8622 13.7356H48.2377V9.00529H43.4261V13.7356H40.8099V2.12012H43.4261V6.75345H48.2377V2.12012H50.8622V13.7356Z"
+                                          fill="white" />
+                                    <path d="M57.561 13.2903V10.6984C58.0308 11.0924 58.5411 11.3883 59.092 11.5851C59.6427 11.7823 60.1989 11.8811 60.7605 11.8811C61.0899 11.8811 61.3773 11.8511 61.6232 11.7918C61.8689 11.7326 62.074 11.6501 62.2388 11.5448C62.4035 11.4395 62.5264 11.3154 62.6073 11.1723C62.6883 11.029 62.7288 10.8737 62.7288 10.7062C62.7288 10.4796 62.664 10.2772 62.5344 10.0987C62.4048 9.92095 62.2279 9.75609 62.0039 9.60482C61.7798 9.45371 61.5138 9.3078 61.2062 9.16744C60.8982 9.02675 60.5662 8.88397 60.2098 8.73805C59.3026 8.3599 58.6263 7.89834 58.1806 7.3529C57.7352 6.80749 57.5124 6.14883 57.5124 5.37662C57.5124 4.77187 57.6339 4.25204 57.8769 3.81738C58.12 3.38251 58.4507 3.02466 58.8692 2.74395C59.2875 2.46336 59.7722 2.25657 60.3232 2.12437C60.874 1.99213 61.4572 1.92603 62.0727 1.92603C62.6775 1.92603 63.2135 1.96239 63.6808 2.03521C64.1476 2.10814 64.5784 2.22045 64.9725 2.37156V4.79345C64.7782 4.65857 64.5661 4.53942 64.3368 4.43704C64.107 4.33437 63.8709 4.24936 63.6279 4.18157C63.3848 4.11444 63.1433 4.06428 62.9031 4.03216C62.6626 3.9995 62.4345 3.98323 62.2187 3.98323C61.9214 3.98323 61.6515 4.01156 61.4084 4.06827C61.1656 4.12494 60.9603 4.20476 60.793 4.30747C60.6255 4.40986 60.4958 4.53279 60.4041 4.67579C60.3122 4.81911 60.2665 4.97964 60.2665 5.1581C60.2665 5.35203 60.3177 5.52637 60.4202 5.68031C60.5229 5.83434 60.6686 5.98014 60.8578 6.11765C61.0468 6.2555 61.2761 6.39037 61.5462 6.52254C61.8162 6.65511 62.1214 6.79131 62.4615 6.93174C62.9259 7.12597 63.3431 7.33272 63.713 7.55145C64.0828 7.7703 64.4001 8.01716 64.6649 8.29248C64.9293 8.568 65.1317 8.88261 65.2722 9.23618C65.4126 9.58975 65.4829 10.0016 65.4829 10.4715C65.4829 11.1194 65.36 11.6635 65.1143 12.1034C64.8685 12.5436 64.5353 12.9004 64.114 13.1727C63.6928 13.4455 63.2027 13.6412 62.6438 13.7602C62.0849 13.8789 61.4948 13.9383 60.874 13.9383C60.2367 13.9383 59.6306 13.8842 59.0555 13.7764C58.4803 13.6685 57.9821 13.5065 57.561 13.2903Z"
+                                          fill="white" />
+                                    <path d="M77.6086 13.7356H74.7575L73.9313 11.1517H69.8002L68.9822 13.7356H66.1472L70.3752 2.12012H73.4775L77.6086 13.7356ZM73.3319 9.14297L72.0845 5.23864C71.9926 4.94693 71.9278 4.5988 71.89 4.19371H71.8252C71.7981 4.53406 71.7308 4.87132 71.6228 5.20615L70.3591 9.14297H73.3319Z"
+                                          fill="white" />
+                                    <path d="M85.9761 13.7356H79.0586V2.12012H81.6748V11.6134H85.9761V13.7356Z"
+                                          fill="white" />
+                                    <path d="M94.5053 13.7356H87.5394V2.12012H94.2377V4.2505H90.1553V6.83446H93.9544V8.95677H90.1553V11.6134H94.5053V13.7356Z"
+                                          fill="white" />
+                                    <path d="M12.2413 9.5675H8.18886C9.14315 7.26859 10.0058 5.09455 10.9469 2.9476C12.2425 -0.0097665 12.2683 -0.00276521 15.9034 0.000200073H19.6764L14.8873 6.10439H19.3304L9.65294 16.2351L9.31878 16.0931C10.2585 13.9992 11.1951 11.9045 12.2413 9.5675Z"
+                                          fill="white" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="resetfont d-flex gap-10px align-items-end ">
+                            <h3 class="resetfont feature-item-price-red w-auto h-auto">24.990.000 ₫</h3>
+                            <p class="resetfont feature-item-input-text text-decoration-line-through">30.990.000 ₫</p>
+                        </div>
+                        <div class="flex-column-center gap-8px w-100">
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">
+                                    Tặng PMH Ưu đãi Youtube Premium Ưu
+                                    đãi
+                                    Youtube Premium
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">Tặng PMH Tặng loa JBL Go 3</p>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">
+                                    Tặng PMH <b class="resetfont font-size-11">700.000đ</b>
+                                </p>
+                            </div>
+                            <div class="justify-content-center align-items-center w-100">
+                                <p class="text-uppercase resetfont text-sale-km">+ 9 Ưu đãi khác</p>
+                            </div>
+                        </div>
+
+                        <div class="w-auto resetfont d-flex align-items-start text-align-center justify-content-center box-note ">
+                            <h3 class="resetfont feature-item-input-text text-black2">
+                                Note thêm (Tùy chọn - Max 33 kí
+                                tự)
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resetfont feature-detail-item">
+                    <div class="feature-detail-img w-100 pd-22px">
+                        <div class="background-frame"
+                             style=" background-image: url('/Content/Detail/img/Khung Sản phẩm giá sốc.png');">
+                        </div>
+                        <div class="w-100 h-100">
+                            <img class="frame-img" src="~/Content/Detail/img/Cell ⏵ Img - iPhone 14 Pro Max.png" alt="">
+                        </div>
+                    </div>
+                    <div class="resetfont feature-detail-item-one">
+                        <div class="d-flex text-align-center justify-content-center w-100">
+                            <h3 class="resetfont w-100 feature-item-btn-price h-100 font-weight-600">
+                                iPhone 14 Pro Max
+                                128GB
+                            </h3>
+                        </div>
+                        <div class="resetfont d-flex gap-10px align-items-end ">
+                            <h3 class="resetfont feature-item-price-red w-auto h-auto">24.990.000 ₫</h3>
+                            <p class="resetfont feature-item-input-text text-decoration-line-through">30.990.000 ₫</p>
+                        </div>
+                        <div class="flex-column-center gap-8px w-100">
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">
+                                    Tặng PMH Ưu đãi Youtube Premium Ưu
+                                    đãi
+                                    Youtube Premium
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">Tặng PMH Tặng loa JBL Go 3</p>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">
+                                    Tặng PMH <b class="resetfont font-size-11">700.000đ</b>
+                                </p>
+                            </div>
+                            <div class="justify-content-center align-items-center w-100">
+                                <p class="text-uppercase resetfont text-sale-km">+ 9 Ưu đãi khác</p>
+                            </div>
+                        </div>
+
+                        <div class="w-auto resetfont d-flex align-items-start text-align-center justify-content-center box-note ">
+                            <h3 class="resetfont feature-item-input-text text-black2">
+                                Note thêm (Tùy chọn - Max 33 kí
+                                tự)
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resetfont feature-detail-item">
+                    <div class="feature-detail-img w-100 pd-22px">
+                        <div class="background-frame "
+                             style=" background-image: url('/Content/Detail/img/Khung Sản phẩm giá sốc.png');display:none">
+                        </div>
+                        <div class="w-100 h-100">
+                            <img src="~/Content/Detail/img/Cell ⏵ Img - iPhone 14 Pro Max.png" alt="">
+                        </div>
+                    </div>
+                    <div class="resetfont feature-detail-item-one">
+                        <div class="d-flex text-align-center justify-content-center w-100">
+                            <h3 class="resetfont w-100 feature-item-btn-price h-100 font-weight-600">
+                                iPhone 14 Pro Max
+                                128GB
+                            </h3>
+                        </div>
+                        <div class="resetfont d-flex gap-10px align-items-end ">
+                            <h3 class="resetfont feature-item-price-red w-auto h-auto">24.990.000 ₫</h3>
+                            <p class="resetfont feature-item-input-text text-decoration-line-through">30.990.000 ₫</p>
+                        </div>
+                        <div class="flex-column-center gap-8px w-100">
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">
+                                    Tặng PMH Ưu đãi Youtube Premium Ưu
+                                    đãi
+                                    Youtube Premium
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">Tặng PMH Tặng loa JBL Go 3</p>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center gap-4px w-100">
+                                <div class="sale-km">
+                                    <p class="text-uppercase resetfont text-sale-km">KM</p>
+                                </div>
+                                <p class="resetfont font-size-11  text-hident-one">
+                                    Tặng PMH <b class="resetfont font-size-11">700.000đ</b>
+                                </p>
+                            </div>
+                            <div class="justify-content-center align-items-center w-100">
+                                <p class="text-uppercase resetfont text-sale-km">+ 9 Ưu đãi khác</p>
+                            </div>
+                        </div>
+
+                        <div class="w-auto resetfont d-flex align-items-start text-align-center justify-content-center box-note ">
+                            <h3 class="resetfont feature-item-input-text text-black2">
+                                Note thêm (Tùy chọn - Max 33 kí
+                                tự)
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="resetfont w-100 dd-flex align-items-start text-align-center justify-content-center"
+                 id="feature-see-more">
+                <button class="resetfont xemthem-detail feature-item-input-text font-weight-700 white-white-1">
+                    Xem thêm
+                </button>
+            </div>
+        </section>
+    </div>
+    <div class="feature-text resetfont mb-xxl-3">
+        <p class="resetfont">
+            Donec sed erat ut magna suscipit mattis. Aliquam erat volutpat. Morbi in orci risus. Donec
+            pretium fringilla blandit. Etiam ut accumsan leo. Aliquam id mi quam. Vivamus dictum ut erat nec congue.
+            Etiam facilisis lacus ut arcu vulputate, non pellentesque sem convallis. Proin tempus sapien nisl, nec
+            varius risus tristique a. Etiam ligula lacus, ultricies at cursus id, fringilla nec nulla. Fusce pretium
+            laoreet diam a mollis. In finibus purus sed tortor fringilla, eu luctus lorem sodales.Ut dignissim ante ac
+            augue vulputate tristique. Mauris venenatis tincidunt nibh, sit amet fringilla augue malesuada a. Mauris a
+            nunc congue, viverra lectus sed, imperdiet quam. Aenean tempor sem sed lorem ultricies lacinia. Sed sit amet
+            tortor nibh. Donec condimentum posuere nunc, et hendrerit sapien dictum ut. Aliquam congue non purus eu
+            suscipit. Integer eu dui tortor. Donec ut dolor vitae ipsum ultrices semper. Morbi imperdiet dictum urna nec
+            blandit. Curabitur interdum diam ut porta vulputate. Fusce ultrices efficitur lectus et ornare. Morbi
+            vulputate condimentum metus eu viverra. Integer iaculis volutpat lobortis. In dapibus massa at molestie
+            ultricies. Nunc vitae gravida ipsum, euismod euismod nulla. Morbi at nibh ut orci fringilla luctus. Nunc
+            diam dolor, posuere a venenatis et, venenatis nec augue. Phasellus tempus mauris non metus placerat, id
+            consectetur quam porta. Proin pulvinar consequat urna, et porttitor leo maximus sed. Ut condimentum massa ut
+            turpis consectetur aliquam. Maecenas vehicula magna quis malesuada feugiat. Fusce pharetra eros id odio
+            vestibulum, quis mollis est tempor. Etiam sed purus orci. Nullam sit amet tortor eget.
+            Donec sed erat ut magna suscipit mattis. Aliquam erat volutpat. Morbi in orci risus. Donec pretium fringilla
+            blandit. Etiam ut accumsan leo. Aliquam id mi quam. Vivamus dictum ut erat nec congue. Etiam facilisis lacus
+            ut arcu vulputate, non pellentesque sem convallis. Proin tempus sapien nisl, nec varius risus tristique a.
+            Etiam ligula lacus, ultricies at cursus id, fringilla nec nulla. Fusce pretium laoreet diam a mollis. In
+            finibus purus sed tortor fringilla, eu luctus lorem sodales.Ut dignissim ante ac augue vulputate tristique.
+            Mauris venenatis tincidunt nibh, sit amet fringilla augue malesuada a. Mauris a nunc congue, viverra lectus
+            sed, imperdiet quam. Aenean tempor sem sed lorem ultricies lacinia. Sed sit amet tortor nibh. Donec
+            condimentum posuere nunc, et hendrerit sapien dictum ut. Aliquam congue non purus eu suscipit. Integer eu
+            dui tortor. Donec ut dolor vitae ipsum ultrices semper. Morbi imperdiet dictum urna nec blandit. Curabitur
+            interdum diam ut porta vulputate. Fusce ultrices efficitur lectus et ornare. Morbi vulputate condimentum
+            metus eu viverra. Integer iaculis volutpat lobortis. In dapibus massa at molestie ultricies. Nunc vitae
+            gravida ipsum, euismod euismod nulla. Morbi at nibh ut orci fringilla luctus. Nunc diam dolor, posuere a
+            venenatis et, venenatis nec augue. Phasellus tempus mauris non metus placerat, id consectetur quam porta.
+            Proin pulvinar consequat urna, et porttitor leo maximus sed. Ut condimentum massa ut turpis consectetur
+            aliquam. Maecenas vehicula magna quis malesuada feugiat. Fusce pharetra eros id odio vestibulum, quis mollis
+            est tempor. Etiam sed purus orci. Nullam sit amet tortor eget.
+        </p>
+    </div>
+</main>
+
+@section scripts {
+    <script src="~/Content/Detail/js-css/select_option.js?@DateTime.Now"></script>
+    <!-- nouisliderribute js -->
+    <script src="~/Content/Detail/js/nouislider.min.js?@DateTime.Now"></script>
+
+    <script src="~/Content/Detail/js-css/click_all.js?@DateTime.Now"></script>
+    <script src="~/Content/Detail/js-css/xem_them.js?@DateTime.Now"></script>
+    <!-- init js -->
+    <script src="~/Content/Detail/js-css/web_Desktop_v1.js?@DateTime.Now"></script>
+}
