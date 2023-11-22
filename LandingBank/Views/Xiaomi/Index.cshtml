@@ -1,8 +1,436 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout_Desktop.cshtml";
 }
+<!DOCTYPE html>
+<html xml:lang="vi-VN" lang="vi-VN" dir="ltr">
 
-<h2>Index</h2>
+@section meta {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>Nhà thông minh | Xiaomi Việt Nam</title>
+    <link rel="apple-touch-icon" sizes="192x192" href="https://i02.appmifile.com/i18n/images/pwa/maskable-192x192.png">
 
+    <link rel="stylesheet" href="~/Content/xiaomi/css/swiper-bundle.min.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/xiaomi/css/bootstrap.min.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/xiaomi/js-css/style.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/xiaomi/js-css/xiaomi.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/xiaomi/js-css/index.css?@DateTime.Now">
+    <script type="text/javascript" async
+            src="https://i02.appmifile.com/webfile/globalweb/stat/js/xmot-i18n.min.js?v=20220127"></script>
+    @* <link rel="stylesheet" type="text/css" href="https://s05.appmifile.com/sgp/spps_files/store/0.32.2/css/vn/index.css">
+        <link href="https://s05.appmifile.com/sgp/spps_files/store/0.32.2/js/vn/../../css/4793.chunk.css" rel="stylesheet">
+        <link href="https://s05.appmifile.com/sgp/spps_files/store/0.32.2/js/vn/../../css/3574.chunk.css" rel="stylesheet"> *@
+}
+<main class="site-main">
+    <section class="site-grid site-grid--small-top site-grid--full" role="grid">
+        <div class="store-banner-site">
+            <div class="swiper swiper-container mySwiper store-banner-site--light">
+                @* <div class="swiper-pagination"></div> *@
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0">
+                        <div class="site-banner site-banner--light site-banner--left site-banner--normal site-banner--has-link">
+                            <picture class="responsive-image site-banner__image">
+                                <img src="~/Content/xiaomi/img/Screenshot xiaomi smart band 8.png?@DateTime.Now"
+                                     alt="Xiaomi Robot Vacuum E10" loading="lazy" />
+                            </picture>
+                            <div class="site-banner__info d-none">
+                                <h2 class="site-banner__title mi-brand mi-brand--xiaomi">Xiaomi TV A 55</h2>
+                                <h4 class="site-banner__subtitle">Muôn Góc Nhìn, Vạn Trải Nghiệm</h4>
+                                <div class="site-banner__actions site-banner__actions--margin">
+                                    <a href="//www.mi.com/vn/product/xiaomi-tv-a-55/"
+                                       class="mi-btn mi-btn--primary mi-btn--normal mi-btn--light site-banner__link">
+                                        <span class="mi-btn__text">TÌM HIỂU THÊM</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1">
+                        <div class="site-banner site-banner--light site-banner--left site-banner--normal site-banner--has-link">
+                            <picture class="responsive-image site-banner__image">
+                                <img src="~/Content/xiaomi/img/Screenshot xiaomi robot hut bui.png?@DateTime.Now"
+                                     alt="Xiaomi Robot Vacuum E10" loading="lazy" />
+                            </picture>
+                            <div class="site-banner__info d-none">
+                                <img class="site-banner__title site-banner__title--svg"
+                                     src="https://i02.appmifile.com//364_operator_vn/06/04/2023/de613a591c480f6c57dc94dc430cf367.svg"
+                                     alt="Xiaomi Robot Vacuum E10" />
+                                <h4 class="site-banner__subtitle">Chuyên gia vệ sinh sàn linh hoạt</h4>
+                                <div class="site-banner__actions site-banner__actions--margin">
+                                    <a href="https://www.mi.com/vn/product/xiaomi-robot-vacuum-e10/"
+                                       class="mi-btn mi-btn--primary mi-btn--normal mi-btn--light site-banner__link">
+                                        <span class="mi-btn__text">TÌM HIỂU THÊM</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2">
+                        <div class="site-banner site-banner--dark site-banner--left site-banner--normal site-banner--has-link">
+                            <picture class="responsive-image site-banner__image">
+                                <img src="~/Content/xiaomi/img/Screenshot xiaomi smart purifier 4 lite.png?@DateTime.Now"
+                                     alt="Xiaomi Robot Vacuum E10" loading="lazy" />
+                            </picture>
+                            <div class="site-banner__info d-none">
+                                <img class="site-banner__title site-banner__title--svg"
+                                     src="https://i02.appmifile.com//352_operator_vn/29/12/2022/8faaa594f93d9c2262c0a96c9ba79509.svg"
+                                     alt="Xiaomi Smart Air Purifier 4 Compact" />
+                                <h4 class="site-banner__subtitle">Mang không khí sạch đến nơi bạn cần</h4>
+                                <div class="site-banner__actions site-banner__actions--margin">
+                                    <a href="https://www.mi.com/vn/product/xiaomi-smart-air-purifier-4-compact/"
+                                       class="mi-btn mi-btn--primary mi-btn--normal mi-btn--dark site-banner__link">
+                                        <span class="mi-btn__text">TÌM HIỂU THÊM</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next "></div>
+                <div class="swiper-button-prev "></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <section class="site-grid site-grid--medium site-grid--half-quarter" role="grid">
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Máy lọc không khí Purifier 4 Lite</h2>
+                <h4 class="site-goods-sku__subtitle">Hít khí sạch, hô hấp khỏe</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/phu-kien/may-loc-khong-khi-xiaomi-mi-air-purifier-3h-chinh-hang-dgw"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="~/Content/xiaomi/img/xiaomi-purifier-4-litepng_1646387171.png?@DateTime.Now"
+                         alt="Xiaomi Robot Vacuum E10" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi Robot Vacuum E10</h2>
+                <h4 class="site-goods-sku__subtitle">Chuyên gia vệ sinh sàn linh hoạt</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/robot-hut-bui/robot-hut-bui-xiaomi-vacuum-e10-chinh-hang"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="~/Content/xiaomi/img/robot-hut-bui-lau-nha-xiaomi-vacuum-e10-130323-050133-600x600.jpg?@DateTime.Now"
+                         alt="Xiaomi Robot Vacuum E10" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi Smart Band 8</h2>
+                <h4 class="site-goods-sku__subtitle">Thể thao kết hợp với phong cách</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dong-ho-thong-minh/vong-deo-thay-thong-minh-xiaomi-band-8-chinh-hang"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="~/Content/xiaomi/img/Xiaomi-Mi-Band-8-Smart-Bracelet-Black-520284-0.jpg?@DateTime.Now"
+                         alt="Xiaomi Robot Vacuum E10" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <section class="site-grid site-grid--medium-special site-grid--half" role="grid">
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi TV A Pro</h2>
+                <h4 class="site-goods-sku__subtitle">Muôn Góc Nhìn, Vạn Trải Nghiệm</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/smart-tv/tv-xiaomi/xiaomi-tv-a-pro"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="~/Content/xiaomi/img/a-pro-.png?@DateTime.Now" alt="Xiaomi Robot Vacuum E10"
+                         loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi TV A2</h2>
+                <h4 class="site-goods-sku__subtitle">Cuộc sống tiện nghi, tầm nhìn vô hạn</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/smart-tv/tv-xiaomi/xiaomi-tv-a-series"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="~/Content/xiaomi/img/tv a2.jpeg.jpg?@DateTime.Now" alt="Xiaomi Robot Vacuum E10"
+                         loading="lazy" />
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <section class="site-grid site-grid--medium site-grid--half-quarter" role="grid">
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Redmi Buds 4 Lite</h2>
+                <h4 class="site-goods-sku__subtitle">Đưa âm nhạc vào cuộc sống</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/tai-nghe/tai-nghe-khong-day-redmi-buds-4-lite"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="~/Content/xiaomi/img/Redmi Buds 4 Lite.png?@DateTime.Now" alt="Redmi Buds 4 Lite">
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Redmi Buds 4</h2>
+                <h4 class="site-goods-sku__subtitle">Đưa âm nhạc vào cuộc sống</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/tai-nghe/tai-nghe-khong-day-xiaomi-redmi-buds-4-chinh-hang"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="~/Content/xiaomi/img/Redmi Buds 4.png?@DateTime.Now" alt="Redmi Buds 4">
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Redmi Buds 4 Pro</h2>
+                <h4 class="site-goods-sku__subtitle">Đưa âm nhạc vào cuộc sống</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/tai-nghe/tai-nghe-khong-day-xiaomi-redmi-buds-4-pro-chinh-hang"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="~/Content/xiaomi/img/Redmi Buds 4 Pro.png?@DateTime.Now" alt="Redmi Buds 4 Pro">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <section class="site-grid site-grid--medium site-grid--half-quarter" role="grid">
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi buds 3</h2>
+                <h4 class="site-goods-sku__subtitle">Đưa âm nhạc vào cuộc sống</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="//www.mi.com/vn/product/xiaomi-tv-a-43-fhd/"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="~/Content/xiaomi/img/XiaomiBuds3.png?@DateTime.Now" alt="Xiaomi Robot Vacuum E10"
+                         loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi Smart Air Purifier 4 Compact</h2>
+                <h4 class="site-goods-sku__subtitle">Mang không khí sạch đến nơi bạn cần</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/may-loc-khong-khi/may-loc-khong-khi-xiaomi-air-purifier-4-compact-chinh-hang"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="~/Content/xiaomi/img/Xiaomi Smart Air Purifier 4 Compact.png?@DateTime.Now"
+                         alt="Xiaomi Robot Vacuum E10" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi Smart Air Purifier 4</h2>
+                <h4 class="site-goods-sku__subtitle">Hít khí sạch, hô hấp khỏe</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/may-loc-khong-khi/may-loc-khong-khi-xiaomi-air-purifier-4-chinh-hang"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="~/Content/xiaomi/img/Purifier 4.png?@DateTime.Now" alt="Xiaomi Robot Vacuum E10"
+                         loading="lazy" />
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <section class="site-grid site-grid--medium site-grid--half-quarter" role="grid">
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi Robot Vacuum S10</h2>
+                <h4 class="site-goods-sku__subtitle">
+                    Lau sàn bằng áp suất với hai giẻ lau để loại bỏ vết bẩn tốt hơn
+                </h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/robot-hut-bui/robot-hut-bui-xiaomi-vacuum-s10-chinh-hang"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="~/Content/xiaomi/img/Vacuum S10.png?@DateTime.Now" alt="Xiaomi Robot Vacuum S10"
+                         loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi Robot Vacuum S10 Plus</h2>
+                <h4 class="site-goods-sku__subtitle">Dọn sạch tối ưu, tự động hóa tối đa</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/robot-hut-bui/robot-hut-bui-xiaomi-vacuum-s10-plus-chinh-hang"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="~/Content/xiaomi/img/Vacuum S10 plus.png?@DateTime.Now" alt="Xiaomi Robot Vacuum S10 Plus"
+                         loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi Robot Vacuum X10</h2>
+                <h4 class="site-goods-sku__subtitle">
+                    Lau sàn bằng áp suất với hai giẻ lau để loại bỏ vết bẩn tốt hơn
+                </h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/robot-hut-bui/robot-hut-bui-xiaomi-vacuum-x10-chinh-hang"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="~/Content/xiaomi/img/Vacuum X10.png?@DateTime.Now" alt="Xiaomi Robot Vacuum X10"
+                         loading="lazy" />
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <section class="site-grid site-grid--medium-special site-grid--half" role="grid">
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Mi Robot Vacuum-Mop 2 Lite</h2>
+                <h4 class="site-goods-sku__subtitle">Dọn sạch tối ưu, tự động hóa tối đa</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/robot-hut-bui/xiaomi-vaccum-mop-2-lite-chinh-hang"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="~/Content/xiaomi/img/Vacuum Mop 2 Lite.png?@DateTime.Now" alt="Mi Robot Vacuum-Mop 2 Lite"
+                         loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-text-c site-text-c--quarter">
+            <div class="site-text-c__title">All Product</div>
+            <a href="https://hoanghamobile.com/smart-home?filters=%7b%22brand%22%3a%22251%22%7d&search=true" class="mi-btn mi-btn--link mi-btn--normal mi-btn--light site-text-c__link" tabindex="0" aria-label="Tìm hiểu thêm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="eva eva-arrow-circle-right-outline icon nav-icon"><g data-name="Layer 2"><g data-name="arrow-circle-right"><rect width="24" height="24" transform="rotate(-90 12 12)" opacity="0"></rect><path d="M17 12v-.09a.88.88 0 0 0-.06-.28.72.72 0 0 0-.11-.19 1 1 0 0 0-.09-.13l-2.86-3a1 1 0 0 0-1.45 1.38L13.66 11H8a1 1 0 0 0 0 2h5.59l-1.3 1.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3-3a1 1 0 0 0 .21-.32A1 1 0 0 0 17 12z"></path><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path></g></g></svg>
+            </a>
+        </div>
+    </section>
+
+    @* <section class="site-grid site-grid--medium site-grid--half-quarter" role="grid">
+            <div class="site-goods-sku site-goods-sku--half">
+                <div class="site-goods-sku__info">
+                    <h2 class="site-goods-sku__title">Mi Robot Vacuum-Mop 2 Lite</h2>
+                    <h4 class="site-goods-sku__subtitle">Dọn sạch tối ưu, tự động hóa tối đa</h4>
+                    <ul class="site-goods-sku__tag-list"></ul>
+                </div>
+                <div class="site-goods-sku__actions"><a
+                        href="https://hoanghamobile.com/robot-hut-bui/xiaomi-vaccum-mop-2-lite-chinh-hang"
+                        class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link"><span
+                            class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+                </div>
+                <div class="site-goods-sku__image">
+                    <picture class="responsive-image site-goods-sku__picture">
+                        <img src="~/Content/xiaomi/img/Vacuum Mop 2 Lite.png?@DateTime.Now" alt="Mi Robot Vacuum-Mop 2 Lite"
+                            loading="lazy" />
+                    </picture>
+                </div>
+            </div>
+        </section> *@
+
+
+</main>
+@section scripts {
+    <script>
+        window.open('https://hoanghamobile.com/dien-thoai-di-dong/vivo-v29e-chinh-hang', 'rel=noreferrer')
+    </script>
+    <script src="~/Content/xiaomi/js-css/swiper-bundle.min.js?@DateTime.Now"></script>
+    <script src="~/Content/xiaomi/js-css/xiaomi.js?@DateTime.Now"></script>
+
+}

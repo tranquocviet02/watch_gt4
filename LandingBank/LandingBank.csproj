@@ -129,6 +129,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BKCustomerController.cs" />
+    <Compile Include="Controllers\BlackFridayController.cs" />
     <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\honorn9_testController.cs" />
@@ -455,6 +456,8 @@
     <Content Include="Content\Bank\VPBank\vpbank.png" />
     <Content Include="Content\Bank\web.min.css" />
     <Content Include="Content\Bank\web.min.js" />
+    <Content Include="Content\BlackFriday\img\BlackFriday banner.png" />
+    <Content Include="Content\BlackFriday\img\thumb BlackFriday.jpg" />
     <Content Include="Content\css\1000px.css" />
     <Content Include="Content\css\styles.css" />
     <Content Include="Content\Detail\css\bootstrap.min.css" />
@@ -741,7 +744,44 @@
     <Content Include="Content\vivo_v29\js-css\Web_vivo_v29.css" />
     <Content Include="Content\vivo_v29\js\jquery-3.6.0.min.js" />
     <Content Include="Content\vivo_v29\js\swiper-bundle.min.js" />
+    <Content Include="Content\BlackFriday\css\bootstrap.min.css" />
+    <Content Include="Content\BlackFriday\css\swiper-bundle.min.css" />
+    <Content Include="Content\BlackFriday\js-css\index.css" />
+    <Content Include="Content\BlackFriday\js-css\index_mb.css" />
+    <Content Include="Content\BlackFriday\js-css\style.css" />
+    <Content Include="Content\BlackFriday\js-css\swiper-bundle.min.js" />
+    <Content Include="Content\BlackFriday\js-css\web-desktop.css" />
+    <Content Include="Content\BlackFriday\js-css\xiaomi.css" />
+    <Content Include="Content\BlackFriday\js-css\xiaomi.js" />
+    <Content Include="Content\BlackFriday\js-css\xiaomi_mb.css" />
     <Content Include="Content\xiaomi\css\bootstrap.min.css" />
+    <Content Include="Content\xiaomi\css\swiper-bundle.min.css" />
+    <Content Include="Content\xiaomi\img\a-pro-.png" />
+    <Content Include="Content\xiaomi\img\Purifier 4.png" />
+    <Content Include="Content\xiaomi\img\Redmi Buds 4 Lite.png" />
+    <Content Include="Content\xiaomi\img\Redmi Buds 4 Pro.png" />
+    <Content Include="Content\xiaomi\img\Redmi Buds 4.png" />
+    <Content Include="Content\xiaomi\img\robot-hut-bui-lau-nha-xiaomi-vacuum-e10-130323-050133-600x600.jpg" />
+    <Content Include="Content\xiaomi\img\Screenshot xiaomi robot hut bui.png" />
+    <Content Include="Content\xiaomi\img\Screenshot xiaomi smart band 8.png" />
+    <Content Include="Content\xiaomi\img\Screenshot xiaomi smart purifier 4 lite.png" />
+    <Content Include="Content\xiaomi\img\tv a2.jpeg.jpg" />
+    <Content Include="Content\xiaomi\img\Vacuum Mop 2 Lite.png" />
+    <Content Include="Content\xiaomi\img\Vacuum S10 plus.png" />
+    <Content Include="Content\xiaomi\img\Vacuum S10.png" />
+    <Content Include="Content\xiaomi\img\Vacuum X10.png" />
+    <Content Include="Content\xiaomi\img\Xiaomi Smart Air Purifier 4 Compact.png" />
+    <Content Include="Content\xiaomi\img\Xiaomi-Mi-Band-8-Smart-Bracelet-Black-520284-0.jpg" />
+    <Content Include="Content\xiaomi\img\xiaomi-purifier-4-litepng_1646387171.png" />
+    <Content Include="Content\xiaomi\img\XiaomiBuds3.png" />
+    <Content Include="Content\xiaomi\js-css\index.css" />
+    <Content Include="Content\xiaomi\js-css\index_mb.css" />
+    <Content Include="Content\xiaomi\js-css\style.css" />
+    <Content Include="Content\xiaomi\js-css\swiper-bundle.min.js" />
+    <Content Include="Content\xiaomi\js-css\web-desktop.css" />
+    <Content Include="Content\xiaomi\js-css\xiaomi.css" />
+    <Content Include="Content\xiaomi\js-css\xiaomi.js" />
+    <Content Include="Content\xiaomi\js-css\xiaomi_mb.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -1147,11 +1187,16 @@
     <Content Include="Views\Xiaomi\Index.cshtml" />
     <Content Include="Views\Xiaomi\Index_Mobile.cshtml" />
     <Content Include="Views\honorn9_test\Index.cshtml" />
+    <Content Include="Views\BlackFriday\Index.cshtml" />
+    <Content Include="Views\BlackFriday\Index_Mobile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content2\Apple\Uploads2023\" />
     <Folder Include="Content2\Apple\web\fonts\Segoe Ui\" />
+    <Folder Include="Content\BlackFriday\img-desktop\" />
+    <Folder Include="Content\BlackFriday\img-mb\" />
+    <Folder Include="Content\BlackFriday\js\" />
     <Folder Include="Content\honor_90\font\" />
     <Folder Include="Content\honor_90\img\" />
     <Folder Include="Content\honor_90\img_desktop\" />
@@ -1161,9 +1206,7 @@
     <Folder Include="Content\Oppon3\js\" />
     <Folder Include="Content\vivo_v29\img_Mobile\" />
     <Folder Include="Content\xiaomi\img-desktop\" />
-    <Folder Include="Content\xiaomi\img-mobile\" />
-    <Folder Include="Content\xiaomi\img\" />
-    <Folder Include="Content\xiaomi\js-css\" />
+    <Folder Include="Content\xiaomi\img-mb\" />
     <Folder Include="Content\xiaomi\js\" />
   </ItemGroup>
   <ItemGroup>

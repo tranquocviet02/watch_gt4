@@ -1,8 +1,676 @@
 ﻿
 @{
-    ViewBag.Title = "Index_Mobile";
-    Layout = "~/Views/Shared/_Layout_Mobile.cshtml";
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_Desktop.cshtml";
 }
 
-<h2>Index_Mobile</h2>
+
+@section meta {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>Nhà thông minh | Xiaomi Việt Nam</title>
+    <link rel="apple-touch-icon" sizes="192x192" href="https://i02.appmifile.com/i18n/images/pwa/maskable-192x192.png">
+
+    <link rel="stylesheet" href="~/Content/xiaomi/css/swiper-bundle.min.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/xiaomi/css/bootstrap.min.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/xiaomi/js-css/style.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/xiaomi/js-css/xiaomi.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/xiaomi/js-css/index.css?@DateTime.Now">
+    <script type="text/javascript" async src="https://i02.appmifile.com/webfile/globalweb/stat/js/xmot-i18n.min.js?v=20220127"></script>
+    @* <link rel="stylesheet" type="text/css" href="https://s05.appmifile.com/sgp/spps_files/store/0.32.2/css/vn/index.css">
+        <link href="https://s05.appmifile.com/sgp/spps_files/store/0.32.2/js/vn/../../css/4793.chunk.css" rel="stylesheet">
+        <link href="https://s05.appmifile.com/sgp/spps_files/store/0.32.2/js/vn/../../css/3574.chunk.css" rel="stylesheet"> *@
+}
+<main class="site-main">
+    <section class="site-grid site-grid--small-top site-grid--full" role="grid">
+        <div class="store-banner-site">
+            <div class="swiper swiper-container mySwiper store-banner-site--light">
+                @* <div class="swiper-pagination"></div> *@
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0">
+                        <div class="site-banner site-banner--light site-banner--left site-banner--normal site-banner--has-link">
+                            <picture class="responsive-image site-banner__image">
+                                <img src="~/Content/xiaomi/img/Screenshot xiaomi smart band 8.png?@DateTime.Now" alt="Xiaomi Robot Vacuum E10" loading="lazy" />
+                            </picture>
+                            <div class="site-banner__info d-none">
+                                <h2 class="site-banner__title mi-brand mi-brand--xiaomi">Xiaomi TV A 55</h2>
+                                <h4 class="site-banner__subtitle">Muôn Góc Nhìn, Vạn Trải Nghiệm</h4>
+                                <div class="site-banner__actions site-banner__actions--margin">
+                                    <a href="//www.mi.com/vn/product/xiaomi-tv-a-55/" class="mi-btn mi-btn--primary mi-btn--normal mi-btn--light site-banner__link" tabindex="0"><span class="mi-btn__text">TÌM HIỂU THÊM</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1">
+                        <div class="site-banner site-banner--light site-banner--left site-banner--normal site-banner--has-link">
+                            <picture class="responsive-image site-banner__image">
+                                <img src="~/Content/xiaomi/img/Screenshot xiaomi robot hut bui.png?@DateTime.Now" alt="Xiaomi Robot Vacuum E10" loading="lazy" />
+                            </picture>
+                            <div class="site-banner__info d-none">
+                                <img class="site-banner__title site-banner__title--svg" src="https://i02.appmifile.com//364_operator_vn/06/04/2023/de613a591c480f6c57dc94dc430cf367.svg" alt="Xiaomi Robot Vacuum E10" />
+                                <h4 class="site-banner__subtitle">Chuyên gia vệ sinh sàn linh hoạt</h4>
+                                <div class="site-banner__actions site-banner__actions--margin">
+                                    <a href="https://www.mi.com/vn/product/xiaomi-robot-vacuum-e10/" class="mi-btn mi-btn--primary mi-btn--normal mi-btn--light site-banner__link" tabindex="0"><span class="mi-btn__text">TÌM HIỂU THÊM</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2">
+                        <div class="site-banner site-banner--dark site-banner--left site-banner--normal site-banner--has-link" data-ot-expose="{&quot;event&quot;:&quot;view_item_list&quot;,&quot;tip&quot;:{&quot;c&quot;:&quot;6035-1|1-store-banner-3&quot;},&quot;link&quot;:&quot;https://www.mi.com/vn/product/xiaomi-smart-air-purifier-4-compact/&quot;,&quot;elementName&quot;:&quot;TÌM HIỂU THÊM&quot;,&quot;elementTitle&quot;:&quot;https://i02.appmifile.com//352_operator_vn/29/12/2022/8faaa594f93d9c2262c0a96c9ba79509.svg&quot;}">
+                            <picture class="responsive-image site-banner__image">
+                                <img src="~/Content/xiaomi/img/Screenshot xiaomi smart purifier 4 lite.png?@DateTime.Now" alt="Xiaomi Robot Vacuum E10" loading="lazy" />
+                            </picture>
+                            <div class="site-banner__info d-none">
+                                <img class="site-banner__title site-banner__title--svg" src="https://i02.appmifile.com//352_operator_vn/29/12/2022/8faaa594f93d9c2262c0a96c9ba79509.svg" alt="Xiaomi Smart Air Purifier 4 Compact" />
+                                <h4 class="site-banner__subtitle">Mang không khí sạch đến nơi bạn cần</h4>
+                                <div class="site-banner__actions site-banner__actions--margin">
+                                    <a href="https://www.mi.com/vn/product/xiaomi-smart-air-purifier-4-compact/" class="mi-btn mi-btn--primary mi-btn--normal mi-btn--dark site-banner__link" tabindex="0"><span class="mi-btn__text">TÌM HIỂU THÊM</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next "></div>
+                <div class="swiper-button-prev "></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <section class="site-grid site-grid--small site-grid--full" role="grid">
+        <section class="banner-text banner-text--full">
+            <a id="tv-media" style="top:calc(-1 * var(--header-height));display:block;position:absolute;visibility:hidden;height:0;z-index:-10" aria-hidden="true"></a>
+            <div class="banner-text__info">
+                <span class="banner-text__title">TV &amp; phương tiện</span>
+                <div class="banner-text__actions">
+                    <a href="https://hoanghamobile.com/smart-home?filters=%7b%22brand%22%3a%22251%22%7d&search=true" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m mi-btn--highlight-m banner-text__link" tabindex="0"><span class="mi-btn__text">Xem thêm</span><i class="micon micon-link-arrow"></i></a>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="site-grid site-grid--medium site-grid--half-quarter" role="grid">
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi TV A 43 FHD</h2>
+                <h4 class="site-goods-sku__subtitle">Muôn Góc Nhìn, Vạn Trải Nghiệm</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="//www.mi.com/vn/product/xiaomi-tv-a-43-fhd/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="https://i02.appmifile.com//946_operatorx_operatorx_opx/02/08/2023/722f5985ee013a32e2b198c13cb8513e!380x380.png?f=webp" />
+                    <source media="(max-width: 720px)" type="image/png" srcSet="https://i02.appmifile.com//946_operatorx_operatorx_opx/02/08/2023/722f5985ee013a32e2b198c13cb8513e!380x380.png" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="https://i02.appmifile.com//946_operatorx_operatorx_opx/02/08/2023/722f5985ee013a32e2b198c13cb8513e!200x200.png?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/png" srcSet="https://i02.appmifile.com//946_operatorx_operatorx_opx/02/08/2023/722f5985ee013a32e2b198c13cb8513e!200x200.png" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="https://i02.appmifile.com//946_operatorx_operatorx_opx/02/08/2023/722f5985ee013a32e2b198c13cb8513e!256x256.png?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/png" srcSet="https://i02.appmifile.com//946_operatorx_operatorx_opx/02/08/2023/722f5985ee013a32e2b198c13cb8513e!256x256.png" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="https://i02.appmifile.com//946_operatorx_operatorx_opx/02/08/2023/722f5985ee013a32e2b198c13cb8513e!348x348.png?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/png" srcSet="https://i02.appmifile.com//946_operatorx_operatorx_opx/02/08/2023/722f5985ee013a32e2b198c13cb8513e!348x348.png" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="https://i02.appmifile.com//946_operatorx_operatorx_opx/02/08/2023/722f5985ee013a32e2b198c13cb8513e!500x500.png?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/png" srcSet="https://i02.appmifile.com//946_operatorx_operatorx_opx/02/08/2023/722f5985ee013a32e2b198c13cb8513e!500x500.png" />
+                    <img src="https://i02.appmifile.com//946_operatorx_operatorx_opx/02/08/2023/722f5985ee013a32e2b198c13cb8513e!500x500.png" alt="Xiaomi TV A 43 FHD" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi TV A Pro 65</h2>
+                <h4 class="site-goods-sku__subtitle">Muôn Góc Nhìn, Vạn Trải Nghiệm</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="//www.mi.com/vn/product/xiaomi-tv-a-pro-65/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="https://i02.appmifile.com//648_operatorx_operatorx_opx/08/08/2023/5451b95a4519a6ecb6f41de0736f176c!380x380.png?f=webp" />
+                    <source media="(max-width: 720px)" type="image/png" srcSet="https://i02.appmifile.com//648_operatorx_operatorx_opx/08/08/2023/5451b95a4519a6ecb6f41de0736f176c!380x380.png" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="https://i02.appmifile.com//648_operatorx_operatorx_opx/08/08/2023/5451b95a4519a6ecb6f41de0736f176c!200x200.png?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/png" srcSet="https://i02.appmifile.com//648_operatorx_operatorx_opx/08/08/2023/5451b95a4519a6ecb6f41de0736f176c!200x200.png" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="https://i02.appmifile.com//648_operatorx_operatorx_opx/08/08/2023/5451b95a4519a6ecb6f41de0736f176c!256x256.png?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/png" srcSet="https://i02.appmifile.com//648_operatorx_operatorx_opx/08/08/2023/5451b95a4519a6ecb6f41de0736f176c!256x256.png" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="https://i02.appmifile.com//648_operatorx_operatorx_opx/08/08/2023/5451b95a4519a6ecb6f41de0736f176c!348x348.png?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/png" srcSet="https://i02.appmifile.com//648_operatorx_operatorx_opx/08/08/2023/5451b95a4519a6ecb6f41de0736f176c!348x348.png" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="https://i02.appmifile.com//648_operatorx_operatorx_opx/08/08/2023/5451b95a4519a6ecb6f41de0736f176c!500x500.png?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/png" srcSet="https://i02.appmifile.com//648_operatorx_operatorx_opx/08/08/2023/5451b95a4519a6ecb6f41de0736f176c!500x500.png" />
+                    <img src="https://i02.appmifile.com//648_operatorx_operatorx_opx/08/08/2023/5451b95a4519a6ecb6f41de0736f176c!500x500.png" alt="Xiaomi TV A Pro 65" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter" data-ot-expose="{&quot;event&quot;:&quot;view_item_list&quot;,&quot;tip&quot;:{&quot;c&quot;:&quot;13514-3|3-goods-sku&quot;},&quot;link&quot;:&quot;//www.mi.com/vn/product/xiaomi-tv-a2-58/&quot;}">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi TV A2 58&quot;</h2>
+                <h4 class="site-goods-sku__subtitle">Cuộc sống tiện nghi, tầm nhìn vô hạn</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="//www.mi.com/vn/product/xiaomi-tv-a2-58/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672280672.54551320!380x380.png?f=webp" />
+                    <source media="(max-width: 720px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672280672.54551320!380x380.png" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672280672.54551320!200x200.png?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672280672.54551320!200x200.png" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672280672.54551320!256x256.png?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672280672.54551320!256x256.png" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672280672.54551320!348x348.png?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672280672.54551320!348x348.png" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672280672.54551320!500x500.png?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672280672.54551320!500x500.png" />
+                    <img src="https://i02.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672280672.54551320!500x500.png" alt="Xiaomi TV A2 58&quot;" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+    </section>
+    <section class="site-grid site-grid--medium site-grid--quarter" role="grid">
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi TV A2 32</h2>
+                <h4 class="site-goods-sku__subtitle">Cuộc sống tiện nghi, tầm nhìn vô hạn</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://www.mi.com/vn/product/xiaomi-tv-a2-32/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666872080.70966688!380x380.png?f=webp" />
+                    <source media="(max-width: 720px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666872080.70966688!380x380.png" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666872080.70966688!200x200.png?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666872080.70966688!200x200.png" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666872080.70966688!256x256.png?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666872080.70966688!256x256.png" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666872080.70966688!348x348.png?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666872080.70966688!348x348.png" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666872080.70966688!500x500.png?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666872080.70966688!500x500.png" />
+                    <img src="https://i02.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666872080.70966688!500x500.png" alt="Xiaomi TV A2 32" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Mi Portable Bluetooth Speaker (16W)</h2>
+                <h4 class="site-goods-sku__subtitle">ĐƯA ÂM NHẠC VÀO ĐỜI SỐNG</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://www.mi.com/vn/product/mi-portable-bluetooth-speaker/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844364.76345104!380x380.png?f=webp" />
+                    <source media="(max-width: 720px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844364.76345104!380x380.png" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844364.76345104!200x200.png?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844364.76345104!200x200.png" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844364.76345104!256x256.png?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844364.76345104!256x256.png" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844364.76345104!348x348.png?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844364.76345104!348x348.png" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844364.76345104!500x500.png?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844364.76345104!500x500.png" />
+                    <img src="https://i02.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844364.76345104!500x500.png" alt="Mi Portable Bluetooth Speaker (16W)" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Mi Smart Projector 2</h2>
+                <h4 class="site-goods-sku__subtitle">Rạp hát tại gia di động của bạn</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://www.mi.com/vn/product/mi-smart-projector-2/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839132.32216485!380x380.png?f=webp" />
+                    <source media="(max-width: 720px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839132.32216485!380x380.png" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839132.32216485!200x200.png?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839132.32216485!200x200.png" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839132.32216485!256x256.png?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839132.32216485!256x256.png" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839132.32216485!348x348.png?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839132.32216485!348x348.png" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839132.32216485!500x500.png?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839132.32216485!500x500.png" />
+                    <img src="https://i02.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839132.32216485!500x500.png" alt="Mi Smart Projector 2" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+    </section>
+    <section class="site-grid site-grid--small site-grid--full" role="grid">
+        <section class="banner-text banner-text--full">
+            <a id="vacuum-cleaner" style="top:calc(-1 * var(--header-height));display:block;position:absolute;visibility:hidden;height:0;z-index:-10" aria-hidden="true"></a>
+            <div class="banner-text__info">
+                <span class="banner-text__title">Máy hút bụi</span>
+                <div class="banner-text__actions">
+                    <a href="https://hoanghamobile.com/smart-home?filters=%7b%22brand%22%3a%22251%22%7d&search=true" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m mi-btn--highlight-m banner-text__link" tabindex="0"><span class="mi-btn__text">Xem thêm</span><i class="micon micon-link-arrow"></i></a>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="site-grid site-grid--medium-special site-grid--half" role="grid">
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi Robot Vacuum S10+</h2>
+                <h4 class="site-goods-sku__subtitle">Lau sàn bằng áp suất với hai giẻ lau để loại bỏ vết bẩn tốt hơn</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://www.mi.com/vn/product/xiaomi-robot-vacuum-s10-plus/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677487368.78352609!380x380.png?f=webp" />
+                    <source media="(max-width: 720px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677487368.78352609!380x380.png" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677487368.78352609!200x200.png?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677487368.78352609!200x200.png" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677487368.78352609!256x256.png?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677487368.78352609!256x256.png" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677487368.78352609!348x348.png?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677487368.78352609!348x348.png" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677487368.78352609!500x500.png?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677487368.78352609!500x500.png" />
+                    <img src="https://i02.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677487368.78352609!500x500.png" alt="Xiaomi Robot Vacuum S10+" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi Robot Vacuum X10+</h2>
+                <h4 class="site-goods-sku__subtitle">Dọn sạch tối ưu, tự động hóa tối đa</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://www.mi.com/vn/product/xiaomi-robot-vacuum-x10-plus/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877302.02075589!380x380.png?f=webp" />
+                    <source media="(max-width: 720px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877302.02075589!380x380.png" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877302.02075589!200x200.png?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877302.02075589!200x200.png" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877302.02075589!256x256.png?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877302.02075589!256x256.png" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877302.02075589!348x348.png?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877302.02075589!348x348.png" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877302.02075589!500x500.png?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877302.02075589!500x500.png" />
+                    <img src="https://i02.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877302.02075589!500x500.png" alt="Xiaomi Robot Vacuum X10+" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+    </section>
+    <section class="site-grid site-grid--medium site-grid--quarter" role="grid">
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi Truclean W10 Ultra Wet Dry Vacuum</h2>
+                <h4 class="site-goods-sku__subtitle">Làm sạch hoàn toàn trong một lần</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="//www.mi.com/vn/product/xiaomi-truclean-w10ultra-wet-dry-vacuum/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877334.64564777!380x380.png?f=webp" />
+                    <source media="(max-width: 720px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877334.64564777!380x380.png" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877334.64564777!200x200.png?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877334.64564777!200x200.png" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877334.64564777!256x256.png?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877334.64564777!256x256.png" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877334.64564777!348x348.png?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877334.64564777!348x348.png" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877334.64564777!500x500.png?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877334.64564777!500x500.png" />
+                    <img src="https://i02.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666877334.64564777!500x500.png" alt="Xiaomi Truclean W10 Ultra Wet Dry Vacuum" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi Robot Vacuum E10</h2>
+                <h4 class="site-goods-sku__subtitle">Chuyên gia vệ sinh sàn linh hoạt</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://www.mi.com/vn/product/xiaomi-robot-vacuum-e10/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677576726.00766138!380x380.png?f=webp" />
+                    <source media="(max-width: 720px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677576726.00766138!380x380.png" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677576726.00766138!200x200.png?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677576726.00766138!200x200.png" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677576726.00766138!256x256.png?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677576726.00766138!256x256.png" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677576726.00766138!348x348.png?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677576726.00766138!348x348.png" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677576726.00766138!500x500.png?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677576726.00766138!500x500.png" />
+                    <img src="https://i02.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677576726.00766138!500x500.png" alt="Xiaomi Robot Vacuum E10" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter" }">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi Vacuum Cleaner G9 Plus</h2>
+                <h4 class="site-goods-sku__subtitle">Máy đa chức năng để loại bỏ sâu bụi bẩn với nhiều chế độ cài đặt</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://www.mi.com/vn/product/xiaomi-vacuum-cleaner-g9-plus/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1676529942.20218425!380x380.png?f=webp" />
+                    <source media="(max-width: 720px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1676529942.20218425!380x380.png" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1676529942.20218425!200x200.png?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1676529942.20218425!200x200.png" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1676529942.20218425!256x256.png?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1676529942.20218425!256x256.png" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1676529942.20218425!348x348.png?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1676529942.20218425!348x348.png" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1676529942.20218425!500x500.png?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1676529942.20218425!500x500.png" />
+                    <img src="https://i02.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1676529942.20218425!500x500.png" alt="Xiaomi Vacuum Cleaner G9 Plus" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+    </section>
+    <section class="site-grid site-grid--small site-grid--full" role="grid">
+        <section class="banner-text banner-text--full">
+            <a id="environment-appliance" style="top:calc(-1 * var(--header-height));display:block;position:absolute;visibility:hidden;height:0;z-index:-10" aria-hidden="true"></a>
+            <div class="banner-text__info">
+                <span class="banner-text__title">Thiết bị môi trường</span>
+                <div class="banner-text__actions">
+                    <a href="https://hoanghamobile.com/smart-home?filters=%7b%22brand%22%3a%22251%22%7d&search=true" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m mi-btn--highlight-m banner-text__link" tabindex="0"><span class="mi-btn__text">Xem thêm</span><i class="micon micon-link-arrow"></i></a>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="site-grid site-grid--medium site-grid--half-quarter" role="grid">
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi Smart Air Purifier 4 Pro</h2>
+                <h4 class="site-goods-sku__subtitle">Hít khí sạch, hô hấp khỏe</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="//www.mi.com/vn/product/xiaomi-smart-air-purifier-4-pro/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839240.67439522!380x380.png?f=webp" />
+                    <source media="(max-width: 720px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839240.67439522!380x380.png" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839240.67439522!200x200.png?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839240.67439522!200x200.png" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839240.67439522!256x256.png?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839240.67439522!256x256.png" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839240.67439522!348x348.png?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839240.67439522!348x348.png" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839240.67439522!500x500.png?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839240.67439522!500x500.png" />
+                    <img src="https://i02.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839240.67439522!500x500.png" alt="Xiaomi Smart Air Purifier 4 Pro" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi Smart Air Purifier 4 Compact</h2>
+                <h4 class="site-goods-sku__subtitle">Mang không khí sạch đến nơi bạn cần</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://www.mi.com/vn/product/xiaomi-smart-air-purifier-4-compact/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666840332.79253415!380x380.png?f=webp" />
+                    <source media="(max-width: 720px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666840332.79253415!380x380.png" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666840332.79253415!200x200.png?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666840332.79253415!200x200.png" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666840332.79253415!256x256.png?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666840332.79253415!256x256.png" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666840332.79253415!348x348.png?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666840332.79253415!348x348.png" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666840332.79253415!500x500.png?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666840332.79253415!500x500.png" />
+                    <img src="https://i02.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666840332.79253415!500x500.png" alt="Xiaomi Smart Air Purifier 4 Compact" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Mi Smart Standing Fan 2 Lite</h2>
+                <h4 class="site-goods-sku__subtitle">Điều khiển mức gió thông minh bằng giọng nói</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://www.mi.com/vn/product/mi-smart-standing-fan-2-lite/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1671688799.17486234!380x380.png?f=webp" />
+                    <source media="(max-width: 720px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1671688799.17486234!380x380.png" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1671688799.17486234!200x200.png?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1671688799.17486234!200x200.png" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1671688799.17486234!256x256.png?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1671688799.17486234!256x256.png" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1671688799.17486234!348x348.png?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1671688799.17486234!348x348.png" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1671688799.17486234!500x500.png?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1671688799.17486234!500x500.png" />
+                    <img src="https://i02.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1671688799.17486234!500x500.png" alt="Mi Smart Standing Fan 2 Lite" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+    </section>
+    <section class="site-grid site-grid--medium site-grid--quarter" role="grid">
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi Smart Air Purifier 4</h2>
+                <h4 class="site-goods-sku__subtitle">Hít khí sạch, hô hấp khỏe</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://www.mi.com/vn/product/xiaomi-smart-air-purifier-4/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839178.92683243!380x380.png?f=webp" />
+                    <source media="(max-width: 720px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839178.92683243!380x380.png" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839178.92683243!200x200.png?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839178.92683243!200x200.png" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839178.92683243!256x256.png?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839178.92683243!256x256.png" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839178.92683243!348x348.png?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839178.92683243!348x348.png" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839178.92683243!500x500.png?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839178.92683243!500x500.png" />
+                    <img src="https://i02.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666839178.92683243!500x500.png" alt="Xiaomi Smart Air Purifier 4" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Mi Smart Standing Fan 2</h2>
+                <h4 class="site-goods-sku__subtitle">Cánh quạt kép mang đến làn gió mát tự nhiên</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://www.mi.com/vn/product/mi-smart-standing-fan-2/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844135.3835033!380x380.jpg?f=webp" />
+                    <source media="(max-width: 720px)" type="image/jpeg" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844135.3835033!380x380.jpg" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844135.3835033!200x200.jpg?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/jpeg" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844135.3835033!200x200.jpg" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844135.3835033!256x256.jpg?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/jpeg" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844135.3835033!256x256.jpg" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844135.3835033!348x348.jpg?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/jpeg" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844135.3835033!348x348.jpg" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844135.3835033!500x500.jpg?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/jpeg" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844135.3835033!500x500.jpg" />
+                    <img src="https://i02.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666844135.3835033!500x500.jpg" alt="Mi Smart Standing Fan 2" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi Rechargeable Mini Fan</h2>
+                <h4 class="site-goods-sku__subtitle">Một chiếc quạt không dây bền bỉ mang đến làn gió mát ở mọi nơi.</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://www.mi.com/vn/product/xiaomi-rechargeable-mini-fan/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1680058953.69024800!380x380.png?f=webp" />
+                    <source media="(max-width: 720px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1680058953.69024800!380x380.png" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1680058953.69024800!200x200.png?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1680058953.69024800!200x200.png" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1680058953.69024800!256x256.png?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1680058953.69024800!256x256.png" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1680058953.69024800!348x348.png?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1680058953.69024800!348x348.png" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1680058953.69024800!500x500.png?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1680058953.69024800!500x500.png" />
+                    <img src="https://i02.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1680058953.69024800!500x500.png" alt="Xiaomi Rechargeable Mini Fan" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+    </section>
+    <section class="site-grid site-grid--small site-grid--full" role="grid">
+        <section class="banner-text banner-text--full">
+            <a id="smart-device" style="top:calc(-1 * var(--header-height));display:block;position:absolute;visibility:hidden;height:0;z-index:-10" aria-hidden="true"></a>
+            <div class="banner-text__info">
+                <span class="banner-text__title">Thiết bị thông minh</span>
+                <div class="banner-text__actions">
+                    <a href="https://hoanghamobile.com/smart-home?filters=%7b%22brand%22%3a%22251%22%7d&search=true" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m mi-btn--highlight-m banner-text__link" tabindex="0"><span class="mi-btn__text">Xem thêm</span><i class="micon micon-link-arrow"></i></a>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="site-grid site-grid--medium site-grid--quarter" role="grid">
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Mi Camera 2K Magnetic Mount</h2>
+                <h4 class="site-goods-sku__subtitle">Thiết kế nhỏ gọn, hình ảnh 2K siêu nét</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="//www.mi.com/vn/product/mi-camera-2k-magnetic-mount/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666876940.34896683!380x380.png?f=webp" />
+                    <source media="(max-width: 720px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666876940.34896683!380x380.png" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666876940.34896683!200x200.png?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666876940.34896683!200x200.png" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666876940.34896683!256x256.png?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666876940.34896683!256x256.png" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666876940.34896683!348x348.png?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666876940.34896683!348x348.png" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666876940.34896683!500x500.png?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666876940.34896683!500x500.png" />
+                    <img src="https://i02.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666876940.34896683!500x500.png" alt="Mi Camera 2K Magnetic Mount" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Mi 360° Home Security Camera 2K Pro</h2>
+                <h4 class="site-goods-sku__subtitle">Chất lượng hình ảnh 2K cực rõ, AI đã được nâng cấp</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://www.mi.com/vn/product/mi-360-home-security-camera-2k-pro/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666845058.44989709!380x380.jpg?f=webp" />
+                    <source media="(max-width: 720px)" type="image/jpeg" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666845058.44989709!380x380.jpg" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666845058.44989709!200x200.jpg?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/jpeg" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666845058.44989709!200x200.jpg" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666845058.44989709!256x256.jpg?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/jpeg" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666845058.44989709!256x256.jpg" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666845058.44989709!348x348.jpg?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/jpeg" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666845058.44989709!348x348.jpg" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666845058.44989709!500x500.jpg?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/jpeg" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666845058.44989709!500x500.jpg" />
+                    <img src="https://i02.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666845058.44989709!500x500.jpg" alt="Mi 360° Home Security Camera 2K Pro" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter">
+            <div class="site-goods-sku__info">
+                <h2 class="site-goods-sku__title">Xiaomi Smart Camera C400</h2>
+                <h4 class="site-goods-sku__subtitle">Bảo mật thông minh với độ rõ nét 2,5K</h4>
+                <ul class="site-goods-sku__tag-list"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://www.mi.com/vn/product/xiaomi-smart-camera-c400/" class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link" tabindex="0"><span class="mi-btn__text">Tìm hiểu thêm</span><i class="micon micon-link-arrow"></i></a>
+            </div>
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <source media="(max-width: 720px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672039614.53085652!380x380.png?f=webp" />
+                    <source media="(max-width: 720px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672039614.53085652!380x380.png" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672039614.53085652!200x200.png?f=webp" />
+                    <source media="(min-width: 721px) and (max-width: 1024px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672039614.53085652!200x200.png" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672039614.53085652!256x256.png?f=webp" />
+                    <source media="(min-width: 1025px) and (max-width: 1440px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672039614.53085652!256x256.png" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672039614.53085652!348x348.png?f=webp" />
+                    <source media="(min-width: 1441px) and (max-width: 1920px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672039614.53085652!348x348.png" />
+                    <source media="(min-width: 1921px)" type="image/webp" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672039614.53085652!500x500.png?f=webp" />
+                    <source media="(min-width: 1921px)" type="image/png" srcSet="//i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672039614.53085652!500x500.png" />
+                    <img src="https://i02.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1672039614.53085652!500x500.png" alt="Xiaomi Smart Camera C400" loading="lazy" />
+                </picture>
+            </div>
+        </div>
+    </section>
+</main>
+@section scripts {
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  centeredSlides: false,
+  slidesPerGroupSkip: 1,
+  grabCursor: true,
+  keyboard: {
+    enabled: true,
+  },
+  breakpoints: {
+    769: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },loop: true, // Thêm vòng lặp vô hạn
+  @* autoplay: {
+    delay: 3000, // Đặt thời gian tự chạy giữa các slide, đơn vị là mili giây
+    disableOnInteraction: false, // Cho phép tự chạy tiếp tục sau khi người dùng tương tác với swiper
+  }, *@
+});
+
+    </script>
+}
+
 

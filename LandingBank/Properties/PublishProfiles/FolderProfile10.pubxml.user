@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>D:\oppo_n3</_PublishTargetUrl>
-    <History>True|2023-11-07T06:35:54.9317484Z;True|2023-11-07T11:50:35.7311240+07:00;True|2023-11-07T11:44:41.0685443+07:00;True|2023-10-31T09:05:22.4028029+07:00;True|2023-10-31T09:02:18.2024986+07:00;True|2023-10-19T13:57:38.5913076+07:00;True|2023-10-19T13:51:24.1567158+07:00;True|2023-10-13T14:53:13.2329544+07:00;</History>
+    <History>True|2023-11-17T02:59:37.5400914Z;True|2023-11-07T13:35:54.9317484+07:00;True|2023-11-07T11:50:35.7311240+07:00;True|2023-11-07T11:44:41.0685443+07:00;True|2023-10-31T09:05:22.4028029+07:00;True|2023-10-31T09:02:18.2024986+07:00;True|2023-10-19T13:57:38.5913076+07:00;True|2023-10-19T13:51:24.1567158+07:00;True|2023-10-13T14:53:13.2329544+07:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -21,10 +21,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/22/2023 12:01:57</publishTime>
     </File>
     <File Include="bin/LandingBank.dll">
-      <publishTime>11/07/2023 13:35:54</publishTime>
+      <publishTime>11/17/2023 09:59:17</publishTime>
     </File>
     <File Include="bin/LandingBank.pdb">
-      <publishTime>11/07/2023 13:35:54</publishTime>
+      <publishTime>11/17/2023 09:59:17</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>08/22/2023 12:01:57</publishTime>
@@ -244,6 +244,42 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="Content/Bank/web.min.js">
       <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/BlackFriday/css/bootstrap.min.css">
+      <publishTime>11/17/2023 09:53:12</publishTime>
+    </File>
+    <File Include="Content/BlackFriday/css/swiper-bundle.min.css">
+      <publishTime>11/17/2023 09:53:12</publishTime>
+    </File>
+    <File Include="Content/BlackFriday/img/BlackFriday banner.png">
+      <publishTime>11/17/2023 09:55:55</publishTime>
+    </File>
+    <File Include="Content/BlackFriday/img/thumb BlackFriday.jpg">
+      <publishTime>11/17/2023 09:56:25</publishTime>
+    </File>
+    <File Include="Content/BlackFriday/js-css/index.css">
+      <publishTime>11/17/2023 09:53:12</publishTime>
+    </File>
+    <File Include="Content/BlackFriday/js-css/index_mb.css">
+      <publishTime>11/17/2023 09:53:12</publishTime>
+    </File>
+    <File Include="Content/BlackFriday/js-css/style.css">
+      <publishTime>11/17/2023 09:53:12</publishTime>
+    </File>
+    <File Include="Content/BlackFriday/js-css/swiper-bundle.min.js">
+      <publishTime>11/17/2023 09:53:12</publishTime>
+    </File>
+    <File Include="Content/BlackFriday/js-css/web-desktop.css">
+      <publishTime>11/17/2023 09:53:12</publishTime>
+    </File>
+    <File Include="Content/BlackFriday/js-css/xiaomi.css">
+      <publishTime>11/17/2023 09:53:12</publishTime>
+    </File>
+    <File Include="Content/BlackFriday/js-css/xiaomi.js">
+      <publishTime>11/17/2023 09:53:12</publishTime>
+    </File>
+    <File Include="Content/BlackFriday/js-css/xiaomi_mb.css">
+      <publishTime>11/17/2023 09:53:12</publishTime>
     </File>
     <File Include="Content/css/1000px.css">
       <publishTime>08/29/2023 18:51:15</publishTime>
@@ -1191,7 +1227,88 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/23/2023 17:17:37</publishTime>
     </File>
     <File Include="Content/xiaomi/css/bootstrap.min.css">
-      <publishTime>11/07/2023 11:54:04</publishTime>
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/css/swiper-bundle.min.css">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/a-pro-.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Purifier 4.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Redmi Buds 4 Lite.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Redmi Buds 4 Pro.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Redmi Buds 4.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/robot-hut-bui-lau-nha-xiaomi-vacuum-e10-130323-050133-600x600.jpg">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Screenshot xiaomi robot hut bui.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Screenshot xiaomi smart band 8.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Screenshot xiaomi smart purifier 4 lite.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/tv a2.jpeg.jpg">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Vacuum Mop 2 Lite.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Vacuum S10 plus.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Vacuum S10.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Vacuum X10.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Xiaomi Smart Air Purifier 4 Compact.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Xiaomi-Mi-Band-8-Smart-Bracelet-Black-520284-0.jpg">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/xiaomi-purifier-4-litepng_1646387171.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/XiaomiBuds3.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/js-css/index.css">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/js-css/index_mb.css">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/js-css/style.css">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/js-css/swiper-bundle.min.js">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/js-css/web-desktop.css">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/js-css/xiaomi.css">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/js-css/xiaomi.js">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/js-css/xiaomi_mb.css">
+      <publishTime>11/17/2023 09:53:01</publishTime>
     </File>
     <File Include="Content2/Apple/apple.min.css">
       <publishTime>08/29/2023 18:51:15</publishTime>
@@ -3092,6 +3209,12 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Views/BKCustomer/Index2.cshtml">
       <publishTime>08/29/2023 18:51:15</publishTime>
     </File>
+    <File Include="Views/BlackFriday/Index.cshtml">
+      <publishTime>11/17/2023 09:57:22</publishTime>
+    </File>
+    <File Include="Views/BlackFriday/Index_Mobile.cshtml">
+      <publishTime>11/17/2023 09:57:34</publishTime>
+    </File>
     <File Include="Views/Detail/Index.cshtml">
       <publishTime>10/25/2023 10:45:06</publishTime>
     </File>
@@ -3106,6 +3229,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="Views/Home/Index.cshtml">
       <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Views/honorn9_test/Index.cshtml">
+      <publishTime>11/07/2023 17:04:36</publishTime>
     </File>
     <File Include="Views/Honor_90/Index.cshtml">
       <publishTime>10/31/2023 09:01:02</publishTime>
@@ -3192,16 +3318,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/22/2023 12:01:56</publishTime>
     </File>
     <File Include="Views/Xiaomi/Index.cshtml">
-      <publishTime>11/07/2023 11:48:02</publishTime>
+      <publishTime>11/17/2023 09:57:58</publishTime>
     </File>
     <File Include="Views/Xiaomi/Index_Mobile.cshtml">
-      <publishTime>11/07/2023 11:48:14</publishTime>
+      <publishTime>11/17/2023 09:58:51</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
       <publishTime>08/22/2023 12:01:56</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/31/2023 09:02:14</publishTime>
+      <publishTime>11/17/2023 09:59:31</publishTime>
     </File>
   </ItemGroup>
 </Project>
