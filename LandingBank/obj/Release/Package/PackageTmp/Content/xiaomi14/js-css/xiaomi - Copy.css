@@ -1,0 +1,92 @@
+﻿
+.action-desktop {
+    position: absolute;
+    bottom: 50px;
+    left: 170px;
+}
+
+.product-action {
+    display: flex;
+    padding: 0;
+    justify-items: stretch;
+}
+
+    .product-action .btnbuy {
+        margin-right: 6px;
+        display: block;
+        text-align: center;
+        color: #fff;
+        padding: 10px 20px;
+        flex-grow: 2
+    }
+
+        .product-action .btnbuy:last-child {
+            margin-right: 0
+        }
+
+    .product-action .btn-icon {
+        border-radius: 4px;
+        padding: 5px 3px 5px 0;
+        font-size: 22px;
+        position: relative;
+        width: 10px;
+        max-width: 40px;
+        min-width: 40px;
+        width: 40px;
+        flex-grow: 1
+    }
+
+    .product-action .btnbuy strong {
+        display: block
+    }
+
+    .product-action .btnbuy strong {
+        font-size: 16px
+    }
+
+    .product-action .btn-red {
+        background: transparent linear-gradient(180deg,#fd475a 0%,#bf1e2d 100%) 0% 0% no-repeat padding-box;
+        box-shadow: 0 4px 6px #00000029;
+        border-radius: 3px
+    }
+
+    .product-action .btn-green {
+        background: transparent linear-gradient(180deg,#ff990e 0%,#ff6801 100%) 0% 0% no-repeat padding-box;
+        box-shadow: 0 4px 6px #00000029;
+        border-radius: 3px
+    }
+
+    .product-action .btn-orange {
+        background: transparent linear-gradient(180deg,#a6ceeb 0%,#ef74f1 100%) 0% 0% no-repeat padding-box;
+        box-shadow: 0 4px 6px #00000029
+    }
+
+    .product-action .btn-oppo11 {
+        background: transparent linear-gradient(180deg,#a6ceeb 0%,#ef74f1 100%) 0% 0% no-repeat padding-box;
+        box-shadow: 0 4px 6px #00000029
+    }
+
+    .product-action .btn-oppo11-blue {
+        background: transparent linear-gradient(180deg,#a6ceeb 0%,#5e96cf 100%) 0% 0% no-repeat padding-box;
+        box-shadow: 0 4px 6px #00000029
+    }
+
+    .product-action .btn-red:hover {
+        background: transparent linear-gradient(0deg,#fd475a 0%,#bf1e2d 100%) 0% 0% no-repeat padding-box
+    }
+
+    .product-action .btn-green:hover {
+        background: transparent linear-gradient(0deg,#00917a 0%,#00483d 100%) 0% 0% no-repeat padding-box
+    }
+
+    .product-action .btn-orange:hover {
+        background: transparent linear-gradient(0deg,#ff990e 0%,#ff6801 100%) 0% 0% no-repeat padding-box
+    }
+
+    .product-action .btn-oppo11:hover {
+        background: transparent linear-gradient(0deg,#a6ceeb 0%,#ef74f1 100%) 0% 0% no-repeat padding-box
+    }
+
+    .product-action .btn-oppo11-blue:hover {
+        background: transparent linear-gradient(0deg,#a6ceeb 0%,#5e96cf 100%) 0% 0% no-repeat padding-box
+    }

@@ -1,0 +1,209 @@
+.title-banner {
+    color: #000;
+    line-height: 1.25;
+    text-align: center;
+    font-weight: 700;
+    display: inline-block;
+    font-size: 30px;
+    
+}
+
+.item-title-banner {
+    color: #000;
+    line-height: 1.25;
+    text-align: center;
+    font-weight: 700;
+    display: inline-block;
+    font-size: 27px;
+    
+}
+
+.site-grid {
+    grid-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+    .site-grid .item-grid-four {
+        grid-column: span 6;
+    }
+
+.site-goods-sku {
+    align-items: center;
+    background-color: #d2d3d5;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: hidden;
+    position: relative;
+    transition: box-shadow .25s ease;
+    width: 100%;
+    border-radius: 10px;
+    padding: 12px;
+    justify-content: center;
+}
+
+.section.sec1 .content-text {
+    width: 90%;
+}
+
+.section.sec1.text-start {
+    align-items: start;
+    justify-content: space-between;
+}
+
+    .section.sec1.text-start .content-text {
+        width: 49%;
+    }
+
+        .section.sec1.text-start .content-text .title, .section.sec1.text-start .content-text .sub-title {
+            text-align: start;
+        }
+
+.section.sec1.relative {
+    position: relative;
+}
+
+.section.sec1 .content-text.absolute {
+    position: absolute;
+    top: 10%;
+}
+
+.section.sec1-item .content-text .title {
+    color: #000;
+    line-height: 1.25;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.section.sec1-item .content-text .sub-title {
+    color: #000;
+    line-height: 1.25;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 300;
+    display: inline-block;
+}
+
+.section.sec1 .content-text .title {
+    color: #000;
+    line-height: 1.25;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.section.sec1 .content-text .sub-title {
+    color: #000;
+    line-height: 1.25;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 300;
+    display: inline-block;
+}
+
+.tinh-nang img {
+    width: 100%;
+    max-width: 60px;
+}
+
+.Flip-feature-four {
+    padding: 0 10px;
+}
+
+.background-f6f7fb h1, .background-f6f7fb p, .background-f6f7fb h2,
+.background-f6f7fb h3, .background-f6f7fb span {
+    color: #000 !important;
+}
+
+.background-black h1, .background-black p, .background-black h2,
+.background-black h3, .background-black span {
+    color: white !important;
+}
+
+.gap-20px-rbs{
+    gap: 20px;
+}
+
+@media screen and (max-width: 640px) {
+    .section.sec1-item .content-text .title {
+        font-size: 1.1rem;
+    }
+    .section.sec1-item .content-text .sub-title {
+        font-size: 0.8rem;
+        margin: 0;
+    }
+    .section.sec1 .content-text .title{
+        font-size: 1.6rem;
+    }
+    .section.sec1 .content-text .sub-title{
+        font-size: 0.8rem;
+        margin: 0;
+    }
+    .tinh-nang img {
+        max-width: 60px;
+    }
+    .site-goods-sku{
+        padding: 10px;
+    }
+    .gap-20px-rbs{
+        gap: 10px;
+    }
+}
+
+
+@media screen and (max-width: 560px) {
+    .section.sec1-item .content-text .title {
+        font-size: 15px;
+    }
+    .section.sec1-item .content-text .sub-title {
+        font-size: 12px;
+        margin: 0;
+    }
+    .section.sec1 .content-text .title{
+        font-size: 1.4rem;
+    }
+    .section.sec1 .content-text .sub-title{
+        font-size: 12px;
+        margin: 0;
+    }
+    .tinh-nang img {
+        max-width: 60px;
+    }
+    .site-goods-sku{
+        padding: 5px;
+    }
+    .gap-20px-rbs{
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section.sec1-item .content-text .title {
+        font-size: 14px;
+    }
+    .section.sec1-item .content-text .sub-title {
+        font-size: 11px;
+        margin: 0;
+    }
+    .section.sec1 .content-text .title{
+        font-size: 1rem;
+        margin: 4px;
+        padding: 0;
+    }
+    .section.sec1 .content-text .sub-title{
+        font-size: 11px;
+        margin: 0;
+        line-height: 1;
+    }
+}
+
+.Flip-feature-title{
+    padding: 30px 0;
+}

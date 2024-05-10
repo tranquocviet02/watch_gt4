@@ -1,0 +1,2075 @@
+﻿@model QStore.Models.Publishing.Product
+@{
+ViewBag.Title = "[04-14/04] Đặt trước Oscal Tiger 12 - Bùng nổ tiềm năng vô hạn";
+@* Layout = "~/Views/Shared/_Layout_Desktop.cshtml"; *@
+}
+@{
+    var path = Request.Url.LocalPath.ToLower();
+    string domain = string.Format("{0}://{1}", QStore.Utils.Configs.DOMAIN_SCHEMAL, QStore.Utils.Configs.DOMAIN_NAME);
+    string UniqueURL = string.Format("{0}{1}", domain, path);
+    string PageTitle = Model.SeoData.Title;
+    string PageDescription = Model.SeoData.Description;
+    string ProductImage = string.IsNullOrEmpty(Model.Image) ? QStore.Utils.Configs.SETTING_SEO_NO_IMAGE : Model.ImageValue.Url;
+    string PageImage = string.Format("{0}{1}", domain, ProductImage);
+    string PageKeyword = Model.SeoData.Keyword;
+
+
+
+    //List<int> LtsIp13Ids = new List<int>() { 1297, 1298, 1299, 1300, 1301, 1323, 1302, 1324, 1303, 1304, 1305, 1325, 1306, 1307, 1288 };
+    //   bool isIphone13 = LtsIp13Ids.Contains(Model.ID);
+
+    string htmlHotsaleNote = string.Empty;
+    string htmlHotsaleLimitNote = string.Empty;
+
+
+    bool AllowOrderIP15 = true;
+}
+
+@section meta
+{
+
+<meta name="description"
+    content="Model">
+    <meta property="og:image" content="https://hoanghamobile.com/Content/Tiger12/img/thumb-oscal-12.jpg">
+    <meta property="og:description" content="Tặng 01 đồng hồ Gloryfit S8 Pro trị giá 690.000đ (Số lượng có hạn) + Bảo hành 1 đổi 1 100 ngày + Trả góp 0%" />
+    <meta property="og:url" content="@UniqueURL" />
+    <script>
+		window.insider_object.product = @Html.Raw(Model.JSONInsiderProduct);
+    </script>
+
+      <link rel="canonical" href="@UniqueURL" />
+    <script>
+		window.insider_object.product = @Html.Raw(Model.JSONInsiderProduct);
+    </script>
+
+    <link rel="stylesheet" href="~/Content/Tiger12/css/bootstrap.min.css?@DateTime.Now">
+    
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons&#64.4.1/font/bootstrap-icons.css">
+
+    @* <script src="https://www.oscal.hk/lib/js/jquery-3.3.1.min.js"></script> *@
+    <script src="https://hoanghamobile.com/Content/web/js/jquery-3.5.1.min.js"></script>
+    @* <script async src="~/Content/Tiger12/js-css/tiger.js"> </script> *@
+    <script src="https://hoanghamobile.com/Content/web/js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="~/Content/Tiger12/js-css/tiger12.css?@DateTime.Now">  
+    <link rel="stylesheet" href="~/Content/Tiger12/js-css/menu.css?@DateTime.Now">  
+    <link rel="stylesheet" href="~/Content/Tiger12/css/swiper-bundle.min.css?@DateTime.Now"> 
+    <link rel="stylesheet" href="~/Content/Tiger12/css/model.css?@DateTime.Now">  
+    <script src="/Content/web/js/app.js"></script>
+
+    <script src="/Content/web/js/plugins/jquery.cookie/jquery.cookie.min.js"></script>
+    <link href="/Content/web/fonts/SegieUI.css" rel="stylesheet" />
+    <link href="/Content/web/fonts/icon/css/hoangha.css" rel="stylesheet" />
+    <link href="/Content/web/css/styles.web.min.css" rel="stylesheet" />
+    <link href="/Content/web/css/1000px.min.css" rel="stylesheet" />
+
+    <script src="/Content/web/js/plugins/jquery.modal/jquery.modal.min.js"></script>
+    <link href="/Content/web/js/plugins/jquery.modal/jquery.modal.min.css" rel="stylesheet" />
+    <link href="/Content/web/js/plugins/jquery.modal/jquery.modal.custom.css" rel="stylesheet" />
+    <script src="/Content/web/js/plugins/jquery.NProgress/nprogress.min.js"></script>
+    <link href="/Content/web/js/plugins/jquery.NProgress/nprogress.min.css" rel="stylesheet" />
+    <script src="/Content/web/js/plugins/jquery.lazy/jquery.lazy.min.js"></script>
+    <script src="/Content/web/js/plugins/jquery.lazy/jquery.lazy.plugins.min.js"></script>
+    <link href="~/Content/Tiger12/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/web/js/plugins/jquery-toast/jquery.toast.min.css" rel="stylesheet" />
+    <script src="/Content/web/js/plugins/jquery-toast/jquery.toast.min.js"></script>
+     <style>
+
+
+
+        .js--close-modal {
+            background: black;
+            position: absolute;
+            right: -15px;
+            top: -15px;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            background: #575656;
+            box-shadow: 0 2px 10px #000;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .signup-container {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .no-scroll-body {
+            overflow: hidden !important;
+            position: relative;
+            height: 100%;
+        }
+
+        .custom-close-button-class {
+            display: block !important;
+            border: none !important;
+        }
+
+        .div-pc .feature-three.btn {
+            position: sticky;
+            background: #f4f4f4;
+            top: 63px;
+            left: 0;
+            z-index: 999;
+            margin: 50px 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        .div-mb .feature-three.btn {
+            position: sticky;
+            background: #f4f4f4;
+            top: 103px;
+            left: 0;
+            z-index: 999;
+            margin: 50px 0;
+            padding: 0;
+            width: 100%;
+        }
+        .div-pc.text-btn-add {
+            font-size: 18px;
+        }
+        .div-mb.text-btn-add {
+            font-size: 15px;
+        }
+        .btn-add-all{
+            padding: 10px 20px;
+        }
+        #viewMoreContent:hover {
+        color: #009a82;
+        }
+        .product-specs .product-spect-img{
+              min-height: auto;
+        }
+        .product-details .top-product .h1 {
+    margin: 20px 0 10px 0;
+    flex-basis: auto;
+    flex-grow: 3;
+    display: flex;
+}
+            .custom-accordion a.collapsed i.accor-down-icon:before {
+            content: "\F0140";
+            }
+    </style>
+
+        <script>
+
+        let displayedItems = 5; // Number of items to display initially
+        let ItemData = 5; // Number of items to display initially
+        const itemsPerLoad = 5; // Number of items to load on each "Load More" click
+
+        async function fetchData() {
+            try {
+                const response = await fetch("https://hoanghamobile.com/Ajax/Embed_OrderTable?ID=3630&limit=10000&json=1");
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        }
+
+        // Function to display data on the frontend
+        async function displayData() {
+            const data = await fetchData();
+            const tableBody = document.getElementById("registrationTableBody");
+            const totalRegistrations = document.getElementById("totalRegistrations");
+            const searchInput = document.getElementById("searchInput");
+
+            let html = "";
+            let count = 100;
+
+            data.results.slice(0, ItemData).reverse().forEach((entry, index) => {
+                const { Title, PhoneHidden, EmailHidden } = entry;
+
+                // Check if the Title or PhoneHidden contains the search input value
+                if (Title.toLowerCase().includes(searchInput.value.toLowerCase()) || PhoneHidden.toLowerCase().includes(searchInput.value.toLowerCase())) {
+                    count++;
+
+                    const reversedIndex = data.results.length - index + 100; // Corrected the reversed index calculation
+
+                    html += `<tr>
+                        <td>${reversedIndex}</td>
+                        <td>${Title}</td>
+                        <td>${PhoneHidden}</td>
+                        <td>${EmailHidden}</td>
+                    </tr>`;
+                }
+            });
+
+
+            data.total = count;
+
+            tableBody.innerHTML = html;
+            totalRegistrations.textContent = `Danh sách ${count} khách đặt hàng `;
+        }
+
+
+
+
+        async function displayData_model() {
+            const data = await fetchData();
+            const tableBody_model = document.getElementById("registrationTableBody-model");
+            const totalRegistrations_model = document.getElementById("totalRegistrations-model");
+            const searchInput_model = document.getElementById("searchInput-model");
+
+            let html_model = "";
+            let count_model = 100;
+
+            data.results.slice(0, displayedItems).reverse().forEach((entry, index) => {
+                const { Title, PhoneHidden, EmailHidden } = entry;
+
+                // Check if the Title contains the search input value
+                if (Title.toLowerCase().includes(searchInput_model.value.toLowerCase()) || PhoneHidden.toLowerCase().includes(searchInput_model.value.toLowerCase())) {
+                    count_model++;
+
+                    const reversedIndexModel = data.results.length - index + 100; // Calculate the reversed index
+
+                    html_model += `<tr class="ask-content-data">
+                                                                <td>${reversedIndexModel}</td>
+                                                                <td>${Title}</td>
+                                                                <td>${PhoneHidden}</td>
+                                                                <td>${EmailHidden}</td>
+                                                            </tr>`;
+                }
+            });
+
+            tableBody_model.innerHTML = html_model;
+            totalRegistrations_model.textContent = `Danh sách ${count_model} khách đặt hàng `;
+        }
+
+        // Function to display data on the frontend
+        async function totalcoune() {
+            const data = await fetchData();
+            const totalAll = document.getElementById("totalAll");
+            const totalAll_model = document.getElementById("totalAll-model");
+            const searchInput_total = document.getElementById("searchInput-total");
+
+            let count = 100;
+            data.results.forEach((entry, index) => {
+                const { Title, PhoneHidden, EmailHidden } = entry;
+
+                // Check if either the title or phone contains the search input value
+                if (Title.toLowerCase().includes(searchInput_total.value.toLowerCase()) || PhoneHidden.toLowerCase().includes(searchInput_total.value.toLowerCase())) {
+                    count++;
+                }
+
+            });
+
+            totalAll.textContent = `Danh sách ${count} khách đặt hàng `;
+            totalAll_model.textContent = `Danh sách ${count} khách đặt hàng `;
+        }
+
+        function loadMore() {
+            displayedItems += itemsPerLoad;
+            displayData_model();
+        }
+
+        function viewAll() {
+            displayedItems = Number.MAX_SAFE_INTEGER;
+            displayData_model();
+        }
+
+        window.onload = () => {
+            displayData();
+            totalcoune();
+            // Add an event listener to the search input for real-time filtering
+            const searchInput = document.getElementById("searchInput");
+            searchInput.addEventListener("input", displayData);
+
+            //view model
+            displayData_model();
+
+            const searchInput_model = document.getElementById("searchInput-model");
+            searchInput_model.addEventListener("input", viewAll);
+
+            const loadMoreButton_model = document.getElementById("loadMoreButton-model");
+            loadMoreButton_model.addEventListener("click", loadMore);
+
+            const showlist_model = document.getElementById("showlist");
+            showlist_model.addEventListener("click", loadMore);
+        };
+
+
+    </script>
+}
+
+
+
+<div  class="main">
+
+<div class="main-content background-white HH_Tiger12">
+            <div  class="content-pc">
+              <img class="img-100p change-src lazyloaded Flip-feature-item"  data-href="#scrollbooking"  type="Model.Title"  src="~/Content/Tiger12/img/ảnh-landing-desktop-oscal-12.jpg?@DateTime.Now" alt="">
+            </div>
+          </div>
+        <nav id="id-ss-series-menu" class="ss-series-menu">
+            <div class="container">
+                <div class="inner">
+                    <h1 class="active">
+                        <a  data-href="#scrollbooking" class="scroll st-menu__logo Flip-feature-item">
+                            <span>@string.Format("{0}", Model.Title.Replace("(12GB/256GB) - Chính hãng", ""))</span>                   
+                        </a>
+                    </h1>
+                    <div class="ss-menu-right" id="navigation">
+                        <ul>
+                            <li class="active"><a href="#section-3" class="item scroll Flip-feature-item" data-href="#scrollbooking">Chi tiết sản phẩm</a></li>
+                        </ul>
+                        <div class="ss-menu-call active">
+                          @if (Model.IsNotSell)
+                          {
+                              // Mã khi sản phẩm không bán
+                          }
+                          else
+                          {
+                             if (Model.IsPreOrder)
+                                  {
+                                      <a title="Đặt trước" data-sku="@Model.DFDisplay.SKU" href="javascript:;" class="btn-red btnQuickOrder btnbuy ss-menu-btn btn-cart scroll">
+                                          ĐẶT TRƯỚC
+                                      </a>
+                                  }
+                                  else if (Model.BuyOnline && Model.DFDisplay.LimitBuyOnline)
+                                  {
+                                      <a title="MUA NGAY" data-sku="@Model.DFDisplay.SKU" href="javascript:;" class="btn-red btnQuickOrder btnbuy ss-menu-btn btn-cart scroll">
+                                          MUA NGAY
+                                      </a>
+                                  }
+                                  else
+                                  {
+                                      <a title="Đăng ký nhận thông tin" data-id="@Model.ID" href="javascript:;" class="btn-orange btnQuickSubscription btnbuy ss-menu-btn btn-cart scroll">
+                                          ĐĂNG KÝ
+                                      </a>
+                                  }
+
+                          }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+<div class="HH_Tiger12">
+
+
+  
+
+
+
+  <div class="sect2 sect">
+    <div class="why sect-title">
+      <span class="gradient-blue f-s-72">
+        
+            Tại sao chọn Oscal TIGER 12?
+        
+        </span>
+    </div>
+    <div class="type-area">
+      <div class="sect-item-1">
+        <div class="item item-1">
+          <img class="img-100p ls-is-cached lazyloaded" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-1.webp" alt="" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-1.webp">
+          <div class="sect-txt">
+            <p class="p1 f-s-26">Tần số quét màn hình <span class="f-s-40">120Hz</span><br></p>
+          </div>
+        </div>
+        <div class="item item-2">
+          <img class="img-100p ls-is-cached lazyloaded" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-2.webp" alt="" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-2.webp">
+          <div class="sect-txt y-center">
+            <p class="p1 f-s-36">5000mAh</p>
+            <p class="p2 f-s-26">Dung lượng pin</p>
+            <p class="p1 f-s-36">33W</p>
+            <p class="p2 f-s-26">Sạc nhanh</p>
+            <p class="p3 f-s-24">Lên đến 446h chờ <br>và  sạc đầy 100% <br>chỉ trong một giờ</p>
+          </div>
+        </div>
+        <div class="item item-3">
+          <img class="img-100p ls-is-cached lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-3.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-3.webp">
+          <div class="sect-txt">
+            <p class="p1">8,35mm</p>
+            <p class="p2">198g</p>
+          </div>
+        </div>
+      </div>
+      <div class="sect-item-2">
+        <div class="left">
+          <div class="sect-left">
+            <div class="item item-4">
+              <img class="img-100p ls-is-cached lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-4.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-4.webp">
+              <div class="sect-txt">
+                <p class="p1 f-s-26">Loa Smart-K Box</p>
+                <p class="p2 f-s-20"> Âm thanh sống động <br> quanh tai</p>
+              </div>
+            </div>
+            <div class="item item-5">
+              <img class="img-100p ls-is-cached lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-5.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-5.webp">
+              <div class="sect-txt x-center">
+                <p class="p1 f-s-46">Camera trước 13MP</p>
+                <p class="p1 f-s-24"> cảm biến Samsung® ISOCELL 3L6</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="top">
+            <div class="item item-6">
+              <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-6.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-6.webp">
+              <div class="sect-txt x-center">
+                <p class="p1 f-s-40">Màn hình FHD+ 6.78 inch</p>
+                <p class="p2 f-s-20">Màn Hình Rộng Hơn, Thế Giới Gần Hơn</p>
+              </div>
+            </div>
+            <div class="item item-7">
+              <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-7.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-7.webp">
+              <div class="sect-txt">
+                <p class="p1 f-s-32">Chip MediaTek Helio G99</p>
+                <p class="p2 f-s-22 d-none">Tương đương các chip hỗ trợ 5G</p>
+              </div>
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="item item-8">
+              <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-8.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-8.webp">
+              <div class="sect-txt">
+                <p class="p1 f-s-24">Camera 64MP cảm biến Samsung® ISOCELL GW3</p>
+                <p class="p2 f-s-22">Siêu rõ và cực nhanh với Super PD</p>
+              </div>
+            </div>
+            <div class="item item-9">
+              <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-9.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-9.webp">
+              <div class="sect-txt x-center">
+                <p class="p1 f-s-26">RAM 12GB + Mở rộng 12GB = <br> Lên tới 24GB</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sect-item-3">
+        <div class="item item-10">
+          <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-10.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-10.webp">
+          <div class="sect-txt">
+            <p class="p1 f-s-32">ROM 256GB <br> + Mở rộng 1TB (thẻ nhớ)</p>
+          </div>
+        </div>
+        <div class="item item-11">
+          <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-11.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-11.webp">
+          <div class="sect-txt ">
+            <img class="arcsoft ls-is-cached lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/arcsoft.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/arcsoft.webp">
+            <p class="p1 f-s-36">Camera trước 13MP cảm biến Samsung® ISOCELL 3L6</p>
+          </div>
+        </div>
+        <div class="item item-12">
+          <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-12.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-12.webp">
+          <div class="sect-txt x-center">
+            <p class="p1 f-s-28">DokeOS 4.0 Dựa trên Android 13 </p>
+          </div>
+        </div>
+      </div>
+      <div class="sect-item-4">
+        <div class="item item-13">
+          <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-13.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-13.webp">
+          <div class="sect-txt">
+            <p class="p1 f-s-32">NFC đa năng</p>
+          </div>
+        </div>
+        <div class="item item-14">
+          <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-14.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-14.webp">
+          <div class="sect-txt ">
+            <p class="p1 f-s-32">Ba khe thẻ</p>
+            <p class="p2 f-s-22">2 SIM + 1 Thẻ nhớ</p>
+          </div>
+        </div>
+        <div class="item item-15">
+          <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-15.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect2-15.webp">
+          <div class="sect-txt x-center">
+            <p class="p1 f-s-26">Mở khóa Khuôn mặt & Vân tay</p>
+            <p class="p2 f-s-20">Hai cách để mở khóa <br>nhanh chóng và an toàn</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sect3 sect">
+    <div class="common-title">
+      <p class="p1">Mỏng 8,35mm &amp; nhẹ 198g</p>
+      <p class="p2">Không thể tinh tế & Mỏng hơn được nữa</p>
+      <p class="p3">Bạn sẽ bị cuốn hút bởi Oscal TIGER 12 ngay từ cái nhìn đầu tiên - với các cạnh phẳng cho việc cầm nắm dễ dàng và hình dạng
+         cong mảnh mai, nó kết hợp sự bền bỉ, thoải mái và tinh tế. Cầm máy trong tay như một tác phẩm nghệ
+          thuật, hoặc trưng bày trên bàn làm việc để làm nổi bật toàn bộ khu vực.</p>
+    </div>
+    <div class="sect-box">
+      <div class="item">
+        <img class=" lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect3-2.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect3-2.webp">
+        <div class="sect-txt y-center">
+          <p class="p4 f-s-46">8,35mm</p>
+          <p class="p5 f-s-26">Mỏng</p>
+        </div>
+      </div>
+      <div class="item">
+        <img class=" lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect3-3.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect3-3.webp">
+        <div class="sect-txt y-center">
+          <p class="p4 f-s-46">198g</p>
+          <p class="p5 f-s-26">Nhẹ </p>
+        </div>
+      </div>
+    </div>
+    <div class="img-box">
+      <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect3-1.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect3-1.webp">
+      <p class="p6 f-s-46 gradient-blue">3 màu sắc ấn tượng</p>
+    </div>
+    <div class="type-area">
+      <div class="item">
+        <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect3-4.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect3-4.webp">
+        <p class="p7 f-s-36">Màu xanh thiên thanh</p>
+      </div>
+      <div class="item">
+        <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect3-5.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect3-5.webp">
+        <p class="p7 f-s-36">Màu tím bồng bềnh</p>
+      </div>
+      <div class="item">
+        <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect3-6.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect3-6.webp">
+        <p class="p7 f-s-36">Màu xám vân vũ</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sect5 sect">
+    <img class="img-100p change-src lazyloaded" daa-pc="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect5-1.webp" data-phone="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect5-1_phone.webp" alt="" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect5-1.webp">
+    <div class="sect-txt x-center">
+      <p class="p1 f-s-72">Nâng cấp giải trí<img alt="" class=" lazyloaded" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect5-2.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect5-2.webp"> </p>
+      <p class="p2 f-s-40">Màn hình 120Hz cho trải nghiệm siêu mượt</p>
+    </div>
+  </div>
+
+  <div class="sect7 sect">
+    <div class="common-title">
+      <p class="p1">Màn hình FHD+ 6,78 inch</p>
+      <p class="p2">Màn Hình Rộng Hơn, Thế Giới Gần Hơn</p>
+      <p class="p3">Trải nghiệm thế giới trên một màn hình rộng hơn, đắm chìm trong những bộ phim hấp dẫn và những trò chơi đầy kịch tính. Thiết kế siêu nhẹ độc đáo của Oscal TIGER 12 không làm mờ đi sự rực rỡ của màn hình. Thay vào đó, nó mang đến một bữa tiệc thị giác hoàn hảo với màn hình 2.4K 120Hz vượt xa giới hạn tưởng tượng của bạn.</p>
+    </div>
+    <div class="sect-item">
+      <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect7-1.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect7-1.webp">
+      <div class="sect-txt type-area">
+        <div class="sect-item-1">
+          <div class="item item-1">
+            <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect7-2.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect7-2.webp">
+            <div class="word-txt y-center">
+              <p class="p4">1080*2460</p>
+              <p class="p5">Độ phân giải</p>
+            </div>
+          </div>
+          <div class="item item-2">
+            <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect7-3.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect7-3.webp">
+            <div class="word-txt y-center">
+              <p class="p4">6,78 inch</p>
+              <p class="p5">Kích thước màn hình</p>
+            </div>
+          </div>
+        </div>
+        <div class="sect-item-2">
+          <div class="item item-3">
+            <div class="word-txt ">
+              <p class="p4">120Hz</p>
+              <p class="p5">Tần số quét/p>
+            </div>
+          </div>
+          <div class="item item-4">
+            <div class="word-txt ">
+              <p class="p4">90%</p>
+              <p class="p5">Tỉ lệ màn hình so với thân máy</p>
+            </div>
+          </div>
+          <div class="item item-5">
+            <div class="word-txt ">
+              <p class="p4">FHD+ INCELL</p>
+              <p class="p5">Loại Panel</p>
+            </div>
+          </div>
+          <div class="item item-6">
+            <div class="word-txt ">
+              <p class="p4">500 nits</p>
+              <p class="p5">độ sáng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="main-content background-white">
+  <div class="content-pc">
+      <div class="sect8 sect">
+    <div class="common-title ">
+      <p class="p1">Tần số quét lên tới 120Hz</p>
+      <p class="p2">Chuyển động mượt mà hơn</p>
+      <p class="p3">Sự chuyển đổi đáng kể từ 60Hz lên 120Hz giúp phản ứng khi chơi các game có mức FPS như đua xe trở nên nhanh chóng hơn. Bên cạnh đó, bạn có thể tránh được mọi sự giật lag, giúp mắt bạn cảm nhận chuyển động trên màn hình mượt mà hơn. Tất cả điều này được thực hiện nhờ Oscal TIGER 12.</p>
+    </div>
+    <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect8-1.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect8-1.webp">
+      </div>
+      <div class="sect10 sect">
+        <div class="common-title ">
+          <p class="p1">Pin 5000mAh &amp; Sạc nhanh 33W</p>
+          <p class="p2">100% chỉ trong một giờ</p>
+          <p class="p3">Đi từ sáng đến tối và hơn thế nữa với pin khủng 5000mAh của TIGER 12. Và nếu bạn sắp hết? Bạn sẽ quay lại trò chơi ngay lập tức với Sạc nhanh 33W. Không bao giờ tạm dừng, không bao giờ chờ đợi, với TIGER 12 bạn luôn sẵn sàng.</p>
+        </div>
+        <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect10-1.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect10-1.webp">
+        <div class="type-area sect-item">
+          <div class="item item-1">
+            <img alt="" class=" ls-is-cached lazyloaded" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect10-2.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect10-2.webp">
+            <p class="p4 f-s-20">Trò chơi</p>
+            <p class="p5 f-s-28">6 giờ</p>
+          </div>
+          <div class="item item-2">
+            <img alt="" class=" ls-is-cached lazyloaded" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect10-3.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect10-3.webp">
+            <p class="p4 f-s-20">Băng hình</p>
+            <p class="p5 f-s-28">6 giờ</p>
+          </div>
+          <div class="item item-3">
+            <img alt="" class=" lazyloaded" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect10-4.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect10-4.webp">
+            <p class="p4 f-s-20">Web</p>
+            <p class="p5 f-s-28">9 giờ</p>
+          </div>
+          <div class="item item-4">
+            <img alt="" class=" lazyloaded" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect10-5.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect10-5.webp">
+            <p class="p4 f-s-20">Đang gọi</p>
+            <p class="p5 f-s-28">35 giờ</p>
+          </div>
+          <div class="item item-5">
+            <img alt="" class=" lazyloaded" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect10-6.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect10-6.webp">
+            <p class="p4 f-s-20">Âm nhạc</p>
+            <p class="p5 f-s-28">19 giờ</p>
+          </div>
+          <div class="item item-6">
+            <img alt="" class=" lazyloaded" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect10-7.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect10-7.webp">
+            <p class="p4 f-s-20">Đứng gần</p>
+            <p class="p5 f-s-28">446 giờ</p>
+          </div>
+        </div>
+      </div>
+      <div class="sect9 sect">
+        <img class="img-100p change-src ls-is-cached lazyloaded" data-pc="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect9-1.webp" data-phone="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect9-1_phone.webp" alt="" data-src="" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect9-1.webp">
+        <div class="common-title x-center type-area">
+          <p class="p1">Loa Smart-K Box</p>
+          <p class="p2"> Âm thanh vòm</p>
+          <p class="p3">Oscal TIGER 12 mang đến trải nghiệm nghe sáng tạo với âm thanh mạnh mẽ, chất lượng cao. Nếu bạn đang tìm kiếm trải nghiệm âm thanh đắm chìm thì loa Smart-K Box sẽ mang đến âm thanh sống động, tràn ngập căn phòng. Với pin cực lớn 5000mAh, bạn có thể tận hưởng âm nhạc bất tận khi đang di chuyển.</p>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="sect11 sect">
+    <img class="img-100p change-src ls-is-cached lazyloaded" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect11-1.webp" data-phone="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect11-1_phone.webp" alt="" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect11-1.webp">
+    <div class="sect-word common-title x-center">
+      <p class="p1">Nâng cấp Camera<img class="arrow lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect11-2.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect11-2.webp"></p>
+      <p class="p2">Camera 64MP siêu nét &amp; siêu nhanh với Super PD</p>
+    </div>
+  </div>
+  <div class="sect12 sect">
+    <img class="img-100p change-src ls-is-cached lazyloaded" data-pc="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect12-1.webp" data-phone="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect12-1_phone.webp" alt="" data-src="" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect12-1.webp">
+  </div>
+
+  <div class=" main-content background">
+    <div class="content-pc">
+      <div class="swiper mySwiper w-100">
+          <div class="swiper-wrapper">
+              <div class="sect18-20 sect18 sect swiper-slide">
+      <div class="arcsoft-box">
+        <img class="arcsoft ls-is-cached lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/arcsoft.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/arcsoft.webp">
+        <p class="p1 gradient-blue">HDR</p>
+      </div>
+      <p class="p2 f-s-28 d-none">Mang lại dải màu sắc sống động, độ chi tiết cao và màu sắc trung thực </p>
+      <div class="type-area">
+        <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect18-1.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect18-1.webp">
+        <p class="p3 f-s-28">Oscal TIGER 12</p>
+      </div>
+    </div>
+              <div class="sect18-20 sect19 sect swiper-slide">
+                <div class="arcsoft-box">
+                  <p class="p1 gradient-blue">Siêu Chụp Đêm</p>
+                  <img class="arcsoft ls-is-cached lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/arcsoft.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/arcsoft.webp">
+                </div>
+                <p class="p2 f-s-28 d-none">Mang đến những bức ảnh chụp đêm sắc nét với khả năng giảm nhiễu tối đa và chất lượng màu sắc được nâng cao</p>
+                <div class="type-area">
+                  <img class="img-100p change-src ls-is-cached lazyloaded" data-pc="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect19-1.webp" data-phone="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect19-1_phone.webp" alt="" data-src="" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect19-1.webp">
+                </div>
+              </div>
+              <div class="sect18-20 sect20 sect swiper-slide">
+                <div class="arcsoft-box">
+                  <img class="arcsoft ls-is-cached lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/arcsoft.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/arcsoft.webp">
+                  <p class="p1 gradient-blue">Chân dung</p>
+                </div>
+                <p class="p2 f-s-28 d-none">Tận hưởng những bức ảnh chân dung nổi bật với việc lấy nét chính xác và xóa phông tuyệt đẹp,
+                   <br> tách biệt bạn khỏi bất kỳ sự xao lãng nào phía sau bạn.</p>
+                <div class="type-area">
+                  <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect20-1.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect20-1.webp">
+                </div>
+              </div>
+              <div class="sect18-20 sect21 sect swiper-slide">
+                <div class="arcsoft-box">
+                  <img class="arcsoft ls-is-cached lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/arcsoft.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/arcsoft.webp">
+                  <p class="p1 gradient-blue">Làm đẹp</p>
+                </div>
+                <p class="p2 f-s-28 d-none">Chụp những bức ảnh nhóm tự nhiên tuyệt đẹp, không cần trang điểm, <br>
+                  được điều chỉnh một cách tinh tế chắc chắn sẽ thu hút mọi ánh nhìn.</p>
+                <div class="type-area">
+                  <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect21-1.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect21-1.webp">
+                  <p class="p3 f-s-46">Oscal TIGER 12</p>
+                </div>
+                <div class="type-area sect-item d-none">
+                  <div class="item">
+                    <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect21-2.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect21-2.webp">
+                    <p class="p3 f-s-46">Oscal TIGER 12</p>
+                  </div>
+                  <div class="item">
+                    <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect21-3.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect21-3.webp">
+                    <p class="p3 f-s-46">Oscal TIGER 12</p>
+                  </div>
+                  <div class="item">
+                    <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect21-4.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect21-4.webp">
+                    <p class="p3 f-s-46">Oscal TIGER 12</p>
+                  </div>
+                </div>
+              </div>
+              <div class="sect18-20 sect21  sect22 sect swiper-slide">
+                <div class="arcsoft-box">
+                  <img class="arcsoft ls-is-cached lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/arcsoft.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/arcsoft.webp">
+                  <p class="p1 gradient-blue">Panorama</p>
+                </div>
+                <p class="p2 f-s-28 d-none">Chụp các cảnh đẹp tuyệt vời một cách dễ dàng và mở ra vô số khả năng <br>
+                 cho những bức ảnh sáng tạo với chế độ Toàn cảnh Panorama.</p>
+                <div class="type-area">
+                  <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect22-1.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect22-1.webp">
+                </div>
+                <div class="type-area sect-item d-none">
+                  <div class="item">
+                    <img class="img-100p ls-is-cached lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect22-2.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect22-2.webp">
+                  </div>
+                  <div class="item">
+                    <img class="img-100p ls-is-cached lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect22-3.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect22-3.webp">
+                  </div>
+                  <div class="item">
+                    <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect22-4.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect22-4.webp">
+                  </div>
+                </div>
+              </div>
+          </div>
+          <button class="start_css swiper-button-prev" type="button" onclick="plusDivs_accessory(-1)"
+                        tabindex="0" aria-label="Previous slide" aria-controls="product-container-compare">
+                        <svg class="start_css" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                            viewBox="0 0 50 50" fill="none">
+                            <rect width="50" height="50" rx="25" fill="#615f5f"></rect>
+                            <path d="M31 13L19 25L31 37" stroke="white" stroke-width="3"></path>
+                        </svg>
+                    </button>
+                    <button class="start_css swiper-button-next" type="button" onclick="plusDivs_accessory(1)"
+                        tabindex="0" aria-label="Next slide" aria-controls="product-container">
+                        <svg class="start_css" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                            viewBox="0 0 50 50" fill="none">
+                            <rect width="50" height="50" rx="25" fill="#615f5f"></rect>
+                            <path d="M19 37L31 25L19 13" stroke="white" stroke-width="3"></path>
+                        </svg>
+
+                    </button>
+
+            <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sect18-20 sect23 sect">
+    <div class="arcsoft-box">
+      <img class="arcsoft lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/arcsoft.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/arcsoft.webp">
+      <p class="p1 gradient-blue">Quay phim 20K 30fps với chế độ Làm đẹp</p>
+    </div>
+    <p class="p2 f-s-28">Tạo ấn tượng trên mạng xã hội với những video blog <br>
+     và tài liệu tuyệt vời về mặt hình ảnh.</p>
+    <div class="type-area">
+      <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect23-1.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect23-1.webp">
+    </div>
+  </div>
+  <div class="sect26 sect">
+    <img class="img-100p change-src ls-is-cached lazyloaded" data-pc="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect25-1.webp" data-phone="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect25-1_phone.webp" alt="" data-src="" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect25-1.webp">
+    <div class="sect-txt x-center">
+      <p class="p1 gradient-blue">Nâng cấp tốc độ<img class="arrow ls-is-cached lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect26-arrow.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect26-arrow.webp"></p>
+      <p class="p2 f-s-40">Đa nhiệm hoàn hảo với Helio G99 6nm </p>
+    </div>
+  </div>
+<div class="main-content background-white">
+  <div class="content-pc">
+      <div class="sect27 sect">
+    <div class="sect-item-1 type-area">
+      <div class="item item-1">
+        <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect26-1.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect26-1.webp">
+        <div class="sect-word x-center">
+          <p class="p1 f-s-26">RAM 12GB + 12GB Mở rộng <br>= RAM lên tới 24GB</p>
+        </div>
+      </div>
+      <div class="item item-2">
+        <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect26-2.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect26-2.webp">
+        <div class="sect-word">
+          <p class="p1 f-s-32">ROM 256GB + Mở rộng <br> tới 1TB qua thẻ nhớ</p>
+          <p class="p2 f-s-22">Phù hợp cho mọi <br> nhu cầu của bạn</p>
+        </div>
+      </div>
+    </div>
+    <div class="sect-item-2 type-area">
+      <div class="item item-3">
+        <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect26-3.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect26-3.webp">
+        <div class="sect-word">
+          <p class="p1 f-s-32">Chip MediaTek Helio G99 Tám nhân</p>
+          <p class="p2 f-s-22">Tương đương các chip hỗ trợ 5G</p>
+        </div>
+      </div>
+      <div class="item item-4">
+        <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect26-4.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect26-4.webp">
+        <div class="sect-word x-center">
+          <p class="p1 f-s-22">Hệ thống làm mát tích hợp 15.441mm <sup>2</sup></p>
+          <p class="p1">Graphite Làm mát & Keo tản nhiệt</p>
+        </div>
+      </div>
+      <div class="item item-5">
+        <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect26-5.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect26-5.webp">
+        <div class="sect-word x-center">
+          <p class="p1 f-s-28">Điểm Antutu 438,186</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sect32 sect">
+    <img class="img-100p change-src ls-is-cached lazyloaded" data-pc="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect32-1.webp" data-phone="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect32-1_phone.webp" alt="" data-src="" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect32-1.webp">
+    <div class="sect-txt type-area common-title x-center">
+      <p class="p1 f-s-52 gradient-blue">ROM 256GB + Mở rộng 1TB qua thẻ nhớ</p>
+      <p class="p2 f-s-36">Lưu trữ mọi thứ bạn muốn</p>
+      <p class="p3">Bạn vẫn thường xuyên xóa những bức ảnh đáng nhớ của mình chỉ để nhường chỗ cho việc tải xuống các trò chơi có bộ nhớ lớn? Với Oscal TIGER 12 được hỗ trợ bởi ROM 256GB và thẻ TF có thể mở rộng lên tới 1TB, bạn sẽ giải quyết triệt để những lo lắng về lưu trữ. Hãy tạm biệt những rắc rối về việc giải phóng không gian và tự do tải xuống không giới hạn.</p>
+    </div>
+  </div>
+  <div class="sect33 sect">
+    <div class="sect-txt type-area common-title ">
+      <p class="p1 f-s-52 gradient-blue">RAM 12GB + 12GB mở rộng <br> = 24GB RAM</p>
+      <p class="p2 f-s-36">Xử lý hình ảnh cấp độ chuyên nghiệp</p>
+      <p class="p3">Mọi trường hợp giật lag và chậm trễ đều khiến bạn thất vọng, và khiến động lực của bạn ngày càng giảm sút. Tuy nhiên, với khả năng đa nhiệm hàng đầu, khởi chạy ứng dụng nhanh như chớp và chuyển đổi mượt mà, TIGER 12, được hỗ trợ bởi RAM lên tới 24GB, đảm bảo năng suất làm việc cao nhất và phát trực tuyến liền mạch, duy trì động lực của bạn ở mức cao nhất.  </p>
+    </div>
+    <div class="img-box">
+      <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect33-1.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect33-1.webp">
+    </div>
+  </div>
+  <div class="sect28 sect">
+    <div class="common-title x-center">
+      <p class="p1">Chip MediaTek Helio G99 Tám nhân</p>
+      <p class="p2">Tương đương các chip hỗ trợ 5G</p>
+      <p class="p3">TIGER 12, được trang bị chip Helio G99 sử dụng quy trình 6nm hiệu quả,
+         mang lại hiệu suất vượt trội trong các trò chơi sử dụng nhiều CPU trong khi vẫn
+          duy trì hiệu quả sử dụng năng lượng cao để kéo dài tuổi thọ pin.
+           Với sự hỗ trợ của Arm Mali-G57 mạnh mẽ, Oscal TIGER 12 có thể tăng tốc
+            hơn nữa khả năng xử lý đồ họa để tối đa hóa hiệu suất cho các tác vụ hàng ngày.</p>
+    </div>
+    <img class="img-100p change-src ls-is-cached lazyloaded" data-pc="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect27-1.webp" data-phone="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect27-1_phone.webp" alt="" data-src="" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect27-1.webp">
+  </div>
+  <div class="sect29 sect">
+    <div class="common-title x-center">
+      <p class="p1">Công nghệ chơi game HyperEngine <br> 2.0 Lite</p>
+      <p class="p2">Bộ máy quản lý tài nguyên 2.0</p>
+      <p class="p3">Bộ máy quản lý tài nguyên thông minh của TIGER 12 đảm bảo hiệu suất liên tục và chơi trò chơi mượt mà trong thời gian lâu hơn.</p>
+    </div>
+    <img class="img-100p change-src ls-is-cached lazyloaded" data-pc="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect28-1.webp" data-phone="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect28-1_phone.webp" alt="" data-src="" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect28-1.webp">
+  </div>
+  <div class="sect30 sect">
+    <div class="sect-title gradient-blue f-s-52">
+      CPU, GPU và Bộ nhớ <br> quản lý thông minh
+    </div>
+    <div class="sect-item-1 type-area">
+      <div class="left">
+        <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect29-1.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect29-1.webp">
+      </div>
+      <div class="right f-s-36">
+       1.Hiệu suất mượt mà hơn khi chơi các game nặng, lối chơi căng thẳng
+      </div>
+    </div>
+    <div class="sect-item-2 type-area">
+      <div class="right f-s-36">
+       2. Các cải tiến về phần cứng và phần mềm giúp giảm mức tiêu thụ điện năng trong các game có mức FPS cao, kéo dài tuổi thọ pin mà không làm giảm trải nghiệm người dùng.
+
+      </div>
+      <div class="left">
+        <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect29-2.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect29-2.webp">
+      </div>
+    </div>
+  </div>
+  <div class="sect31 sect">
+    <img class="img-100p change-src ls-is-cached lazyloaded" data-pc="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect30-1.webp" data-phone="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect30-1_phone.webp" alt="" data-src="" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect30-1.webp">
+    <div class="sect-txt type-area">
+      <p class="p1 f-s-52 gradient-blue">Cuộc gọi và dữ liệu đồng thời</p>
+      <p class="p2 f-s-36">Cho phép người dùng trì hoãn cuộc gọi khi đang trong trò chơi mà không bị rớt kết nối dữ liệu. 
+</p>
+    </div>
+  </div>
+
+  <div class="sect34 sect">
+    <div class="sect-txt type-area common-title ">
+      <p class="p1 f-s-52 gradient-blue">Hệ thống làm mát tích hợp 15,441mm2 </p>
+      <p class="p2 f-s-36">Tản nhiệt Graphite & Gel Nhiệt</p>
+      <p class="p3">Giải trí không giới hạn trên TIGER 12 mà không cần lo lắng về vấn đề quá nhiệt nhờ vào hệ thống làm mát độc đáo lên đến 15,441mm2 với graphite làm mát và gel nhiệt. TIGER 12 đảm bảo cho bạn một trải nghiệm mượt mà và dễ chịu suốt chặng đường.</p>
+    </div>
+    <div class="img-box">
+      <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect34-1.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect34-1.webp">
+    </div>
+  </div>
+  </div>
+</div>
+  <div class="sect35 sect">
+    <div class="sect-txt type-area common-title ">
+      <p class="p1 f-s-52 gradient-blue">Nâng cấp Hiệu suất </p>
+      <p class="p2 ">Hoạt động mượt mà với DokeOS 4.0 Dựa trên Android 13</p>
+    </div>
+    <div class="img-box">
+      <img class="img-100p change-src ls-is-cached lazyloaded" data-pc="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect35-1.webp" data-phone="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect35-1_phone.webp" alt="" data-src="" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect35-1.webp">
+    </div>
+  </div>
+  <div class="sect36 sect">
+    <img class="img-100p change-src ls-is-cached lazyloaded" data-pc="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect36-1.webp" data-phone="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect36-1_phone.webp" alt="" data-src="" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect36-1.webp">
+    <div class="common-title x-center">
+      <p class="p1">Ứng dụng EasyShare </p>
+      <p class="p2">Chia sẻ ngay lập tức. Mọi nơi, mọi lúc.</p>
+      <p class="p3">Với Ứng dụng EasyShare của TIGER 12, bạn có thể tận hưởng việc trao đổi tệp nhanh chóng, dễ dàng khi đang di chuyển. Không có mạng hoặc Bluetooth? Không vấn đề. Chia sẻ giai điệu, clip hoặc ảnh ngay lập tức, mọi lúc, mọi nơi.</p>
+      <div class="sect-item type-area">
+        <div class="item item-1">
+          <img class="img-100p ls-is-cached lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect36-2.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect36-2.webp">
+          <div class="sect-txt">
+            <p class="p4 f-s-26"> Tốc độ truyền tải <br> 7.7MB/s  </p>
+            <p class="p5 f-s-20">Nhanh gấp 60 lần <br> so với Bluetooth↑</p>
+          </div>
+        </div>
+        <div class="item item-2">
+          <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect36-3.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect36-3.webp">
+          <div class="sect-txt">
+            <p class="p4 f-s-26"> Tập tin lớn, <br> hiệu suất tốt hơn  </p>
+            <p class="p5 f-s-20"> Tiện ích <br> ngay lập tức </p>
+          </div>
+        </div>
+        <div class="item item-3">
+          <img class="img-100p lazyloaded" alt="" data-src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect36-4.webp" src="https://d2kbvjszk9d5ln.cloudfront.net/yshop/tiger12/sect36-4.webp">
+          <div class="sect-txt">
+            <p class="p4 f-s-26"> Ngoại tuyến để <br> bảo vệ quyền riêng tư trưc tuyến </p>
+            <p class="p5 f-s-20"> Bảo vệ thông tin cá nhân </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sect-note f-s-24">
+      *EasyShare chỉ có tác dụng khi bạn bật Wifi trong phần Cài đặt chứ không phụ thuộc vào mạng.
+    </div>
+  </div>
+
+  <div class="sect57 sect d-none">
+    <div class="type-area">
+      <div class="sect-title">
+        OSCAL TIGER 12
+      </div>
+      <div class="sect-list">
+        <div class="left">
+          Model
+        </div>
+        <div class="right">
+          Oscal TIGER 12
+        </div>
+      </div>
+      <div class="sect-list">
+        <div class="left">
+          Màu sắc
+        </div>
+        <div class="right">
+          Tím Bồng Bềnh - Xanh Thiên Thanh - Xám Vân Vũ
+        </div>
+      </div>
+      <div class="sect-list">
+        <div class="left">
+          Kích thước
+        </div>
+        <div class="right">
+          168.5 x 76.6 x 8.4 mm (6.63 x 3.02 x 0.33 in)
+        </div>
+      </div>
+      <div class="sect-list">
+        <div class="left">
+          Trọng lượng
+        </div>
+        <div class="right">
+          198.3 g (6.98 oz)
+        </div>
+      </div>
+      <div class="sect-list">
+        <div class="left">
+          Kích thước màn hình
+        </div>
+        <div class="right">
+          6.78 inches, 109.2 cm2 (~84.6% so với thân máy)
+        </div>
+      </div>
+      <div class="sect-list">
+        <div class="left">
+          Loại màn hình
+        </div>
+        <div class="right">
+          IPS LCD, tần số quét 120Hz
+        </div>
+      </div>
+      <div class="sect-list">
+        <div class="left">
+          Độ phân giải
+        </div>
+        <div class="right">
+          1080 x 2460 pixels (mật độ điểm ảnh ~396 ppi)
+        </div>
+      </div>
+      <div class="sect-list">
+        <div class="left">
+          Độ sáng tối đa
+        </div>
+        <div class="right">
+          500 nits
+        </div>
+      </div>
+      <div class="sect-list">
+        <div class="left">
+          Hệ điều hành
+        </div>
+        <div class="right">
+          Android 13, Doke OS 4.0
+        </div>
+      </div>
+      <div class="sect-list">
+        <div class="left">
+          Bộ xử lý
+        </div>
+        <div class="right">
+          Mediatek Helio G99 (6nm)
+        </div>
+      </div>
+      <div class="sect-list">
+        <div class="left">
+          GPU
+        </div>
+        <div class="right">
+          Mali-G57 MC2
+        </div>
+      </div>
+      <div class="sect-list">
+        <div class="left">
+          RAM
+        </div>
+        <div class="right">
+          12GB (+12GB mở rộng)
+        </div>
+      </div>
+      <div class="sect-list">
+        <div class="left">
+          Bộ nhớ/ROM
+        </div>
+        <div class="right">
+          256GB
+        </div>
+      </div>
+      <div class="sect-list">
+        <div class="left">
+          Pin
+        </div>
+        <div class="right">
+          5000 mAh
+        </div>
+      </div>
+      <div class="sect-list">
+        <div class="left">
+          Sạc
+        </div>
+        <div class="right">
+          Sạc nhanh 33W
+        </div>
+      </div>
+      <div class="sect-list">
+        <div class="left">
+          Camera trước
+        </div>
+        <div class="right">
+          13 MP, (wide), 1/3", 1.12µm
+          <br> Quay video 1080p@30fps
+        </div>
+      </div>
+      <div class="sect-list">
+        <div class="left">
+          Camera sau
+        </div>
+        <div class="right">
+          64 MP, (góc rộng), 1/1.97", 0.7µm, PDAF + 2MP (chiều sâu)
+          <br>Quay video 1440p@30fps, 1080p@30fps
+          <br>Tính năng: LED flash, HDR, panorama
+        </div>
+      </div>
+      <div class="sect-list">
+        <div class="left">
+          Camera sau
+        </div>
+        <div class="right">
+          2G: GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2
+          <hr>3G: HSDPA 900 / 2100
+          <hr>4G: 1, 3, 7, 8, 19, 20, 28, 40, 41
+        </div>
+      </div>
+      <div class="sect-list">
+        <div class="left">
+          Wifi
+        </div>
+        <div class="right">
+          Wi-Fi 802.11 a/b/g/n/ac, dual-band
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<section id ="scrollbooking">
+    <div class="container">
+        <div class="product-details">
+            <div class="top-product">
+                <p class = "h1">
+                    @if (Model.FlashSale != null && Model.FlashSale.ID > 0)
+                    {
+                        <i class="icon-flash text-orange" title="Flashsales giá siêu sock"></i>
+                    }
+
+
+                    @Model.SeoData.H1
+
+                    @if (Model.FlashSale != null && Model.FlashSale.ID > 0)
+                    {
+                        var startDay = Model.FlashSale.StartDate.HasValue ? Model.FlashSale.StartDate.Value.ToString("dd") : DateTime.Now.ToString("dd");
+                        var endDay = Model.FlashSale.EndDate.HasValue ? Model.FlashSale.EndDate.Value.AddDays(-1).ToString("dd") : DateTime.Now.AddDays(1).ToString("dd");
+                        var endMonth = Model.FlashSale.EndDate.HasValue ? Model.FlashSale.EndDate.Value.ToString("MM") : DateTime.Now.AddDays(1).ToString("MM");
+
+                        htmlHotsaleNote = string.Format("<br/><label class=\"text-green\">Hotsale giá sốc từ {0}-{1}/{2} giá chỉ còn {3:0,0} ₫</label>", startDay, endDay, endMonth, Model.FlashSale.FlashSalePrice);
+                        htmlHotsaleLimitNote = "<br/><label class=\"text-dark\">Sản phẩm bán giá Hotsale với số lượng có hạn</label>";
+                        <label>
+                            @if (Model.FlashSale.EndDate.HasValue)
+                            {
+                                <span class="timer" id="timer" data-start="@DateTime.Now.ToString("MMMM dd, yyyy HH:mm:ss")" data-end="@Model.FlashSale.EndDate.Value.ToString("MMMM dd, yyyy HH:mm:ss")"></span>
+                            }
+                        </label>
+                    }
+                </p>
+                @*<div class="statistic">
+                        <ul>
+                            <li><a title="Lượt xem"><i class="icon-eye"></i> <span>Đã xem:</span> <strong>@(Model.TotalView > 0 ? string.Format("{0:0,0} ₫", Model.TotalView) : "0")</strong></a></li>
+                            <li><a title="Đánh giá" href="#reviews"><i class="icon-star"></i> <span>Đánh giá:</span> <strong class="totalReviews"></strong></a></li>
+                            <li><a href="#comments" title="Bình luận"><i class="icon-comment"></i> <span>Bình luận:</span> <strong class="totalComments"></strong></a></li>
+                        </ul>
+                    </div>*@
+            </div>
+
+            <div class="product-details-container">
+                <div class="product-image">
+
+                    <div class="love-this-button">
+                        @if (Model.isWishlist)
+                        {
+                            <a class="inlist" title="Bỏ sản phẩm khỏi danh sách yêu thích" href="javascript:wishProduct(@Model.ID, @User.Identity.IsAuthenticated.ToString().ToLower())">
+                                <i class="icon-love-1"></i>
+                                <i class="icon-love-2"></i>
+                            </a>
+                        }
+                        else
+                        {
+                            <a title="Thêm vào sản phẩm yêu thích" href="javascript:wishProduct(@Model.ID, @User.Identity.IsAuthenticated.ToString().ToLower())">
+                                <i class="icon-love-1"></i>
+                                <i class="icon-love-2"></i>
+                            </a>
+                        }
+                    </div>
+
+                    <div id="imagePreview">
+                        <!-- Loading Screen -->
+                        <div data-u="loading" class="loading">
+                            <div class="filter"></div>
+                            <div class="load-bg"></div>
+                        </div>
+
+                        <div data-u="slides" class="viewer">
+                            @if (Model.Images.Count > 0)
+                            {
+                                foreach (var color in Model.Images)
+                                {
+                                    foreach (var item in color.Data)
+                                    {
+                                        <div>
+                                            <a data-fancybox="gallery" rel="group" href="@(QStore.Utils.Configs.SETTING_PATH_IMAGE)/preview@(item.Url)"><img data-u="image" src="@(QStore.Utils.Configs.SETTING_PATH_IMAGE)/productlist/dsp@(item.Url)" title="@Model.Title @color.Title" alt="@Model.Title @color.Title" /></a>
+                                            <div data-u="thumb">
+                                                <img class="i" src="@(QStore.Utils.Configs.SETTING_PATH_IMAGE)/productlist/dst@(item.Url)" title="@Model.Title @color.Title" alt="@Model.Title @color.Title" />
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                var defaultImage = string.IsNullOrEmpty(Model.ImageValue.Url) ? "/Content/web/img/no-image.png" : Model.ImageValue.Url;
+                                <div>
+                                    <a data-fancybox="gallery" rel="group" href="@(QStore.Utils.Configs.SETTING_PATH_IMAGE)/preview@(defaultImage)"><img data-u="image" src="@(QStore.Utils.Configs.SETTING_PATH_IMAGE)/productlist/dsp@(defaultImage)" title="@Model.Title" alt="@Model.Title" /></a>
+                                    <div data-u="thumb">
+                                        <img class="i" src="@(QStore.Utils.Configs.SETTING_PATH_IMAGE)/productlist/dst@(defaultImage)" title="@Model.Title" alt="@Model.Title" />
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                        <!-- Thumbnail Navigator -->
+                        <div data-u="thumbnavigator" class="jssort11" data-autocenter="1" data-scale-bottom="0.75">
+                            <!-- Thumbnail Item Skin Begin -->
+                            <div class="bg-shadow" style="top: 0;left: -30px;width: 370px;height: 80px;position: absolute;box-shadow: 0px 4px 6px #00000029; border-radius: 8px;"></div>
+                            <div data-u="slides" style="cursor:pointer;">
+                                <div data-u="prototype" class="p">
+                                    <div data-u="thumbnailtemplate" class="tp"></div>
+                                </div>
+                            </div>
+
+                            <span class="slider-t-l">
+                                <i class="icon-right"></i>
+                            </span>
+                            <span class="slider-t-r">
+                                <i class="icon-right"></i>
+                            </span>
+                            <!-- Thumbnail Item Skin End -->
+                        </div>
+
+
+
+                        <!-- Arrow Navigator -->
+                        <span data-u="arrowleft" class="slider-l" data-autocenter="2">
+                            <i class="icon-left"></i>
+                        </span>
+                        <span data-u="arrowright" class="slider-r" data-autocenter="2">
+                            <i class="icon-right"></i>
+                        </span>
+
+                    </div>
+                </div>
+
+                @if (Model.IsNotSell)
+                {
+                    <div class="product-center">
+                        <p class="freeship">
+                            <i class="icon-freeship-truck"></i> <span>SẢN PHẨM NGỪNG KINH DOANH</span>
+                        </p>
+                        <div>
+                            <p>Sản phẩm này hiện tại HoangHaMobile đã ngừng kinh doanh, vui lòng tham khảo sản phẩm khác.</p>
+                        </div>
+                    </div>
+
+
+              <div class="product-shop product-right  product-promotion">
+                <div class="product-specs">
+                    <p class= "h3" >Thông số kỹ thuật @Model.Title</p>
+                    
+
+                    <div class="specs-special">
+                        @foreach (var meta in Model.Specs.Where(o => o.MetaShowInQuick).OrderBy(o => o.GroupOrder).ThenBy(o => o.MetaShowInQuickOrder).GroupBy(g => g.MetaTitle))
+                        {
+                            <ol>
+                                <li>
+                                    <strong>@meta.Key:</strong>
+                                    <span>@string.Join(", ", meta.Select(c => c.Content))</span>
+                                </li>
+                            </ol>
+                        }
+                    </div>
+                    <div class="product-spect-img">
+                        @if (Model.Specs.Count > 0)
+                        {
+                            <a data-padding="0px" data-width="600px" class="ajax-modal product-specs-button" href="/Ajax/fullspecs/@Model.ID"><span class="icon-config"></span>
+                                <strong>Cấu hình chi tiết</strong>
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+                }
+                else
+                {
+
+                    <div class="product-center" style="position:relative;">
+                        <p class="price current-product-price">
+                            <strong>
+                                @(Model.DFDisplay.Price.HasValue ? string.Format("{0:0,0} ₫", Model.DFDisplay.Price) : "Giá: Liên hệ")
+                            </strong>
+                            @if (Model.DFDisplay.LastPrice.HasValue)
+                            {
+                                <i><strike>@string.Format("{0:0,0} ₫", Model.DFDisplay.LastPrice)</strike></i>
+                            }
+
+                            <i> | Giá đã bao gồm VAT</i>
+                            @if (!string.IsNullOrEmpty(Model.DFDisplay.PriceNote))
+                            {
+                                <br /><i>@Model.DFDisplay.PriceNote</i>
+                            }
+                            @Html.Raw(htmlHotsaleNote)
+                            @Html.Raw(htmlHotsaleLimitNote)
+                        </p>
+                        <p class="freeship">
+                            @if (string.IsNullOrEmpty(Model.ShippingNote))
+                            {
+                                <i class="icon-freeship-truck"></i>
+                                <span>
+                                    Miễn phí vận chuyển toàn quốc
+                                </span>
+                            }
+                            else
+                            {
+                                <span>@Model.ShippingNote</span>
+                            }
+                        </p>
+
+
+                        <div style="position:absolute; right:0;">
+                            <label>SKU:</label> <strong id="dfSKU">@Model.DFDisplay.SKU</strong>
+                        </div>
+
+                        @if (Model.Versions.Count > 0)
+                        {
+                            <div class="product-option version">
+                                <strong class="label">Lựa chọn phiên bản</strong>
+                                <div class="options" id="versionOption" data-id="@Model.DFDisplay.VersionID">
+                                    @foreach (var item in Model.Versions)
+                                    {
+                                        <div data-sku="@item.SKU" class="item @(item.ID == Model.DFDisplay.VersionID ? "selected" : "")">
+                                            <a href="@item.Url">
+                                                <span><label><strong>@item.Title</strong></label></span>
+                                                <strong>@(item.Price.HasValue ? string.Format("{0:0,0} ₫", item.Price) : "Liên hệ")</strong>
+                                            </a>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        }
+
+                        @if (Model.Colors.Count > 0)
+                        {
+                            int idxColor = 0;
+                            <div class="product-option color">
+                                <strong class="label">Lựa chọn màu và xem địa chỉ còn hàng</strong>
+                                <div class="options" id="colorOptions">
+                                    @foreach (var item in Model.Colors)
+                                    {
+                                        var bestPrice = (item.Price.HasValue ? string.Format("{0:0,0} ₫", item.Price) : "Liên hệ");
+                                        var lastPrice = (item.LastPrice.HasValue ? string.Format("{0:0,0} ₫", item.LastPrice) : "");
+
+                                        <div data-name="@item.Title" data-hotsale="@htmlHotsaleNote" data-pricenote="@item.PriceNote" data-buyonline="@item.LimitBuyOnline.ToString().ToLower()" data-bestPrice="@(bestPrice)" data-lastPrice="@(lastPrice)" data-idx="@idxColor" data-hex="@item.HexValue" data-title="@item.TitleAlt" data-id="@item.ID" data-sku="@item.SKU" class="item @(item.ID == Model.DFDisplay.ColorID ? "selected" : "")">
+                                            <span><label><strong>@item.Title</strong></label></span>
+                                            <strong>@(bestPrice)</strong>
+                                            <div class="colorGuide" style="@string.Format("background:{0}", item.HexValue)">
+                                                <label><strong>@(string.IsNullOrEmpty(item.TitleAlt) ? item.Title : item.TitleAlt)</strong></label>
+                                            </div>
+                                        </div>
+                                        idxColor = idxColor + Model.Images.Where(o => o.ID == item.ID).Select(c => c.Data.Count()).Sum();
+
+                                        @*<span>@item.LimitBuyOnline | @item.InStock / @item.LimitStock</span>*@
+                                    }
+
+                                </div>
+                            </div>
+                        }
+
+
+                        <div style="display:flex;">
+                            @if (Model.Event != null)
+                            {
+                                var discountValueRate = Model.Event.DiscountRate.HasValue ? (Model.DFDisplay.Price * Model.Event.DiscountRate / 100) : null;
+                                var discountValue = Model.Event.DiscountPrice <= discountValueRate ? Model.Event.DiscountPrice : discountValueRate;
+                                var extradiscountValue = (decimal?)Model.Offters.Where(o => o.DisCountPrice.HasValue || o.DiscountRate.HasValue).Sum(discount => (discount.DiscountRate.HasValue ? (Model.DFDisplay.Price * discount.DiscountRate) / 100 : discount.DisCountPrice));
+
+                                <div onclick="window.location.href = '@Model.Event.UID';" class="event" style="cursor:pointer;border:1px solid #F4F4F4; border-radius:5px; margin:5px 0; padding:8px; background:#fff; text-align:center; flex-grow:2; margin-right:10px; background:linear-gradient(90deg, #F64850, #FB810B); color:#fff;">
+                                    <div class="eventPrice" data-extra="@string.Format("{0:0}", extradiscountValue)" data-rate="@Model.Event.DiscountRate" data-val="@string.Format("{0:0}", Model.Event.DiscountPrice)">@Model.Event.Title</div>
+                                    <div class="eventValue" style="font-weight:bold; font-size:23px;">@string.Format("{0:0,0} ₫", Model.DFDisplay.Price - (discountValue + extradiscountValue)) </div>
+                                </div>
+                            }
+
+
+                            @if (Model.TradeAddOnPrice.HasValue)
+                            {
+                                <a target="_blank" title="Thu cũ, đổi mới lên đời @Model.Title" href="/thu-cu-doi-moi?id=@Model.ID" class="renew" style="border:1px solid #ddd; border-radius:5px; margin:5px 0; padding:8px; background:transparent linear-gradient(180deg, #ffffff 0%, #c3c3c3 100%) 0% 0% no-repeat padding-box; text-align:center; flex-grow:2">
+                                    <strong style="display: block; margin-bottom: 5px; font-size: 18px;">LÊN ĐỜI NGAY</strong>
+                                    <div>Trợ giá lên tới <strong data-val="@string.Format("{0:0}", Model.TradeAddOnPrice)" class="renewPrice">@string.Format("{0:0,0} ₫", Model.TradeAddOnPrice)</strong> khi thu cũ đổi mới</div>
+                                    <div style="font-weight:bold; font-size:23px;"><strong class="renewValue text-red">@string.Format("{0:0,0} ₫", Model.DFDisplay.Price - Model.TradeAddOnPrice) </strong></div>
+                                </a>
+                            }
+                        </div>
+
+
+
+
+                        @if (Model.Promote.Where(o => o.ZoneID == 1).Count() > 0)
+                        {
+                            int kmIdx = 0;
+                            var kmInGroup = Model.Promote.Where(km => km.GroupID > 0 && km.ZoneID == 1).GroupBy(g => g.GroupID);
+                            var zoneName = Model.Promote.Where(o => o.ZoneID == 1).Select(o => o.ZoneTitle).FirstOrDefault();
+
+                            <div class="product-promotion">
+                                <strong class="label text-green">@zoneName.ToUpper()</strong>
+                                <ul>
+                                    @foreach (var kmGroup in kmInGroup)
+                                    {
+                                        kmIdx++;
+                                        string liClass = string.Empty;
+                                        <li>
+                                            <span class="bag">KM @kmIdx</span>
+                                            @if (kmGroup.Count() > 1)
+                                            {
+                                                liClass = "list";
+                                                <i class="text-dark"><strong>Chọn 1 trong @kmGroup.Count() ưu đãi</strong></i>
+                                            }
+                                        </li>
+                                        foreach (var km in kmGroup)
+                                        {
+                                            <li class="@(liClass)">
+                                                @km.Title
+                                                @if (!string.IsNullOrEmpty(km.UID))
+                                                {
+                                                    @Html.Raw(string.Format(" - (<a href=\"{0}\">Xem chi tiết</a>)", km.UID))
+                                                }
+                                            </li>
+                                        }
+                                    }
+
+                                    @foreach (var km in Model.Promote.Where(km => km.ZoneID == 1 && km.GroupID <= 0 && (km.GroupID != -2 || Model.Promote.Where(o => o.ZoneID == 1).Count() < 2)))
+                                    {
+                                        if (km.ID != 932 || Model.DFDisplay.Price >= 4000000 || true)
+                                        {
+                                            kmIdx++;
+                                            <li><span class="bag">KM @kmIdx</span></li>
+                                            <li>
+                                                @if (!string.IsNullOrEmpty(km.UID))
+                                                {
+                                                    <a href="@km.UID" style="font-weight:normal">@km.Title</a>
+                                                }
+                                                else
+                                                {
+                                                    @km.Title
+                                                }
+                                            </li>
+                                        }
+                                    }
+
+                                </ul>
+                            </div>
+                        }
+
+
+
+
+                        <div class="product-promotion" style="padding:8px; border-radius:6px; background:#fff; margin-top:15px;">
+                          <div>
+                                    <strong class="label">ƯU ĐÃI MUA HÀNG</strong>
+                                    <ul>
+                                            <li>
+                                                <i class="icon-checked text-green">                                         
+                                                </i>Tặng Đồng Hồ Gloryfit S8 Pro
+                                            <li>
+                                            <li>
+                                                <i class="icon-checked text-green">                                         
+                                                </i>Ưu đãi trả góp 0%                                            
+                                            </li>
+                                            <li>
+                                                <i class="icon-checked text-green">                                         
+                                                </i>1 Đổi 1 trong 100 ngày đầu nếu lỗi do nhà sản xuất                                      
+                                            </li>
+                                    </ul>
+                                </div>
+                        </div>
+
+                        
+                        <div class="product-action">
+                            @{
+                                List<int> KplusProduct = new List<int>() { 1771, 1772, 1773, 1774, 1907, 1909, 1771, 3424, 3425, 3808, 3810, 4015, 4017, 4018, 4019, 4020, 4021 };
+                                bool isIP15 = Model.ProductGroupID.HasValue && QStore.Utils.Configs.IPHONE_15_MODEL_ID.Contains(Model.ID);
+                                isIP15 = false;
+                            }
+                            @if (KplusProduct.Contains(Model.ID))
+                            {
+                                <a title="Mua ngay" href="/Topup/Kplus" class="btn-red btnbuy"><strong>MUA NGAY</strong><span> Kích hoạt online <br />Hoặc Nhận tại cửa hàng</span></a>
+                            }
+                            else if (isIP15)
+                            {
+                                if (AllowOrderIP15)
+                                {
+                                    <!-- đặt hàng ip15 từ ngày 22 -->
+                                    <a title="Đặt trước" data-gr="@Model.ProductGroupID" href="javascript:;" class="btn-red btnbuy btn-ip15"><strong style="padding:14px;">ĐẶT TRƯỚC NGAY</strong></a>
+                                }
+                            }
+                            else
+                            {
+
+                                if (Model.IsPreOrder)
+                                {
+                                    <a title="Đặt trước" data-sku="@Model.DFDisplay.SKU" href="javascript:;" class="btn-red btnQuickOrder btnbuy"><strong style="padding:14px;">ĐẶT TRƯỚC</strong></a>
+                                }
+                                else if (Model.BuyOnline && Model.DFDisplay.LimitBuyOnline)
+                                {
+                                    <a title="Mua ngay" data-sku="@Model.DFDisplay.SKU" href="javascript:;" class="btn-red btnQuickOrder btnbuy"><strong>MUA NGAY</strong><span> Giao tận nhà (COD) <br />Hoặc Nhận tại cửa hàng</span></a>
+                                }
+                                else
+                                {
+                                    <a title="Đăng ký nhận thông tin" data-id="@Model.ID" href="javascript:;" class="btn-orange btnQuickSubscription btnbuy"><strong>ĐĂNG KÝ NHẬN THÔNG TIN</strong><span> Theo dõi thông tin mới nhất về sản phẩm</span></a>
+                                }
+
+                                if (Model.BuyInstallment && Model.DFDisplay.LimitBuyOnline)
+                                {
+                                    <a title="Mua trả góp" href="/tra-gop@(Model.UID)" class="btnInstallment btn-green btnbuy"><strong>TRẢ GÓP</strong><span>Công ty Tài chính <br /> Hoặc 0% qua thẻ tín dụng</span></a>
+                                }
+                            }
+                        </div>
+
+
+                        <div class="product-promotion">
+                            <div class="mg-top15">
+                                <ul>
+                                    @foreach (var km in Model.PromoteionNote)
+                                    {
+                                        <li>
+                                            @if (!string.IsNullOrEmpty(km.UID))
+                                            {
+                                                <a href="@km.UID" style="font-weight:normal">@km.Title</a>
+                                            }
+                                            else
+                                            {
+                                                @km.Title
+                                            }
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                     <div class="product-shop product-right  product-promotion">
+                <div class="product-specs">
+                    <p class = "h3">Thông số kỹ thuật @Model.Title</p>
+                    
+
+                    <div class="specs-special">
+                        @foreach (var meta in Model.Specs.Where(o => o.MetaShowInQuick).OrderBy(o => o.GroupOrder).ThenBy(o => o.MetaShowInQuickOrder).GroupBy(g => g.MetaTitle))
+                        {
+                            <ol>
+                                <li>
+                                    <strong>@meta.Key:</strong>
+                                    <span>@string.Join(", ", meta.Select(c => c.Content))</span>
+                                </li>
+                            </ol>
+                        }
+                    </div>
+
+                    <div class="product-spect-img">
+                        @if (Model.Specs.Count > 0)
+                        {
+                            <a data-padding="0px" data-width="600px" class="ajax-modal product-specs-button" href="/Ajax/fullspecs/@Model.ID"><span class="icon-config"></span>
+                                <strong>Cấu hình chi tiết</strong>
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+
+                    
+                }
+
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+</div>
+
+
+
+@if (Model.PromoteCombo.Count > 0)
+{
+    <section>
+        <div class="container">
+            <div class="full-width-content">
+                <div class="product-combo">
+                    <div class="header">
+                        <h3>Ưu đãi khi mua cùng @Model.Title</h3>
+                    </div>
+
+                    <div class="lts-product lts-product-bgwhite lts-product-combo equaHeight" data-obj="a.title">
+
+                        <div class="item source">
+                            @{
+                                var source_Img = string.IsNullOrEmpty(Model.Image) ? QStore.Utils.Configs.DEFAULT_NO_IMAGE : string.Format("{0}/productlist/ts{1}", QStore.Utils.Configs.SETTING_PATH_IMAGE, Model.ImageValue.Url);
+                            }
+                            <div class="img">
+                                <a href="@Model.UID" title="@Model.Title">
+                                    <img src="@source_Img" alt="@Model.Title" title="@Model.Title">
+                                </a>
+                            </div>
+                            <div class="info">
+                                <a href="@Model.UID" class="title" title="@Model.Title">@Model.Title</a>
+                                <span class="price current-product-price">
+                                    <strong>@string.Format("{0:0,0} ₫", Model.DFDisplay.Price)</strong>
+                                    @if (Model.DFDisplay.LastPrice.HasValue)
+                                    {
+                                        <strike>@string.Format("{0:0,0} ₫", Model.DFDisplay.LastPrice)</strike>
+                                    }
+                                </span>
+                            </div>
+                        </div>
+                        @foreach (var promote in Model.PromoteCombo)
+                        {
+
+                            <div class="combo-add">
+                                <span>+</span>
+                            </div>
+                            <div class="item destination">
+                                @{
+                                    source_Img = string.IsNullOrEmpty(promote.Product.Image) ? QStore.Utils.Configs.DEFAULT_NO_IMAGE : string.Format("{0}/productlist/ts{1}", QStore.Utils.Configs.SETTING_PATH_IMAGE, promote.Product.ImageData.Url);
+                                }
+
+                                <div class="img">
+                                    <a href="@promote.Product.UID" title="@promote.Product.Title">
+                                        <img src="@source_Img" alt="@promote.Product.Title" title="@promote.Product.Title">
+                                    </a>
+                                </div>
+                                @if (promote.DiscountPrice.HasValue)
+                                {
+                                    <span class="sales">
+                                        <i class="icon-flash2"></i> Giảm @string.Format("{0:0,0} ₫", promote.DiscountPrice)
+                                    </span>
+                                }
+
+                                <div class="info">
+                                    <a href="@Model.UID" class="title" title="@promote.Product.Title">@promote.Product.Title</a>
+                                    @if (promote.Product.Price - promote.DiscountPrice < promote.Product.LastPrice)
+                                    {
+                                        <span class="price"><strong>@string.Format("{0:0,0} ₫", promote.Product.Price - promote.DiscountPrice) &nbsp;</strong> <strike>@string.Format("{0:0,0} ₫", promote.Product.LastPrice)</strike></span>
+                                    }
+                                    else
+                                    {
+                                        <span class="price"><strong>@string.Format("{0:0,0} ₫", promote.Product.Price) &nbsp;</strong></span>
+                                    }
+                                </div>
+                                @if (promote.Product.Price.HasValue)
+                                {
+                                    <div class="button">
+                                        <a class="add-cart" data-colorid="0" href="javascript:;" data-sku="@string.Format("{0}", promote.Product.SKU)"><span>Thêm vào giỏ hàng</span></a>
+                                    </div>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+
+
+<section class = "main-content">
+   <div class="content-pc">
+      
+    <section class=" feature-minigame d-flex-start section-rules gap-20px padding-30px-0 align-items-start" style="width: calc(100% - 20px);background:white">
+        <div class="content-rules box-shadow position-relative w-50">
+            <img class="Flip-feature-one-banner w-100"
+                        src="@Model.Images" alt="text banner">
+        </div>
+        <div class="col-lg-8 w-50">
+            <div class="card">
+                <div class="card-header p-3">
+                    <h4 class="card-title d-none" id="totalRegistrations"></h4>
+                    <h4 class="card-title" id="totalAll"></h4>
+                    <div class="frm-search">
+                        <input class="form-control desktop-only searchPhoneCustomer" type="search" id="searchInput"
+                            name="search" placeholder="Nhập số điện thoại để tìm kiếm"
+                            style="padding: 3px 12px 3px 12px;">
+                    </div>
+                </div>
+                <div class="card-body p-3">
+                    <div class="table-responsive">
+                        <table class="table table-striped mb-0">
+
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Tên</th>
+                                    <th>Số điện thoại</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody id="registrationTableBody"></tbody>
+                        </table>
+                        <div class="bgd-overlay wrap-btn">
+                            <button class="btn-more" id="showlist">
+                                Xem thêm
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="popup-modal popup-show-list-customer myModal3" id="popup-show-program" role="dialog">
+        <div class="popup-overlay js--close-modal"></div>
+        <div class="popup-modal-dialog">
+            <div class="popup-main">
+                <a class="popup-btn-close js--close-modal"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        width="20" height="30" viewBox="0 0 48 48">
+                        <path
+                            d="M 11.480469 5.0058594 C 10.500482 5.0058442 9.521297 5.3771405 8.7792969 6.1191406 L 6.1191406 8.7792969 C 4.6346201 10.26247 4.6351404 12.69764 6.1191406 14.181641 L 15.9375 24 L 6.1191406 33.818359 C 4.6346201 35.301533 4.6351404 37.736703 6.1191406 39.220703 L 8.7792969 41.880859 C 10.26247 43.36538 12.69764 43.36486 14.181641 41.880859 L 24 32.0625 L 33.818359 41.880859 C 35.301533 43.36538 37.736703 43.36486 39.220703 41.880859 L 41.880859 39.220703 C 43.36538 37.73753 43.36486 35.30236 41.880859 33.818359 L 32.0625 24 L 41.880859 14.181641 C 43.36538 12.698467 43.36486 10.263297 41.880859 8.7792969 L 39.220703 6.1191406 C 37.73753 4.6346201 35.30236 4.6351404 33.818359 6.1191406 L 24 15.9375 L 14.181641 6.1191406 C 13.440054 5.3768804 12.460456 5.0058746 11.480469 5.0058594 z M 11.480469 6.9921875 C 11.944232 6.9921723 12.408165 7.1734634 12.767578 7.5332031 L 23.292969 18.058594 A 1.0001 1.0001 0 0 0 24.707031 18.058594 L 35.232422 7.5332031 C 35.952422 6.8132033 37.087814 6.8137237 37.806641 7.5332031 L 40.466797 10.193359 C 41.186797 10.913359 41.186276 12.048752 40.466797 12.767578 L 29.941406 23.292969 A 1.0001 1.0001 0 0 0 29.941406 24.707031 L 40.466797 35.232422 C 41.186797 35.952422 41.186276 37.087814 40.466797 37.806641 L 37.806641 40.466797 C 37.086641 41.186797 35.951248 41.186276 35.232422 40.466797 L 24.707031 29.941406 A 1.0001 1.0001 0 0 0 23.292969 29.941406 L 12.767578 40.466797 C 12.047578 41.186797 10.912186 41.186276 10.193359 40.466797 L 7.5332031 37.806641 C 6.8132033 37.086641 6.8137237 35.951248 7.5332031 35.232422 L 18.058594 24.707031 A 1.0001 1.0001 0 0 0 18.058594 23.292969 L 7.5332031 12.767578 C 6.8132033 12.047578 6.8137237 10.912186 7.5332031 10.193359 L 10.193359 7.5332031 C 10.553359 7.1732032 11.016706 6.9922027 11.480469 6.9921875 z"
+                            fill="white">
+                        </path>
+                    </svg>
+                </a>
+                <h3 class="popup-title resetfont">Thể lệ chương trình</h3>
+                <div class="popup-contents">
+                    <div class="content-rules-programe">
+                        <div class="content-rules">
+                            <div class="item">
+                                <p><b>Chương trình đặt hàng Xiaomi 14</b></p>
+                                <p><b>1. Thời gian triển khai:</b></p>
+                                <p>- Thời gian Pre order: 14-22/03</p>
+                                <p>- Thời gian trả hàng:23/03-31/03</p>
+                                <p>- Đặt cọc: 500.000VNĐ/ 1 máy</p>
+                                <p><b>2. Nội dung chương trình</b></p>
+                                <p><b>Xiaomi 14 12GB/256GB giá 22.990.000</b></p>
+                                <p>+ Quà tặng: </p>
+                                <p>- Tặng PMH 4 triệu đồng</p>
+                                <p>- Giảm thêm 500.000 khi mua kèm phụ kiện Xiaomi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-modal popup-show-list-customer myModal3" id="popup-btn-list" role="dialog">
+        <div class="popup-overlay js--close-modal"></div>
+        <div class="popup-modal-dialog">
+            <div class="popup-main p-0">
+                <div class="w-100" style="">
+                    <div class="card">
+                        <div class="card-header p-3  ">
+                            <h4 class="card-title d-none" id="totalRegistrations-model"></h4>
+                            <h4 class="card-title" id="totalAll-model"></h4>
+                            <div class="frm-search">
+                                <input class="form-control desktop-only searchPhoneCustomer" type="search"
+                                    id="searchInput-model" name="search" placeholder="Nhập số điện thoại để tìm kiếm"
+                                    style="padding: 3px 12px 3px 12px;">
+                            </div>
+                            <a class="popup-btn-close-list js--close-modal"><svg xmlns="http://www.w3.org/2000/svg"
+                                    x="0px" y="0px" width="20" height="30" viewBox="0 0 48 48">
+                                    <path
+                                        d="M 11.480469 5.0058594 C 10.500482 5.0058442 9.521297 5.3771405 8.7792969 6.1191406 L 6.1191406 8.7792969 C 4.6346201 10.26247 4.6351404 12.69764 6.1191406 14.181641 L 15.9375 24 L 6.1191406 33.818359 C 4.6346201 35.301533 4.6351404 37.736703 6.1191406 39.220703 L 8.7792969 41.880859 C 10.26247 43.36538 12.69764 43.36486 14.181641 41.880859 L 24 32.0625 L 33.818359 41.880859 C 35.301533 43.36538 37.736703 43.36486 39.220703 41.880859 L 41.880859 39.220703 C 43.36538 37.73753 43.36486 35.30236 41.880859 33.818359 L 32.0625 24 L 41.880859 14.181641 C 43.36538 12.698467 43.36486 10.263297 41.880859 8.7792969 L 39.220703 6.1191406 C 37.73753 4.6346201 35.30236 4.6351404 33.818359 6.1191406 L 24 15.9375 L 14.181641 6.1191406 C 13.440054 5.3768804 12.460456 5.0058746 11.480469 5.0058594 z M 11.480469 6.9921875 C 11.944232 6.9921723 12.408165 7.1734634 12.767578 7.5332031 L 23.292969 18.058594 A 1.0001 1.0001 0 0 0 24.707031 18.058594 L 35.232422 7.5332031 C 35.952422 6.8132033 37.087814 6.8137237 37.806641 7.5332031 L 40.466797 10.193359 C 41.186797 10.913359 41.186276 12.048752 40.466797 12.767578 L 29.941406 23.292969 A 1.0001 1.0001 0 0 0 29.941406 24.707031 L 40.466797 35.232422 C 41.186797 35.952422 41.186276 37.087814 40.466797 37.806641 L 37.806641 40.466797 C 37.086641 41.186797 35.951248 41.186276 35.232422 40.466797 L 24.707031 29.941406 A 1.0001 1.0001 0 0 0 23.292969 29.941406 L 12.767578 40.466797 C 12.047578 41.186797 10.912186 41.186276 10.193359 40.466797 L 7.5332031 37.806641 C 6.8132033 37.086641 6.8137237 35.951248 7.5332031 35.232422 L 18.058594 24.707031 A 1.0001 1.0001 0 0 0 18.058594 23.292969 L 7.5332031 12.767578 C 6.8132033 12.047578 6.8137237 10.912186 7.5332031 10.193359 L 10.193359 7.5332031 C 10.553359 7.1732032 11.016706 6.9922027 11.480469 6.9921875 z"
+                                        fill="white">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="card-body p-3" style="max-height: 450px;overflow-y: auto;">
+                            <div class="table-responsive">
+                                <table class="table table-striped mb-0">
+
+                                    <thead>
+                                        <tr>
+                                            <th>STT</th>
+                                            <th>Tiêu đề</th>
+                                            <th>Số điện thoại</th>
+                                            <th>Email</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="registrationTableBody-model"></tbody>
+                                </table>
+
+
+                            </div>
+                        </div>
+                        <div class="bgd-overlay wrap-btn" style="text-align: center;margin-bottom: 10px;">
+                            <button class="btn-more" id="loadMoreButton-model">
+                                Xem thêm
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="text" class="d-none" id="searchInput-total">
+
+
+    </div>
+  </section>
+
+<section>
+    <div class="container">
+        <div class="product-layout product-layout-grid">
+            <div class="product-left">
+                @if (!string.IsNullOrEmpty(Model.Details))
+                {
+                    <div class="product-text" id="productContent">
+                        @Html.Raw(Model.Details)
+                    </div>
+
+                    <div class="view-more-container">
+                        <a href="javascript:;" id="viewMoreContent">Xem thêm</a>
+                    </div>
+                }
+                else
+                {
+                    <div class="product-text just-center" id="productContent">
+                        <img src="/Content/web/content-icon/no-item.png" />
+                    </div>
+                    <div class="view-more-container">
+                        <a href="javascript:;">... Nội dung đang cập nhật ...</a>
+                    </div>
+                }
+            </div>
+
+           
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+@{
+    var reviewModel = new QStore.Models.Review.ReviewListReq()
+    {
+        ModelID = Model.ID,
+        SystemTypeID = ((int)QStore.Models.Enum.SystemType.Product),
+        Title = Model.Title,
+        Rate = Model.Rate,
+        Product = Model
+    };
+}
+
+
+
+@Html.Partial("_Comment", reviewModel)
+
+
+
+
+@{
+    var menuIdJquery = string.Join(", ", Model.BreadCrumb.Select(o => string.Format("#{0}", o.UID.Replace("/", ""))));
+}
+
+<iframe src="https://asia.creativecdn.com/tags?id=pr_n4X0y6ApZyJaHX1dNxQd_offer_@(Model.ID)" width="1" height="1" scrolling="no" frameBorder="0" style="display: none;"></iframe>
+
+
+@section scripts {
+
+    @{
+        string rawPrice = Model.DFDisplay.Price.HasValue ? string.Format("{0:00}", Model.DFDisplay.Price) : "";
+    }
+    <script>
+	dataLayer.push({
+	  'dr_event_type' : 'view_item',
+	  'dr_value' : @(rawPrice),   // product price
+	  'dr_items' : [{
+		  'id': '@(Model.ID)',   // should be the same as the id in Google Merchant Center,
+		  'google_business_vertical': 'retail'
+		}],
+	  'event':'dynamic_remarketing'
+	});
+    </script>
+
+    <script type="text/javascript">
+
+		var isInCheckDelivery = 1;
+
+		$(document).ready(function () {
+
+			$('@(menuIdJquery)').addClass('actived');
+
+			imagePreview_init();
+			setProductContentHeighWithSpecs();
+
+			compareAutocomplete(
+			{
+				template : '@(Model.UIDCompareTemplate)',
+				ptype : @Model.Type.ID,
+				ignore : @Model.ID
+
+			});
+			updateViewProduct(@Model.ID);
+			productDetails();
+		});
+    </script>
+
+    @if (!string.IsNullOrEmpty(Request["buy"]))
+    {
+        <script type="text/javascript">
+            $(document).ready(function () {
+                isInCheckDelivery = 0;
+                $(".btnQuickOrder, .btnQuickSubscription").click();
+            });
+        </script>
+    }
+
+
+
+    <script>
+
+		var gaData = {
+				currency: "VND",
+				value: @(Model.DFDisplay.Price.HasValue ? string.Format("{0:00}", Model.DFDisplay.Price) : "0"),
+				items: [
+					{
+						item_id: "@Model.DFDisplay.SKU",
+						item_name: "@Model.Title",
+						affiliation: "Google Merchandise Store",
+						coupon: "",
+						discount: @(Model.DFDisplay.LastPrice.HasValue ? Model.DFDisplay.LastPrice - Model.DFDisplay.Price : 0),
+						index: 0,
+						item_brand: "@Model.Brand.Title",
+						@foreach(var cat in Model.Category)
+						{
+							@Html.Raw($"						item_category: \"{cat.Title}\",\r\n")
+						}
+						item_list_id: "@Model.Type.Title @Model.Brand.Title",
+						item_list_name: "@Model.Type.Title @Model.Brand.Title",
+						location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+						price: @(Model.DFDisplay.Price.HasValue ? string.Format("{0:00}", Model.DFDisplay.Price) : "0"),
+						quantity: 1
+					}
+				]
+			};
+
+		dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+        dataLayer.push({
+            event: "view_item",
+            ecommerce: gaData
+		});
+
+
+		$(document).ready(function () {
+            $(".btnQuickOrder, .btnbuy").on("click", function () {
+
+                dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+                dataLayer.push({
+                    event: "add_to_cart",
+                    ecommerce: gaData
+                });
+            });
+		});
+
+    </script>
+
+    
+
+  <script src="~/Content/Tiger12/js/Scroll.js?@DateTime.Now"></script>
+        <script>
+        $(document).ready(function () {
+            $('#showMoreBtn').click(function () {
+                $('#popup-show-program').css('display', 'block');
+                $('body').addClass('no-scroll-body');
+            });
+
+            $('.popup-btn-close').click(function () {
+                $('#popup-show-program').css('display', 'none');
+                $('body').removeClass('no-scroll-body');
+            });
+
+            $('#showlist').click(function () {
+                $('#popup-btn-list').css('display', 'block');
+                $('body').addClass('no-scroll-body');
+            });
+
+            $('.popup-btn-close-list').click(function () {
+                $('#popup-btn-list').css('display', 'none');
+                $('body').removeClass('no-scroll-body');
+            });
+        });
+
+    </script>
+  <script>
+$(document).ready(function() {
+    const desContent = $('.product-text');
+    const seeMoreButton = $('#viewMoreContent');
+    let isContentExpanded = false;
+
+    seeMoreButton.click(function() {
+        const computedStyles = window.getComputedStyle(desContent[0]);
+
+        if (isContentExpanded) {
+            // Đang mở rộng, thu gọn nội dung
+            desContent.css('max-height', '700px'); // Thiết lập lại chiều cao ban đầu
+            seeMoreButton.html('<h3 class="start_css">Xem thêm</h3> <i class="fa-solid fa-caret-down"></i>');
+            desContent.removeClass('open');
+        } else {
+            // Đang thu gọn, mở rộng nội dung
+            const scrollHeight = desContent[0].scrollHeight + 'px';
+            desContent.css('max-height', scrollHeight); // Đặt lại chiều cao thành chiều cao thực tế của nội dung
+            seeMoreButton.html('<h3 class="start_css">Thu gọn bài viết </h3><i class="fa-solid fa-caret-up"></i>');
+            desContent.addClass('open');
+        }
+
+        isContentExpanded = !isContentExpanded;
+    });
+
+    $(".ajax-modal").click(function(n) {
+        n.preventDefault();
+        this.blur();
+        $("#popup-modal").css({
+            width: ""
+        });
+        $("#popup-modal").css({
+            padding: ""
+        });
+        var t = $(this).attr("data-width") != null ? $(this).attr("data-width") : ""
+          , i = $(this).attr("data-padding") != null ? $(this).attr("data-padding") : "";
+        $.get(this.href, function(n) {
+            $("#popup-modal").html(n).css({
+                width: t
+            }).css({
+                padding: i
+            }).modal({
+                closeClass: "icon-minutes",
+                closeText: " "
+            })
+        })
+    });
+});
+</script>
+    <script src="~/Content/Tiger12/js/swiper-bundle.min.js?@DateTime.Now"></script>
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+            zoom: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 10000, // Thời gian chờ giữa các slide (miligiây)
+                disableOnInteraction: false, // Tự động dừng khi người dùng tương tác với slider
+            },
+        });
+
+    </script>
+
+
+}
+

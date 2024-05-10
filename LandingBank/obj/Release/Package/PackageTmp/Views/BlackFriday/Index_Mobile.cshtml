@@ -1,8 +1,1800 @@
-﻿
-@{
-    ViewBag.Title = "Index_Mobile";
-    Layout = "~/Views/Shared/_Layout_Mobile.cshtml";
+﻿@{
+    ViewBag.Title = "[22-27/11] Black Friday - Săn sale quên lối.";
+    @* Layout = "~/Views/Shared/_Layout_Mobile.cshtml"; *@
 }
 
-<h2>Index_Mobile</h2>
+@section meta {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="description"
+          content="Phụ kiện chính hãng chỉ từ 6k. Loa - Tai nghe chính hãng giảm tới 66%. Vô vàn ưu đãi khác đang chờ đón các bạn. Xem ngay tại đây.">
+    <meta property="og:image" content="~/Content/MerryChristmas/img/thumb BlackFriday.jpg?@DateTime.Now">
+    <meta property="og:url" content="https://hoanghamobile.com/black-friday-san-sale-quen-loi">
+
+    <script src="https://hoanghamobile.com/Content/web/js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="~/Content/MerryChristmas/css/bootstrap.min.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/MerryChristmas/js-css/style.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/MerryChristmas/js-css/MerryChristmas_mb.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/MerryChristmas/js-css/index_mb.css?@DateTime.Now">
+
+    <style>
+        .d-none-important {
+            display: none !important;
+        }
+
+        .d-block-important {
+            display: block !important;
+        }
+
+        .sanpham_sale {
+            position: absolute;
+            top: 41%;
+            left: 5px;
+            background: #ff6801;
+            border-radius: 40px;
+            width: 75%;
+            /* padding: 0; */
+            padding: 3px 5px;
+            margin: 0;
+            color: #fff;
+            font-weight: bold;
+            font-size: 11px;
+            /* font-size: max(0.6375vw,12px); */
+            /* height: 17px; */
+            text-align: center;
+            display: none;
+        }
+
+        .note p {
+            font-size: max(.9375vw,12px);
+            margin-top: 0.3125vw;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            color: white;
+            display: box;
+            /* display: -webkit-box; */
+            font-weight: 400;
+            line-height: 1.25;
+            margin: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: inherit;
+            word-break: break-word;
+            padding: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+    $.post('/Ajax/Price', { "id": "3682,3683,3884,3539,3479,3647,3258,3539,3270,3785,251,3514,3670,3526,1312,3834,3409,3692,3695,3693,3694,3779,1314,831,91,3158,2885,3266,2309,3087,3414,2481,2979,3532,3370,1231,3932,2569,1659,1658,3376,3510,3435,3188,3203,3865,3673,2297,2735,3504,3505,3507,2833,606,3506,3234,1935,2051,2054,3685,3333,3898,3935,3537,3826" }, function (data) {
+        $(data).each(function (index, value) {
+            var priceContainer = $('#idsanpham_' + value.ID);
+            if (priceContainer.length > 0) {
+                var formattedPrice = parseFloat(value.BestPrice).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+                priceContainer.html('<li class="title-price formatted-number">' + formattedPrice + '</li>');
+            }
+
+            var priceLastPrice = $('#idsanpham_LastPrice_' + value.ID);
+            if (priceLastPrice.length > 0) {
+                var lastPrice = parseFloat(value.LastPrice);
+                if (isNaN(lastPrice)) {
+                    lastPrice = '';
+                }
+                var formattedPrice = lastPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+                priceLastPrice.html('<li class="title-price formatted-number" style="color: #28b765;font-size: max(1vw,11px);">' + formattedPrice + '</li>');
+            }
+
+            var priceSale = $('#idsanpham_sale_' + value.ID);
+            if (priceSale.length > 0) {
+                var salePrice = parseFloat(value.LastPrice) - parseFloat(value.BestPrice);
+                if (isNaN(salePrice) || salePrice === 0) {
+                    priceSale.addClass("d-none-important");
+                } else {
+                    priceSale.removeClass("d-none-important").addClass("d-block-important");
+                    var formattedSalePrice = salePrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+                    priceSale.html('<li class="icon-flash2"> Giảm ' + formattedSalePrice + '</li>');
+                }
+            }
+        });
+    });
+});
+
+
+
+        @* $(document).ready(function () {
+        $.ajax({
+        url: '/Ajax/Price',
+        method: 'POST',
+        data: { "id": "3682,3683,3884,3539,3479,3647,3258,3539,3785,3670,3526,3409,3692,3695,3693,3694,3779,1314,831,91,3158,2885,3266,2309,3087,3414,2481,2979,3532,3370,1231,3932,2569,1659,1658,3376,3510,3435,3188" }, // Dữ liệu gửi đi cần được đặt ở đây
+        success: function (data) {
+        // Xử lý dữ liệu sau khi nhận được từ API
+        updatePrices(data); // Gọi hàm updatePrices với dữ liệu nhận được
+        },
+        error: function (error) {
+        console.log('Đã xảy ra lỗi: ', error);
+        }
+        });
+
+        // Hàm cập nhật giá vào các container
+        function updatePrices(pricesData) {
+        pricesData.forEach(function (price) {
+        // Tìm container với ID tương ứng và cập nhật giá trị
+        var priceContainer = $('#idsanpham_' + price.ID);
+        if (priceContainer.length > 0) {
+        // Sử dụng price.BestPrice thay vì price.id hoặc price.productId (tùy thuộc vào cấu trúc dữ liệu trả về từ API)
+        var formattedPrice = parseFloat(price.BestPrice).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+        priceContainer.html('<li class="title-price formatted-number">Giá: ' + formattedPrice + '</li>');
+        }
+        });
+        }
+        }); *@
+
+
+    </script>
+}
+
+<main class="main-content site-main">
+    <div class="content-v1">
+        <section class="feature-section feature-one">
+            <picture>
+                <!-- Hình ảnh mặc định khi không có điều kiện nào được đáp ứng -->
+                <img class="Flip-feature-one-banner w-100"
+                     src="~/Content/MerryChristmas/img/BlackFriday banner.jpg?@DateTime.Now" alt="hình ảnh banner">
+            </picture>
+        </section>
+    </div>
+    <section class="site-grid site-grid--small site-grid--full max-w-640px" role="grid">
+        <section class="banner-text banner-text--full">
+            <div class="banner-text__info">
+                <span class="banner-text__title text-uppercase">DEAL HOT</span>
+            </div>
+        </section>
+    </section>
+    <section class="site-grid site-grid--medium max-w-640px" role="grid" style="display: flex;flex-direction: column;">
+        <a class="grid-column-span-4" href="https://www.tiktok.com/&#64;hoanghamobileoffical">
+            <picture>
+                <!-- Hình ảnh mặc định khi không có điều kiện nào được đáp ứng -->
+                <img class="Flip-feature-one-banner w-100"
+                     src="~/Content/MerryChristmas/img/Khung landing 1.png?@DateTime.Now" alt="hình ảnh banner">
+            </picture>
+        </a>
+        <a class="grid-column-span-4" href="https://www.tiktok.com/&#64;hoanghamobileoffical">
+            <picture>
+                <!-- Hình ảnh mặc định khi không có điều kiện nào được đáp ứng -->
+                <img class="Flip-feature-one-banner w-100"
+                     src="~/Content/MerryChristmas/img/Khung landing 2.png?@DateTime.Now" alt="hình ảnh banner">
+            </picture>
+        </a>
+        <a class="grid-column-span-4" href="https://www.tiktok.com/&#64;hoanghamobileoffical">
+            <picture>
+                <!-- Hình ảnh mặc định khi không có điều kiện nào được đáp ứng -->
+                <img class="Flip-feature-one-banner w-100"
+                     src="~/Content/MerryChristmas/img/Khung landing 3.png?@DateTime.Now" alt="hình ảnh banner">
+            </picture>
+        </a>
+    </section>
+    <section class="site-grid site-grid--small site-grid--full max-w-640px" role="grid">
+        <section class="banner-text banner-text--full">
+            <div class="banner-text__info">
+                <span class="banner-text__title text-uppercase">HOT Smartphone</span>
+            </div>
+        </section>
+    </section>
+    <section class="site-grid site-grid--medium site-grid--half-quarter max-w-640px" role="grid">
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/09/27/samsung-galaxy-a05-4.png?@DateTime.Now"
+                         alt="Xiaomi Robot Vacuum E10" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3682">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Samsung Galaxy A05 - 4GB/128GB</h4>
+                <ul id="idsanpham_3682" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3682" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dien-thoai-di-dong/samsung-galaxy-a05-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter ">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/09/27/samsung-galaxy-a05-1.png?@DateTime.Now"
+                         alt="Xiaomi Robot Vacuum E10" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3683">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Samsung Galaxy A05S - 4GB/128GB</h4>
+                <ul id="idsanpham_3683" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3683" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dien-thoai-di-dong/samsung-galaxy-a05s-4gb-128gb-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter ">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/07/26/galaxy-z-flip5-2.png?@DateTime.Now"
+                         alt="Xiaomi Robot Vacuum E10" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3435">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Samsung Galaxy Z Flip5 8GB/256GB</h4>
+                <ul id="idsanpham_3435" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3435" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dien-thoai-di-dong/samsung-galaxy-z-flip5-256gb-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/07/26/fold-5-chinh-thuc-2.png?@DateTime.Now"
+                         alt="Xiaomi Robot Vacuum E10" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3539">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Samsung Galaxy Z Fold5 12GB/512GB</h4>
+                <ul id="idsanpham_3539" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3539" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dien-thoai-di-dong/samsung-galaxy-z-fold5-256gb-12gb-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/06/28/nokia-c32-0.png?@DateTime.Now"
+                         alt="Xiaomi Robot Vacuum E10" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3479">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Nokia C32 (4GB/128GB)</h4>
+                <ul id="idsanpham_3479" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3479" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dien-thoai-di-dong/nokia-c32-4gb-128gb-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter ">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/08/24/tcl-40-se-purple-0.png?@DateTime.Now"
+                         alt="Xiaomi Robot Vacuum E10" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3647">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">TCL 40 SE (4GB/128GB)</h4>
+                <ul id="idsanpham_3647" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3647" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dien-thoai-di-dong/tcl-40-se-4gb-128gb-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter ">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/03/24/redminote12-0.png?@DateTime.Now"
+                         alt="Xiaomi Robot Vacuum E10" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3258">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Redmi Note 12 (4GB/128GB)</h4>
+                <ul id="idsanpham_3258" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3258" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dien-thoai-di-dong/redmi-note-12-4gb-128gb-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/03/21/redmi12c.png?@DateTime.Now"
+                         alt="Điện thoại Redmi 12C (4GB/64GB)" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3188">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Điện thoại Redmi 12C (4GB/64GB)</h4>
+                <ul id="idsanpham_3188" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3188" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dien-thoai-di-dong/redmi-12c-4gb-64gb-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/09/20/13t.png?@DateTime.Now"
+                         alt="Xiaomi 13T (12GB/256GB)" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3785">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Xiaomi 13T (12GB/256GB)</h4>
+                <ul id="idsanpham_3785" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3785" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dien-thoai-di-dong/xiaomi-13t-12gb-256gb-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter ">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/07/21/image-removebg-preview.png?@DateTime.Now"
+                         alt="OPPO Reno10 5G (8GB/128GB)" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3670">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">OPPO Reno10 5G (8GB/128GB)</h4>
+                <ul id="idsanpham_3670" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3670" class="site-goods-sku__title text-decoration-line-through"></ul>
+
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dien-thoai-di-dong/oppo-reno10-5g-8gb-128gb-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter ">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/07/18/tecno-pova-5-gold.png?@DateTime.Now"
+                         alt="TECNO POVA 5 (8GB/128GB)" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3526">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">TECNO POVA 5 (8GB/128GB)</h4>
+                <ul id="idsanpham_3526" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3526" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dien-thoai-di-dong/tecno-pova-5-8gb-128gb-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/10/24/infinix-hot-30i.png?@DateTime.Now"
+                         alt="Infinix HOT 30i (4GB/128GB)" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3409">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Infinix HOT 30i (4GB/128GB)</h4>
+                <ul id="idsanpham_3409" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3409" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dien-thoai-di-dong/infinix-hot-30i-4gb-128gb-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    @* Apple *@
+
+    <section class="site-grid site-grid--small site-grid--full max-w-640px" role="grid">
+        <section class="banner-text banner-text--full">
+            <div class="banner-text__info">
+                <span class="banner-text__title text-uppercase">Apple</span>
+            </div>
+        </section>
+    </section>
+
+    <section class="site-grid site-grid--medium site-grid--half-quarter max-w-640px" role="grid">
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/09/13/iphone-15-plus-blue-pure-back-iphone-15-plus-blue-pure-front-2up-screen-usen.png?@DateTime.Now"
+                         alt=" iPhone 15 (128GB)" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3692">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle"> iPhone 15 (128GB)</h4>
+                <ul id="idsanpham_3692" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3692" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dien-thoai-di-dong/apple-iphone-15-128gb-chinh-hang-vn-a?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/09/13/iphone-15-plus-blue-pure-back-iphone-15-plus-blue-pure-front-2up-screen-usen.png?@DateTime.Now"
+                         alt="iPhone 15 Plus (128GB)" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3693">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">iPhone 15 Plus (128GB)</h4>
+                <ul id="idsanpham_3693" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3693" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dien-thoai-di-dong/apple-iphone-15-plus-128gb-chinh-hang-vn-a?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/09/13/iphone-15-pro-finish-select-202309-6-7inch-naturaltitanium-removebg-preview-1.png?@DateTime.Now"
+                         alt="iPhone 15 Pro (128GB)" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3695">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">iPhone 15 Pro (128GB)</h4>
+                <ul id="idsanpham_3695" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3695" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dien-thoai-di-dong/apple-iphone-15-pro-128gb-chinh-hang-vn-a?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/09/13/iphone-15-pro-max-natural-titanium-pure-back-iphone-15-pro-max-natural-titanium-pure-front-2up-screen-usen-1.png?@DateTime.Now"
+                         alt="iPhone 15 Pro Max (256GB) " loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3694">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">iPhone 15 Pro Max (256GB) </h4>
+                <ul id="idsanpham_3694" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3694" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dien-thoai-di-dong/apple-iphone-15-pro-max-256gb-chinh-hang-vn-a?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--quarter ">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/10/18/apple-watch-se-2023-gps-40-starlight.png?@DateTime.Now"
+                         alt="Apple Watch SE 2023 - GPS, 40mm - Vỏ Nhôm Dây Cao Su - VN/A" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3834">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Apple Watch SE 2023 - GPS, 40mm - Vỏ Nhôm Dây Cao Su - VN/A</h4>
+                <ul id="idsanpham_3834" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3834" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dong-ho-thong-minh/apple-watch-se-2023-gps-40mm-vo-nhom-day-cao-su-chinh-hang-vn-a?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter ">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2021/09/15/image-removebg-preview-26.png?@DateTime.Now"
+                         alt="iPad Gen 9 10.2 Wi-Fi (64GB)" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_1312">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">iPad Gen 9 10.2" Wi-Fi (64GB)</h4>
+                <ul id="idsanpham_1312" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_1312" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/may-tinh-bang/apple-ipad-gen-9-10-2-2021-wifi-64gb-chinh-hang-apple-viet-nam?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/11/07/macbook-air-m1-silver.png?@DateTime.Now"
+                         alt="MacBook Air M1 13 (8GB/256GB)" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_831">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">MacBook Air M1 13" (8GB/256GB)</h4>
+                <ul id="idsanpham_831" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_831" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/lap-top/macbook-air-13-inch-2020-256gb-chinh-hang-apple-viet-nam-phien-ban-moi?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2020/12/15/image-removebg-preview.png?@DateTime.Now"
+                         alt="AirPods 2 với Hộp Sạc Lightning" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_91">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">AirPods 2 với Hộp Sạc Lightning</h4>
+                <ul id="idsanpham_91" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_91" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/tai-nghe/tai-nghe-apple-airpods-2-case-sac-thuong-mv7n2vn-a?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="site-grid site-grid--small site-grid--full max-w-640px" role="grid">
+        <section class="banner-text banner-text--full">
+            <div class="banner-text__info">
+                <span class="banner-text__title text-uppercase">Laptop - Màn hình</span>
+            </div>
+        </section>
+    </section>
+
+    <section class="site-grid site-grid--medium site-grid--half-quarter max-w-640px" role="grid">
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/03/02/16zd90q-g-ax51a5-1.png?@DateTime.Now"
+                         alt="Laptop LG Gram 2022 16ZD90Q-G.AX51A5D i5-1240P/8GB/256GB/Intel Iris Xe Graphics/16' WQXGA/DOS"
+                         loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3158">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Laptop LG Gram 2022 16ZD90Q-G.AX51A5D</h4>
+                <ul id="idsanpham_3158" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3158" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/laptop/laptop-lg-gram-2022-16zd90q-g-ax51a5d-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter d-none">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/03/02/laptop-gigabyte-gaming-g5-me-51vn263sh-01-01.jpg?@DateTime.Now"
+                         alt="Laptop Gigabyte Gaming G5 ME-51VN263SH i5 12500H/8GB/512GB/15.6 FHD/RTX3050TI 4GB/Win11"
+                         loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_2885">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Laptop Gaming GIGABYTE G5 ME-51VN263SH</h4>
+                <ul id="idsanpham_2885" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_2885" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/laptop/laptop-gigabyte-gaming-g5-me-51vn263sh-i5-12500h-8gb-512gb-15-6-fhd?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter d-none">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/03/28/7c140pa-0.jpg?@DateTime.Now"
+                         alt="Laptop HP VICTUS 16 e1107AX-7C140PA (R5- 6600H/8GB/512GB/RTX 3050/16.1 FHD 144Hz/Windows 11)"
+                         loading="lazy" />
+                </picture>
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Laptop HP VICTUS 16 e1107AX-7C140PA</h4>
+                <ul id="idsanpham_3266" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3266" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/laptop/laptop-hp-victus-16-e1107ax-7c140pa-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/03/15/laptop-hp-envy-16-h0034tx-6k7g0pa-01.jpg?@DateTime.Now"
+                         alt="Laptop HP Envy 16-h0034TX 6K7G0PA-i7-12700H/16GB/512GB/RTX 3060 6GB/16 Inch 120Hz"
+                         loading="lazy" />
+                </picture>
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Laptop HP Envy 16 h0034TX-6K7G0PA</h4>
+                <ul id="idsanpham_2309" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_2309" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/laptop/laptop-hp-envy-16-h0034tx-6k7g0pa-i7-12700h-16gb-512gb-rtx-3060-6gb-16-inch?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--half d-none">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/03/08/laptop-asus-expertbook-p2451fa-ek3299t-01.jpg?@DateTime.Now"
+                         alt="Laptop Asus ExpertBook P2451FA-EK3299T, i3-10110U/4GB/256GB-SSD/14.0FHD/W10SL/ĐEN"
+                         loading="lazy" />
+                </picture>
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Laptop Asus ExpertBook P2451FA-EK3299T</h4>
+                <ul id="idsanpham_3087" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3087" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/laptop/laptop-asus-expertbook-p2451fa-ek3299t-i3-10110u-4gb-256gb-ssd-14-0fhd-w10?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/05/26/itel-spirit-2-i5-0.jpg?@DateTime.Now"
+                         alt="Laptop Itel Spirit 2 (71006300244) (i5-1155G7/8GB/512GB/15.6 FHD/Windows 11)"
+                         loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3414">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Laptop Itel Spirit 2 (71006300244)</h4>
+                <ul id="idsanpham_3414" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3414" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/laptop/laptop-itel-spirit-2-71006300244-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/03/07/laptop-acer-swift-3-sf314-511-55qe-01.jpg?@DateTime.Now"
+                         alt="Laptop Acer Swift 3 SF314-511-55QE (I5-1135G7/16GB/512GB PCIE/14.0 FHD/WIN11/BẠC) (NX.ABNSV.003)"
+                         loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_2481">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Laptop Acer Swift 3 SF314-511-55QE</h4>
+                <ul id="idsanpham_2481" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_2481" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/laptop/laptop-acer-swift-3-sf314-511-55qe-i5-1135g7-16gb-512gb-pcie-14-0-fhd-win1?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+        </div>
+        <div class="site-goods-sku site-goods-sku--half d-none">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/03/15/laptop-hp-pavilion-15-eg2063tx-7c0q2pa-01.jpg?@DateTime.Now"
+                         alt="Laptop HP Pavilion 15-eg2063TX 7C0Q2PA, i5-1235U/8GB/512GB/MX550/15.6FHD/WIN11/BẠC"
+                         loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_2979">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Laptop HP Pavilion 15 eg2063TX-7C0Q2PA</h4>
+                <ul id="idsanpham_2979" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_2979" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/laptop/laptop-hp-pavilion-15-eg2063tx-7c0q2pa-i5-1235u-8gb-512gb-mx550-15-6fhd?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/03/09/msi-g2412-1.png?@DateTime.Now"
+                         alt="Màn hình MSI G2412"
+                         loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3203">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Màn hình MSI G2412</h4>
+                <ul id="idsanpham_3203" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3203" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/man-hinh-may-tinh/man-hinh-msi-g2412-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/10/19/msi-pro-mp251-1.png?@DateTime.Now"
+                         alt="Màn hình MSI PRO MP251"
+                         loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3865">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Màn hình MSI PRO MP251</h4>
+                <ul id="idsanpham_3865" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3865" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/man-hinh-may-tinh/man-hinh-msi-pro-mp251-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/09/07/pro-mp243x-1.png?@DateTime.Now"
+                         alt="Màn hình MSI PRO MP243X"
+                         loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3673">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Màn hình MSI PRO MP243X</h4>
+                <ul id="idsanpham_3673" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3673" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/man-hinh/man-hinh-msi-pro-mp243x-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/08/18/a-6.png?@DateTime.Now"
+                         alt="Màn hình Samsung LC27F390FHEXXV 27 inch/FHD/LED/PLS/250cd/m²/60Hz/5ms/HDMI+VGA/Màn hình cong"
+                         loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_2297">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Màn hình Samsung LC27F390FHEXXV 27 inch/FHD/LED/PLS/250cd/m²/60Hz/5ms/HDMI+VGA/Màn hình cong</h4>
+                <ul id="idsanpham_2297" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_2297" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/man-hinh/man-hinh-samsung-lc27f390fhexxv-27-inch-fhd-led-pls-250cd-m%C2%B2-60hz-5ms?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half d-none">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/10/24/image-removebg-preview-12.png?@DateTime.Now"
+                         alt="Màn hình Lenovo Q24i-20 66EEGAC3VN 23.8inch/FHD/IPS/75Hz/4-14ms/DP+HDMI/Đen"
+                         loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_2735">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Màn hình Lenovo Q24i-20 66EEGAC3VN 23.8inch/FHD/IPS/75Hz/4-14ms/DP+HDMI/Đen</h4>
+                <ul id="idsanpham_2735" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_2735" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/man-hinh-may-tinh/man-hinh-lenovo-q24i-20-66eegac3vn-23-8icnh-fhd-ips-75hz-4-14ms-dp-hdmi-den?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="site-grid site-grid--small site-grid--full max-w-640px" role="grid">
+        <section class="banner-text banner-text--full">
+            <div class="banner-text__info">
+                <span class="banner-text__title text-uppercase">Smartwatch</span>
+            </div>
+        </section>
+    </section>
+
+
+    <section class="site-grid site-grid--medium site-grid--half-quarter max-w-640px" role="grid">
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/07/21/xiaomi-redmi-watch-3-activea-1.png?@DateTime.Now"
+                         alt="Xiaomi Redmi Watch 3 Active" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3532">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Xiaomi Redmi Watch 3 Active</h4>
+                <ul id="idsanpham_3532" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3532" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dong-ho-thong-minh/xiaomi-redmi-watch-3-active-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter ">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/05/10/huawei-band-8-7.png?@DateTime.Now"
+                         alt="Huawei Band 8" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3370">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Huawei Band 8</h4>
+                <ul id="idsanpham_3370" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3370" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dong-ho-thong-minh/vong-deo-tay-thong-minh-huawei-band-8-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter ">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/02/09/image-removebg-preview_637799988894127992.png?@DateTime.Now"
+                         alt="Garmin Forerunner 55" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_1231">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Garmin Forerunner 55</h4>
+                <ul id="idsanpham_1231" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_1231" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dong-ho-thong-minh/dong-ho-thong-minh-garmin-forerunner-55-chinh-hang-fpt?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/11/10/huawei-band-4e.png?@DateTime.Now"
+                         alt="Huawei Band 4E" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3932">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Huawei Band 4E</h4>
+                <ul id="idsanpham_3932" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3932" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dong-ho-thong-minh/vong-deo-tay-thong-minh-huawei-band-4e-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/06/20/garmin-forerunner-255-6.png?@DateTime.Now"
+                         alt="Garmin Forerunner 255" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_2051">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Garmin Forerunner 255</h4>
+                <ul id="idsanpham_2051" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_2051" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dong-ho-thong-minh/dong-ho-thong-minh-garmin-forerunner-255-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/06/20/garmin-forerunner-955-2.png?@DateTime.Now"
+                         alt="Garmin Forerunner 955" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_2054">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Garmin Forerunner 955</h4>
+                <ul id="idsanpham_2054" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_2054" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dong-ho-thong-minh/dong-ho-thong-minh-garmin-forerunner-955-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/09/15/thumb-gt4.png?@DateTime.Now"
+                         alt="Huawei Watch GT4 46mm" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3685">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Huawei Watch GT4 46mm</h4>
+                <ul id="idsanpham_3685" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3685" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dong-ho-thong-minh/dong-ho-thong-minh-huawei-watch-gt4-46mm-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/04/19/kieslect-k11-pro-4.png?@DateTime.Now"
+                         alt=" Kieslect K11 Pro" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3333">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle"> Kieslect K11 Pro</h4>
+                <ul id="idsanpham_3333" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3333" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/dong-ho-thong-minh/dong-ho-thong-minh-kieslect-k11-pro-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="site-grid site-grid--small site-grid--full max-w-640px" role="grid">
+        <section class="banner-text banner-text--full">
+            <div class="banner-text__info">
+                <span class="banner-text__title text-uppercase">LOA - TAI NGHE</span>
+            </div>
+        </section>
+    </section>
+
+    <section class="site-grid site-grid--medium site-grid--half-quarter max-w-640px" role="grid">
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/03/29/redmi-buds-4-lite-1.png?@DateTime.Now"
+                         alt="Redmi Buds 4 Lite" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3270">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Redmi Buds 4 Lite</h4>
+                <ul id="idsanpham_3270" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3270" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/tai-nghe/tai-nghe-khong-day-redmi-buds-4-lite?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter d-none">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/09/22/image-removebg-preview-8.png?@DateTime.Now"
+                         alt="Xiaomi Redmi Buds 4" loading="lazy" />
+                </picture>
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Xiaomi Redmi Buds 4</h4>
+                <ul id="idsanpham_2509" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_2509" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/tai-nghe/tai-nghe-khong-day-xiaomi-redmi-buds-4-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter ">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/10/03/image-removebg-preview-22.png?@DateTime.Now"
+                         alt="Havit TW935" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_2569">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Havit TW935</h4>
+                <ul id="idsanpham_2569" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_2569" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/tai-nghe/tai-nghe-khong-day-havit-tw935-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--half d-none">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/10/03/image-removebg-preview-21.png?@DateTime.Now"
+                         alt="Havit TW925" loading="lazy" />
+                </picture>
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Havit TW925</h4>
+                <ul id="idsanpham_2568" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_2568" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/tai-nghe/tai-nghe-khong-day-havit-tw925-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half d-none">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/03/08/havit-tw-967-1.png?@DateTime.Now"
+                         alt="Havit TW 967" loading="lazy" />
+                </picture>
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Havit TW 967</h4>
+                <ul id="idsanpham_3189" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3189" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/tai-nghe/tai-nghe-khong-day-havit-tw-967-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half d-none">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/05/26/tws-soul-s-live-30-1.png?@DateTime.Now"
+                         alt="TWS SOUL S-Live 30" loading="lazy" />
+                </picture>
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">TWS SOUL S-Live 30</h4>
+                <ul id="idsanpham_3408" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3408" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/tai-nghe/tai-nghe-tws-soul-s-live-30-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half d-none">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/08/15/image-removebg-preview-34.png?@DateTime.Now"
+                         alt="JBL Live Pro 2 TWS" loading="lazy" />
+                </picture>
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">JBL Live Pro 2 TWS</h4>
+                <ul id="idsanpham_2278" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3278" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/tai-nghe/tai-nghe-khong-day-jbl-live-pro-2-tws-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2020/09/23/Tai%20nghe%20Bluetooth%20JBL%20T115BT%20-%20Ch%C3%ADnh%20h%C3%A3ng.png?@DateTime.Now"
+                         alt="JBL T115BT" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_251">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">JBL T115BT</h4>
+                <ul id="idsanpham_251" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_251" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/tai-nghe/tai-nghe-bluetooth-jbl-t115bt-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/07/12/defunc-true-lite-4.png?@DateTime.Now"
+                         alt="True Wireless Defunc True Lite" loading="lazy" />
+                </picture>
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">True Wireless Defunc True Lite</h4>
+                <ul id="idsanpham_3514" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3514" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/tai-nghe/tai-nghe-true-wireless-defunc-true-lite-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/10/26/marshall-motif-ii-anc-4.png?@DateTime.Now"
+                         alt="Marshall Motif II ANC" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3898">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Marshall Motif II ANC</h4>
+                <ul id="idsanpham_3898" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3898" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/tai-nghe/tai-nghe-khong-day-marshall-motif-ii-anc-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/11/14/sony-inzone-h5-4.png?@DateTime.Now"
+                         alt="Gaming chụp tai không dây Sony INZONE H5" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3935">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Gaming chụp tai không dây Sony INZONE H5</h4>
+                <ul id="idsanpham_3935" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3935" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/tai-nghe/tai-nghe-gaming-chup-tai-khong-day-sony-inzone-h5-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/07/25/sony-wf-1000xm5-1.png?@DateTime.Now"
+                         alt="Sony WF-1000XM5" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3537">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Sony WF-1000XM5</h4>
+                <ul id="idsanpham_3537" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3537" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/tai-nghe/tai-nghe-khong-day-sony-wf-1000xm5-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/10/09/true-wireless-huawei-freebuds-se-2-3.png?@DateTime.Now"
+                         alt="True Wireless Huawei FreeBuds SE 2" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3826">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">True Wireless Huawei FreeBuds SE 2</h4>
+                <ul id="idsanpham_3826" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3826" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/tai-nghe/tai-nghe-bluetooth-true-wireless-huawei-freebuds-se-2-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="site-grid site-grid--small site-grid--full max-w-640px" role="grid">
+        <section class="banner-text banner-text--full">
+            <div class="banner-text__info">
+                <span class="banner-text__title text-uppercase">Smarthome</span>
+            </div>
+        </section>
+    </section>
+
+    <section class="site-grid site-grid--medium site-grid--half-quarter max-w-640px" role="grid">
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/01/25/1233334.png?@DateTime.Now"
+                         alt="Clair K2M24" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_1659">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Clair K2M24</h4>
+                <ul id="idsanpham_1659" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_1659" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/may-loc-khong-khi/may-loc-khong-khi-clair-k2m24-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter ">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/01/25/boud-myclair-paper-10.jpg?@DateTime.Now"
+                         alt="myClair" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_1658">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">myClair</h4>
+                <ul id="idsanpham_1658" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_1658" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/may-loc-khong-khi/may-loc-khong-khi-myclair-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter ">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/05/11/55suc7550-1.png?@DateTime.Now"
+                         alt="TV SKYWORTH 55SUC7550 (4K/55-inch)" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3376">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">TV SKYWORTH 55SUC7550 (4K/55-inch)</h4>
+                <ul id="idsanpham_3376" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3376" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/tivi/smart-tv-skyworth-4k-55-inch-55suc7550-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/07/27/a-pro-55-front.png?@DateTime.Now"
+                         alt="Xiaomi Google Tivi 4K 55 inch 55A Pro" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3510">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Xiaomi Google Tivi 4K 55 inch 55A Pro</h4>
+                <ul id="idsanpham_3510" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3510" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/tivi/tv-xiaomi-a-pro-4k-55-inch-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="site-grid site-grid--small site-grid--full max-w-640px" role="grid">
+        <section class="banner-text banner-text--full">
+            <div class="banner-text__info">
+                <span class="banner-text__title text-uppercase">PHỤ KIỆN</span>
+            </div>
+        </section>
+    </section>
+
+
+    <section class="site-grid site-grid--medium site-grid--half-quarter max-w-640px" role="grid">
+
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/04/06/powergo-smart-ai-5.png?@DateTime.Now"
+                         alt="Sạc dự phòng Innostyle Powergo Smart AI 10000mAh" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_606">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Sạc dự phòng Innostyle Powergo Smart AI 10000mAh</h4>
+                <ul id="idsanpham_606" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_606" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/phu-kien/pin-du-phong-innostyle-powergo-smart-ai-10000mah-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/07/11/golf-gf-u206-1.png?@DateTime.Now"
+                         alt="Củ sạc Golf GF-U206 2 cổng USB-A" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3506">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Củ sạc Golf GF-U206 2 cổng USB-A</h4>
+                <ul id="idsanpham_3506" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3506" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/cu-sac/cu-sac-golf-gf-u206-2-cong-usb-a-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/05/14/image-removebg-preview-15.png?@DateTime.Now"
+                         alt="Camera WIFI trong nhà IMOU IPC - A22EP 1080" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_1935">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Camera WIFI trong nhà IMOU IPC - A22EP 1080</h4>
+                <ul id="idsanpham_1935" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_1935" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/camera/camera-wifi-trong-nha-imou-ipc-a22ep-d-v3-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/03/15/xiaomi-mi-home-security-c200.png?@DateTime.Now"
+                         alt="Camera Xiaomi MI Home Security C200 (BHR6766GL)" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3234">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Camera Xiaomi MI Home Security C200 (BHR6766GL)</h4>
+                <ul id="idsanpham_3234" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3234" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/camera/camera-xiaomi-mi-home-security-c200-bhr6766gl?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/07/11/usb-a-to-lightning-3a-gc-71i-day-du-1m-3.png?@DateTime.Now"
+                         alt="Cáp Golf USB-A to Lightning 3A GC-71I dây dù 1M" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3504">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Cáp Golf USB-A to Lightning 3A GC-71I dây dù 1M</h4>
+                <ul id="idsanpham_3504" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3504" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/day-cap/cap-golf-usb-a-to-lightning-3a-gc-71i-day-du-1m?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter ">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/07/11/cap-golf-usb-a-to-lightning-3a-gc-71i-day-du-1m-2.png?@DateTime.Now"
+                         alt="Cáp Golf USB-A to Type-C 2.4A GC-71T dây dù 1M " loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3505">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Cáp Golf USB-A to Type-C 2.4A GC-71T dây dù 1M </h4>
+                <ul id="idsanpham_3505" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3505" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/day-cap/cap-golf-usb-a-to-type-c-2-4a-gc-71t-day-du-1m?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--quarter ">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/07/11/cu-sac-golf-gf-u1-1-cong-usb-a-2.png?@DateTime.Now"
+                         alt="Củ sạc Golf GF-U1 1 cổng USB-A" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_3507">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Củ sạc Golf GF-U1 1 cổng USB-A</h4>
+                <ul id="idsanpham_3507" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_3507" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/cu-sac/cu-sac-golf-gf-u1-1-cong-usb-a-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="site-goods-sku site-goods-sku--half">
+            <div class="site-goods-sku__image">
+                <picture class="responsive-image site-goods-sku__picture">
+                    <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/11/09/image-removebg-preview-61.png?@DateTime.Now"
+                         alt="Cáp Pisen Micro USB 2A 800mm" loading="lazy" />
+                </picture>
+            </div>
+            <div class="sanpham_sale" id="idsanpham_sale_2833">
+
+            </div>
+            <div class="site-goods-sku__info">
+                <h4 class="site-goods-sku__subtitle">Cáp Pisen Micro USB 2A 800mm</h4>
+                <ul id="idsanpham_2833" class="site-goods-sku__title"></ul>
+                <ul id="idsanpham_LastPrice_2833" class="site-goods-sku__title text-decoration-line-through"></ul>
+            </div>
+            <div class="site-goods-sku__actions">
+                <a href="https://hoanghamobile.com/day-cap/cap-pisen-micro-usb-2a-800mm-chinh-hang?buy=1"
+                   class="mi-btn mi-btn--primary-link mi-btn--normal mi-btn--light mi-btn--arrow-m site-goods-sku__link">
+                    <span class="mi-btn__text">MUA NGAY</span><i class="micon micon-link-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <section class="note max-w-640px w-100 ">
+        <p>
+            <strong>*Deal củ - cáp sạc 6.000đ:</strong> <br>
+            - Áp dụng với các đơn hàng mua trực tiếp tại cửa hàng <br>
+            <br>
+            <strong>- 24/11</strong>
+            <br>
+            Cáp Golf USB-A to Lightning 3A GC-71I dây dù 1M - Chính hãng <br>
+            Cáp Golf USB-A to Type-C 2.4A GC-71T dây dù 1M - Chính hãng <br>
+            Củ sạc Golf GF-U1 1 cổng USB-A - Chính hãng <br>
+            <br>
+            <strong>- 25/11</strong>
+            <br>
+            Cáp Pisen Micro USB 2A 800mm - Chính hãng
+        </p>
+    </section>
+</main>
+
 

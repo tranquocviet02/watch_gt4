@@ -1,0 +1,89 @@
+
+@media (max-width:576px) {
+    .lib-cart-emptyFth[data-v-c3dc22a8] {
+        padding: 2.4rem 0 !important;
+        height: 100% !important
+    }
+
+    .lib-pdb40[data-v-c3dc22a8] {
+        padding-bottom: 0 !important
+    }
+}
+
+.lib-cart-topBtn[data-v-c3dc22a8] {
+    width: unset !important;
+    padding: 0 .33rem
+}
+
+.dialog_delete_wishitem[data-v-c3dc22a8] {
+    font-size: 0
+}
+
+    .dialog_delete_wishitem[data-v-c3dc22a8] .el-dialog {
+        height: 1.6rem;
+        min-height: 1.6rem;
+        display: flex;
+        flex-direction: column
+    }
+
+        .dialog_delete_wishitem[data-v-c3dc22a8] .el-dialog .el-dialog__header {
+            line-height: .24rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            padding: .16rem
+        }
+
+        .dialog_delete_wishitem[data-v-c3dc22a8] .el-dialog .el-dialog__headerbtn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: static
+        }
+
+            .dialog_delete_wishitem[data-v-c3dc22a8] .el-dialog .el-dialog__headerbtn .el-dialog__close {
+                font-size: .24rem
+            }
+
+        .dialog_delete_wishitem[data-v-c3dc22a8] .el-dialog .el-dialog__body {
+            flex: 1;
+            padding: 0 .16rem;
+            font-size: .18rem;
+            color: #333
+        }
+
+        .dialog_delete_wishitem[data-v-c3dc22a8] .el-dialog .el-dialog__footer {
+            padding: 0 .16rem
+        }
+
+            .dialog_delete_wishitem[data-v-c3dc22a8] .el-dialog .el-dialog__footer div {
+                height: .48rem;
+                display: flex;
+                justify-content: space-around
+            }
+
+            .dialog_delete_wishitem[data-v-c3dc22a8] .el-dialog .el-dialog__footer button {
+                width: 1.12rem;
+                height: .36rem;
+                background: #000;
+                border: 1.5px solid #000;
+                border-radius: .04rem;
+                font-family: "Aktiv Grotesk Ex";
+                font-style: normal;
+                font-weight: 500;
+                font-size: .18rem;
+                line-height: .28rem;
+                text-align: center;
+                color: #fff;
+                min-width: .5rem
+            }
+
+            .dialog_delete_wishitem[data-v-c3dc22a8] .el-dialog .el-dialog__footer .su_a {
+                background: transparent;
+                color: #000
+            }
+
+#inspect-element-top-layer * {
+    all: unset;
+}

@@ -1,0 +1,4143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\Landding</_PublishTargetUrl>
+    <History>True|2023-12-29T03:26:34.2666763Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/LandingBank.dll">
+      <publishTime>12/29/2023 10:26:20</publishTime>
+    </File>
+    <File Include="bin/LandingBank.pdb">
+      <publishTime>12/29/2023 10:26:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Console.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Globalization.Calendars.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.ZipFile.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Http.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Sockets.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Runtime.InteropServices.RuntimeInformation.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Tasks.Extensions.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.ValueTuple.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="Content/Apple/apple.min.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/Apple/fonts/apple.min.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/Apple/iphone14/app.min.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/Apple/iphone14/styles.min.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/Apple/iphone14/thu-cu-iphone-web.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/Bank/VPBank/the1.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/Bank/VPBank/the3.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/Bank/VPBank/the4.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/Bank/VPBank/top.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/Bank/VPBank/uudai.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/Bank/VPBank/vpbank.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/Bank/web.min.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/Bank/web.min.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/BlackFriday1/css/bootstrap.min.css">
+      <publishTime>12/01/2023 09:20:03</publishTime>
+    </File>
+    <File Include="Content/BlackFriday1/css/swiper-bundle.min.css">
+      <publishTime>12/01/2023 09:20:03</publishTime>
+    </File>
+    <File Include="Content/BlackFriday1/img/BlackFriday banner mb.jpg">
+      <publishTime>12/01/2023 09:20:03</publishTime>
+    </File>
+    <File Include="Content/BlackFriday1/img/BlackFriday banner.jpg">
+      <publishTime>12/01/2023 09:20:03</publishTime>
+    </File>
+    <File Include="Content/BlackFriday1/img/Khung landing 1.png">
+      <publishTime>12/01/2023 09:20:03</publishTime>
+    </File>
+    <File Include="Content/BlackFriday1/img/Khung landing 2.png">
+      <publishTime>12/01/2023 09:20:03</publishTime>
+    </File>
+    <File Include="Content/BlackFriday1/img/Khung landing 3.png">
+      <publishTime>12/01/2023 09:20:03</publishTime>
+    </File>
+    <File Include="Content/BlackFriday1/img/khung-deal.png">
+      <publishTime>12/01/2023 09:20:03</publishTime>
+    </File>
+    <File Include="Content/BlackFriday1/img/thumb BlackFriday.jpg">
+      <publishTime>12/01/2023 09:20:03</publishTime>
+    </File>
+    <File Include="Content/BlackFriday1/js-css/BlackFriday.css">
+      <publishTime>12/01/2023 09:20:03</publishTime>
+    </File>
+    <File Include="Content/BlackFriday1/js-css/BlackFriday.js">
+      <publishTime>12/01/2023 09:20:03</publishTime>
+    </File>
+    <File Include="Content/BlackFriday1/js-css/BlackFriday_mb.css">
+      <publishTime>12/01/2023 09:20:03</publishTime>
+    </File>
+    <File Include="Content/BlackFriday1/js-css/Index.cshtml">
+      <publishTime>12/01/2023 09:20:03</publishTime>
+    </File>
+    <File Include="Content/BlackFriday1/js-css/index.css">
+      <publishTime>12/01/2023 09:20:03</publishTime>
+    </File>
+    <File Include="Content/BlackFriday1/js-css/Index.Mobile.cshtml">
+      <publishTime>12/01/2023 09:20:03</publishTime>
+    </File>
+    <File Include="Content/BlackFriday1/js-css/index_mb.css">
+      <publishTime>12/01/2023 09:20:03</publishTime>
+    </File>
+    <File Include="Content/BlackFriday1/js-css/style.css">
+      <publishTime>12/01/2023 09:20:03</publishTime>
+    </File>
+    <File Include="Content/BlackFriday1/js-css/swiper-bundle.min.js">
+      <publishTime>12/01/2023 09:20:03</publishTime>
+    </File>
+    <File Include="Content/BlackFriday1/js-css/web-desktop.css">
+      <publishTime>12/01/2023 09:20:03</publishTime>
+    </File>
+    <File Include="Content/css/1000px.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/css/styles.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/Detail/css/bootstrap.min.css">
+      <publishTime>11/02/2023 16:47:20</publishTime>
+    </File>
+    <File Include="Content/Detail/css/icon.min.css">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/css/web_Desktop_v1.css">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img/apple.png">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img/Cell ⏵ Img - iPhone 14 Pro Max.png">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img/gia soc.png">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img/hot.png">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img/Khung Apple.png">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img/khung none 178.png">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img/khung none 200.png">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img/Khung Sản phẩm giá sốc.png">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img/Khung Sản phẩm hot.png">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img/memory-black.png">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img/memory-card.png">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img/No content.png">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img/re het co.png">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img/Rectangle 49.png">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img/Rẻ hết cỡ.png">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img/smartphone.png">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img/Sort_increase.png">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img/Sort_reduce.png">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img/voucher.png">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img_Mobile/Background Apple.png">
+      <publishTime>11/02/2023 15:04:02</publishTime>
+    </File>
+    <File Include="Content/Detail/img_Mobile/Background gia soc.png">
+      <publishTime>11/02/2023 15:04:02</publishTime>
+    </File>
+    <File Include="Content/Detail/img_Mobile/Background hot.png">
+      <publishTime>11/02/2023 15:04:02</publishTime>
+    </File>
+    <File Include="Content/Detail/img_Mobile/Background re het co.png">
+      <publishTime>11/02/2023 15:04:02</publishTime>
+    </File>
+    <File Include="Content/Detail/img_Mobile/Cell ⏵ Img - iPhone 14 Pro Max.png">
+      <publishTime>11/02/2023 15:08:50</publishTime>
+    </File>
+    <File Include="Content/Detail/img_Mobile/khung none 143 143.png">
+      <publishTime>11/02/2023 15:15:41</publishTime>
+    </File>
+    <File Include="Content/Detail/img_Mobile/khung none 173.png">
+      <publishTime>11/02/2023 15:15:41</publishTime>
+    </File>
+    <File Include="Content/Detail/js-css/click_all.js">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/js-css/gridjs.js">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/js-css/mermaid.css">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/js-css/select_option.css">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/js-css/select_option.js">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/js-css/slouslide.min.css">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/js-css/web_Desktop_v1.css">
+      <publishTime>11/02/2023 14:47:02</publishTime>
+    </File>
+    <File Include="Content/Detail/js-css/web_Desktop_v1.js">
+      <publishTime>11/02/2023 14:46:48</publishTime>
+    </File>
+    <File Include="Content/Detail/js-css/web_Mobile_v1.css">
+      <publishTime>11/02/2023 16:58:26</publishTime>
+    </File>
+    <File Include="Content/Detail/js-css/web_Mobile_v1.js">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/js-css/xem_them.js">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/js/bootstrap.bundle.min.js">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail/js/nouislider.min.js">
+      <publishTime>10/25/2023 11:05:41</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/css/app.css">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/css/app.min.css">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/css/bootstrap.min.css">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/css/css.css">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/css/css2.css">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/css/icons.min.css">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/css/model.css">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/css/model_Mobile.css">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/css/sass.scss">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/css/search.css">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/css/search2.css">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/css/select_option.css">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/css/select_option_Mobile.css">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/css/style.css">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/css/style_Mobile.css">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/css/swiper-min.css">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/css/table.css">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/css/w3school.css">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/css/w3school_Mobile.css">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/03_2_6.jpg.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/add.svg">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/add_circle.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/add_fillo.svg">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Box.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/call.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/check.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/clock.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Close button.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/close.svg">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/compare_arrows.svg">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/crown-2.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Delivery.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/dislike.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/document.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/flashsale.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Frame 236.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Frame 324.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Frame 87 %281%29.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Frame 87 %282%29.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Frame 87.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Frame.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Frame.svg">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Frame_rong.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/galaxys23ultra_front_green_221122_2.jpg.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Group 6551.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Heading_askandanswer.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Heading_maycu.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Heading_phukien.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Heading_sosanh.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Heading_thucu.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Heading_tintuc.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/heart.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/hoanghanone.svg">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/keyboard_arrow.svg">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/like.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/location-minus.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/location.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Logo VNPAY-QR 1.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/machine.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/money-change.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/navigate_next.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/No_content.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/play-circle.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Rectangle 49.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Rectangle 49.svg">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/redeem_FILL0_wght400_GRAD0_opsz48 %281%29 1.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/reply.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/s23-ultra-kem_1.png.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/s23-ultra-tim_1.png.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/s23-ultra-xanh.png.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/send.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/setting-2.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/shield-tick.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/shopping-cart.svg">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/sm-s908_galaxys22ultra_front_burgundy_211119_3.jpg.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/star.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/trash_can.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Vector.png">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images _Mobile/Vector.svg">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/03_2_6.jpg.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/150px 150.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/200px 200.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/30x 30.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/add.svg">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/add_circle_FILL0_wght400_GRAD0_opsz48 1 %283%29.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Box.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Box.svg">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/call.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/check.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/clock.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Close button.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/close.svg">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/compare_arrows.svg">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/crown-2.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Delivery.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/dislike.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/document.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Frame 225.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Frame 236.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Frame 324.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Frame 87 %281%29.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Frame 87 %282%29.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Frame 87.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Frame.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Frame.svg">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Frame_rong.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/galaxys23ultra_front_green_221122_2.jpg.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Group 6551.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Heading_askandanswer.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Heading_maycu.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Heading_phukien.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Heading_sosanh.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Heading_thucu.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Heading_tintuc.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/heart.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/hoanghanone.svg">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/keyboard_arrow.svg">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/like.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/location-minus.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/location.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Logo VNPAY-QR 1.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/machine.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/money-change.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/navigate_next.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/No_content.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Path 5577.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/radio input.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Rectangle 49.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Rectangle 49.svg">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/redeem_FILL0_wght400_GRAD0_opsz48 %281%29 1.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/reply.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/s23-ultra-kem_1.png.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/s23-ultra-tim_1.png.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/s23-ultra-xanh.png.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/send.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/setting-2.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/shield-tick.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/shopping-cart.svg">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/sm-s908_galaxys22ultra_front_burgundy_211119_3.jpg.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/trash_can.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Vector.png">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/images/Vector.svg">
+      <publishTime>11/24/2023 16:53:19</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/javascript/app.js">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/javascript/function.js">
+      <publishTime>11/27/2023 09:15:48</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/javascript/function_Mobile.js">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/javascript/jquery-1.11.3.min.js">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/javascript/jssor.slider-28.1.0.min.js">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/javascript/model.js">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/javascript/Order.js">
+      <publishTime>11/27/2023 09:45:09</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/javascript/Order_mb.js">
+      <publishTime>11/27/2023 09:45:44</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/javascript/select_option.js">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/javascript/swiper-bundle.min.js">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/javascript/swiper-bundle.min2.js">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/javascript/swiper.js">
+      <publishTime>11/27/2023 09:44:43</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/javascript/swiper_Mobile.js">
+      <publishTime>11/27/2023 09:44:28</publishTime>
+    </File>
+    <File Include="Content/Detail_Project2/javascript/ww3school.js">
+      <publishTime>11/24/2023 16:53:20</publishTime>
+    </File>
+    <File Include="Content/etc.clientlibs/corewcmcomponentscommonssiteclientlibs/container.ACSHASH68e8a508c100f218cc66bb13a94d1002.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/etc.clientlibs/sonyglobalclientlibs/clientlib-base.ACSHASHf3f0e6cff0ab139c656396a517573673.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/etc.clientlibs/sonyglobalclientlibs/clientlib-dependencies.ACSHASHd41d8cd98f00b204e9800998ecf8427e.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/etc.clientlibs/sonyglobalclientlibs/clientlib-dependencies.ACSHASHd41d8cd98f00b204e9800998ecf8427e.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/etc.clientlibs/sonyglobalclientlibs/clientlib-flow.ACSHASHb51809e20bb5ed5b5fd4757ace69d490.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/etc.clientlibs/sonyglobalclientlibs/clientlib-flow.ACSHASHeb4b09f97a3785c0a87915a88e3789e0.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/etc.clientlibs/sonyglobalclientlibs/clientlib-sony-vietnamese.ACSHASH11b1bab1ce3c5880302bc331ed605f72.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/etc.clientlibs/sonyglobalclientlibs/clientlib-sony.ACSHASH45aadc16459012b298f0f86ff5eb7f1b.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/etc.clientlibs/sonyglobalclientlibs/clientlib-sonyresourcesassetsimgGlobalFooter/EN_Grouplink_White.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/etc.clientlibs/sonyglobalclientlibs/clientlib-sonyresourcesassetsimgGlobalFooter/EN_GroupLink_White_hover.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/etc.clientlibs/sonyglobalclientlibs/clientlib-vendor.ACSHASHb52019df31b805d3bae1221f2c327613.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/etc.clientlibs/sonyglobalclientlibs/Slideshow.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/fonts/icon/css/hoangha.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/fonts/icon/fonts/hoangha.eot">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/fonts/icon/fonts/hoangha.svg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/fonts/icon/fonts/hoangha.ttf">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/fonts/icon/fonts/hoangha.woff">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/fonts/SegieUI.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/honor_90/css/bootstrap.min.css">
+      <publishTime>10/31/2023 09:04:30</publishTime>
+    </File>
+    <File Include="Content/img/fire.svg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/img/logo-atm.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/img/logo-bct.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/img/logo-jcb.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/img/logo-kerry.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/img/logo-master.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/img/logo-samsungpay.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/img/logo-text.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/img/logo-viettel.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/img/logo-visa.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/img/logo-vnpay.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/img/logo.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/img/Miband 4-01.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/img/seo-content.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/img/spin.svg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/img/sub-logo.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/js-css/web_css.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/js-css/web_v1.1.8.6.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/js-css/web_v1.1.8.6.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/js/jquery-3.5.1.min.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/js/plugins/jquery-scrolltofixed/jquery-scrolltofixed.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/js/plugins/jssor.slider-28.0.0.min/jssor.slider-28.0.0.min.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/js/plugins/OwlCarousel2-2.3.4/assets/ajax-loader.gif">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/js/plugins/OwlCarousel2-2.3.4/assets/owl.carousel.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/js/plugins/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.default.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.default.min.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.green.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.green.min.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/js/plugins/OwlCarousel2-2.3.4/assets/owl.video.play.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/js/plugins/OwlCarousel2-2.3.4/owl.carousel.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/js/plugins/OwlCarousel2-2.3.4/owl.carousel.min.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/logo/ads-1.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/logo/ads-2.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/logo/ads-3.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/logo/brand %281%29.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/logo/brand %282%29.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/logo/brand %283%29.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/logo/brand %284%29.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/logo/brand %285%29.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/logo/brand %286%29.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/css/bootstrap.min.css">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/css/swiper-bundle.min.css">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/accessory scroll mb.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/accessory scroll.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/banner img mb.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/banner img.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/banner text mb.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/banner text.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/BlackFriday banner.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/icon banner.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/khung-deal.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/laptop scroll mb.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/laptop scroll.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/loa scroll mb.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/loa scroll.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/Merry Christmas desktop.jpg">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/Merry Christmas mobile.jpg">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/smart home mb.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/smart home scroll mb.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/smart home scroll.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/smart tv scroll mb.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/smart tv scroll.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/smartphone scroll mb.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/smartphone scroll.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/thumb BlackFriday.jpg">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/tiktok scroll mb.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/tiktok scroll.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/watch scroll mb.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/img/watch scroll.png">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/js-css/Index.cshtml">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/js-css/index.css">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/js-css/Index.Mobile.cshtml">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/js-css/index_mb.css">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/js-css/MerryChristmas.css">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/js-css/MerryChristmas.js">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/js-css/MerryChristmas_mb.css">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/js-css/Scroll.js">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/js-css/style.css">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/MerryChristmas/js-css/swiper-bundle.min.js">
+      <publishTime>12/08/2023 14:51:12</publishTime>
+    </File>
+    <File Include="Content/n3/css/bootstrap.min.css">
+      <publishTime>12/29/2023 10:24:57</publishTime>
+    </File>
+    <File Include="Content/n3/img/RMN13_HIDDEN DT.jpg">
+      <publishTime>12/29/2023 09:41:14</publishTime>
+    </File>
+    <File Include="Content/n3/img/RMN13_HIDDEN MB.jpg">
+      <publishTime>12/29/2023 09:41:14</publishTime>
+    </File>
+    <File Include="Content/n3/js-css/web_Desktop.css">
+      <publishTime>12/29/2023 09:30:52</publishTime>
+    </File>
+    <File Include="Content/n3/js/jquery-3.5.1.min.js">
+      <publishTime>12/29/2023 09:32:27</publishTime>
+    </File>
+    <File Include="Content/n3/video/video n13.mp4">
+      <publishTime>12/29/2023 09:24:22</publishTime>
+    </File>
+    <File Include="Content/Oppon3/css/bootstrap.min.css">
+      <publishTime>10/25/2023 11:15:29</publishTime>
+    </File>
+    <File Include="Content/Oppon3/css/icon.min.css">
+      <publishTime>10/09/2023 11:53:56</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/1b 1.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/background-end.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Background.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Background2.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/CHÂN DUNG 2.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/FIND N3 Flip - GOLD BLACK - MASTER KV - H - RGB 2.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/FIND N3 Series - KV PRE ORDER - H - RGB.jpg">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-five.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-four.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-four_1.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-four_2.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-four_4.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-one.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-one1.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-sevent1.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-six-end.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-three.jpg">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-three_1.jpg">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-three_1.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-three_2.jpg">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-three_2.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-three_3.jpg">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-three_3.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-three_4.jpg">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Flip-feature-three_4.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Group 2085660946 1.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Group 2085660962.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Group 2085660965.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/IMG_20230818_021438.jpg">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/IMG_20230818_021438.png">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/IMG_20230818_021458.jpg">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/IMG_20230818_022333.jpg">
+      <publishTime>10/19/2023 11:18:53</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Oppo-Logo.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/pet 3D 1.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/pet 3D 1_1.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/pet 3D 1_2.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/pet 3D 1_3.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/pet 3D 1_4.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/pet 3D 1_5.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648053.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648071.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648071_1.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648071_2.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648071_3.png">
+      <publishTime>10/19/2023 11:07:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648071_4.png">
+      <publishTime>10/19/2023 11:07:39</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648072 %284%29.png">
+      <publishTime>10/19/2023 11:07:39</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648072.png">
+      <publishTime>10/19/2023 11:07:39</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648072_1.png">
+      <publishTime>10/19/2023 11:07:39</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Rectangle 240648072_2.png">
+      <publishTime>10/19/2023 11:07:39</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/Section - 10.png">
+      <publishTime>10/19/2023 11:07:39</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3-Flip/火烈鸟 Flamingo 粉色 Pink 背面合起-RGB 1.png">
+      <publishTime>10/19/2023 11:07:39</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Default-feature-five.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Default-feature-four.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Default-feature-four_400x.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Default-feature-one.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Default-feature-one_400x.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Default-feature-sevent.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Default-feature-sevent1.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Default-feature-six.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Default-feature-three.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/FIND N3 Series - KV PRE ORDER - H - RGB.jpg">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Icon-item-five2.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img-Mobile-n3/Oppo-Logo.png">
+      <publishTime>10/19/2023 11:07:20</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3/Couple-camera 1.png">
+      <publishTime>10/19/2023 11:06:36</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3/Icon %281%29.png">
+      <publishTime>10/19/2023 11:06:36</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3/Icon-item-five2.png">
+      <publishTime>10/19/2023 11:06:36</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3/Icon-item-five2_cham.png">
+      <publishTime>10/19/2023 11:06:36</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3/Icon-item-five2_mouse.png">
+      <publishTime>10/19/2023 11:06:36</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3/Icon.png">
+      <publishTime>10/19/2023 11:06:36</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3/image-feature-five.png">
+      <publishTime>10/19/2023 11:06:36</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3/image-feature-four.png">
+      <publishTime>10/19/2023 11:06:36</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3/image-feature-six.png">
+      <publishTime>10/19/2023 11:06:36</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3/kv-oppo-gold 2.png">
+      <publishTime>10/19/2023 11:06:36</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3/Mobile.png">
+      <publishTime>10/19/2023 17:33:01</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3/N3-Double-Final2 1.png">
+      <publishTime>10/19/2023 11:06:36</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3/OPPO-Find-N3-Series_Desktop.png">
+      <publishTime>10/19/2023 16:55:29</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3/OPPO-Find-N3-Series_Mobile.png">
+      <publishTime>10/19/2023 16:55:30</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3/Oppo-Logo.png">
+      <publishTime>10/19/2023 11:06:36</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3/Vector %281%29.png">
+      <publishTime>10/19/2023 11:06:36</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/1b 1.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/background-end.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/Background.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/Background2.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/CHÂN DUNG 2.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/FIND N3 Flip - GOLD BLACK - MASTER KV - H - RGB 2.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/FIND N3 Series - KV PRE ORDER - H - RGB.jpg">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/Group 2085660946 1.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/Group 2085660962.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/Group 2085660965.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/Oppo-Logo.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/pet 3D 1.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/pet 3D 1_1.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/pet 3D 1_2.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/pet 3D 1_3.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/pet 3D 1_4.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/pet 3D 1_5.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648053.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648071.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648071_1.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648071_2.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648071_3.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648071_4.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648072 %284%29.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648072.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648072_1.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/Rectangle 240648072_2.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/Section - 10.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/img_n3_Flip/火烈鸟 Flamingo 粉色 Pink 背面合起-RGB 1.png">
+      <publishTime>10/19/2023 11:06:59</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/jquery_box_video.css">
+      <publishTime>10/17/2023 14:02:41</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/jquery_box_video.js">
+      <publishTime>10/17/2023 14:02:50</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/Scroll.js">
+      <publishTime>10/19/2023 18:55:39</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/swiper-bundle.min.css">
+      <publishTime>10/19/2023 19:05:40</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/swipper-3d.css">
+      <publishTime>10/19/2023 19:05:26</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/swipper-3d.js">
+      <publishTime>10/17/2023 14:03:46</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/web_Desktop_n3.css">
+      <publishTime>10/19/2023 11:13:43</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/web_Desktop_n3_Flip.css">
+      <publishTime>10/19/2023 11:13:34</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/web_Desktop_v1.js">
+      <publishTime>10/17/2023 14:04:35</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/web_Mobile_n3.css">
+      <publishTime>10/19/2023 11:14:08</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/web_Mobile_n3_Flip.css">
+      <publishTime>10/19/2023 11:13:52</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/web_Mobile_oppo.css">
+      <publishTime>10/19/2023 11:14:18</publishTime>
+    </File>
+    <File Include="Content/Oppon3/js-css/web_Mobile_v1.js">
+      <publishTime>10/17/2023 14:05:01</publishTime>
+    </File>
+    <File Include="Content/Oppon3/video/OPPO N3 Desktop combine 30s 9x16.mp4">
+      <publishTime>10/17/2023 14:09:30</publishTime>
+    </File>
+    <File Include="Content/Oppon3/video/OPPO N3 Mobile combine 30s 16x9 ending KV master.mp4">
+      <publishTime>10/17/2023 14:09:30</publishTime>
+    </File>
+    <File Include="Content/product/airpods.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/deal.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/Mask Group 1.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/Mask Group 2.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/Mask Group 3.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/Mask Group 332.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/Mask Group 4.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/Mask Group 5.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/news-home.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/note-10/01-t.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/note-10/01.jpg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/note-10/02-t.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/note-10/02.jpg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/note-10/03-t.jpg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/note-10/03.jpg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/note-10/03.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/note-10/04-t.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/note-10/04.jpg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/note-10/05-t.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/note-10/05.jpg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/phukien.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/samsung-galaxy-note-10-plus-blue-400x460.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/slider-2.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/slider-3.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/slider-4.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/slider-5.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/slider.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/product/thaypin.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/css/bootstrap.min.css">
+      <publishTime>12/08/2023 14:52:30</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/css/swiper-bundle.min.css">
+      <publishTime>12/08/2023 14:52:30</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/img/camera A15 MB.jpeg">
+      <publishTime>12/08/2023 14:53:08</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/img/camera A15 PC.jpeg">
+      <publishTime>12/08/2023 14:53:08</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/img/camera A25 MB.jpeg">
+      <publishTime>12/08/2023 14:53:08</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/img/camera A25 PC.jpeg">
+      <publishTime>12/08/2023 14:53:08</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/img/hiệu năng A15 PC.jpeg">
+      <publishTime>12/08/2023 14:53:08</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/img/hiệu năng A15.jpeg">
+      <publishTime>12/08/2023 14:53:08</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/img/hiệu năng A25 MB.jpeg">
+      <publishTime>12/08/2023 14:53:08</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/img/hiệu năng A25 PC.jpeg">
+      <publishTime>12/08/2023 14:53:08</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/img/knox chung PC.jpeg">
+      <publishTime>12/08/2023 14:53:08</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/img/knox chung.jpeg">
+      <publishTime>12/08/2023 14:53:08</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/img/màn hình A15 MB.jpeg">
+      <publishTime>12/08/2023 14:53:08</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/img/màn hình A15 PC.jpeg">
+      <publishTime>12/08/2023 14:53:08</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/img/màn hình A25 MB.jpeg">
+      <publishTime>12/08/2023 14:53:08</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/img/màn hình A25 PC.jpeg">
+      <publishTime>12/08/2023 14:53:08</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/img/pin sạc nhanh A15 MB.jpeg">
+      <publishTime>12/08/2023 14:53:08</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/img/pin sạc nhanh A15 PC.jpeg">
+      <publishTime>12/08/2023 14:53:08</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/img/Thiết kế A15.png">
+      <publishTime>12/08/2023 14:53:08</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/img/thiết kế A25.png">
+      <publishTime>12/08/2023 14:53:08</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/js-css/Index.cshtml">
+      <publishTime>12/08/2023 14:52:42</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/js-css/index.css">
+      <publishTime>12/08/2023 14:52:42</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/js-css/Index.Mobile.cshtml">
+      <publishTime>12/08/2023 14:52:42</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/js-css/index_mb.css">
+      <publishTime>12/08/2023 14:52:42</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/js-css/MerryChristmas.css">
+      <publishTime>12/08/2023 14:52:42</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/js-css/MerryChristmas.js">
+      <publishTime>12/08/2023 14:52:42</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/js-css/MerryChristmas_mb.css">
+      <publishTime>12/08/2023 14:52:42</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/js-css/Scroll.js">
+      <publishTime>12/08/2023 14:52:42</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/js-css/style.css">
+      <publishTime>12/08/2023 14:52:42</publishTime>
+    </File>
+    <File Include="Content/SamsungDL/js-css/swiper-bundle.min.js">
+      <publishTime>12/08/2023 14:52:42</publishTime>
+    </File>
+    <File Include="Content/tet2024/css/bootstrap.min.css">
+      <publishTime>12/28/2023 15:15:52</publishTime>
+    </File>
+    <File Include="Content/tet2024/css/swiper-bundle.min.css">
+      <publishTime>12/28/2023 15:15:52</publishTime>
+    </File>
+    <File Include="Content/tet2024/img/accessory scroll.png">
+      <publishTime>12/28/2023 15:30:14</publishTime>
+    </File>
+    <File Include="Content/tet2024/img/banner tiktok.png">
+      <publishTime>12/28/2023 15:30:14</publishTime>
+    </File>
+    <File Include="Content/tet2024/img/banner vong quay.png">
+      <publishTime>12/28/2023 15:30:14</publishTime>
+    </File>
+    <File Include="Content/tet2024/img/icon banner.png">
+      <publishTime>12/28/2023 15:30:14</publishTime>
+    </File>
+    <File Include="Content/tet2024/img/laptop scroll.png">
+      <publishTime>12/28/2023 15:30:14</publishTime>
+    </File>
+    <File Include="Content/tet2024/img/loa scroll.png">
+      <publishTime>12/28/2023 15:30:14</publishTime>
+    </File>
+    <File Include="Content/tet2024/img/smart home scroll.png">
+      <publishTime>12/28/2023 15:30:14</publishTime>
+    </File>
+    <File Include="Content/tet2024/img/smartphone scroll.png">
+      <publishTime>12/28/2023 15:30:14</publishTime>
+    </File>
+    <File Include="Content/tet2024/img/watch scroll.png">
+      <publishTime>12/28/2023 15:30:14</publishTime>
+    </File>
+    <File Include="Content/tet2024/js-css/Index.cshtml">
+      <publishTime>12/28/2023 15:15:52</publishTime>
+    </File>
+    <File Include="Content/tet2024/js-css/index.css">
+      <publishTime>12/28/2023 15:15:52</publishTime>
+    </File>
+    <File Include="Content/tet2024/js-css/Index.Mobile.cshtml">
+      <publishTime>12/28/2023 15:15:52</publishTime>
+    </File>
+    <File Include="Content/tet2024/js-css/index_mb.css">
+      <publishTime>12/28/2023 15:15:52</publishTime>
+    </File>
+    <File Include="Content/tet2024/js-css/MerryChristmas.css">
+      <publishTime>12/28/2023 15:15:52</publishTime>
+    </File>
+    <File Include="Content/tet2024/js-css/MerryChristmas.js">
+      <publishTime>12/28/2023 15:15:52</publishTime>
+    </File>
+    <File Include="Content/tet2024/js-css/MerryChristmas_mb.css">
+      <publishTime>12/28/2023 15:15:52</publishTime>
+    </File>
+    <File Include="Content/tet2024/js-css/Scroll.js">
+      <publishTime>12/28/2023 15:15:52</publishTime>
+    </File>
+    <File Include="Content/tet2024/js-css/style.css">
+      <publishTime>12/28/2023 15:15:52</publishTime>
+    </File>
+    <File Include="Content/tet2024/js-css/swiper-bundle.min.js">
+      <publishTime>12/28/2023 15:15:52</publishTime>
+    </File>
+    <File Include="Content/TYKcSG5WRRSSCogasx3IQnokrEpaDJwrzJ1tGiAcSikDfCB6BnUz/UBA.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/css/bootstrap.min.css">
+      <publishTime>10/25/2023 11:15:49</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/css/icon.min.css">
+      <publishTime>10/19/2023 13:43:42</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/css/swiper-bundle.min.css">
+      <publishTime>10/23/2023 17:16:39</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/VIVOTYPEVN-BOLD.TTF">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/VIVOTYPEVN-HEAVY.TTF">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/VIVOTYPEVN-LIGHT.TTF">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/VIVOTYPEVN-MEDIUM.TTF">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/VIVOTYPEVN-REGULAR.TTF">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNBold.eot">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNBold.ttf">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNBold.woff">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNBold.woff2">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNHeavy.eot">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNHeavy.svg">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNHeavy.ttf">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNHeavy.woff">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNHeavy.woff2">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNLight.eot">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNLight.svg">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNLight.ttf">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNLight.woff">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNLight.woff2">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNMedium.eot">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNMedium.svg">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNMedium.ttf">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNMedium.woff">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNMedium.woff2">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNRegular.eot">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNRegular.svg">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNRegular.ttf">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNRegular.woff">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/font/vivotypeVNRegular.woff2">
+      <publishTime>10/23/2023 17:18:08</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/feature-eight.png">
+      <publishTime>10/23/2023 17:16:52</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/feature-five-one.png">
+      <publishTime>10/23/2023 17:16:52</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/feature-five-two.png">
+      <publishTime>10/23/2023 17:16:52</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/feature-four-five.png">
+      <publishTime>10/23/2023 17:16:52</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/feature-four-four.png">
+      <publishTime>10/23/2023 17:16:52</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/feature-four-one.png">
+      <publishTime>10/23/2023 17:16:52</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/feature-four-three.png">
+      <publishTime>10/23/2023 17:16:52</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/feature-four-two.png">
+      <publishTime>10/23/2023 17:16:52</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/feature-night.png">
+      <publishTime>10/23/2023 17:16:52</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/feature-one-img.png">
+      <publishTime>10/23/2023 17:16:52</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/feature-sevent.png">
+      <publishTime>10/23/2023 17:16:52</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/feature-six.png">
+      <publishTime>10/23/2023 17:16:53</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/feature-ten.png">
+      <publishTime>10/23/2023 17:16:53</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/feature-three-item-one.png">
+      <publishTime>10/23/2023 17:16:53</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/feature-three-item-two.png">
+      <publishTime>10/23/2023 17:16:53</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/feature-three-item-two2.png">
+      <publishTime>10/23/2023 17:16:54</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/feature-two-img.png">
+      <publishTime>10/23/2023 17:16:54</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/Landing V29e-01.jpg">
+      <publishTime>10/23/2023 17:34:46</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/Landing V29e-02.jpg">
+      <publishTime>10/23/2023 17:34:46</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/img/thumb-V29e.jpg">
+      <publishTime>10/23/2023 17:16:52</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/js-css/Web_Desktop_v29.css">
+      <publishTime>10/23/2023 17:56:36</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/js-css/Web_Desktop_v29.js">
+      <publishTime>10/23/2023 18:01:47</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/js-css/Web_vivo_v29.css">
+      <publishTime>10/23/2023 17:56:43</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/js/jquery-3.6.0.min.js">
+      <publishTime>10/23/2023 17:17:37</publishTime>
+    </File>
+    <File Include="Content/vivo_v29/js/swiper-bundle.min.js">
+      <publishTime>10/23/2023 17:17:37</publishTime>
+    </File>
+    <File Include="Content/xiaomi/css/bootstrap.min.css">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/css/swiper-bundle.min.css">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/a-pro-.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Purifier 4.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Redmi Buds 4 Lite.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Redmi Buds 4 Pro.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Redmi Buds 4.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/robot-hut-bui-lau-nha-xiaomi-vacuum-e10-130323-050133-600x600.jpg">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Screenshot xiaomi robot hut bui.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Screenshot xiaomi smart band 8.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Screenshot xiaomi smart purifier 4 lite.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/tv a2.jpeg.jpg">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Vacuum Mop 2 Lite.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Vacuum S10 plus.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Vacuum S10.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Vacuum X10.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Xiaomi Smart Air Purifier 4 Compact.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/Xiaomi-Mi-Band-8-Smart-Bracelet-Black-520284-0.jpg">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/xiaomi-purifier-4-litepng_1646387171.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/img/XiaomiBuds3.png">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/js-css/index.css">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/js-css/index_mb.css">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/js-css/style.css">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/js-css/swiper-bundle.min.js">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/js-css/web-desktop.css">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/js-css/xiaomi.css">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/js-css/xiaomi.js">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content/xiaomi/js-css/xiaomi_mb.css">
+      <publishTime>11/17/2023 09:53:01</publishTime>
+    </File>
+    <File Include="Content2/Apple/apple.min.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/fonts/SanFranciscoDisplay.min.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/iphone14/app.min.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/iphone14/styles.min.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/iphone14/thu-cu-iphone-web.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/js-css/web_v1.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/js-css/web_v1.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/web/icon/fonts/hoangha.woff">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/web/icon/fonts/hoangha9.woff">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/web/img/logo-atm.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/web/img/logo-bct.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/web/img/logo-jcb.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/web/img/logo-master.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/web/img/logo-samsungpay.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/web/img/logo-text.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/web/img/logo-visa.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/web/img/logo-vnpay.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/web/img/maycugiatot.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/web/img/nhattin.jpg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/web/img/thucugiacao.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content2/Apple/web/img/vnpost.jpg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/css/1000px.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/css/styles.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/fonts/icon/css/hoangha.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/fonts/icon/fonts/hoangha.eot">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/fonts/icon/fonts/hoangha.svg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/fonts/icon/fonts/hoangha.ttf">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/fonts/icon/fonts/hoangha.woff">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/fonts/SegieUI.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/img/fire.svg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/img/logo-atm.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/img/logo-bct.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/img/logo-jcb.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/img/logo-kerry.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/img/logo-master.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/img/logo-samsungpay.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/img/logo-text.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/img/logo-viettel.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/img/logo-visa.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/img/logo-vnpay.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/img/logo.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/img/Miband 4-01.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/img/seo-content.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/img/spin.svg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/img/sub-logo.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/js/jquery-3.5.1.min.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/js/plugins/jquery-scrolltofixed/jquery-scrolltofixed.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/js/plugins/jssor.slider-28.0.0.min/jssor.slider-28.0.0.min.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/js/plugins/OwlCarousel2-2.3.4/assets/ajax-loader.gif">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/js/plugins/OwlCarousel2-2.3.4/assets/owl.carousel.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/js/plugins/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.default.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.default.min.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.green.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.green.min.css">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/js/plugins/OwlCarousel2-2.3.4/assets/owl.video.play.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/js/plugins/OwlCarousel2-2.3.4/owl.carousel.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/js/plugins/OwlCarousel2-2.3.4/owl.carousel.min.js">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/logo/ads-1.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/logo/ads-2.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/logo/ads-3.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/logo/brand %281%29.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/logo/brand %282%29.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/logo/brand %283%29.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/logo/brand %284%29.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/logo/brand %285%29.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/logo/brand %286%29.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/airpods.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/deal.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/Mask Group 1.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/Mask Group 2.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/Mask Group 3.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/Mask Group 332.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/Mask Group 4.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/Mask Group 5.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/news-home.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/note-10/01-t.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/note-10/01.jpg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/note-10/02-t.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/note-10/02.jpg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/note-10/03-t.jpg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/note-10/03.jpg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/note-10/03.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/note-10/04-t.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/note-10/04.jpg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/note-10/05-t.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/note-10/05.jpg">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/phukien.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/samsung-galaxy-note-10-plus-blue-400x460.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/slider-2.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/slider-3.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/slider-4.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/slider-5.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/slider.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Content3/product/thaypin.png">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="ContentDesktopHTC/img/BUY HTC A103-09.png">
+      <publishTime>09/05/2023 17:43:27</publishTime>
+    </File>
+    <File Include="ContentDesktopHTC/img/HTC A103-01_Desktop.jpg">
+      <publishTime>08/29/2023 18:55:38</publishTime>
+    </File>
+    <File Include="ContentDesktopHTC/img/HTC A103-02_Mobile.jpg">
+      <publishTime>08/29/2023 18:55:38</publishTime>
+    </File>
+    <File Include="ContentDesktopHTC/img/htc-a103-battery01-d.jpg">
+      <publishTime>08/29/2023 18:55:38</publishTime>
+    </File>
+    <File Include="ContentDesktopHTC/img/htc-a103-color-gray-d.jpg">
+      <publishTime>08/29/2023 18:55:38</publishTime>
+    </File>
+    <File Include="ContentDesktopHTC/img/htc-a103-color-silver-d.jpg">
+      <publishTime>08/29/2023 18:55:38</publishTime>
+    </File>
+    <File Include="ContentDesktopHTC/img/htc-a103-cpu01-d.jpg">
+      <publishTime>08/29/2023 18:55:38</publishTime>
+    </File>
+    <File Include="ContentDesktopHTC/img/htc-a103-display01-d.jpg">
+      <publishTime>08/29/2023 18:55:38</publishTime>
+    </File>
+    <File Include="ContentDesktopHTC/img/htc-a103-kv01-d.jpg">
+      <publishTime>08/29/2023 18:55:38</publishTime>
+    </File>
+    <File Include="ContentDesktopHTC/img/htc-a103-memory01-d.jpg">
+      <publishTime>08/29/2023 18:55:38</publishTime>
+    </File>
+    <File Include="ContentDesktopHTC/img/htc-a103-network01-d.jpg">
+      <publishTime>08/29/2023 18:55:38</publishTime>
+    </File>
+    <File Include="ContentDesktopHTC/img/logo-black.jpg">
+      <publishTime>08/29/2023 18:55:38</publishTime>
+    </File>
+    <File Include="ContentDesktopHTC/img/logo-white.svg">
+      <publishTime>08/29/2023 18:55:38</publishTime>
+    </File>
+    <File Include="ContentDesktopHTC/js-css/css-Mobile.css">
+      <publishTime>08/29/2023 18:55:38</publishTime>
+    </File>
+    <File Include="ContentDesktopHTC/js-css/css.css">
+      <publishTime>08/29/2023 18:55:38</publishTime>
+    </File>
+    <File Include="ContentDesktopHTC/js-css/style-css.css">
+      <publishTime>08/29/2023 18:55:38</publishTime>
+    </File>
+    <File Include="ContentDesktopHTC/js-css/style-css_Mobile.css">
+      <publishTime>08/29/2023 18:55:38</publishTime>
+    </File>
+    <File Include="ContentProject2/css/.scss">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/css/app.css">
+      <publishTime>09/28/2023 19:19:45</publishTime>
+    </File>
+    <File Include="ContentProject2/css/css.css">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/css/css2.css">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/css/model.css">
+      <publishTime>09/28/2023 19:26:43</publishTime>
+    </File>
+    <File Include="ContentProject2/css/model_Mobile.css">
+      <publishTime>09/25/2023 08:53:10</publishTime>
+    </File>
+    <File Include="ContentProject2/css/select_option.css">
+      <publishTime>09/28/2023 19:28:15</publishTime>
+    </File>
+    <File Include="ContentProject2/css/select_option_Mobile.css">
+      <publishTime>09/28/2023 19:23:03</publishTime>
+    </File>
+    <File Include="ContentProject2/css/style.css">
+      <publishTime>09/28/2023 19:26:13</publishTime>
+    </File>
+    <File Include="ContentProject2/css/style_Mobile.css">
+      <publishTime>09/28/2023 19:18:37</publishTime>
+    </File>
+    <File Include="ContentProject2/css/swiper-min.css">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/css/w3school.css">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/css/w3school_Mobile.css">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/03_2_6.jpg.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/add.svg">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/add_circle.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/add_fillo.svg">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Box.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/call.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/check.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/clock.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Close button.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/close.svg">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/compare_arrows.svg">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/crown-2.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Delivery.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/dislike.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/document.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/flashsale.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Frame 236.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Frame 324.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Frame 87 %281%29.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Frame 87 %282%29.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Frame 87.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Frame.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Frame.svg">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Frame_rong.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/galaxys23ultra_front_green_221122_2.jpg.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Group 6551.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Heading_askandanswer.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Heading_maycu.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Heading_phukien.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Heading_sosanh.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Heading_thucu.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Heading_tintuc.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/heart.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/hoanghanone.svg">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/keyboard_arrow.svg">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/like.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/location-minus.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/location.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Logo VNPAY-QR 1.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/machine.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/money-change.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/navigate_next.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/No_content.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/play-circle.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Rectangle 49.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Rectangle 49.svg">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/redeem_FILL0_wght400_GRAD0_opsz48 %281%29 1.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/reply.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/s23-ultra-kem_1.png.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/s23-ultra-tim_1.png.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/s23-ultra-xanh.png.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/send.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/setting-2.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/shield-tick.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/shopping-cart.svg">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/sm-s908_galaxys22ultra_front_burgundy_211119_3.jpg.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/star.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/trash_can.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Vector.png">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images _Mobile/Vector.svg">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/images/03_2_6.jpg.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/150px 150.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/200px 200.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/30x 30.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/add.svg">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/add_circle_FILL0_wght400_GRAD0_opsz48 1 %283%29.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Box.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Box.svg">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/call.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/check.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/clock.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Close button.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/close.svg">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/compare_arrows.svg">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/crown-2.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Delivery.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/dislike.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/document.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Frame 225.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Frame 236.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Frame 324.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Frame 87 %281%29.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Frame 87 %282%29.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Frame 87.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Frame.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Frame.svg">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Frame_rong.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/galaxys23ultra_front_green_221122_2.jpg.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Group 6551.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Heading_askandanswer.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Heading_maycu.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Heading_phukien.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Heading_sosanh.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Heading_thucu.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Heading_tintuc.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/heart.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/hoanghanone.svg">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/keyboard_arrow.svg">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/like.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/location-minus.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/location.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Logo VNPAY-QR 1.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/machine.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/money-change.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/navigate_next.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/No_content.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Path 5577.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/radio input.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Rectangle 49.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Rectangle 49.svg">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/redeem_FILL0_wght400_GRAD0_opsz48 %281%29 1.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/reply.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/s23-ultra-kem_1.png.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/s23-ultra-tim_1.png.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/s23-ultra-xanh.png.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/send.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/setting-2.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/shield-tick.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/shopping-cart.svg">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/sm-s908_galaxys22ultra_front_burgundy_211119_3.jpg.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/trash_can.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Vector.png">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/images/Vector.svg">
+      <publishTime>09/28/2023 19:42:27</publishTime>
+    </File>
+    <File Include="ContentProject2/javascript/function.js">
+      <publishTime>09/28/2023 19:33:15</publishTime>
+    </File>
+    <File Include="ContentProject2/javascript/function_Mobile.js">
+      <publishTime>09/28/2023 19:33:34</publishTime>
+    </File>
+    <File Include="ContentProject2/javascript/model.js">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentProject2/javascript/select_option.js">
+      <publishTime>09/28/2023 19:33:58</publishTime>
+    </File>
+    <File Include="ContentProject2/javascript/swiper-bundle.min.js">
+      <publishTime>09/28/2023 19:39:21</publishTime>
+    </File>
+    <File Include="ContentProject2/javascript/swiper.js">
+      <publishTime>09/25/2023 08:43:06</publishTime>
+    </File>
+    <File Include="ContentProject2/javascript/swiper_Mobile.js">
+      <publishTime>09/25/2023 08:43:23</publishTime>
+    </File>
+    <File Include="ContentProject2/javascript/ww3school.js">
+      <publishTime>09/14/2023 10:53:15</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/css/1000px.css">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/css/styles.css">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/etc.clientlibs/corewcmcomponentscommonssiteclientlibs/container.ACSHASH68e8a508c100f218cc66bb13a94d1002.js">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/etc.clientlibs/sonyglobalclientlibs/clientlib-base.ACSHASHf3f0e6cff0ab139c656396a517573673.js">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/etc.clientlibs/sonyglobalclientlibs/clientlib-dependencies.ACSHASHd41d8cd98f00b204e9800998ecf8427e.css">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/etc.clientlibs/sonyglobalclientlibs/clientlib-dependencies.ACSHASHd41d8cd98f00b204e9800998ecf8427e.js">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/etc.clientlibs/sonyglobalclientlibs/clientlib-flow.ACSHASHb51809e20bb5ed5b5fd4757ace69d490.css">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/etc.clientlibs/sonyglobalclientlibs/clientlib-flow.ACSHASHeb4b09f97a3785c0a87915a88e3789e0.js">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/etc.clientlibs/sonyglobalclientlibs/clientlib-sony-vietnamese.ACSHASH11b1bab1ce3c5880302bc331ed605f72.css">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/etc.clientlibs/sonyglobalclientlibs/clientlib-sony.ACSHASH45aadc16459012b298f0f86ff5eb7f1b.js">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/etc.clientlibs/sonyglobalclientlibs/clientlib-sonyresourcesassetsimgGlobalFooter/EN_Grouplink_White.png">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/etc.clientlibs/sonyglobalclientlibs/clientlib-sonyresourcesassetsimgGlobalFooter/EN_GroupLink_White_hover.png">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/etc.clientlibs/sonyglobalclientlibs/clientlib-vendor.ACSHASHb52019df31b805d3bae1221f2c327613.js">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/etc.clientlibs/sonyglobalclientlibs/Slideshow.js">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/fonts/icon/css/hoangha.css">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/fonts/icon/fonts/hoangha.eot">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/fonts/icon/fonts/hoangha.svg">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/fonts/icon/fonts/hoangha.ttf">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/fonts/icon/fonts/hoangha.woff">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/fonts/SegieUI.css">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/img/Asset 12%403x.png">
+      <publishTime>10/03/2023 14:09:48</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/img/Asset-10%403x.png">
+      <publishTime>10/03/2023 14:03:11</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/img/Huawei-Mobile.png">
+      <publishTime>10/02/2023 11:16:49</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/img/huawei-watch-gt4.jpg">
+      <publishTime>10/05/2023 14:40:39</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/img/Huawei.png">
+      <publishTime>10/02/2023 11:04:54</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/img/Huawei_price.png">
+      <publishTime>10/02/2023 11:32:46</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js-css/glightbox.min.css">
+      <publishTime>10/02/2023 10:39:16</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js-css/glightbox.min.js">
+      <publishTime>10/03/2023 10:00:25</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js-css/index.css">
+      <publishTime>10/05/2023 15:07:12</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js-css/index.js">
+      <publishTime>10/03/2023 14:58:45</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js-css/index_Mobile.css">
+      <publishTime>10/05/2023 15:41:01</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js-css/index_Mobile.js">
+      <publishTime>10/03/2023 14:58:32</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js-css/jquery_box.css">
+      <publishTime>10/17/2023 14:10:16</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js-css/lightbox.init.js">
+      <publishTime>10/02/2023 10:09:34</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js/jquery-3.5.1.min.js">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js/plugins/jquery-scrolltofixed/jquery-scrolltofixed.js">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js/plugins/jssor.slider-28.0.0.min/jssor.slider-28.0.0.min.js">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js/plugins/OwlCarousel2-2.3.4/assets/ajax-loader.gif">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js/plugins/OwlCarousel2-2.3.4/assets/owl.carousel.css">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js/plugins/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.default.css">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.default.min.css">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.green.css">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.green.min.css">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js/plugins/OwlCarousel2-2.3.4/assets/owl.video.play.png">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js/plugins/OwlCarousel2-2.3.4/owl.carousel.js">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/js/plugins/OwlCarousel2-2.3.4/owl.carousel.min.js">
+      <publishTime>09/29/2023 09:24:04</publishTime>
+    </File>
+    <File Include="ContentWatch_GT4/video/huawei-watch-gt4-fashion-forward.mp4">
+      <publishTime>10/02/2023 17:17:54</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>08/22/2023 12:01:57</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="LayoutDesktop/css/1000px.css">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/css/styles.css">
+      <publishTime>09/14/2023 11:03:51</publishTime>
+    </File>
+    <File Include="LayoutDesktop/fonts/icon/css/hoangha.css">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/fonts/icon/fonts/hoangha.eot">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/fonts/icon/fonts/hoangha.svg">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/fonts/icon/fonts/hoangha.ttf">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/fonts/icon/fonts/hoangha.woff">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/fonts/SegieUI.css">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/img/fire.svg">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/img/logo-atm.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/img/logo-bct.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/img/logo-jcb.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/img/logo-kerry.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/img/logo-master.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/img/logo-samsungpay.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/img/logo-text.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/img/logo-viettel.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/img/logo-visa.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/img/logo-vnpay.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/img/logo.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/img/Miband 4-01.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/img/seo-content.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/img/spin.svg">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/img/sub-logo.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/js/jquery-3.5.1.min.js">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/js/plugins/jquery-scrolltofixed/jquery-scrolltofixed.js">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/js/plugins/jssor.slider-28.0.0.min/jssor.slider-28.0.0.min.js">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/js/plugins/OwlCarousel2-2.3.4/assets/ajax-loader.gif">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/js/plugins/OwlCarousel2-2.3.4/assets/owl.carousel.css">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/js/plugins/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.default.css">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.default.min.css">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.green.css">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.green.min.css">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/js/plugins/OwlCarousel2-2.3.4/assets/owl.video.play.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/js/plugins/OwlCarousel2-2.3.4/owl.carousel.js">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/js/plugins/OwlCarousel2-2.3.4/owl.carousel.min.js">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/js/web_v1.1.9.9.js">
+      <publishTime>10/03/2023 09:56:21</publishTime>
+    </File>
+    <File Include="LayoutDesktop/logo/ads-1.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/logo/ads-2.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/logo/ads-3.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/logo/brand %281%29.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/logo/brand %282%29.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/logo/brand %283%29.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/logo/brand %284%29.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/logo/brand %285%29.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/logo/brand %286%29.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/airpods.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/deal.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/Mask Group 1.png">
+      <publishTime>08/29/2023 18:58:54</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/Mask Group 2.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/Mask Group 3.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/Mask Group 332.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/Mask Group 4.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/Mask Group 5.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/news-home.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/note-10/01-t.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/note-10/01.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/note-10/02-t.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/note-10/02.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/note-10/03-t.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/note-10/03.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/note-10/03.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/note-10/04-t.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/note-10/04.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/note-10/05-t.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/note-10/05.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/phukien.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/samsung-galaxy-note-10-plus-blue-400x460.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/slider-2.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/slider-3.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/slider-4.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/slider-5.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/slider.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop/product/thaypin.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/Apple/apple.min.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/Apple/fonts/apple.min.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/Apple/iphone14/app.min.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/Apple/iphone14/styles.min.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/Apple/iphone14/thu-cu-iphone-web.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/Bank/VPBank/the1.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/Bank/VPBank/the2.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/Bank/VPBank/the3.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/Bank/VPBank/the4.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/Bank/VPBank/top.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/Bank/VPBank/uudai.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/Bank/VPBank/vpbank.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/Bank/web.min.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/Bank/web.min.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/css/1000px.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/css/styles.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/etc.clientlibs/clientlib-css/StyleClient.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/etc.clientlibs/clientlib-css/table-css.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/etc.clientlibs/corewcmcomponentscommonssiteclientlibs/container.ACSHASH68e8a508c100f218cc66bb13a94d1002.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/etc.clientlibs/sonyglobalclientlibs/clientlib-base.ACSHASHf3f0e6cff0ab139c656396a517573673.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/etc.clientlibs/sonyglobalclientlibs/clientlib-dependencies.ACSHASHd41d8cd98f00b204e9800998ecf8427e.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/etc.clientlibs/sonyglobalclientlibs/clientlib-dependencies.ACSHASHd41d8cd98f00b204e9800998ecf8427e.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/etc.clientlibs/sonyglobalclientlibs/clientlib-flow.ACSHASHb51809e20bb5ed5b5fd4757ace69d490.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/etc.clientlibs/sonyglobalclientlibs/clientlib-flow.ACSHASHeb4b09f97a3785c0a87915a88e3789e0.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/etc.clientlibs/sonyglobalclientlibs/clientlib-sony-vietnamese.ACSHASH11b1bab1ce3c5880302bc331ed605f72.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/etc.clientlibs/sonyglobalclientlibs/clientlib-sony.ACSHASH45aadc16459012b298f0f86ff5eb7f1b.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/etc.clientlibs/sonyglobalclientlibs/clientlib-sonyresourcesassetsimgGlobalFooter/EN_Grouplink_White.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/etc.clientlibs/sonyglobalclientlibs/clientlib-sonyresourcesassetsimgGlobalFooter/EN_GroupLink_White_hover.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/etc.clientlibs/sonyglobalclientlibs/clientlib-vendor.ACSHASHb52019df31b805d3bae1221f2c327613.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/etc.clientlibs/sonyglobalclientlibs/Slideshow.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/fonts/icon/css/hoangha.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/fonts/icon/fonts/hoangha.eot">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/fonts/icon/fonts/hoangha.svg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/fonts/icon/fonts/hoangha.ttf">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/fonts/icon/fonts/hoangha.woff">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/fonts/SegieUI.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/img/fire.svg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/img/logo-atm.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/img/logo-bct.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/img/logo-jcb.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/img/logo-kerry.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/img/logo-master.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/img/logo-samsungpay.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/img/logo-text.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/img/logo-viettel.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/img/logo-visa.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/img/logo-vnpay.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/img/logo.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/img/Miband 4-01.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/img/seo-content.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/img/spin.svg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/img/sub-logo.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/js-css-sony/style.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/js-css/thu-cu-len-doi-iphone-14-pro-max">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/js-css/web_css.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/js-css/web_v1.1.8.6.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/js-css/web_v1.1.8.6.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/js/jquery-3.5.1.min.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/js/plugins/jquery-scrolltofixed/jquery-scrolltofixed.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/js/plugins/jssor.slider-28.0.0.min/jssor.slider-28.0.0.min.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/js/plugins/OwlCarousel2-2.3.4/assets/ajax-loader.gif">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/js/plugins/OwlCarousel2-2.3.4/assets/owl.carousel.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/js/plugins/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.default.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.default.min.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.green.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.green.min.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/js/plugins/OwlCarousel2-2.3.4/assets/owl.video.play.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/js/plugins/OwlCarousel2-2.3.4/owl.carousel.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/js/plugins/OwlCarousel2-2.3.4/owl.carousel.min.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/logo/ads-1.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/logo/ads-2.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/logo/ads-3.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/logo/brand %281%29.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/logo/brand %282%29.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/logo/brand %283%29.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/logo/brand %284%29.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/logo/brand %285%29.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/logo/brand %286%29.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/airpods.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/deal.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/Mask Group 1.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/Mask Group 2.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/Mask Group 3.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/Mask Group 332.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/Mask Group 4.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/Mask Group 5.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/news-home.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/note-10/01-t.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/note-10/01.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/note-10/02-t.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/note-10/02.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/note-10/03-t.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/note-10/03.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/note-10/03.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/note-10/04-t.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/note-10/04.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/note-10/05-t.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/note-10/05.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/phukien.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/samsung-galaxy-note-10-plus-blue-400x460.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/slider-2.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/slider-3.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/slider-4.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/slider-5.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/slider.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/product/thaypin.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/TYKcSG5WRRSSCogasx3IQnokrEpaDJwrzJ1tGiAcSikDfCB6BnUz/UBA.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/web/img/logo-atm.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/web/img/logo-bct.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/web/img/logo-jcb.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/web/img/logo-master.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/web/img/logo-samsungpay.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/web/img/logo-text.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/web/img/logo-visa.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/web/img/logo-vnpay.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/web/img/maycugiatot.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/web/img/nhattin.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/web/img/thucugiacao.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/web/img/vnpost.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutDesktop1/web/img/zalo.svg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/etc.clientlibs/clientlib-css/StyleClient.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/etc.clientlibs/clientlib-css/StyleClient_mb.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/etc.clientlibs/clientlib-css/table-css.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/etc.clientlibs/corewcmcomponentscommonssiteclientlibs/container.ACSHASH68e8a508c100f218cc66bb13a94d1002.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/etc.clientlibs/sonyglobalclientlibs/clientlib-base.ACSHASHf3f0e6cff0ab139c656396a517573673.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/etc.clientlibs/sonyglobalclientlibs/clientlib-dependencies.ACSHASHd41d8cd98f00b204e9800998ecf8427e.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/etc.clientlibs/sonyglobalclientlibs/clientlib-dependencies.ACSHASHd41d8cd98f00b204e9800998ecf8427e.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/etc.clientlibs/sonyglobalclientlibs/clientlib-flow.ACSHASHb51809e20bb5ed5b5fd4757ace69d490.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/etc.clientlibs/sonyglobalclientlibs/clientlib-flow.ACSHASHeb4b09f97a3785c0a87915a88e3789e0.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/etc.clientlibs/sonyglobalclientlibs/clientlib-sony-vietnamese.ACSHASH11b1bab1ce3c5880302bc331ed605f72.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/etc.clientlibs/sonyglobalclientlibs/clientlib-sony.ACSHASH45aadc16459012b298f0f86ff5eb7f1b.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/etc.clientlibs/sonyglobalclientlibs/clientlib-sonyresourcesassetsimgGlobalFooter/EN_Grouplink_White.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/etc.clientlibs/sonyglobalclientlibs/clientlib-sonyresourcesassetsimgGlobalFooter/EN_GroupLink_White_hover.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/etc.clientlibs/sonyglobalclientlibs/clientlib-vendor.ACSHASHb52019df31b805d3bae1221f2c327613.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/etc.clientlibs/sonyglobalclientlibs/Slideshow.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/icon/css/hoangha.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/icon/eva/eva.min.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/icon/fonts/hoangha.eot">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/icon/fonts/hoangha.svg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/icon/fonts/hoangha.ttf">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/icon/fonts/Segoe UI/hoangha.woff">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/icon/fonts/Segoe UI/Segoe UI Bold Italic.woff2">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/icon/fonts/Segoe UI/Segoe UI Bold.woff2">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/icon/fonts/Segoe UI/Segoe UI Italic.woff2">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/icon/fonts/Segoe UI/Segoe UI Semilight Italic.woff2">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/icon/fonts/Segoe UI/Segoe UI Semilight.woff2">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/icon/fonts/Segoe UI/Segoe UI.woff2">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/SegieUI.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/Segoe UI/hoangha.woff">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/Segoe UI/Segoe UI Bold Italic.woff2">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/Segoe UI/Segoe UI Bold.woff2">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/Segoe UI/Segoe UI Italic.woff2">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/Segoe UI/Segoe UI Semilight Italic.woff2">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/Segoe UI/Segoe UI Semilight.woff2">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/fonts/Segoe UI/Segoe UI.woff2">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/img/fire.svg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/img/logo-atm.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/img/logo-bct.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/img/logo-jcb.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/img/logo-kerry.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/img/logo-master.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/img/logo-samsungpay.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/img/logo-text.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/img/logo-viettel.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/img/logo-visa.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/img/logo-vnpay.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/img/logo.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/img/maycugiatot.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/img/Miband 4-01.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/img/seo-content.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/img/spin.svg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/img/sub-logo.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/img/thucugiacao.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/img/zalo.svg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/js-css-sony/style.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/js-css/mobile_v1.1.8.6.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/js-css/mobile_v1.1.9.9.js">
+      <publishTime>10/02/2023 09:05:15</publishTime>
+    </File>
+    <File Include="LayoutMobile/js-css/thu-cu-len-doi-iphone-14-pro-max">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/js/jquery-3.5.1.min.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/js/plugins/jquery-scrolltofixed/jquery-scrolltofixed.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/js/plugins/jssor.slider-28.0.0.min/jssor.slider-28.0.0.min.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/js/plugins/OwlCarousel2-2.3.4/assets/ajax-loader.gif">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/js/plugins/OwlCarousel2-2.3.4/assets/owl.carousel.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/js/plugins/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.default.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.default.min.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.green.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/js/plugins/OwlCarousel2-2.3.4/assets/owl.theme.green.min.css">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/js/plugins/OwlCarousel2-2.3.4/assets/owl.video.play.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/js/plugins/OwlCarousel2-2.3.4/owl.carousel.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/js/plugins/OwlCarousel2-2.3.4/owl.carousel.min.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/logo/ads-1.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/logo/ads-2.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/logo/ads-3.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/logo/brand %281%29.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/logo/brand %282%29.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/logo/brand %283%29.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/logo/brand %284%29.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/logo/brand %285%29.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/logo/brand %286%29.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/airpods.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/deal.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/Mask Group 1.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/Mask Group 2.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/Mask Group 3.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/Mask Group 332.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/Mask Group 4.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/Mask Group 5.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/news-home.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/note-10/01-t.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/note-10/01.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/note-10/02-t.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/note-10/02.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/note-10/03-t.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/note-10/03.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/note-10/03.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/note-10/04-t.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/note-10/04.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/note-10/05-t.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/note-10/05.jpg">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/phukien.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/samsung-galaxy-note-10-plus-blue-400x460.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/slider-2.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/slider-3.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/slider-4.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/slider-5.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/slider.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/product/thaypin.png">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="LayoutMobile/TYKcSG5WRRSSCogasx3IQnokrEpaDJwrzJ1tGiAcSikDfCB6BnUz/UBA.js">
+      <publishTime>08/29/2023 18:58:55</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.js">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.js">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.map">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.js">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.min.js">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.slim.min.map">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.8.3.js">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Views/BKCustomer/AddOrUpdate.cshtml">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Views/BKCustomer/Index.cshtml">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Views/BKCustomer/Index1.cshtml">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Views/BKCustomer/Index2.cshtml">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Views/BlackFriday/Index.cshtml">
+      <publishTime>12/01/2023 09:20:11</publishTime>
+    </File>
+    <File Include="Views/BlackFriday/Index_Mobile.cshtml">
+      <publishTime>12/01/2023 09:59:05</publishTime>
+    </File>
+    <File Include="Views/Detail/Index.cshtml">
+      <publishTime>11/02/2023 14:49:06</publishTime>
+    </File>
+    <File Include="Views/Detail/Index_Mobile.cshtml">
+      <publishTime>11/02/2023 16:59:12</publishTime>
+    </File>
+    <File Include="Views/Detail_Project2/Index.cshtml">
+      <publishTime>11/27/2023 09:45:34</publishTime>
+    </File>
+    <File Include="Views/Detail_Project2/Index_mb.cshtml">
+      <publishTime>11/27/2023 09:47:13</publishTime>
+    </File>
+    <File Include="Views/Detail_Project2/Index_sosanh.cshtml">
+      <publishTime>11/27/2023 09:34:01</publishTime>
+    </File>
+    <File Include="Views/Detail_Project2/Index_sosanh_mb.cshtml">
+      <publishTime>11/27/2023 09:34:47</publishTime>
+    </File>
+    <File Include="Views/GiangSinh/Index.cshtml">
+      <publishTime>12/08/2023 14:54:09</publishTime>
+    </File>
+    <File Include="Views/GiangSinh/Index_Mobile.cshtml">
+      <publishTime>12/08/2023 14:54:20</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Views/honorn9_test/Index.cshtml">
+      <publishTime>11/07/2023 17:04:36</publishTime>
+    </File>
+    <File Include="Views/Honor_90/Index.cshtml">
+      <publishTime>10/31/2023 09:01:02</publishTime>
+    </File>
+    <File Include="Views/Honor_90/Index_Mobile.cshtml">
+      <publishTime>10/31/2023 09:01:09</publishTime>
+    </File>
+    <File Include="Views/HTC/IndexDesktop_HTC.cshtml">
+      <publishTime>09/11/2023 16:46:42</publishTime>
+    </File>
+    <File Include="Views/HTC/IndexMobile_HTC.cshtml">
+      <publishTime>09/05/2023 17:42:30</publishTime>
+    </File>
+    <File Include="Views/Landing_projec2/Index.cshtml">
+      <publishTime>09/14/2023 14:14:06</publishTime>
+    </File>
+    <File Include="Views/Landing_projec2/indexsosanh.cshtml">
+      <publishTime>09/14/2023 14:24:44</publishTime>
+    </File>
+    <File Include="Views/Landing_projec2/Indexsosanh_Mobile.cshtml">
+      <publishTime>09/18/2023 17:18:56</publishTime>
+    </File>
+    <File Include="Views/Landing_projec2/Index_Mobile.cshtml">
+      <publishTime>09/25/2023 08:48:09</publishTime>
+    </File>
+    <File Include="Views/Landing_project2/Index.cshtml">
+      <publishTime>10/09/2023 09:37:44</publishTime>
+    </File>
+    <File Include="Views/Landing_project2/indexsosanh.cshtml">
+      <publishTime>09/28/2023 19:35:37</publishTime>
+    </File>
+    <File Include="Views/Landing_project2/Indexsosanh_Mobile.cshtml">
+      <publishTime>09/28/2023 19:35:47</publishTime>
+    </File>
+    <File Include="Views/Landing_project2/Index_Mobile.cshtml">
+      <publishTime>11/27/2023 09:25:22</publishTime>
+    </File>
+    <File Include="Views/Menu_mB/Index.cshtml">
+      <publishTime>11/27/2023 15:56:47</publishTime>
+    </File>
+    <File Include="Views/N3/Index.cshtml">
+      <publishTime>12/29/2023 10:24:54</publishTime>
+    </File>
+    <File Include="Views/N3/Index_Mobile.cshtml">
+      <publishTime>12/29/2023 10:25:25</publishTime>
+    </File>
+    <File Include="Views/OppoN3/Index.cshtml">
+      <publishTime>10/19/2023 19:08:50</publishTime>
+    </File>
+    <File Include="Views/OppoN3/Index_Mobile.cshtml">
+      <publishTime>10/19/2023 19:44:52</publishTime>
+    </File>
+    <File Include="Views/SamsungDL/Index.cshtml">
+      <publishTime>12/08/2023 14:54:45</publishTime>
+    </File>
+    <File Include="Views/SamsungDL/Index_mobile.cshtml">
+      <publishTime>12/08/2023 14:54:55</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout2.cshtml">
+      <publishTime>08/29/2023 18:51:15</publishTime>
+    </File>
+    <File Include="Views/Shared/_layout_Desktop.cshtml">
+      <publishTime>12/29/2023 09:51:17</publishTime>
+    </File>
+    <File Include="Views/Shared/_layout_DesktopDetail.cshtml">
+      <publishTime>10/04/2023 10:24:23</publishTime>
+    </File>
+    <File Include="Views/Shared/_layout_DesktopMobile.cshtml">
+      <publishTime>10/04/2023 10:10:10</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout_Mobile.cshtml">
+      <publishTime>12/29/2023 09:51:26</publishTime>
+    </File>
+    <File Include="Views/Tet2024/Index.cshtml">
+      <publishTime>12/29/2023 09:13:28</publishTime>
+    </File>
+    <File Include="Views/Tet2024/Index_Mobile.cshtml">
+      <publishTime>12/29/2023 09:13:28</publishTime>
+    </File>
+    <File Include="Views/Vivo_v29/Index.cshtml">
+      <publishTime>10/24/2023 18:13:05</publishTime>
+    </File>
+    <File Include="Views/Vivo_v29/Index_Mobile.cshtml">
+      <publishTime>10/19/2023 13:47:49</publishTime>
+    </File>
+    <File Include="Views/Watch_GT4/Index.cshtml">
+      <publishTime>10/05/2023 15:07:12</publishTime>
+    </File>
+    <File Include="Views/Watch_GT4/Index_Mobile.cshtml">
+      <publishTime>10/05/2023 15:27:12</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Views/Xiaomi/Index.cshtml">
+      <publishTime>11/17/2023 09:57:58</publishTime>
+    </File>
+    <File Include="Views/Xiaomi/Index_Mobile.cshtml">
+      <publishTime>11/17/2023 09:58:51</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>08/22/2023 12:01:56</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/29/2023 10:26:21</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

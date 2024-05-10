@@ -1,0 +1,1168 @@
+﻿@{
+    ViewBag.Title = "Galaxy A55 | A35 5G - Chân dung đêm sống động";
+    @* Layout = "~/Views/Shared/_layout_Desktop.cshtml"; *@
+}
+
+
+@section meta {
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+            <meta name="description"
+                content="Từ 22/3-31/3, Sở hữu Galaxy A55 | A35 5G tặng 6 tháng Samsung Care+, ưu đãi 50% mua kèm củ sạc, Trả góp 0% qua Samsung Finance+">
+            <meta property="og:image" id="ogImage"
+                content="https://hoanghamobile.com/Content/Samsung-a35-a55/img/thum samsung a35 a55.jpg">
+            <meta property="og:url" content="https://hoanghamobile.com/samsung-galaxy-a35-a55-5g">
+            <link rel="stylesheet" href="~/Content/Samsung-a35-a55/css/bootstrap.min.css?@DateTime.Now">
+            <link href="~/Content/Samsung-a35-a55/css/swiper-bundle.min.css?@DateTime.Now" type="text/css" rel="stylesheet" />
+            <link href="~/Content/Samsung-a35-a55/js-css/a35-a55.css?@DateTime.Now" type="text/css" rel="stylesheet" />
+            <link href="~/Content/Samsung-a35-a55/js-css/web_Desktop.css?@DateTime.Now" type="text/css" rel="stylesheet" />
+            <script src="https://hoanghamobile.com/Content/web/js/jquery-3.5.1.min.js"></script>
+            <style>
+             #popup-modal,
+                .jquery-modal,
+                #sticker-modal {
+                    display: none !important;
+                }
+
+                body {
+                    overflow: auto !important;
+                }
+
+                .js--close-modal {
+                    background: black;
+                    position: absolute;
+                    right: -15px;
+                    top: -15px;
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    border: 2px solid #fff;
+                    background: #575656;
+                    box-shadow: 0 2px 10px #000;
+                    text-align: center;
+                    cursor: pointer;
+                }
+
+                .signup-container {
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+
+                .no-scroll-body {
+                    overflow: hidden !important;
+                    position: relative;
+                    height: 100%;
+                }
+
+                .custom-close-button-class {
+                    display: block !important;
+                    border: none !important;
+                }
+
+                .div-pc .feature-three.btn {
+                    position: sticky;
+                    background: #f4f4f4;
+                    top: 70px;
+                    left: 0;
+                    z-index: 999;
+                    margin: 50px 0;
+                    padding: 0;
+                    width: 100%;
+                }
+
+                .div-mb .feature-three.btn {
+                    position: sticky;
+                    background: #f4f4f4;
+                    top: 103px;
+                    left: 0;
+                    z-index: 999;
+                    margin: 50px 0;
+                    padding: 0;
+                    width: 100%;
+                }
+                .div-pc.text-btn-add {
+                    font-size: 18px;
+                }
+                .div-mb.text-btn-add {
+                    font-size: 15px;
+                }
+                .btn-add-all{
+                    padding: 10px 20px;
+                }
+            </style>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $.post('/Ajax/Price', { "id": "4148,4149" }, function (data) {
+                        $(data).each(function (index, value) {
+                            for (var i = 0; i < 3; i++) {
+                                var href_ck = $('#idsanpham_href' + (i > 0 ? i : '') + '_' + value.ID);
+                                if (href_ck.length > 0) {
+                                    var hrefUrl = value.UID + '?buy=1';
+                                    href_ck.attr('href', hrefUrl);
+                                }
+
+                                var href_ck = $('#idsanpham_href_mobile' + (i > 0 ? i : '') + '_' + value.ID);
+                                if (href_ck.length > 0) {
+                                    var hrefUrl = value.UID + '?buy=1';
+                                    href_ck.attr('href', hrefUrl);
+                                }
+                            }
+                        });
+                    });
+                });
+
+            </script>
+}
+<div class="main-content div-pc">
+    <section class="Default-feature-one feature-section position-relative w-100 flex-column-center">
+        <div class=" max-w-1200px w-100 flex-column-center  position-relative">
+            <img class="w-100" src="~/Content/Samsung-a35-a55/img/samsung a35 a55 banner desktop.jpg?@DateTime.Now">
+            <div class="flex-column-center">
+                <div class="d-flex div-btn-add">
+                    <a class="button-add " href="" id="idsanpham_href_4148">Mua Ngay
+                        Samsung Galaxy A35</a>
+                    <a class="button-add" href="" id="idsanpham_href_4149">Mua Ngay
+                        Samsung Galaxy A55</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="Content-v1 resetfont">
+        <section>
+        </section>
+        <section class="feature-three btn d-flex justify-content-center ">
+            <div class="d-flex text-align-center button-slide ">
+                <button data-href="#Flip-section-a35"
+                    class="Flip-feature-item resetfont btn-Default btn-add-all color--n-3-black text-btn-add Reserve  background-f6f7fb div-banner-item active"
+                    id="div-a35">
+                    Samsung Galaxy A35
+                </button>
+                <button data-href="#Flip-section-a55"
+                    class="Flip-feature-item resetfont btn-add-all  btn-Flip  color--n-3-black text-btn-add installment background-f6f7fb div-banner-item"
+                    id="div-a55">
+                    Samsung Galaxy A55
+                </button>
+            </div>
+        </section>
+
+        <div id="hidden-div-a35" class="Samsung-Galaxy-A35 flex-column-center  background-f6f7fb">
+
+            <section class="Flip-feature-title">
+                <h1 class="title-banner resetfont">Samsung Galaxy A35</h1>
+            </section>
+
+            <div class="Flip-feature-four flex-column-center section sec1-item  " id ="Flip-section-a35">
+                <h1 class="item-title-banner">4 tính năng nổi bật</h1>
+                <div class="site-grid tinh-nang">
+                    <div class="item-grid-four site-goods-sku ">
+                        <div class="d-flex-center gap-20px">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh-0.1.png?@DateTime.Now">
+                            <div class="flex-column-center content-text">
+                                <h1 class="title text-align-start">Thiết kế sang trọng và tối giản</h1>
+                                <p class="sub-title text-align-start">Cùng mặt lưng kính cao cấp</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-grid-four site-goods-sku ">
+                        <div class="d-flex-center gap-20px">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh-0.0.png?@DateTime.Now">
+                            <div class="flex-column-center content-text">
+                                <h1 class="title text-align-start">Bắt trọn mọi khoảnh khắc</h1>
+                                <p class="sub-title text-align-start">Sống động với chống rung OIS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-grid-four site-goods-sku ">
+                        <div class="d-flex-center gap-20px">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh-0.2.png?@DateTime.Now">
+                            <div class="flex-column-center content-text">
+                                <h1 class="title text-align-start">Trải nghiệm giải trí tuyệt hảo</h1>
+                                <p class="sub-title text-align-start">Màn hình Super Amoled 120Hz đến 6.6"</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="item-grid-four site-goods-sku ">
+                        <div class="d-flex-center gap-20px">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh-0.3.png?@DateTime.Now">
+                            <div class="flex-column-center content-text">
+                                <h1 class="title text-align-start">Bảo mật an toàn</h1>
+                                <p class="sub-title text-align-start">Với Samsung Knox Vault đạt chuẩn bảo mật EALS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 relative">
+                <div class="content-text absolute">
+                    <h1 class="title">Tuyệt vời từ trong ra ngoài</h1>
+                    <h2 class="sub-title">Sự kết hợp đầy cảm hứng giữa sang trọng và tối giản.
+                        Thiết kế mang tính biểu tượng của Galaxy A35 5G có cụm camera quen thuộc được bao phủ bởi mặt
+                        lưng kính trang nhã và cạnh viền phẳng mang lại vẻ ngoài
+                        bóng bẩy.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 1 pc.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1">
+                <div class="content-text">
+                    <h1 class="title">Màu sắc xu hướng và ấn tượng</h1>
+                    <h2 class="sub-title">Bật phong cách với 3 màu sắc đón đầu xu hướng: Xanh Iceblue, Xanh đen Navy,
+                        Vàng Lemon</h2>
+                </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide w-100">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 2.0 pc.jpg?@DateTime.Now">
+                        </div>
+                        <div class="swiper-slide w-100">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 2.2 pc.jpg?@DateTime.Now">
+                        </div>
+                        <div class="swiper-slide w-100">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 2.3 pc.jpg?@DateTime.Now">
+                        </div>
+                    </div>
+
+                    <button class="start_css swiper-button-prev" type="button" onclick="plusDivs_accessory(-1)"
+                        tabindex="0" aria-label="Previous slide" aria-controls="product-container-compare">
+                        <svg class="start_css" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                            viewBox="0 0 50 50" fill="none">
+                            <rect width="50" height="50" rx="25" fill="#615f5f"></rect>
+                            <path d="M31 13L19 25L31 37" stroke="white" stroke-width="3"></path>
+                        </svg>
+                    </button>
+                    <button class="start_css swiper-button-next" type="button" onclick="plusDivs_accessory(1)"
+                        tabindex="0" aria-label="Next slide" aria-controls="product-container">
+                        <svg class="start_css" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                            viewBox="0 0 50 50" fill="none">
+                            <rect width="50" height="50" rx="25" fill="#615f5f"></rect>
+                            <path d="M19 37L31 25L19 13" stroke="white" stroke-width="3"></path>
+                        </svg>
+
+                    </button>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <div class="flex-column-center w-100 section sec1">
+                <div class="content-text">
+                    <h1 class="title">Nhân đôi cuộc vui</h1>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 3 pc.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 relative">
+                <div class="content-text absolute">
+                    <h1 class="title">Vẻ đẹp trên từng chi tiết</h1>
+                    <h2 class="sub-title">Chụp lại những bức ảnh tuyệt hảo với camera góc rộng cùng độ phân giải cao đến
+                        50MP. Màu sắc rực rỡ và chi tiết sắc nét sẽ mang đến cho bạn những bức ảnh đẹp, tràn ngập cảm
+                        hứng.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 4 pc.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 relative">
+                <div class="content-text absolute">
+                    <h1 class="title">Lưu lại tuyệt tác cả trong bóng đêm</h1>
+                    <h2 class="sub-title">Chụp đêm thêm sáng tạo cùng Galaxy A35 5G, với NPU cải tiến và cảm biến nâng
+                        cao giúp ảnh chụp rõ ràng, chi tiết ngay cả trong bóng tối.
+                        Dù là cảnh đêm hay ảnh chân dung sẽ vẫn luôn sắc nét từng chi tiết!</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 5 pc.jpg?@DateTime.Now">
+            </div>
+
+            <div class="d-flex-center w-100 section sec1 text-start">
+                <div class="content-text" style="    padding-left: 50px;">
+                    <h1 class="title">Quay video ổn định và rõ nét</h1>
+                    <h2 class="sub-title">Công nghệ Super HDR sẽ mang đến màu sắc rực rỡ, video rõ ràng và có khả năng
+                        hiển thị tốt hơn trong nhiều điều kiện ánh sáng khác nhau. Khi kết hợp với công nghệ chống rung
+                        OIS và VDIS,
+                        bạn sẽ có được video mượt mà ngay cả khi đang di chuyển.</h2>
+                </div>
+                <video class="video_self lazy" style="    width: 45%;"
+                    data-src="~/Content/Samsung-a35-a55/video/video-a35.mp4" data-poster="" autoplay="" muted="" loop=""
+                    x5-video-player-fullscreen="true" playsinline="" src="~/Content/Samsung-a35-a55/video/video-a35.mp4"
+                    data-loaded="true"></video>
+            </div>
+
+            <div class="d-flex div-btn-add">
+                <a class="button-add " href="" id="idsanpham_href1_4148">Mua Ngay
+                    Samsung Galaxy A35</a>
+            </div>
+
+            <div class="d-flex-center w-100 section sec1 text-start">
+                <img style="    margin-left: -50px;" class="w-100"
+                    src="~/Content/Samsung-a35-a55/img/a35/Ảnh 7 pc.jpg?@DateTime.Now">
+                <div class="content-text">
+                    <h1 class="title">Chỉnh ảnh dễ dàng và sáng tạo không giới hạn</h1>
+                    <h2 class="sub-title">Nâng trình chỉnh ảnh lên tầm cao mới với những tính năng Edit Suggestion như
+                        làm mờ nền Background Blur,
+                        chỉnh sửa thông minh Remaster, Xóa bóng Erase shadow và hơn thế nữa.</h2>
+                </div>
+
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 relative">
+                <div class="content-text absolute">
+                    <h1 class="title">Màn hình sáng rõ và sống động</h1>
+                    <h2 class="sub-title">Giải trí tuyệt đỉnh cùng Màn hình FHD+ Super AMOLED tràn viền vô cực 6,6 inch
+                        rực rỡ với tần số quét mượt mà đến 120Hz
+                        và độ sáng 1.000 nits. Công nghệ Vision Booster có thể mang lại cho bạn khả năng hiển thị ngoài
+                        trời rõ nét ngay cả dưới ánh nắng trực tiếp.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 8 pc.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 relative background-black">
+                <div class="content-text absolute">
+                    <h1 class="title">Nắm trọn quyền năng trong lòng bàn tay</h1>
+                    <h2 class="sub-title">Khai phá sức mạnh của bộ xử lý 8 nhân Octa-core với GPU và NPU cải tiến, cho
+                        phép thực hiện đa nhiệm, chơi game và phát trực tuyến trở nên dễ dàng hơn bao giờ hết. Galaxy
+                        A35 5G trang bị hệ thống làm mát buồng hơi lớn hơn đến 74%, sẵn sàng xử lý hầu hết mọi tác vụ.
+                        Bộ nhớ trong 128GB hoặc 256GB và có hỗ trợ khe cắm thẻ nhớ ngoài microSD lên tới 1TB.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 9 pc.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 relative">
+                <div class="content-text absolute">
+                    <h1 class="title">Pin bền bỉ lên đến 2 ngày</h1>
+                    <h2 class="sub-title">Thoải mái di chuyển mọi nơi với dung lượng pin 5.000mAh (tiêu chuẩn) cho phép
+                        bạn duy trì kết nối đến 2 ngày và sạc lại bằng tính năng
+                        Sạc siêu nhanh.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 10 pc.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 relative">
+                <div class="content-text absolute">
+                    <h1 class="title">Yên tâm hơn nếu không may rơi vỡ</h1>
+                    <h2 class="sub-title">Galaxy A35 có khả năng kháng bụi và nước đạt chuẩn IP67. Ngoài ra, màn hình
+                        được làm từ kính cường lực Corning® Gorilla® Victus®+ sẽ giúp bạn
+                        yên tâm hơn.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 11 pc.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 relative">
+                <div class="content-text absolute">
+                    <h1 class="title">Hỗ trợ bảo mật thông tin an toàn</h1>
+                    <h2 class="sub-title">Bảo mật Samsung Knox Vault đạt chứng nhận EAL5+ và được thiết kế để bảo vệ
+                        thông tin nhạy cảm của bạn, chẳng hạn như mã PIN, mật khẩu và hình mở khóa. Dữ liệu được mã hóa
+                        của bạn có thể được chuyển sang bộ lưu trữ Samsung Knox Vault một cách an toàn, cách ly và tách
+                        biệt hoàn
+                        toàn khỏi hệ điều hành chính.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 12 pc.jpg?@DateTime.Now">
+            </div>
+
+            <div class="d-flex div-btn-add">
+                <a class="button-add " href="" id="idsanpham_href2_4148">Mua Ngay
+                    Samsung Galaxy A35</a>
+            </div>
+
+        </div>
+        <div id="hidden-div-a55" style="display: none;" class="Samsung-Galaxy-A55 flex-column-center">
+            <section class="Flip-feature-title">
+                <h1 class="title-banner resetfont">Samsung Galaxy A55</h1>
+            </section>
+            <div class="Flip-feature-four flex-column-center section sec1-item  background-white" id ="Flip-section-a55">
+                <h1 class="item-title-banner">4 tính năng nổi bật</h1>
+                <div class="site-grid tinh-nang">
+                    <div class="item-grid-four site-goods-sku ">
+                        <div class="d-flex-center gap-20px">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh-0.1.png?@DateTime.Now">
+                            <div class="flex-column-center content-text">
+                                <h1 class="title text-align-start">Chất ảnh đêm rực rỡ</h1>
+                                <p class="sub-title text-align-start">Sống động với chống rung OIS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-grid-four site-goods-sku ">
+                        <div class="d-flex-center gap-20px">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh-0.0.png?@DateTime.Now">
+                            <div class="flex-column-center content-text">
+                                <h1 class="title text-align-start">Thiết kế tối giản, sang trọng và tinh tế</h1>
+                                <p class="sub-title text-align-start">Cùng mặt lưng kính và viền kim loại cao cấp</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-grid-four site-goods-sku ">
+                        <div class="d-flex-center gap-20px">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh-0.2.png?@DateTime.Now">
+                            <div class="flex-column-center content-text">
+                                <h1 class="title text-align-start">Vi xử lý 8 nhân Octa-core tăng cấp hiệu năng</h1>
+                                <p class="sub-title text-align-start">Trải nghiệm mượt mà mọi tác vụ</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="item-grid-four site-goods-sku ">
+                        <div class="d-flex-center gap-20px">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh-0.3.png?@DateTime.Now">
+                            <div class="flex-column-center content-text">
+                                <h1 class="title text-align-start">Bảo mật an toàn</h1>
+                                <p class="sub-title text-align-start">Với Samsung Knox Vault đạt chuẩn bảo mật EAL57</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-column-center w-100 section sec1  background-white">
+                <div class="content-text">
+                    <h1 class="title">Diện mạo bắt mắt với mặt lưng kính trang nhã cùng viền kim loại tinh tế</h1>
+                    <p class="sub-title">Không thể rời mắt! Galaxy A55 5G được cải tiến từ thiết kế tối giản đặc trưng
+                        với viền kim loại phẳng ôm trọn cụm 3 camera và
+                        mặt kính Corning® Gorilla® Glass Victus®+ giúp tăng độ bền trước mọi sự cố bất ngờ.</p>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 1-pc.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 background-white">
+                <div class="content-text">
+                    <h1 class="title">Sắc màu đầy cảm hứng</h1>
+                    <h2 class="sub-title">Sắc màu đa dạng phù hợp đa phong cách với 3 lựa chọn thời trang: Xanh Iceblue,
+                        Xanh đen Navy và Tím Lilac.</h2>
+                </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide w-100">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 2 pc.jpg?@DateTime.Now">
+                        </div>
+                        <div class="swiper-slide w-100">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 2.1 pc.jpg?@DateTime.Now">
+                        </div>
+                        <div class="swiper-slide w-100">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 2.3 pc.jpg?@DateTime.Now">
+                        </div>
+                    </div>
+
+                    <button class="start_css swiper-button-prev" type="button" onclick="plusDivs_accessory(-1)"
+                        tabindex="0" aria-label="Previous slide" aria-controls="product-container-compare">
+                        <svg class="start_css" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                            viewBox="0 0 50 50" fill="none">
+                            <rect width="50" height="50" rx="25" fill="#615f5f"></rect>
+                            <path d="M31 13L19 25L31 37" stroke="white" stroke-width="3"></path>
+                        </svg>
+                    </button>
+                    <button class="start_css swiper-button-next" type="button" onclick="plusDivs_accessory(1)"
+                        tabindex="0" aria-label="Next slide" aria-controls="product-container">
+                        <svg class="start_css" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                            viewBox="0 0 50 50" fill="none">
+                            <rect width="50" height="50" rx="25" fill="#615f5f"></rect>
+                            <path d="M19 37L31 25L19 13" stroke="white" stroke-width="3"></path>
+                        </svg>
+
+                    </button>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+
+            <div class="flex-column-center w-100 section sec1 background-white ">
+                <div class="content-text">
+                    <h1 class="title">Chất ảnh ấn tượng</h1>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 3-pc.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 background-black ">
+                <div class="content-text">
+                    <h1 class="title">Bắt trọn từng chi tiết bất chấp điều kiện sáng</h1>
+                    <h2 class="sub-title">Công nghệ chụp đêm Nightgraphy và Camera với điểm ảnh lớn của Galaxy A55 5G
+                        giúp thu ánh sáng nhạy hơn cho bức ảnh càng rạng ngời sắc nét, rực rỡ chân thực cùng khả năng
+                        giảm nhiễu vượt trội cả khi trời tối</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 4-pc.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 background-black ">
+                <div class="content-text">
+                    <h1 class="title">Camera 50MP sống động và chi tiết</h1>
+                    <h2 class="sub-title">Tự hào chia sẻ khoảnh khắc với Galaxy A55 5G! Camera Góc Rộng có độ phân giải
+                        cao 50MP chụp ảnh nét vượt trội với khả năng bắt nét,
+                        rõ từng chi tiết nhỏ nhất, cho bạn khung hình sống động chân thật.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 4.1-pc.jpg?@DateTime.Now">
+            </div>
+
+            <div class="d-flex div-btn-add">
+                <a class="button-add " href="" id="idsanpham_href1_4149">Mua Ngay
+                    Samsung Galaxy A55</a>
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 background-black ">
+                <div class="content-text">
+                    <h1 class="title">Ghi lại khoảnh khắc ấn tượng của bạn</h1>
+                    <h2 class="sub-title">Camera trước 32MP cho ảnh selfie chất lượng cao cùng nhiều lựa chọn tông màu,
+                        từ ấm áp đến tự nhiên.
+                        Đặc biệt, Chế độ Chân Dung với tính năng xóa phông nền và làm mờ hậu cảnh giúp gương mặt bạn
+                        thêm nổi bật.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 5 pc.jpg?@DateTime.Now">
+            </div>
+            <div class="flex-column-center w-100 section sec1 background-black ">
+                <div class="content-text">
+                    <h1 class="title">Thách thức mọi điều kiện sáng với công nghệ Super HDR</h1>
+                    <h2 class="sub-title">Với khả năng tối ưu màu sắc và độ tương phản, Galaxy A55 5G sở hữu chế độ
+                        Super HDR cho phép quay chụp chân thực
+                        và chi tiết trong mọi điều kiện sáng. Kết hợp cùng tính năng chống rung quang học OIS và VDIS
+                        đảm bảo khung hình ổn định và đạt chất lượng 4K vượt trội.</h2>
+                </div>
+                <video class="video_self lazy w-100" data-src="~/Content/Samsung-a35-a55/video/a55_camera_video_pc.mp4"
+                    data-poster="" autoplay="" muted="" loop="" x5-video-player-fullscreen="true" playsinline=""
+                    src="~/Content/Samsung-a35-a55/video/a55_camera_video_pc.mp4" data-loaded="true"></video>
+            </div>
+            <div class="flex-column-center w-100 section sec1 background-black ">
+                <div class="content-text">
+                    <h1 class="title">Chỉnh sửa nhanh chỉ với một chạm</h1>
+                    <h2 class="sub-title">Nâng trình chỉnh ảnh của bạn lên tầm cao mới. Với sự hỗ trợ của đề xuất chỉnh
+                        sửa Edit Suggestion,
+                        Galaxy A55 5G giúp bạn cắt ghép thoải mái và dễ dàng với tính năng Image Cliper.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 6 pc.jpg?@DateTime.Now">
+            </div>
+            <div class="flex-column-center w-100 section sec1 background-f6f7fb ">
+                <div class="content-text">
+                    <h1 class="title">Khai phóng sức mạnh với vi xử lý 8 nhân</h1>
+                    <p class="sub-title">Vi xử lý 8 nhân Octa-core được cải tiến cùng hệ thống làm mát buồng hơi lớn hơn
+                        đến 74% giúp Galaxy A55 5G đa nhiệm mượt mà, chiến game mạnh mẽ hoặc truyền phát trực tuyến ổn
+                        định. Với kết nối 5G, bộ nhớ trong đến 256GB,
+                        hỗ trợ thẻ nhớ ngoài microSD lên đến 1TB, cho phép bạn thao tác vượt mọi giới hạn.</p>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 7 pc.jpg?@DateTime.Now">
+            </div>
+            <div class="flex-column-center w-100 section sec1 background-f6f7fb ">
+                <div class="content-text">
+                    <h1 class="title">Đắm chìm trong màn hình sáng rõ và sắc nét</h1>
+                    <p class="sub-title">Trải nghiệm giải trí tuyệt đỉnh cùng màn hình Super AMOLED 6,6 inch chuẩn FHD+
+                        với tần số quét 120Hz mượt mà,
+                        cùng công nghệ hiển thị Vision Booster giúp tối ưu màu sắc và độ tương phản.</p>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 8 pc.png?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 background-f6f7fb ">
+                <div class="content-text">
+                    <h1 class="title">Trao quyền trải nghiệm với Pin 2 ngày</h1>
+                    <p class="sub-title">Sức mạnh đột phá đang trong tay bạn! Galaxy A55 5G sở hữu Pin 5.000mAh (tiêu
+                        chuẩn) và công nghệ Sạc Siêu Nhanh (25W) giúp bạn giữ kết nối lâu hơn,
+                        sạc nhanh hơn và tận hưởng cuộc sống như ý mình.</p>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 9 pc.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 background-f6f7fb ">
+                <div class="content-text">
+                    <h1 class="title">Bền bỉ với kháng bụi và nước</h1>
+                    <p class="sub-title">Không chỉ là tính năng, chuẩn kháng bụi và nước IP67 bền bỉ,
+                        cao cấp trong phân khúc giúp Galaxy A55 5G cần mọi tình huống đảm bảo an toàn thiết bị, cho bạn
+                        tự tin khám phá,
+                        lưu giữ khoảnh khắc và kết nối mà không cần lo lắng.</p>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 10 pc.jpg?@DateTime.Now">
+            </div>
+
+            <div class="d-flex div-btn-add">
+                <a class="button-add " href="" id="idsanpham_href2_4149">Mua Ngay
+                    Samsung Galaxy A55</a>
+            </div>
+
+        </div>
+
+    </div>
+
+     <section class="Flip-feature-end Content-v1  flex-column-center section sec1-item background-white">
+            <h1 class="item-title-banner">Trải nghiệm Samsung Galaxy</h1>
+            <div class="site-grid w-100">
+                <div class="grid-column-span-4  site-goods-sku" style=" background: white !important;">
+                    <div class="flex-column-center gap-20px">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/ge_smart-switch_mo.jpg?@DateTime.Now">
+                            <div class="flex-column-center content-text">
+                                <h1 class="title">Chuyển đổi linh hoạt Smart Switch</h1>
+                                <p class="sub-title">Dễ dàng chuyển đổi mọi dữ liệu sang thiết kế Galaxy mới từ bất kỳ thiết bị cũ</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="grid-column-span-4 site-goods-sku" style=" background: white !important;">
+                    <div class="flex-column-center gap-20px">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/ge_quick-share_mo.jpg?@DateTime.Now">
+                            <div class="flex-column-center content-text">
+                                <h1 class="title">Chia sẻ nhanh Quick Share</h1>
+                                <p class="sub-title">Bảo mật , tiện lợi và nhanh chóng! Mọi tệp tin của bạn từ nay đều có thể chia sẻ ngay tức thì với Quick Share</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="grid-column-span-4 site-goods-sku" style=" background: white !important;">
+                    <div class="flex-column-center gap-20px">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/ge_one-ui_mo.jpg?@DateTime.Now">
+                            <div class="flex-column-center content-text">
+                                <h1 class="title">Dao diện One UI</h1>
+                                <p class="sub-title">Dễ dàng tùy biến và cá nhân hóa trải nghiệm mỗi ngày theo đúng ý bạn với giao diện One UI 6.</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</div>
+
+<div class="main-content div-mb" style="display: none;">
+    <section class="Default-feature-one feature-section position-relative w-100 flex-column-center">
+        <div class=" max-w-1200px w-100 flex-column-center  position-relative">
+            <img class="w-100" src="~/Content/Samsung-a35-a55/img/samsung a35 a55 banner mobile.jpg?@DateTime.Now">
+            <div class="flex-column-center">
+                <div class="d-flex div-btn-add">
+                    <a class="button-add " href="" id="idsanpham_href_mobile_4148">Mua Ngay
+                        Samsung Galaxy A35</a>
+                    <a class="button-add" href="" id="idsanpham_href_mobile_4149">Mua Ngay
+                        Samsung Galaxy A55</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="Content-mobile-img-banner resetfont">
+
+
+        <section class="feature-three btn d-flex justify-content-center">
+            <div class="d-flex text-align-center button-slide ">
+                <button data-href="#Flip-section-a35-mb"
+                    class="Flip-feature-item resetfont btn-Default btn-add-all color--n-3-black text-btn-add Reserve  background-f6f7fb div-banner-item active"
+                    id="div-a35-mobile">
+                    Samsung Galaxy A35
+                </button>
+                <button data-href="#Flip-section-a55-mb"
+                    class="Flip-feature-item resetfont btn-add-all  btn-Flip  color--n-3-black text-btn-add installment background-f6f7fb div-banner-item"
+                    id="div-a55-mobile">
+                    Samsung Galaxy A55
+                </button>
+            </div>
+        </section>
+
+        <div id="hidden-div-a35-mobile" class="Samsung-Galaxy-A35 flex-column-center  background-f6f7fb">
+
+            <section class="Flip-feature-title">
+                <h1 class="title-banner resetfont">Samsung Galaxy A35</h1>
+            </section>
+
+            <div class="Flip-feature-four flex-column-center section sec1-item  " id = "Flip-section-a35-mb">
+                <h1 class="item-title-banner">4 tính năng nổi bật</h1>
+                <div class="site-grid tinh-nang">
+                    <div class="item-grid-four site-goods-sku ">
+                        <div class="d-flex-center gap-20px-rbs">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh-0.1.png?@DateTime.Now">
+                            <div class="flex-column-center content-text">
+                                <h1 class="title text-align-start">Thiết kế sang trọng và tối giản</h1>
+                                <p class="sub-title text-align-start">Cùng mặt lưng kính cao cấp</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-grid-four site-goods-sku ">
+                        <div class="d-flex-center gap-20px-rbs">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh-0.0.png?@DateTime.Now">
+                            <div class="flex-column-center content-text">
+                                <h1 class="title text-align-start">Bắt trọn mọi khoảnh khắc</h1>
+                                <p class="sub-title text-align-start">Sống động với chống rung OIS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-grid-four site-goods-sku ">
+                        <div class="d-flex-center gap-20px-rbs">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh-0.2.png?@DateTime.Now">
+                            <div class="flex-column-center content-text">
+                                <h1 class="title text-align-start">Trải nghiệm giải trí tuyệt hảo</h1>
+                                <p class="sub-title text-align-start">Màn hình Super Amoled 120Hz đến 6.6"</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="item-grid-four site-goods-sku ">
+                        <div class="d-flex-center gap-20px-rbs">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh-0.3.png?@DateTime.Now">
+                            <div class="flex-column-center content-text">
+                                <h1 class="title text-align-start">Bảo mật an toàn</h1>
+                                <p class="sub-title text-align-start">Với Samsung Knox Vault đạt chuẩn bảo mật EALS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 relative">
+                <div class="content-text absolute">
+                    <h1 class="title">Tuyệt vời từ trong ra ngoài</h1>
+                    <h2 class="sub-title">Sự kết hợp đầy cảm hứng giữa sang trọng và tối giản.
+                        Thiết kế mang tính biểu tượng của Galaxy A35 5G có cụm camera quen thuộc được bao phủ bởi mặt
+                        lưng kính trang nhã và cạnh viền phẳng mang lại vẻ ngoài
+                        bóng bẩy.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 1 mb.png?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 background-white">
+                <div class="content-text">
+                    <h1 class="title">Màu sắc xu hướng và ấn tượng</h1>
+                    <h2 class="sub-title">Bật phong cách với 3 màu sắc đón đầu xu hướng: Xanh Iceblue, Xanh đen Navy,
+                        Vàng Lemon</h2>
+                </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide w-100">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 2.0 mb.jpg?@DateTime.Now">
+                        </div>
+                        <div class="swiper-slide w-100">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 2.2 mb.jpg?@DateTime.Now">
+                        </div>
+                        <div class="swiper-slide w-100">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 2.3 mb.jpg?@DateTime.Now">
+                        </div>
+                    </div>
+
+                    <button class="start_css swiper-button-prev" type="button" onclick="plusDivs_accessory(-1)"
+                        tabindex="0" aria-label="Previous slide" aria-controls="product-container-compare">
+                        <svg class="start_css" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                            viewBox="0 0 50 50" fill="none">
+                            <rect width="50" height="50" rx="25" fill="#615f5f"></rect>
+                            <path d="M31 13L19 25L31 37" stroke="white" stroke-width="3"></path>
+                        </svg>
+                    </button>
+                    <button class="start_css swiper-button-next" type="button" onclick="plusDivs_accessory(1)"
+                        tabindex="0" aria-label="Next slide" aria-controls="product-container">
+                        <svg class="start_css" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                            viewBox="0 0 50 50" fill="none">
+                            <rect width="50" height="50" rx="25" fill="#615f5f"></rect>
+                            <path d="M19 37L31 25L19 13" stroke="white" stroke-width="3"></path>
+                        </svg>
+
+                    </button>
+
+                    <div class="swiper-pagination background-white"></div>
+                </div>
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 background-white">
+                <div class="content-text">
+                    <h1 class="title">Nhân đôi cuộc vui</h1>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 3 mb.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 relative">
+                <div class="content-text absolute">
+                    <h1 class="title">Vẻ đẹp trên từng chi tiết</h1>
+                    <h2 class="sub-title">Chụp lại những bức ảnh tuyệt hảo với camera góc rộng cùng độ phân giải cao đến
+                        50MP. Màu sắc rực rỡ và chi tiết sắc nét sẽ mang đến cho bạn những bức ảnh đẹp, tràn ngập cảm
+                        hứng.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 4 mb.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 relative">
+                <div class="content-text absolute">
+                    <h1 class="title">Lưu lại tuyệt tác cả trong bóng đêm</h1>
+                    <h2 class="sub-title">Chụp đêm thêm sáng tạo cùng Galaxy A35 5G, với NPU cải tiến và cảm biến nâng
+                        cao giúp ảnh chụp rõ ràng, chi tiết ngay cả trong bóng tối.
+                        Dù là cảnh đêm hay ảnh chân dung sẽ vẫn luôn sắc nét từng chi tiết!</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 5 mb.jpg?@DateTime.Now">
+            </div>
+
+            <div class="d-flex div-btn-add">
+                <a class="button-add " href="" id="idsanpham_href_mobile1_4148">Mua Ngay
+                    Samsung Galaxy A35</a>
+            </div>
+            <div class="flex-column-center w-100 section sec1">
+                <div class="content-text">
+                    <h1 class="title">Quay video ổn định và rõ nét</h1>
+                    <h2 class="sub-title">Công nghệ Super HDR sẽ mang đến màu sắc rực rỡ, video rõ ràng và có khả năng
+                        hiển thị tốt hơn trong nhiều điều kiện ánh sáng khác nhau. Khi kết hợp với công nghệ chống rung
+                        OIS và VDIS,
+                        bạn sẽ có được video mượt mà ngay cả khi đang di chuyển.</h2>
+                </div>
+                <video class="video_self lazy w-100" data-src="~/Content/Samsung-a35-a55/video/video-a35.mp4"
+                    data-poster="" autoplay="" muted="" loop="" x5-video-player-fullscreen="true" playsinline=""
+                    src="~/Content/Samsung-a35-a55/video/video-a35.mp4" data-loaded="true"></video>
+            </div>
+
+            <div class="flex-column-center w-100 section sec1">
+
+                <div class="content-text">
+                    <h1 class="title">Chỉnh ảnh dễ dàng và sáng tạo không giới hạn</h1>
+                    <h2 class="sub-title">Nâng trình chỉnh ảnh lên tầm cao mới với những tính năng Edit Suggestion như
+                        làm mờ nền Background Blur,
+                        chỉnh sửa thông minh Remaster, Xóa bóng Erase shadow và hơn thế nữa.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 7 mb.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 relative">
+                <div class="content-text absolute">
+                    <h1 class="title">Màn hình sáng rõ và sống động</h1>
+                    <h2 class="sub-title">Giải trí tuyệt đỉnh cùng Màn hình FHD+ Super AMOLED tràn viền vô cực 6,6 inch
+                        rực rỡ với tần số quét mượt mà đến 120Hz
+                        và độ sáng 1.000 nits. Công nghệ Vision Booster có thể mang lại cho bạn khả năng hiển thị ngoài
+                        trời rõ nét ngay cả dưới ánh nắng trực tiếp.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 8 mb.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 relative background-black">
+                <div class="content-text absolute">
+                    <h1 class="title">Nắm trọn quyền năng trong lòng bàn tay</h1>
+                    <h2 class="sub-title">Khai phá sức mạnh của bộ xử lý 8 nhân Octa-core với GPU và NPU cải tiến, cho
+                        phép thực hiện đa nhiệm, chơi game và phát trực tuyến trở nên dễ dàng hơn bao giờ hết. Galaxy
+                        A35 5G trang bị hệ thống làm mát buồng hơi lớn hơn đến 74%, sẵn sàng xử lý hầu hết mọi tác vụ.
+                        Bộ nhớ trong 128GB hoặc 256GB và có hỗ trợ khe cắm thẻ nhớ ngoài microSD lên tới 1TB.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 9 mb.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 relative">
+                <div class="content-text absolute">
+                    <h1 class="title">Pin bền bỉ lên đến 2 ngày</h1>
+                    <h2 class="sub-title">Thoải mái di chuyển mọi nơi với dung lượng pin 5.000mAh (tiêu chuẩn) cho phép
+                        bạn duy trì kết nối đến 2 ngày và sạc lại bằng tính năng
+                        Sạc siêu nhanh.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 10 mb.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 background-white relative">
+                <div class="content-text absolute">
+                    <h1 class="title">Yên tâm hơn nếu không may rơi vỡ</h1>
+                    <h2 class="sub-title">Galaxy A35 có khả năng kháng bụi và nước đạt chuẩn IP67. Ngoài ra, màn hình
+                        được làm từ kính cường lực Corning® Gorilla® Victus®+ sẽ giúp bạn
+                        yên tâm hơn.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 11 mb.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 relative">
+                <div class="content-text absolute">
+                    <h1 class="title">Hỗ trợ bảo mật thông tin an toàn</h1>
+                    <h2 class="sub-title">Bảo mật Samsung Knox Vault đạt chứng nhận EAL5+ và được thiết kế để bảo vệ
+                        thông tin nhạy cảm của bạn, chẳng hạn như mã PIN, mật khẩu và hình mở khóa. Dữ liệu được mã hóa
+                        của bạn có thể được chuyển sang bộ lưu trữ Samsung Knox Vault một cách an toàn, cách ly và tách
+                        biệt hoàn
+                        toàn khỏi hệ điều hành chính.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a35/Ảnh 12 mb.jpg?@DateTime.Now">
+            </div>
+
+            <div class="d-flex div-btn-add">
+                <a class="button-add " href="" id="idsanpham_href_mobile2_4148">Mua Ngay
+                    Samsung Galaxy A35</a>
+            </div>
+
+        </div>
+        <div id="hidden-div-a55-mobile" style="display: none;" class="Samsung-Galaxy-A55 flex-column-center">
+            <section class="Flip-feature-title">
+                <h1 class="title-banner resetfont">Samsung Galaxy A55</h1>
+            </section>
+
+            <div class="Flip-feature-four flex-column-center section sec1-item background-white "  id = "Flip-section-a55-mb">
+                <h1 class="item-title-banner">4 tính năng nổi bật</h1>
+                <div class="site-grid tinh-nang">
+                    <div class="item-grid-four site-goods-sku ">
+                        <div class="d-flex-center gap-20px">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh-0.1.png?@DateTime.Now">
+                            <div class="flex-column-center content-text">
+                                <h1 class="title text-align-start">Chất ảnh đêm rực rỡ</h1>
+                                <p class="sub-title text-align-start">Sống động với chống rung OIS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-grid-four site-goods-sku ">
+                        <div class="d-flex-center gap-20px">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh-0.0.png?@DateTime.Now">
+                            <div class="flex-column-center content-text">
+                                <h1 class="title text-align-start">Thiết kế tối giản, sang trọng và tinh tế</h1>
+                                <p class="sub-title text-align-start">Cùng mặt lưng kính và viền kim loại cao cấp</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-grid-four site-goods-sku ">
+                        <div class="d-flex-center gap-20px">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh-0.2.png?@DateTime.Now">
+                            <div class="flex-column-center content-text">
+                                <h1 class="title text-align-start">Vi xử lý 8 nhân Octa-core tăng cấp hiệu năng</h1>
+                                <p class="sub-title text-align-start">Trải nghiệm mượt mà mọi tác vụ</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="item-grid-four site-goods-sku ">
+                        <div class="d-flex-center gap-20px">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh-0.3.png?@DateTime.Now">
+                            <div class="flex-column-center content-text">
+                                <h1 class="title text-align-start">Bảo mật an toàn</h1>
+                                <p class="sub-title text-align-start">Với Samsung Knox Vault đạt chuẩn bảo mật EAL57</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-column-center w-100 section sec1  background-white">
+                <div class="content-text">
+                    <h1 class="title">Diện mạo bắt mắt với mặt lưng kính trang nhã cùng viền kim loại tinh tế</h1>
+                    <p class="sub-title">Không thể rời mắt! Galaxy A55 5G được cải tiến từ thiết kế tối giản đặc trưng
+                        với viền kim loại phẳng ôm trọn cụm 3 camera và
+                        mặt kính Corning® Gorilla® Glass Victus®+ giúp tăng độ bền trước mọi sự cố bất ngờ.</p>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 1-mb.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 background-white">
+                <div class="content-text">
+                    <h1 class="title">Sắc màu đầy cảm hứng</h1>
+                    <h2 class="sub-title">Sắc màu đa dạng phù hợp đa phong cách với 3 lựa chọn thời trang: Xanh Iceblue,
+                        Xanh đen Navy và Tím Lilac.</h2>
+                </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide w-100">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 2 mb.jpg?@DateTime.Now">
+                        </div>
+                        <div class="swiper-slide w-100">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 2.1 mb.jpg?@DateTime.Now">
+                        </div>
+                        <div class="swiper-slide w-100">
+                            <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 2.3 mb.jpg?@DateTime.Now">
+                        </div>
+                    </div>
+
+                    <button class="start_css swiper-button-prev" type="button" onclick="plusDivs_accessory(-1)"
+                        tabindex="0" aria-label="Previous slide" aria-controls="product-container-compare">
+                        <svg class="start_css" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                            viewBox="0 0 50 50" fill="none">
+                            <rect width="50" height="50" rx="25" fill="#615f5f"></rect>
+                            <path d="M31 13L19 25L31 37" stroke="white" stroke-width="3"></path>
+                        </svg>
+                    </button>
+                    <button class="start_css swiper-button-next" type="button" onclick="plusDivs_accessory(1)"
+                        tabindex="0" aria-label="Next slide" aria-controls="product-container">
+                        <svg class="start_css" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                            viewBox="0 0 50 50" fill="none">
+                            <rect width="50" height="50" rx="25" fill="#615f5f"></rect>
+                            <path d="M19 37L31 25L19 13" stroke="white" stroke-width="3"></path>
+                        </svg>
+
+                    </button>
+
+                    <div class="swiper-pagination background-white"></div>
+                </div>
+            </div>
+
+
+            <div class="flex-column-center w-100 section sec1 background-white ">
+                <div class="content-text">
+                    <h1 class="title">Chất ảnh ấn tượng</h1>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 3-mb.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 background-black ">
+                <div class="content-text">
+                    <h1 class="title">Bắt trọn từng chi tiết bất chấp điều kiện sáng</h1>
+                    <h2 class="sub-title">Công nghệ chụp đêm Nightgraphy và Camera với điểm ảnh lớn của Galaxy A55 5G
+                        giúp thu ánh sáng nhạy hơn cho bức ảnh càng rạng ngời sắc nét, rực rỡ chân thực cùng khả năng
+                        giảm nhiễu vượt trội cả khi trời tối</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 4-mb.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 background-black ">
+                <div class="content-text">
+                    <h1 class="title">Camera 50MP sống động và chi tiết</h1>
+                    <h2 class="sub-title">Tự hào chia sẻ khoảnh khắc với Galaxy A55 5G! Camera Góc Rộng có độ phân giải
+                        cao 50MP chụp ảnh nét vượt trội với khả năng bắt nét,
+                        rõ từng chi tiết nhỏ nhất, cho bạn khung hình sống động chân thật.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 4.1-mb.jpg?@DateTime.Now">
+            </div>
+
+            <div class="d-flex div-btn-add">
+                <a class="button-add " href="" id="idsanpham_href_mobile1_4149">Mua Ngay
+                    Samsung Galaxy A55</a>
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 background-black ">
+                <div class="content-text">
+                    <h1 class="title">Ghi lại khoảnh khắc ấn tượng của bạn</h1>
+                    <h2 class="sub-title">Camera trước 32MP cho ảnh selfie chất lượng cao cùng nhiều lựa chọn tông màu,
+                        từ ấm áp đến tự nhiên.
+                        Đặc biệt, Chế độ Chân Dung với tính năng xóa phông nền và làm mờ hậu cảnh giúp gương mặt bạn
+                        thêm nổi bật.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 5 mb.jpg?@DateTime.Now">
+            </div>
+            <div class="flex-column-center w-100 section sec1 background-black ">
+                <div class="content-text">
+                    <h1 class="title">Thách thức mọi điều kiện sáng với công nghệ Super HDR</h1>
+                    <h2 class="sub-title">Với khả năng tối ưu màu sắc và độ tương phản, Galaxy A55 5G sở hữu chế độ
+                        Super HDR cho phép quay chụp chân thực
+                        và chi tiết trong mọi điều kiện sáng. Kết hợp cùng tính năng chống rung quang học OIS và VDIS
+                        đảm bảo khung hình ổn định và đạt chất lượng 4K vượt trội.</h2>
+                </div>
+                <video class="video_self lazy w-100" data-src="~/Content/Samsung-a35-a55/video/a55_camera_video_mb.mp4"
+                    data-poster="" autoplay="" muted="" loop="" x5-video-player-fullscreen="true" playsinline=""
+                    src="~/Content/Samsung-a35-a55/video/a55_camera_video_mb.mp4" data-loaded="true"></video>
+            </div>
+            <div class="flex-column-center w-100 section sec1 background-black ">
+                <div class="content-text">
+                    <h1 class="title">Chỉnh sửa nhanh chỉ với một chạm</h1>
+                    <h2 class="sub-title">Nâng trình chỉnh ảnh của bạn lên tầm cao mới. Với sự hỗ trợ của đề xuất chỉnh
+                        sửa Edit Suggestion,
+                        Galaxy A55 5G giúp bạn cắt ghép thoải mái và dễ dàng với tính năng Image Cliper.</h2>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 6 mb.jpg?@DateTime.Now">
+            </div>
+            <div class="flex-column-center w-100 section sec1 background-f6f7fb ">
+                <div class="content-text">
+                    <h1 class="title">Khai phóng sức mạnh với vi xử lý 8 nhân</h1>
+                    <p class="sub-title">Vi xử lý 8 nhân Octa-core được cải tiến cùng hệ thống làm mát buồng hơi lớn hơn
+                        đến 74% giúp Galaxy A55 5G đa nhiệm mượt mà, chiến game mạnh mẽ hoặc truyền phát trực tuyến ổn
+                        định. Với kết nối 5G, bộ nhớ trong đến 256GB,
+                        hỗ trợ thẻ nhớ ngoài microSD lên đến 1TB, cho phép bạn thao tác vượt mọi giới hạn.</p>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 7 mb.jpg?@DateTime.Now">
+            </div>
+            <div class="flex-column-center w-100 section sec1 background-f6f7fb ">
+                <div class="content-text">
+                    <h1 class="title">Đắm chìm trong màn hình sáng rõ và sắc nét</h1>
+                    <p class="sub-title">Trải nghiệm giải trí tuyệt đỉnh cùng màn hình Super AMOLED 6,6 inch chuẩn FHD+
+                        với tần số quét 120Hz mượt mà,
+                        cùng công nghệ hiển thị Vision Booster giúp tối ưu màu sắc và độ tương phản.</p>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 8 mb.png?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 background-f6f7fb ">
+                <div class="content-text">
+                    <h1 class="title">Trao quyền trải nghiệm với Pin 2 ngày</h1>
+                    <p class="sub-title">Sức mạnh đột phá đang trong tay bạn! Galaxy A55 5G sở hữu Pin 5.000mAh (tiêu
+                        chuẩn) và công nghệ Sạc Siêu Nhanh (25W) giúp bạn giữ kết nối lâu hơn,
+                        sạc nhanh hơn và tận hưởng cuộc sống như ý mình.</p>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 9 mb.jpg?@DateTime.Now">
+            </div>
+
+            <div class="flex-column-center w-100 section sec1 background-f6f7fb ">
+                <div class="content-text">
+                    <h1 class="title">Bền bỉ với kháng bụi và nước</h1>
+                    <p class="sub-title">Không chỉ là tính năng, chuẩn kháng bụi và nước IP67 bền bỉ,
+                        cao cấp trong phân khúc giúp Galaxy A55 5G cần mọi tình huống đảm bảo an toàn thiết bị, cho bạn
+                        tự tin khám phá,
+                        lưu giữ khoảnh khắc và kết nối mà không cần lo lắng.</p>
+                </div>
+                <img class="w-100" src="~/Content/Samsung-a35-a55/img/a55/Ảnh 10 mb.jpg?@DateTime.Now">
+            </div>
+
+            <div class="d-flex div-btn-add">
+                <a class="button-add " href="" id="idsanpham_href_mobile2_4149">Mua Ngay
+                    Samsung Galaxy A55</a>
+            </div>
+
+        </div>
+
+    </div>
+    <section class="Flip-feature-end Content-mobile-img-banner flex-column-center section sec1-item background-white">
+        <h1 class="item-title-banner">Trải nghiệm Samsung Galaxy</h1>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide w-100">
+                    <div class="flex-column-center gap-20px">
+                        <img class="w-100" src="~/Content/Samsung-a35-a55/img/ge_smart-switch_mo.jpg?@DateTime.Now">
+                        <div class="flex-column-center content-text">
+                            <h1 class="title">Chuyển đổi linh hoạt Smart Switch</h1>
+                            <p class="sub-title">Dễ dàng chuyển đổi mọi dữ liệu sang thiết kế Galaxy mới từ bất kỳ thiết
+                                bị
+                                cũ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide w-100">
+                    <div class="flex-column-center gap-20px">
+                        <img class="w-100" src="~/Content/Samsung-a35-a55/img/ge_quick-share_mo.jpg?@DateTime.Now">
+                        <div class="flex-column-center content-text">
+                            <h1 class="title">Chia sẻ nhanh Quick Share</h1>
+                            <p class="sub-title">Bảo mật , tiện lợi và nhanh chóng! Mọi tệp tin của bạn từ nay đều có
+                                thể
+                                chia sẻ ngay tức thì với Quick Share</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide w-100">
+                    <div class="flex-column-center gap-20px">
+                        <img class="w-100" src="~/Content/Samsung-a35-a55/img/ge_one-ui_mo.jpg?@DateTime.Now">
+                        <div class="flex-column-center content-text">
+                            <h1 class="title">Dao diện One UI</h1>
+                            <p class="sub-title">Dễ dàng tùy biến và cá nhân hóa trải nghiệm mỗi ngày theo đúng ý bạn
+                                với
+                                giao diện One UI 6.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="start_css swiper-button-prev d-none" type="button" onclick="plusDivs_accessory(-1)"
+                tabindex="0" aria-label="Previous slide" aria-controls="product-container-compare">
+                <svg class="start_css" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"
+                    fill="none">
+                    <rect width="50" height="50" rx="25" fill="#615f5f"></rect>
+                    <path d="M31 13L19 25L31 37" stroke="white" stroke-width="3"></path>
+                </svg>
+            </button>
+            <button class="start_css swiper-button-next d-none" type="button" onclick="plusDivs_accessory(1)"
+                tabindex="0" aria-label="Next slide" aria-controls="product-container">
+                <svg class="start_css" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"
+                    fill="none">
+                    <rect width="50" height="50" rx="25" fill="#615f5f"></rect>
+                    <path d="M19 37L31 25L19 13" stroke="white" stroke-width="3"></path>
+                </svg>
+
+            </button>
+
+            <div class="swiper-pagination background-white"></div>
+        </div>
+    </section>
+</div>
+
+@{
+    var commentModel = new QStore.Models.Review.ReviewListReq()
+            {
+                ModelID = 4149, //ID của sản phẩm. VD 3794 = OPPO Find N3
+                SystemTypeID = ((int)QStore.Models.Enum.SystemType.Product),
+                Title = "Tên sản phẩm",
+            };
+}
+@Html.Partial("_Comment", commentModel)
+
+
+@section scripts {
+              <script src="~/Content/Oppon3/js-css/Scroll.js?@DateTime.Now"></script>
+            <script src="~/Content/Samsung-a35-a55/js/swiper-bundle.min.js?@DateTime.Now"></script>
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                    zoom: true,
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    autoplay: {
+                        delay: 10000, // Thời gian chờ giữa các slide (miligiây)
+                        disableOnInteraction: false, // Tự động dừng khi người dùng tương tác với slider
+                    },
+                });
+
+            </script>
+
+            <script src="~/Content/Samsung-a35-a55/js-css/web_a35_a55.js?@DateTime.Now"></script>
+
+}

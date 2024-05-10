@@ -1,0 +1,890 @@
+﻿@model QStore.Models.Publishing.Product
+@{
+    var path = Request.Url.LocalPath.ToLower();
+    string domain = string.Format("{0}://{1}", QStore.Utils.Configs.DOMAIN_SCHEMAL, QStore.Utils.Configs.DOMAIN_NAME);
+    string UniqueURL = string.Format("{0}{1}", domain, path);
+    string PageTitle = Model.SeoData.Title;
+    string PageDescription = Model.SeoData.Description;
+    string ProductImage = string.IsNullOrEmpty(Model.Image) ? QStore.Utils.Configs.SETTING_SEO_NO_IMAGE : Model.ImageValue.Url;
+    string PageImage = string.Format("{0}{1}", domain, ProductImage);
+    string PageKeyword = Model.SeoData.Keyword;
+    ViewBag.Title = PageTitle;
+
+
+    //List<int> LtsIp13Ids = new List<int>() { 1297, 1298, 1299, 1300, 1301, 1323, 1302, 1324, 1303, 1304, 1305, 1325, 1306, 1307, 1288 };
+    //   bool isIphone13 = LtsIp13Ids.Contains(Model.ID);
+
+    string htmlHotsaleNote = string.Empty;
+    string htmlHotsaleLimitNote = string.Empty;
+
+
+    bool AllowOrderIP15 = true;
+}
+
+@section meta
+{
+    <link rel="canonical" href="@UniqueURL" />
+    <meta name="description" content="@PageDescription" />
+    <meta name="keywords" content="@PageKeyword" />
+
+    <meta name="twitter:title" content="@PageTitle" />
+    <meta name="twitter:description" content="@PageDescription">
+    <meta name="twitter:url" content="@UniqueURL">
+
+    <meta property="og:title" content="@PageTitle" />
+    <meta property="og:description" content="@PageDescription" />
+    <meta property="og:url" content="@UniqueURL" />
+    <meta property="og:image" content="@PageImage" />
+    <script>
+		window.insider_object.product = @Html.Raw(Model.JSONInsiderProduct);
+    </script>
+
+}
+
+@{
+    int metaPosition = 1;
+}
+<section>
+    <div class="container">
+        <ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="/"><span itemprop="name" content="Trang chủ"><i class="icon-home" title="Trang chủ"></i> Trang chủ</span></a>
+                <meta itemprop="position" content="1" />
+            </li>
+            @foreach (var item in Model.BreadCrumb)
+            {
+                metaPosition++;
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <a itemprop="item" href="@item.UID"><span itemprop="name" content="@item.Title">@item.Title</span></a>
+                    <meta itemprop="position" content="@metaPosition" />
+                </li>
+            }
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="@Model.SeoData.UID" title="@Model.SeoData.Title" class="actived"><span itemprop="name" content="@Model.Title">@Model.Title</span></a>
+                <meta itemprop="position" content="@(metaPosition+1)" />
+            </li>
+        </ol>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="product-details">
+            <div class="top-product">
+                <h1>
+                    @if (Model.FlashSale != null && Model.FlashSale.ID > 0)
+                    {
+                        <i class="icon-flash text-orange" title="Flashsales giá siêu sock"></i>
+                    }
+
+
+                    @Model.SeoData.H1
+
+                    @if (Model.FlashSale != null && Model.FlashSale.ID > 0)
+                    {
+                        var startDay = Model.FlashSale.StartDate.HasValue ? Model.FlashSale.StartDate.Value.ToString("dd") : DateTime.Now.ToString("dd");
+                        var endDay = Model.FlashSale.EndDate.HasValue ? Model.FlashSale.EndDate.Value.AddDays(-1).ToString("dd") : DateTime.Now.AddDays(1).ToString("dd");
+                        var endMonth = Model.FlashSale.EndDate.HasValue ? Model.FlashSale.EndDate.Value.ToString("MM") : DateTime.Now.AddDays(1).ToString("MM");
+
+                        htmlHotsaleNote = string.Format("<br/><label class=\"text-green\">Hotsale giá sốc từ {0}-{1}/{2} giá chỉ còn {3:0,0} ₫</label>", startDay, endDay, endMonth, Model.FlashSale.FlashSalePrice);
+                        htmlHotsaleLimitNote = "<br/><label class=\"text-dark\">Sản phẩm bán giá Hotsale với số lượng có hạn</label>";
+                        <label>
+                            @if (Model.FlashSale.EndDate.HasValue)
+                            {
+                                <span class="timer" id="timer" data-start="@DateTime.Now.ToString("MMMM dd, yyyy HH:mm:ss")" data-end="@Model.FlashSale.EndDate.Value.ToString("MMMM dd, yyyy HH:mm:ss")"></span>
+                            }
+                        </label>
+                    }
+                </h1>
+                @*<div class="statistic">
+                        <ul>
+                            <li><a title="Lượt xem"><i class="icon-eye"></i> <span>Đã xem:</span> <strong>@(Model.TotalView > 0 ? string.Format("{0:0,0} ₫", Model.TotalView) : "0")</strong></a></li>
+                            <li><a title="Đánh giá" href="#reviews"><i class="icon-star"></i> <span>Đánh giá:</span> <strong class="totalReviews"></strong></a></li>
+                            <li><a href="#comments" title="Bình luận"><i class="icon-comment"></i> <span>Bình luận:</span> <strong class="totalComments"></strong></a></li>
+                        </ul>
+                    </div>*@
+            </div>
+
+            <div class="product-details-container">
+                <div class="product-image">
+
+                    <div class="love-this-button">
+                        @if (Model.isWishlist)
+                        {
+                            <a class="inlist" title="Bỏ sản phẩm khỏi danh sách yêu thích" href="javascript:wishProduct(@Model.ID, @User.Identity.IsAuthenticated.ToString().ToLower())">
+                                <i class="icon-love-1"></i>
+                                <i class="icon-love-2"></i>
+                            </a>
+                        }
+                        else
+                        {
+                            <a title="Thêm vào sản phẩm yêu thích" href="javascript:wishProduct(@Model.ID, @User.Identity.IsAuthenticated.ToString().ToLower())">
+                                <i class="icon-love-1"></i>
+                                <i class="icon-love-2"></i>
+                            </a>
+                        }
+                    </div>
+
+                    <div id="imagePreview">
+                        <!-- Loading Screen -->
+                        <div data-u="loading" class="loading">
+                            <div class="filter"></div>
+                            <div class="load-bg"></div>
+                        </div>
+
+                        <div data-u="slides" class="viewer">
+                            @if (Model.Images.Count > 0)
+                            {
+                                foreach (var color in Model.Images)
+                                {
+                                    foreach (var item in color.Data)
+                                    {
+                                        <div>
+                                            <a data-fancybox="gallery" rel="group" href="@(QStore.Utils.Configs.SETTING_PATH_IMAGE)/preview@(item.Url)"><img data-u="image" src="@(QStore.Utils.Configs.SETTING_PATH_IMAGE)/productlist/dsp@(item.Url)" title="@Model.Title @color.Title" alt="@Model.Title @color.Title" /></a>
+                                            <div data-u="thumb">
+                                                <img class="i" src="@(QStore.Utils.Configs.SETTING_PATH_IMAGE)/productlist/dst@(item.Url)" title="@Model.Title @color.Title" alt="@Model.Title @color.Title" />
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                var defaultImage = string.IsNullOrEmpty(Model.ImageValue.Url) ? "/Content/web/img/no-image.png" : Model.ImageValue.Url;
+                                <div>
+                                    <a data-fancybox="gallery" rel="group" href="@(QStore.Utils.Configs.SETTING_PATH_IMAGE)/preview@(defaultImage)"><img data-u="image" src="@(QStore.Utils.Configs.SETTING_PATH_IMAGE)/productlist/dsp@(defaultImage)" title="@Model.Title" alt="@Model.Title" /></a>
+                                    <div data-u="thumb">
+                                        <img class="i" src="@(QStore.Utils.Configs.SETTING_PATH_IMAGE)/productlist/dst@(defaultImage)" title="@Model.Title" alt="@Model.Title" />
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                        <!-- Thumbnail Navigator -->
+                        <div data-u="thumbnavigator" class="jssort11" data-autocenter="1" data-scale-bottom="0.75">
+                            <!-- Thumbnail Item Skin Begin -->
+                            <div class="bg-shadow" style="top: 0;left: -30px;width: 370px;height: 80px;position: absolute;box-shadow: 0px 4px 6px #00000029; border-radius: 8px;"></div>
+                            <div data-u="slides" style="cursor:pointer;">
+                                <div data-u="prototype" class="p">
+                                    <div data-u="thumbnailtemplate" class="tp"></div>
+                                </div>
+                            </div>
+
+                            <span class="slider-t-l">
+                                <i class="icon-right"></i>
+                            </span>
+                            <span class="slider-t-r">
+                                <i class="icon-right"></i>
+                            </span>
+                            <!-- Thumbnail Item Skin End -->
+                        </div>
+
+
+
+                        <!-- Arrow Navigator -->
+                        <span data-u="arrowleft" class="slider-l" data-autocenter="2">
+                            <i class="icon-left"></i>
+                        </span>
+                        <span data-u="arrowright" class="slider-r" data-autocenter="2">
+                            <i class="icon-right"></i>
+                        </span>
+
+                    </div>
+                </div>
+
+                @if (Model.IsNotSell)
+                {
+                    <div class="product-center">
+                        @*<p class="price current-product-price">
+                                <strong>
+                                    @(Model.DFDisplay.Price.HasValue ? string.Format("{0:0,0} ₫", Model.DFDisplay.Price) : "Giá: Liên hệ")
+                                </strong>
+                                @if (Model.DFDisplay.LastPrice.HasValue)
+                                {
+                                    <i> <strike>@string.Format("{0:0,0} ₫", Model.DFDisplay.LastPrice)</strike></i>
+                                }
+
+                                <i> | Giá đã bao gồm VAT</i>
+                                @if (!string.IsNullOrEmpty(Model.DFDisplay.PriceNote))
+                                {
+                                    <br /><i>@Model.DFDisplay.PriceNote</i>
+                                }
+                                @Html.Raw(htmlHotsaleNote)
+                                @Html.Raw(htmlHotsaleLimitNote)
+                            </p>*@
+                        <p class="freeship">
+                            <i class="icon-freeship-truck"></i> <span>SẢN PHẨM NGỪNG KINH DOANH</span>
+                        </p>
+                        <div>
+                            <p>Sản phẩm này hiện tại HoangHaMobile đã ngừng kinh doanh, vui lòng tham khảo sản phẩm khác.</p>
+                        </div>
+                    </div>
+
+                    <div class="product-shop">
+                        <div class="warranty">
+                            <h4>THÔNG TIN BẢO HÀNH</h4>
+                            @if (!string.IsNullOrEmpty(Model.Warranty))
+                            {
+                                <p><i class="icon-shield"></i> <span>@Model.Warranty</span></p>
+                            }
+                            @if (!string.IsNullOrEmpty(Model.ReplaceTime))
+                            {
+                                <p><a href="/chinh-sach-bao-hanh"><i class="icon-shield"></i><strong><span>@Model.ReplaceTime</span></strong></a></p>
+                            }
+                            @if (!string.IsNullOrEmpty(Model.Combo))
+                            {
+                                <p><i class="icon-accessory"></i> <span>@Model.Combo</span></p>
+                            }
+                        </div>
+                    </div>
+                }
+                else
+                {
+
+                    <div class="product-center" style="position:relative;">
+                        <p class="price current-product-price">
+                            <strong>
+                                @(Model.DFDisplay.Price.HasValue ? string.Format("{0:0,0} ₫", Model.DFDisplay.Price) : "Giá: Liên hệ")
+                            </strong>
+                            @if (Model.DFDisplay.LastPrice.HasValue)
+                            {
+                                <i><strike>@string.Format("{0:0,0} ₫", Model.DFDisplay.LastPrice)</strike></i>
+                            }
+
+                            <i> | Giá đã bao gồm VAT</i>
+                            @if (!string.IsNullOrEmpty(Model.DFDisplay.PriceNote))
+                            {
+                                <br /><i>@Model.DFDisplay.PriceNote</i>
+                            }
+                            @Html.Raw(htmlHotsaleNote)
+                            @Html.Raw(htmlHotsaleLimitNote)
+                        </p>
+                        <p class="freeship">
+                            @if (string.IsNullOrEmpty(Model.ShippingNote))
+                            {
+                                <i class="icon-freeship-truck"></i>
+                                <span>
+                                    Miễn phí vận chuyển toàn quốc
+                                </span>
+                            }
+                            else
+                            {
+                                <span>@Model.ShippingNote</span>
+                            }
+                        </p>
+
+
+                        <div style="position:absolute; right:0;">
+                            <label>SKU:</label> <strong id="dfSKU">@Model.DFDisplay.SKU</strong>
+                        </div>
+
+                        @if (Model.Versions.Count > 0)
+                        {
+                            <div class="product-option version">
+                                <strong class="label">Lựa chọn phiên bản</strong>
+                                <div class="options" id="versionOption" data-id="@Model.DFDisplay.VersionID">
+                                    @foreach (var item in Model.Versions)
+                                    {
+                                        <div data-sku="@item.SKU" class="item @(item.ID == Model.DFDisplay.VersionID ? "selected" : "")">
+                                            <a href="@item.Url">
+                                                <span><label><strong>@item.Title</strong></label></span>
+                                                <strong>@(item.Price.HasValue ? string.Format("{0:0,0} ₫", item.Price) : "Liên hệ")</strong>
+                                            </a>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        }
+
+                        @if (Model.Colors.Count > 0)
+                        {
+                            int idxColor = 0;
+                            <div class="product-option color">
+                                <strong class="label">Lựa chọn màu và xem địa chỉ còn hàng</strong>
+                                <div class="options" id="colorOptions">
+                                    @foreach (var item in Model.Colors)
+                                    {
+                                        var bestPrice = (item.Price.HasValue ? string.Format("{0:0,0} ₫", item.Price) : "Liên hệ");
+                                        var lastPrice = (item.LastPrice.HasValue ? string.Format("{0:0,0} ₫", item.LastPrice) : "");
+
+                                        <div data-name="@item.Title" data-hotsale="@htmlHotsaleNote" data-pricenote="@item.PriceNote" data-buyonline="@item.LimitBuyOnline.ToString().ToLower()" data-bestPrice="@(bestPrice)" data-lastPrice="@(lastPrice)" data-idx="@idxColor" data-hex="@item.HexValue" data-title="@item.TitleAlt" data-id="@item.ID" data-sku="@item.SKU" class="item @(item.ID == Model.DFDisplay.ColorID ? "selected" : "")">
+                                            <span><label><strong>@item.Title</strong></label></span>
+                                            <strong>@(bestPrice)</strong>
+                                            <div class="colorGuide" style="@string.Format("background:{0}", item.HexValue)">
+                                                <label><strong>@(string.IsNullOrEmpty(item.TitleAlt) ? item.Title : item.TitleAlt)</strong></label>
+                                            </div>
+                                        </div>
+                                        idxColor = idxColor + Model.Images.Where(o => o.ID == item.ID).Select(c => c.Data.Count()).Sum();
+
+                                        @*<span>@item.LimitBuyOnline | @item.InStock / @item.LimitStock</span>*@
+                                    }
+
+                                </div>
+                            </div>
+                        }
+
+
+                        <div style="display:flex;">
+                            @if (Model.Event != null)
+                            {
+                                var discountValueRate = Model.Event.DiscountRate.HasValue ? (Model.DFDisplay.Price * Model.Event.DiscountRate / 100) : null;
+                                var discountValue = Model.Event.DiscountPrice <= discountValueRate ? Model.Event.DiscountPrice : discountValueRate;
+                                var extradiscountValue = (decimal?)Model.Offters.Where(o => o.DisCountPrice.HasValue || o.DiscountRate.HasValue).Sum(discount => (discount.DiscountRate.HasValue ? (Model.DFDisplay.Price * discount.DiscountRate) / 100 : discount.DisCountPrice));
+
+                                <div onclick="window.location.href = '@Model.Event.UID';" class="event" style="cursor:pointer;border:1px solid #F4F4F4; border-radius:5px; margin:5px 0; padding:8px; background:#fff; text-align:center; flex-grow:2; margin-right:10px; background:linear-gradient(90deg, #F64850, #FB810B); color:#fff;">
+                                    <div class="eventPrice" data-extra="@string.Format("{0:0}", extradiscountValue)" data-rate="@Model.Event.DiscountRate" data-val="@string.Format("{0:0}", Model.Event.DiscountPrice)">@Model.Event.Title</div>
+                                    <div class="eventValue" style="font-weight:bold; font-size:23px;">@string.Format("{0:0,0} ₫", Model.DFDisplay.Price - (discountValue + extradiscountValue)) </div>
+                                </div>
+                            }
+
+
+                            @if (Model.TradeAddOnPrice.HasValue)
+                            {
+                                <a target="_blank" title="Thu cũ, đổi mới lên đời @Model.Title" href="/thu-cu-doi-moi?id=@Model.ID" class="renew" style="border:1px solid #ddd; border-radius:5px; margin:5px 0; padding:8px; background:transparent linear-gradient(180deg, #ffffff 0%, #c3c3c3 100%) 0% 0% no-repeat padding-box; text-align:center; flex-grow:2">
+                                    <strong style="display: block; margin-bottom: 5px; font-size: 18px;">LÊN ĐỜI NGAY</strong>
+                                    <div>Trợ giá lên tới <strong data-val="@string.Format("{0:0}", Model.TradeAddOnPrice)" class="renewPrice">@string.Format("{0:0,0} ₫", Model.TradeAddOnPrice)</strong> khi thu cũ đổi mới</div>
+                                    <div style="font-weight:bold; font-size:23px;"><strong class="renewValue text-red">@string.Format("{0:0,0} ₫", Model.DFDisplay.Price - Model.TradeAddOnPrice) </strong></div>
+                                </a>
+                            }
+                        </div>
+
+
+
+
+                        @if (Model.Promote.Where(o => o.ZoneID == 1).Count() > 0)
+                        {
+                            int kmIdx = 0;
+                            var kmInGroup = Model.Promote.Where(km => km.GroupID > 0 && km.ZoneID == 1).GroupBy(g => g.GroupID);
+                            var zoneName = Model.Promote.Where(o => o.ZoneID == 1).Select(o => o.ZoneTitle).FirstOrDefault();
+
+                            <div class="product-promotion">
+                                <strong class="label text-green">@zoneName.ToUpper()</strong>
+                                <ul>
+                                    @foreach (var kmGroup in kmInGroup)
+                                    {
+                                        kmIdx++;
+                                        string liClass = string.Empty;
+                                        <li>
+                                            <span class="bag">KM @kmIdx</span>
+                                            @if (kmGroup.Count() > 1)
+                                            {
+                                                liClass = "list";
+                                                <i class="text-dark"><strong>Chọn 1 trong @kmGroup.Count() ưu đãi</strong></i>
+                                            }
+                                        </li>
+                                        foreach (var km in kmGroup)
+                                        {
+                                            <li class="@(liClass)">
+                                                @km.Title
+                                                @if (!string.IsNullOrEmpty(km.UID))
+                                                {
+                                                    @Html.Raw(string.Format(" - (<a href=\"{0}\">Xem chi tiết</a>)", km.UID))
+                                                }
+                                            </li>
+                                        }
+                                    }
+
+                                    @foreach (var km in Model.Promote.Where(km => km.ZoneID == 1 && km.GroupID <= 0 && (km.GroupID != -2 || Model.Promote.Where(o => o.ZoneID == 1).Count() < 2)))
+                                    {
+                                        if (km.ID != 932 || Model.DFDisplay.Price >= 4000000 || true)
+                                        {
+                                            kmIdx++;
+                                            <li><span class="bag">KM @kmIdx</span></li>
+                                            <li>
+                                                @if (!string.IsNullOrEmpty(km.UID))
+                                                {
+                                                    <a href="@km.UID" style="font-weight:normal">@km.Title</a>
+                                                }
+                                                else
+                                                {
+                                                    @km.Title
+                                                }
+                                            </li>
+                                        }
+                                    }
+
+                                </ul>
+                            </div>
+                        }
+
+                        <div class="product-action">
+                            @{
+                                List<int> KplusProduct = new List<int>() { 1771, 1772, 1773, 1774, 1907, 1909, 1771, 3424, 3425, 3808, 3810, 4015, 4017, 4018, 4019, 4020, 4021 };
+                                bool isIP15 = Model.ProductGroupID.HasValue && QStore.Utils.Configs.IPHONE_15_MODEL_ID.Contains(Model.ID);
+                                isIP15 = false;
+                            }
+                            @if (KplusProduct.Contains(Model.ID))
+                            {
+                                <a title="Mua ngay" href="/Topup/Kplus" class="btn-red btnbuy"><strong>MUA NGAY</strong><span> Kích hoạt online <br />Hoặc Nhận tại cửa hàng</span></a>
+                            }
+                            else if (isIP15)
+                            {
+                                if (AllowOrderIP15)
+                                {
+                                    <!-- đặt hàng ip15 từ ngày 22 -->
+                                    <a title="Đặt trước" data-gr="@Model.ProductGroupID" href="javascript:;" class="btn-red btnbuy btn-ip15"><strong style="padding:14px;">ĐẶT TRƯỚC NGAY</strong></a>
+                                }
+                            }
+                            else
+                            {
+
+                                if (Model.IsPreOrder)
+                                {
+                                    <a title="Đặt trước" data-sku="@Model.DFDisplay.SKU" href="javascript:;" class="btn-red btnQuickOrder btnbuy"><strong style="padding:14px;">ĐẶT TRƯỚC</strong></a>
+                                }
+                                else if (Model.BuyOnline && Model.DFDisplay.LimitBuyOnline)
+                                {
+                                    <a title="Mua ngay" data-sku="@Model.DFDisplay.SKU" href="javascript:;" class="btn-red btnQuickOrder btnbuy"><strong>MUA NGAY</strong><span> Giao tận nhà (COD) <br />Hoặc Nhận tại cửa hàng</span></a>
+                                }
+                                else
+                                {
+                                    <a title="Đăng ký nhận thông tin" data-id="@Model.ID" href="javascript:;" class="btn-orange btnQuickSubscription btnbuy"><strong>ĐĂNG KÝ NHẬN THÔNG TIN</strong><span> Theo dõi thông tin mới nhất về sản phẩm</span></a>
+                                }
+
+                                if (Model.BuyInstallment && Model.DFDisplay.LimitBuyOnline)
+                                {
+                                    <a title="Mua trả góp" href="/tra-gop@(Model.UID)" class="btnInstallment btn-green btnbuy"><strong>TRẢ GÓP</strong><span>Công ty Tài chính <br /> Hoặc 0% qua thẻ tín dụng</span></a>
+                                }
+                                if (Model.BuyOnline && Model.DFDisplay.LimitBuyOnline)
+                                {
+                                    <a style="width:43px; display:flex; flex-direction:column; max-width:80px; padding:5px;" title="Thêm vào giỏ hàng" data-sku="@Model.DFDisplay.SKU" href="javascript:;" class="add-cart btn-orange btnbuy btn-icon"><i class="icon-cart"></i><span class="cart-plus" style="right:21px;"><i class="icon-plus"></i></span><label style="font-size:11px;">Thêm giỏ hàng</label></a>
+                                }
+                            }
+                        </div>
+
+
+
+
+                        <div class="product-promotion" style="padding:8px; border-radius:6px; background:#fff; margin-top:15px;">
+                            @if (Model.Promote.Where(o => o.GroupID <= 0 && o.ZoneID == 2).Count() > 0)
+                            {
+                                var zoneName = Model.Promote.Where(o => o.ZoneID == 2).Select(o => o.ZoneTitle).FirstOrDefault();
+                                <div>
+                                    <strong class="label">@zoneName.ToUpper()</strong>
+                                    <ul>
+
+                                        @foreach (var km in Model.Promote.Where(km => km.GroupID <= 0 && km.ZoneID == 2))
+                                        {
+                                            <li>
+                                                <i class="icon-checked text-green"></i>
+                                                @if (!string.IsNullOrEmpty(km.UID))
+                                                {
+                                                    <a href="@km.UID" style="font-weight:normal">@km.Title</a>
+                                                }
+                                                else
+                                                {
+                                                    @km.Title
+                                                }
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+                            }
+
+                            @if (Model.Promote.Where(o => o.GroupID <= 0 && o.ZoneID == 3).Count() > 0)
+                            {
+                                var zoneName = Model.Promote.Where(o => o.ZoneID == 3).Select(o => o.ZoneTitle).FirstOrDefault();
+
+                                <div>
+                                    <strong class="label">@zoneName.ToUpper()</strong>
+                                    <ul>
+
+                                        @foreach (var km in Model.Promote.Where(km => km.GroupID <= 0 && km.ZoneID == 3))
+                                        {
+                                            <li>
+                                                <i class="icon-checked text-green"></i>
+                                                @if (!string.IsNullOrEmpty(km.UID))
+                                                {
+                                                    <a href="@km.UID" style="font-weight:normal">@km.Title</a>
+                                                }
+                                                else
+                                                {
+                                                    @km.Title
+                                                }
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+
+                            }
+                        </div>
+
+
+
+                        <div class="product-promotion">
+                            <div class="mg-top15">
+                                <ul>
+                                    @foreach (var km in Model.PromoteionNote)
+                                    {
+                                        <li>
+                                            @if (!string.IsNullOrEmpty(km.UID))
+                                            {
+                                                <a href="@km.UID" style="font-weight:normal">@km.Title</a>
+                                            }
+                                            else
+                                            {
+                                                @km.Title
+                                            }
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div class="product-shop">
+                        <div class="warranty">
+                            <h4>THÔNG TIN BẢO HÀNH</h4>
+                            @if (!string.IsNullOrEmpty(Model.Warranty))
+                            {
+                                <p><i class="icon-shield"></i> <span><strong>@Model.Warranty</strong></span></p>
+                            }
+
+                            @if (!string.IsNullOrEmpty(Model.ReplaceTime))
+                            {
+                                <p><a href="/chinh-sach-bao-hanh"><i class="icon-shield"></i><strong><span>@Model.ReplaceTime</span></strong></a></p>
+                            }
+                            @if (!string.IsNullOrEmpty(Model.Combo))
+                            {
+                                <p><i class="icon-accessory"></i> <span>@Model.Combo</span></p>
+                            }
+                        </div>
+
+                        <div class="check-stock" id="marketFilter">
+                            <div class="city">
+                                <p>Chọn màu và xem địa chỉ còn hàng</p>
+                                <span href="javascript:;" class="button"><i class="icon-localtion"></i> <label>Toàn bộ chi nhánh</label></span>
+                                <div class="list">
+                                    <ul>
+                                        @if (Model.StockCity.Count > 0)
+                                        {
+                                            <li data-id="0" id="city_0"><a href="javascript:marketFilters(0);">Xem tất cả</a></li>
+                                        }
+                                        @foreach (var city in Model.StockCity.OrderBy(o => o.Order).ThenBy(o => o.Title))
+                                        {
+                                            <li data-id="@city.ID" id="city_@city.ID" class="@(city.StockSKU.Contains(Model.DFDisplay.SKU) ? "instock" : "outstock")" data-sku='@Html.Raw(city.StockSKUJson)'><a href="javascript:marketFilters(@city.ID);">@city.Title</a></li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="stock-sum" id="stock-sum"></div>
+
+                            @*<p>@Model.DFDisplay.ColorTitle | @Model.DFDisplay.VersionTitle | @Model.DFDisplay.TonKho | @Model.DFDisplay.LimitStock</p>*@
+
+                            <div class="store">
+                                <ul>
+                                    @foreach (var city in Model.StockCity.OrderBy(o => o.Order))
+                                    {
+                                        foreach (var market in city.Markets)
+                                        {
+                                            <li class="@(market.StockSKU.Contains(Model.DFDisplay.SKU) ? "instock" : "outstock") city_@(city.ID)" data-sku='@Html.Raw(market.StockSKUJson)'>
+                                                <span>
+                                                    <label>@market.Address</label>
+
+                                                    <label class="data">
+                                                        <strong><i class="icon-hotline"></i> <a href="tel:@market.Phone">@market.Phone</a></strong>
+                                                        - <i class="icon-localtion"></i> <a title="@market.Title" href="@market.UID">Chỉ đường</a>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                        }
+                                    }
+                                </ul>
+                                <p class="out-stock @(Model.DFDisplay.TonKho == 0 ? "" : "hide")"><strong>@Model.Title <span class="colorName"></span></strong> chưa có sẵn tại khu vực này. Quý khách vui lòng chọn khu vực khác hoặc gọi đến số Hotline để biết thêm chi tiết.</p>
+                                <p class="out-noonline @(!Model.DFDisplay.LimitBuyOnline && Model.DFDisplay.TonKho > 0 ? "" : "hide")"><strong>@Model.Title <span class="colorName"></span></strong> tạm thời dừng nhận đơn online. Quý khách vui lòng liên hệ , đến các cửa hàng đang có sẵn hàng để mua trực tiếp.</p>
+                            </div>
+                        </div>
+                        @if (Model.Old != null)
+                        {
+                            <div class="out-date">
+                                <p class="title"><strong><a href="@string.Format("/kho-san-pham-cu/{0}-p{1}", QStore.Utils.Utility.UnicodeToAscii(Model.Title), Model.Old.ID)">@Model.Old.Title @Model.Old.TitleSubfix</a></strong></p>
+                                <div class="note">
+                                    <p><i>Giá chỉ từ:</i> <strong class="text-red">@string.Format("{0:0,0} ₫", Model.Old.Price)</strong></p>
+                                    <p><i>Tiết kiệm:</i> <strong class="text-red">@string.Format("{0:0,0} ₫", Model.DFDisplay.Price - Model.Old.Price)</strong></p>
+                                    @Html.Raw(Model.Old.WarrantyNote)
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+@if (Model.PromoteCombo.Count > 0)
+{
+    <section>
+        <div class="container">
+            <div class="full-width-content">
+                <div class="product-combo">
+                    <div class="header">
+                        <h3>Ưu đãi khi mua cùng @Model.Title</h3>
+                    </div>
+
+                    <div class="lts-product lts-product-bgwhite lts-product-combo equaHeight" data-obj="a.title">
+
+                        <div class="item source">
+                            @{
+                                var source_Img = string.IsNullOrEmpty(Model.Image) ? QStore.Utils.Configs.DEFAULT_NO_IMAGE : string.Format("{0}/productlist/ts{1}", QStore.Utils.Configs.SETTING_PATH_IMAGE, Model.ImageValue.Url);
+                            }
+                            <div class="img">
+                                <a href="@Model.UID" title="@Model.Title">
+                                    <img src="@source_Img" alt="@Model.Title" title="@Model.Title">
+                                </a>
+                            </div>
+                            <div class="info">
+                                <a href="@Model.UID" class="title" title="@Model.Title">@Model.Title</a>
+                                <span class="price current-product-price">
+                                    <strong>@string.Format("{0:0,0} ₫", Model.DFDisplay.Price)</strong>
+                                    @if (Model.DFDisplay.LastPrice.HasValue)
+                                    {
+                                        <strike>@string.Format("{0:0,0} ₫", Model.DFDisplay.LastPrice)</strike>
+                                    }
+                                </span>
+                            </div>
+                        </div>
+                        @foreach (var promote in Model.PromoteCombo)
+                        {
+
+                            <div class="combo-add">
+                                <span>+</span>
+                            </div>
+                            <div class="item destination">
+                                @{
+                                    source_Img = string.IsNullOrEmpty(promote.Product.Image) ? QStore.Utils.Configs.DEFAULT_NO_IMAGE : string.Format("{0}/productlist/ts{1}", QStore.Utils.Configs.SETTING_PATH_IMAGE, promote.Product.ImageData.Url);
+                                }
+
+                                <div class="img">
+                                    <a href="@promote.Product.UID" title="@promote.Product.Title">
+                                        <img src="@source_Img" alt="@promote.Product.Title" title="@promote.Product.Title">
+                                    </a>
+                                </div>
+                                @if (promote.DiscountPrice.HasValue)
+                                {
+                                    <span class="sales">
+                                        <i class="icon-flash2"></i> Giảm @string.Format("{0:0,0} ₫", promote.DiscountPrice)
+                                    </span>
+                                }
+
+                                <div class="info">
+                                    <a href="@Model.UID" class="title" title="@promote.Product.Title">@promote.Product.Title</a>
+                                    @if (promote.Product.Price - promote.DiscountPrice < promote.Product.LastPrice)
+                                    {
+                                        <span class="price"><strong>@string.Format("{0:0,0} ₫", promote.Product.Price - promote.DiscountPrice) &nbsp;</strong> <strike>@string.Format("{0:0,0} ₫", promote.Product.LastPrice)</strike></span>
+                                    }
+                                    else
+                                    {
+                                        <span class="price"><strong>@string.Format("{0:0,0} ₫", promote.Product.Price) &nbsp;</strong></span>
+                                    }
+                                </div>
+                                @if (promote.Product.Price.HasValue)
+                                {
+                                    <div class="button">
+                                        <a class="add-cart" data-colorid="0" href="javascript:;" data-sku="@string.Format("{0}", promote.Product.SKU)"><span>Thêm vào giỏ hàng</span></a>
+                                    </div>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+
+<section>
+    <div class="container">
+        <div class="product-layout product-layout-grid">
+            <div class="product-left">
+                @if (!string.IsNullOrEmpty(Model.Details))
+                {
+                    <div class="product-text" id="productContent">
+                        @Html.Raw(Model.Details)
+                    </div>
+
+                    <div class="view-more-container">
+                        <a href="javascript:;" id="viewMoreContent">Xem thêm</a>
+                    </div>
+                }
+                else
+                {
+                    <div class="product-text just-center" id="productContent">
+                        <img src="/Content/web/content-icon/no-item.png" />
+                    </div>
+                    <div class="view-more-container">
+                        <a href="javascript:;">... Nội dung đang cập nhật ...</a>
+                    </div>
+                }
+            </div>
+
+            <div class="product-right">
+                <div class="product-specs">
+                    <h3>Thông số kỹ thuật @Model.Title</h3>
+                    <div class="product-spect-img">
+                        <img src="@string.Format("{0}/productlist/dsp{1}", QStore.Utils.Configs.SETTING_PATH_IMAGE, ProductImage)" />
+                        @if (Model.Specs.Count > 0)
+                        {
+                            <a data-padding="0px" data-width="600px" class="ajax-modal product-specs-button" href="/Ajax/fullspecs/@Model.ID"><span class="icon-config"></span>
+                                <strong>Cấu hình chi tiết</strong>
+                            </a>
+                        }
+                    </div>
+
+                    <div class="specs-special">
+                        @foreach (var meta in Model.Specs.Where(o => o.MetaShowInQuick).OrderBy(o => o.GroupOrder).ThenBy(o => o.MetaShowInQuickOrder).GroupBy(g => g.MetaTitle))
+                        {
+                            <ol>
+                                <li>
+                                    <strong>@meta.Key:</strong>
+                                    <span>@string.Join(", ", meta.Select(c => c.Content))</span>
+                                </li>
+                            </ol>
+                        }
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+@{
+    var reviewModel = new QStore.Models.Review.ReviewListReq()
+    {
+        ModelID = Model.ID,
+        SystemTypeID = ((int)QStore.Models.Enum.SystemType.Product),
+        Title = Model.Title,
+        Rate = Model.Rate,
+        Product = Model
+    };
+}
+
+
+
+
+
+
+@{
+    var menuIdJquery = string.Join(", ", Model.BreadCrumb.Select(o => string.Format("#{0}", o.UID.Replace("/", ""))));
+}
+
+<iframe src="https://asia.creativecdn.com/tags?id=pr_n4X0y6ApZyJaHX1dNxQd_offer_@(Model.ID)" width="1" height="1" scrolling="no" frameBorder="0" style="display: none;"></iframe>
+
+
+@section scripts {
+
+    @{
+        string rawPrice = Model.DFDisplay.Price.HasValue ? string.Format("{0:00}", Model.DFDisplay.Price) : "";
+    }
+    <script>
+	dataLayer.push({
+	  'dr_event_type' : 'view_item',
+	  'dr_value' : @(rawPrice),   // product price
+	  'dr_items' : [{
+		  'id': '@(Model.ID)',   // should be the same as the id in Google Merchant Center,
+		  'google_business_vertical': 'retail'
+		}],
+	  'event':'dynamic_remarketing'
+	});
+    </script>
+
+    <script type="text/javascript">
+
+		var isInCheckDelivery = 1;
+
+		$(document).ready(function () {
+
+			$('@(menuIdJquery)').addClass('actived');
+
+			imagePreview_init();
+			setProductContentHeighWithSpecs();
+
+			compareAutocomplete(
+			{
+				template : '@(Model.UIDCompareTemplate)',
+				ptype : @Model.Type.ID,
+				ignore : @Model.ID
+
+			});
+			updateViewProduct(@Model.ID);
+			productDetails();
+		});
+    </script>
+
+    @if (!string.IsNullOrEmpty(Request["buy"]))
+    {
+        <script type="text/javascript">
+            $(document).ready(function () {
+                isInCheckDelivery = 0;
+                $(".btnQuickOrder, .btnQuickSubscription").click();
+            });
+        </script>
+    }
+
+
+
+    <script>
+
+		var gaData = {
+				currency: "VND",
+				value: @(Model.DFDisplay.Price.HasValue ? string.Format("{0:00}", Model.DFDisplay.Price) : "0"),
+				items: [
+					{
+						item_id: "@Model.DFDisplay.SKU",
+						item_name: "@Model.Title",
+						affiliation: "Google Merchandise Store",
+						coupon: "",
+						discount: @(Model.DFDisplay.LastPrice.HasValue ? Model.DFDisplay.LastPrice - Model.DFDisplay.Price : 0),
+						index: 0,
+						item_brand: "@Model.Brand.Title",
+						@foreach(var cat in Model.Category)
+						{
+							@Html.Raw($"						item_category: \"{cat.Title}\",\r\n")
+						}
+						item_list_id: "@Model.Type.Title @Model.Brand.Title",
+						item_list_name: "@Model.Type.Title @Model.Brand.Title",
+						location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+						price: @(Model.DFDisplay.Price.HasValue ? string.Format("{0:00}", Model.DFDisplay.Price) : "0"),
+						quantity: 1
+					}
+				]
+			};
+
+		dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+        dataLayer.push({
+            event: "view_item",
+            ecommerce: gaData
+		});
+
+
+		$(document).ready(function () {
+            $(".btnQuickOrder, .btnbuy").on("click", function () {
+
+                dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+                dataLayer.push({
+                    event: "add_to_cart",
+                    ecommerce: gaData
+                });
+            });
+		});
+
+    </script>
+
+}
+

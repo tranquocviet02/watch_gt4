@@ -1,0 +1,139 @@
+.title-banner{
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    text-transform: capitalize;
+    font-size: 25px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: -20px;
+}
+/* Styles for devices with a screen width of 600 pixels or more */
+@media screen and (max-width: 640px) {
+    .title-banner{
+        font-size: 2rem;
+    }
+  }
+.item-title .item-title-banner{
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    text-transform: capitalize;
+    font-size: 20px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styles for devices with a screen width of 600 pixels or more */
+@media screen and (max-width: 640px) {
+    .item-title .item-title-banner{
+        font-size: 1.5rem;
+    }
+  }
+
+.item-title .item-title-detail{
+    color: #000;
+    text-align: center;
+    display: block;
+    text-transform: capitalize;
+    font-size: 16px;
+    width: 80%;
+    padding: 0;
+
+}
+/* Styles for devices with a screen width of 600 pixels or more */
+@media screen and (max-width: 640px) {
+    .item-title .item-title-detail{
+        font-size: 1rem;
+    }
+  }
+
+.item-title-two .item-title-two-detail{
+    color: #000;
+    font-weight: bold;
+    display: block;
+    text-transform: capitalize;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.background-main{
+    background: url(../img/BG-mobile.png) no-repeat 0 100%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.position-right {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    top: 15%;
+}
+
+
+.div-icon{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+.div-icon .div-icon-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+    gap: 10px;
+}
+
+/* Styles for devices with a screen width of 600 pixels or more */
+@media screen and (max-width: 550px) {
+    .div-icon .div-icon-item {
+        width: 65%;
+    }
+  }
+
+/* Styles for devices with a screen width of 600 pixels or more */
+@media screen and (max-width: 450px) {
+    .div-icon .div-icon-item {
+        width: 80%;
+    }
+  }
+
+.div-icon .div-icon-item img{
+    width: 100%;
+    max-width: 100px;
+}
+
+.div-bg-white{
+    border-radius: 25%;
+    background: white;
+    position: relative;
+    padding: 50px 10px;
+}
+
+.position-absolute-sevent {
+    position: absolute;
+    bottom: 20px;
+    width: 80%;
+}
+
+.position-absolute-sevent p {
+    width: 100% !important;
+}
+
+/* Styles for devices with a screen width of 600 pixels or more */
+@media screen and (max-width: 390px) {
+    .position-absolute-sevent {
+        bottom: 5px;
+    }
+  }

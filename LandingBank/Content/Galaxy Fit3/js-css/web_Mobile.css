@@ -1,0 +1,183 @@
+﻿
+
+@font-face {
+    font-family: 'SAMSUNGONE-600_V1'; /* Tên của font */
+    src: url('../font/SAMSUNGONE-600_V1.0.TTF') format('truetype'); /* Đường dẫn đến font TTF */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SamsungOne-700'; /* Tên của font */
+    src: url('../font/SamsungOne-700.ttf') format('truetype'); /* Đường dẫn đến font TTF */
+    font-weight: normal;
+    font-style: normal;
+}
+.text-banner{
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    font-size: 40px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+/* Styles for devices with a screen width of 600 pixels or more */
+@media screen and (max-width: 640px) {
+    .text-banner{
+        font-size: 2.2rem;
+    }
+  }
+  
+
+  .title-banner{
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+
+    font-size: 30px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+/* Styles for devices with a screen width of 600 pixels or more */
+@media screen and (max-width: 640px) {
+    .title-banner{
+        font-size: 1.5rem;
+    }
+  }
+   
+  @media screen and (max-width: 480px) {
+    .title-banner{
+        font-size: 1.4rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .title-banner{
+        font-size: 19px;
+    }
+  }
+.title-detail {
+    color: #000;
+    font-weight: 500;
+    text-align: center;
+    display: block;
+    font-family: 'SAMSUNGONE-600_V1', sans-serif;
+    font-size: 15px;
+    width: 100%;
+    padding: 0;
+    margin: 5px 0px;
+}
+/* Styles for devices with a screen width of 600 pixels or more */
+@media screen and (max-width: 640px) {
+    .title-detail{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title-detail{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .title-detail{
+        font-size: 0.8rem;
+    }
+}
+
+.item-h1-watch{
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+
+    font-size: 35px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+    
+@media screen and (max-width: 640px) {
+    .item-h1-watch{
+        font-size: 1.8rem;
+    }
+}
+
+.item-h2-watch{
+    color: #000;
+    font-weight: 400;
+    text-align: end;
+    display: block;
+    font-size: 27px;
+    width: 100%;
+    padding: 0px 10px;
+    margin: 0;
+}
+    
+@media screen and (max-width: 640px) {
+    .item-h2-watch{
+        font-size: 1.4rem;
+    }
+}
+
+.item-h3-watch{
+    color: #000;
+    font-weight: 100;
+    text-align: center;
+    display: block;
+
+    font-size: 27px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+    
+@media screen and (max-width: 640px) {
+    .item-h3-watch{
+        font-size: 1.1rem;
+    }
+}
+
+.w-text-mobile{
+    width: calc(100% - 28px) !important;
+}
+
+.position-absolute-1 {
+    position: absolute;
+    top: 4px;
+}
+
+.position-absolute-2 {
+    position: absolute;
+    bottom: 70%;
+}
+
+@media screen and (max-width: 590px) {
+    .position-absolute-2 {
+        position: absolute;
+        bottom: 65%;
+    }
+}
+
+
+@media screen and (max-width: 440px) {
+    .position-absolute-2 {
+        position: absolute;
+        bottom: 62%;
+    }
+}
+
+.background-black-mb {
+    background: black;
+}
+
+@media screen and (max-width: 4400px) {
+    .background-black-mb {
+        padding: 50px 0px 0px 0px;
+    }
+}

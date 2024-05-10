@@ -1,0 +1,38 @@
+﻿.btn-add {
+    display: flex;
+    padding: 7px 21px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+}
+.btn-add-all {
+    display: flex;
+    padding: 7px 21px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+}
+
+.text-btn-add {
+    font-family: OPPO Sans 3.0 230625;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* 157.143% */
+    letter-spacing: 0.039px;
+    text-transform: capitalize;
+}
+.div-banner-item{
+    background-color: white;
+}
+.div-banner-item.active{
+    background: transparent linear-gradient(180deg,#ff990e 0%,#ff6801 100%) 0% 0% no-repeat padding-box;
+}
+
+.button-slide{
+    border: 2px solid;
+    background: white;
+    /* background: var(--white-white-2, #F4F4F4); */
+    border-radius: 21px;
+}

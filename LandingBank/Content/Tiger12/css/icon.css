@@ -1,0 +1,3763 @@
+﻿@font-face {
+	font-family: icon;
+	src: url(../fonts/icon.eot?peuxn9&v=13);
+	src: url(../fonts/icon.eot?peuxn9#iefix&v=13) format("embedded-opentype"),url(../fonts/icon.ttf?peuxn9&v=13) format("truetype"),url(../fonts/icon.woff?peuxn9&v=13) format("woff"),url(../fonts/icon.svg?peuxn9#icon&v=13) format("svg");
+	font-weight: 400;
+	font-style: normal;
+	font-display: block
+}
+
+[class^=icon-]:before, [class*=" icon-"]:before, [class^=ic-]:before, [class*=" ic-"]:before {
+	font-family: icon;
+	font-style: normal;
+	font-weight: 400;
+	speak: none;
+	display: inline-block;
+	text-decoration: inherit;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+
+.icon-galaxy-buds:before {
+	content: "\e901"
+}
+
+.icon-galaxy-watch:before {
+	content: "\e902"
+}
+
+.icon-phone-fold:before {
+	content: "\e903"
+}
+
+.icon-tablet-2:before {
+	content: "\e904"
+}
+
+.icon-cpu:before {
+	content: "\21"
+}
+
+.icon-clock:before {
+	content: "\22"
+}
+
+.icon-watch:before {
+	content: "\23"
+}
+
+.icon-new:before {
+	content: "\24"
+}
+
+.icon-trending:before {
+	content: "\25"
+}
+
+.icon-angle-double-left:before {
+	content: "\26"
+}
+
+.icon-angle-double-right:before {
+	content: "\27"
+}
+
+.icon-angle-double-up:before {
+	content: "\28"
+}
+
+.icon-angle-double-down:before {
+	content: "\29"
+}
+
+.icon-lightbulb:before {
+	content: "\e800"
+}
+
+.icon-check:before {
+	content: "\e801"
+}
+
+.icon-call:before {
+	content: "\e802"
+}
+
+.icon-megaphone:before {
+	content: "\e803"
+}
+
+.icon-mail:before {
+	content: "\e804"
+}
+
+.icon-star-half:before {
+	content: "\e805"
+}
+
+.icon-star:before {
+	content: "\e806"
+}
+
+.icon-star-empty:before {
+	content: "\e807"
+}
+
+.icon-right-open-big:before {
+	content: "\e808"
+}
+
+.icon-right-thin:before {
+	content: "\e809"
+}
+
+.icon-up-open-big:before {
+	content: "\e80a"
+}
+
+.icon-left-open-big:before {
+	content: "\e80b"
+}
+
+.icon-down-open-big:before {
+	content: "\e80c"
+}
+
+.icon-hdd-black:before {
+	content: "\e80d"
+}
+
+.icon-left-thin:before {
+	content: "\e80e"
+}
+
+.icon-down-thin:before {
+	content: "\e80f"
+}
+
+.icon-heart:before {
+	content: "\e810"
+}
+
+.icon-heart-empty:before {
+	content: "\e811"
+}
+
+.icon-cancel-circled:before {
+	content: "\e812"
+}
+
+.icon-down-dir:before {
+	content: "\e814"
+}
+
+.icon-up-dir:before {
+	content: "\e815"
+}
+
+.icon-left-dir:before {
+	content: "\e816"
+}
+
+.icon-right-dir:before {
+	content: "\e817"
+}
+
+.icon-face:before {
+	content: "\e818"
+}
+
+.icon-plus-squared:before {
+	content: "\e819"
+}
+
+.icon-minus:before {
+	content: "\e81a"
+}
+
+.icon-plus:before {
+	content: "\e81b"
+}
+
+.icon-sd-card:before {
+	content: "\e81c"
+}
+
+.icon-minus-squared:before {
+	content: "\e81d"
+}
+
+.icon-help-circled:before {
+	content: "\e81e"
+}
+
+.icon-help:before {
+	content: "\e81f"
+}
+
+.icon-chat:before {
+	content: "\e820"
+}
+
+.icon-movie:before {
+	content: "\e821"
+}
+
+.icon-export:before {
+	content: "\e822"
+}
+
+.icon-reply:before {
+	content: "\e823"
+}
+
+.icon-reply-all:before {
+	content: "\e824"
+}
+
+.icon-quote:before {
+	content: "\e825"
+}
+
+.icon-thumbs-up:before {
+	content: "\e826"
+}
+
+.icon-eye:before {
+	content: "\e827"
+}
+
+.icon-calendar:before {
+	content: "\e828"
+}
+
+.icon-arrow-combo:before {
+	content: "\e829"
+}
+
+.icon-ccw:before {
+	content: "\e82a"
+}
+
+.icon-basket:before {
+	content: "\e82b"
+}
+
+.icon-doc:before {
+	content: "\e82d"
+}
+
+.icon-save:before {
+	content: "\e82e"
+}
+
+.icon-ffriend:before {
+	content: "\e82f"
+}
+
+.icon-gift:before {
+	content: "\e830"
+}
+
+.icon-game:before {
+	content: "\e831"
+}
+
+.icon-laptop:before {
+	content: "\e832"
+}
+
+.icon-machine:before {
+	content: "\e833"
+}
+
+.icon-renew:before {
+	content: "\e834"
+}
+
+.icon-internet:before {
+	content: "\e835"
+}
+
+.icon-tv:before {
+	content: "\e836"
+}
+
+.icon-card:before {
+	content: "\e837"
+}
+
+.icon-video:before {
+	content: "\e838"
+}
+
+.icon-water:before {
+	content: "\e839"
+}
+
+.icon-phonecard:before {
+	content: "\e83a"
+}
+
+.icon-we:before {
+	content: "\e83b"
+}
+
+.icon-document:before {
+	content: "\e83c"
+}
+
+.icon-electric:before {
+	content: "\e83d"
+}
+
+.icon-fado:before {
+	content: "\e83e"
+}
+
+.icon-phone:before {
+	content: "\e83f"
+}
+
+.icon-promo:before {
+	content: "\e840"
+}
+
+.icon-sim:before {
+	content: "\e841"
+}
+
+.icon-tablet:before {
+	content: "\e843"
+}
+
+.icon-ok-circled:before {
+	content: "\e844"
+}
+
+.icon-software:before {
+	content: "\e845"
+}
+
+.icon-plus-circled:before {
+	content: "\e846"
+}
+
+.icon-ffriend-min:before {
+	content: "\e847"
+}
+
+.icon-spin:before {
+	content: "\e848"
+}
+
+.icon-reload:before {
+	content: "\e849"
+}
+
+.icon-minus-circled:before {
+	content: "\e84b"
+}
+
+.icon-emo-happy:before {
+	content: "\e84c"
+}
+
+.icon-crown:before {
+	content: "\e84d"
+}
+
+.icon-tryon:before {
+	content: "\e84e"
+}
+
+.icon-glasses:before {
+	content: "\e84f"
+}
+
+.icon-user:before {
+	content: "\e8b4"
+}
+
+.icon-cam2:before {
+	content: "\e8ba"
+}
+
+.icon-layout:before {
+	content: "\e8bb"
+}
+
+.icon-menu:before {
+	content: "\e8c5"
+}
+
+.icon-info-circled:before {
+	content: "\e8d3"
+}
+
+.icon-pencil:before {
+	content: "\e8ea"
+}
+
+.icon-connect:before {
+	content: "\e905"
+}
+
+.icon-th-list:before {
+	content: "\e906"
+}
+
+.icon-th:before {
+	content: "\e907"
+}
+
+.icon-book:before {
+	content: "\e908"
+}
+
+.icon-a-cover:before {
+	content: "\e909"
+}
+
+.icon-bag:before {
+	content: "\e90a"
+}
+
+.icon-battery-charge:before {
+	content: "\e90b"
+}
+
+.icon-cable:before {
+	content: "\e90c"
+}
+
+.icon-Combined-Shape:before {
+	content: "\e90d"
+}
+
+.icon-cover:before {
+	content: "\e90e"
+}
+
+.icon-drive:before {
+	content: "\e90f"
+}
+
+.icon-headphone:before {
+	content: "\e910"
+}
+
+.icon-keyboard:before {
+	content: "\e911"
+}
+
+.icon-edit-3:before {
+	content: "\e912"
+}
+
+.icon-mouse:before {
+	content: "\e913"
+}
+
+.icon-screenprotect:before {
+	content: "\e914"
+}
+
+.icon-login:before {
+	content: "\e915"
+}
+
+.icon-sdcard:before {
+	content: "\e916"
+}
+
+.icon-secondhand:before {
+	content: "\e917"
+}
+
+.icon-speaker:before {
+	content: "\e918"
+}
+
+.icon-hotsale:before {
+	content: "\e919"
+}
+
+.icon-apple:before {
+	content: "\e91a"
+}
+
+.icon-apple-cable1:before {
+	content: "\e91b"
+}
+
+.icon-a-macbook:before {
+	content: "\e91c"
+}
+
+.icon-apple-cover:before {
+	content: "\e91d"
+}
+
+.icon-apple-imac:before {
+	content: "\e91e"
+}
+
+.icon-a-power:before {
+	content: "\e91f"
+}
+
+.icon-apple-ipad:before {
+	content: "\e920"
+}
+
+.icon-apple-iphone:before {
+	content: "\e921"
+}
+
+.icon-apple-keyboard:before {
+	content: "\e922"
+}
+
+.icon-screen-size:before {
+	content: "\e923"
+}
+
+.icon-vga:before {
+	content: "\e924"
+}
+
+.icon-weight:before {
+	content: "\e925"
+}
+
+.icon-print-ink:before {
+	content: "\e926"
+}
+
+.icon-display:before {
+	content: "\e927"
+}
+
+.icon-laptop-gaming:before {
+	content: "\e928"
+}
+
+.icon-mouse-pad:before {
+	content: "\e929"
+}
+
+.icon-air-purifier:before {
+	content: "\e92a"
+}
+
+.icon-boiler:before {
+	content: "\e92b"
+}
+
+.icon-power-bank:before {
+	content: "\e92c"
+}
+
+.icon-power-socket-2:before {
+	content: "\e92d"
+}
+
+.icon-power-socket:before {
+	content: "\e92e"
+}
+
+.icon-router:before {
+	content: "\e92f"
+}
+
+.icon-scales:before {
+	content: "\e930"
+}
+
+.icon-security-camera:before {
+	content: "\e931"
+}
+
+.icon-vacuum:before {
+	content: "\e932"
+}
+
+.icon-watch-material:before {
+	content: "\e933"
+}
+
+.icon-adapter:before {
+	content: "\e934"
+}
+
+.icon-compatible-devices:before {
+	content: "\e935"
+}
+
+.icon-material1:before {
+	content: "\e936"
+}
+
+.icon-youtube:before {
+	content: "\e937"
+}
+
+.icon-adjust-time:before {
+	content: "\e938"
+}
+
+.icon-apple-mouse:before {
+	content: "\e939"
+}
+
+.icon-Selfie:before {
+	content: "\e93a"
+}
+
+.icon-360:before {
+	content: "\e93b"
+}
+
+.icon-antutu:before {
+	content: "\e93c"
+}
+
+.icon-bluetooth:before {
+	content: "\e93d"
+}
+
+.icon-box:before {
+	content: "\e93e"
+}
+
+.icon-cam:before {
+	content: "\e93f"
+}
+
+.icon-cancel:before {
+	content: "\e940"
+}
+
+.icon-close:before {
+	content: "\e941"
+}
+
+.icon-idownload:before {
+	content: "\e942"
+}
+
+.icon-expand:before {
+	content: "\e943"
+}
+
+.icon-fast-shipping:before {
+	content: "\e944"
+}
+
+.icon-front-camera:before {
+	content: "\e945"
+}
+
+.icon-local-shipping:before {
+	content: "\e946"
+}
+
+.icon-minimize:before {
+	content: "\e947"
+}
+
+.icon-pause:before {
+	content: "\e948"
+}
+
+.icon-photo:before {
+	content: "\e949"
+}
+
+.icon-play:before {
+	content: "\e94a"
+}
+
+.icon-air-fryer:before {
+	content: "\e94b"
+}
+
+.icon-zoom-in:before {
+	content: "\e94c"
+}
+
+.icon-zoom-out:before {
+	content: "\e94d"
+}
+
+.icon-apple-pencil:before {
+	content: "\e94e"
+}
+
+.icon-info:before {
+	content: "\e94f"
+}
+
+.icon-check-new:before {
+	content: "\e950"
+}
+
+.icon-exclamation:before {
+	content: "\e951"
+}
+
+.icon-adapter1:before {
+	content: "\e952"
+}
+
+.icon-headphone-2:before {
+	content: "\e953"
+}
+
+.icon-power:before {
+	content: "\e954"
+}
+
+.icon-a-macmini:before {
+	content: "\e955"
+}
+
+.icon-a-macpro:before {
+	content: "\e956"
+}
+
+.icon-apple-airtag:before {
+	content: "\e957"
+}
+
+.icon-apple-business:before {
+	content: "\e958"
+}
+
+.icon-print-quality:before {
+	content: "\e959"
+}
+
+.icon-print-speed:before {
+	content: "\e95a"
+}
+
+.icon-print:before {
+	content: "\e95b"
+}
+
+.icon-air-conditining-fan:before {
+	content: "\e95c"
+}
+
+.icon-cooling-size:before {
+	content: "\e95d"
+}
+
+.icon-fan-diameter:before {
+	content: "\e95e"
+}
+
+.icon-fan-wing:before {
+	content: "\e95f"
+}
+
+.icon-fan:before {
+	content: "\e960"
+}
+
+.icon-trophy:before {
+	content: "\e961"
+}
+
+.icon-battery:before {
+	content: "\e962"
+}
+
+.icon-filter-ratio:before {
+	content: "\e963"
+}
+
+.icon-filter-technology:before {
+	content: "\e964"
+}
+
+.icon-mobile:before {
+	content: "\e965"
+}
+
+.icon-filter-wattage:before {
+	content: "\e966"
+}
+
+.icon-guarantee-time:before {
+	content: "\e967"
+}
+
+.icon-hot-pot:before {
+	content: "\e968"
+}
+
+.icon-inner-pot-thickness:before {
+	content: "\e969"
+}
+
+.icon-inner-pot:before {
+	content: "\e96a"
+}
+
+.icon-pot-size:before {
+	content: "\e96b"
+}
+
+.icon-pressure-cooker:before {
+	content: "\e96c"
+}
+
+.icon-rice-cooker:before {
+	content: "\e96d"
+}
+
+.icon-rice-technology:before {
+	content: "\e96e"
+}
+
+.icon-users:before {
+	content: "\e96f"
+}
+
+.icon-send:before {
+	content: "\e970"
+}
+
+.icon-valve:before {
+	content: "\e971"
+}
+
+.icon-water-bin:before {
+	content: "\e972"
+}
+
+.icon-water-filter:before {
+	content: "\e973"
+}
+
+.icon-water-purifier:before {
+	content: "\e974"
+}
+
+.icon-wattage:before {
+	content: "\e975"
+}
+
+.icon-wind:before {
+	content: "\e976"
+}
+
+.icon-blades:before {
+	content: "\e977"
+}
+
+.icon-a-watch:before {
+	content: "\e978"
+}
+
+.icon-blender-mill:before {
+	content: "\e979"
+}
+
+.icon-blender:before {
+	content: "\e97a"
+}
+
+.icon-camera-security-2:before {
+	content: "\e97b"
+}
+
+.icon-camera-security:before {
+	content: "\e97c"
+}
+
+.icon-galaxy-buds-2:before {
+	content: "\e97d"
+}
+
+.icon-galaxy-buds:before {
+	content: "\e97e"
+}
+
+.icon-galaxy-pen:before {
+	content: "\e97f"
+}
+
+.icon-galaxy-tab:before {
+	content: "\e980"
+}
+
+.icon-galaxy-watch:before {
+	content: "\e981"
+}
+
+.icon-heating-technology:before {
+	content: "\e982"
+}
+
+.icon-hub:before {
+	content: "\e983"
+}
+
+.icon-induction-cooker:before {
+	content: "\e984"
+}
+
+.icon-iron:before {
+	content: "\e985"
+}
+
+.icon-juicer-capacity:before {
+	content: "\e986"
+}
+
+.icon-juicer:before {
+	content: "\e987"
+}
+
+.icon-material:before {
+	content: "\e988"
+}
+
+.icon-mill-number:before {
+	content: "\e989"
+}
+
+.icon-origin:before {
+	content: "\e98a"
+}
+
+.icon-shave-2:before {
+	content: "\e98b"
+}
+
+.icon-shave:before {
+	content: "\e98c"
+}
+
+.icon-target-location:before {
+	content: "\e98d"
+}
+
+.icon-thermometer:before {
+	content: "\e98e"
+}
+
+.icon-toothbrush:before {
+	content: "\e98f"
+}
+
+.icon-wattage1:before {
+	content: "\e990"
+}
+
+.icon-hair-dryer:before {
+	content: "\e991"
+}
+
+.icon-boiler-material:before {
+	content: "\e992"
+}
+
+.icon-boiler-size:before {
+	content: "\e993"
+}
+
+.icon-dust-capacity:before {
+	content: "\e994"
+}
+
+.icon-inner-boiler:before {
+	content: "\e995"
+}
+
+.icon-noise:before {
+	content: "\e996"
+}
+
+.icon-room-size:before {
+	content: "\e997"
+}
+
+.icon-time:before {
+	content: "\e998"
+}
+
+.icon-vacuum-filter:before {
+	content: "\e999"
+}
+
+.icon-voltage:before {
+	content: "\e99a"
+}
+
+.icon-projector-2:before {
+	content: "\e99b"
+}
+
+.icon-projector:before {
+	content: "\e99c"
+}
+
+.icon-thermal-pot:before {
+	content: "\e99d"
+}
+
+.icon-flash-light:before {
+	content: "\e99e"
+}
+
+.icon-milk-maker-size:before {
+	content: "\e99f"
+}
+
+.icon-milk-maker:before {
+	content: "\e9a0"
+}
+
+.icon-pot:before {
+	content: "\e9a1"
+}
+
+.icon-pan:before {
+	content: "\e9a2"
+}
+
+.icon-home-appliances:before {
+	content: "\e9a3"
+}
+
+.icon-adapter-2:before {
+	content: "\e9a4"
+}
+
+.icon-wireless-keyboard:before {
+	content: "\e9a5"
+}
+
+.icon-search:before {
+	content: "\e9a6"
+}
+
+.icon-wireless-mouse:before {
+	content: "\e9a7"
+}
+
+.icon-control:before {
+	content: "\e9a8"
+}
+
+.icon-hot:before {
+	content: "\e9a9"
+}
+
+.icon-oven-capacity:before {
+	content: "\e9aa"
+}
+
+.icon-oven:before {
+	content: "\e9ab"
+}
+
+.icon-electric-grill:before {
+	content: "\e9ac"
+}
+
+.icon-case-pc-tower:before {
+	content: "\e9ad"
+}
+
+.icon-gaming-chair:before {
+	content: "\e9ae"
+}
+
+.icon-gaming-mouse:before {
+	content: "\e9af"
+}
+
+.icon-hard-drive:before {
+	content: "\e9b0"
+}
+
+.icon-picture:before {
+	content: "\e9b1"
+}
+
+.icon-mainboard:before {
+	content: "\e9b2"
+}
+
+.icon-odd:before {
+	content: "\e9b3"
+}
+
+.icon-psu:before {
+	content: "\e9b4"
+}
+
+.icon-radiator-fan:before {
+	content: "\e9b5"
+}
+
+.icon-shockproof-bag:before {
+	content: "\e9b6"
+}
+
+.icon-cable-USB-A-RJ45:before {
+	content: "\e9b7"
+}
+
+.icon-cable-USB-C-audio:before {
+	content: "\e9b8"
+}
+
+.icon-electric-lunchbox:before {
+	content: "\e9b9"
+}
+
+.icon-beater-material:before {
+	content: "\e9ba"
+}
+
+.icon-cold:before {
+	content: "\e9bb"
+}
+
+.icon-dispenser-material:before {
+	content: "\e9bc"
+}
+
+.icon-egg-beater:before {
+	content: "\e9bd"
+}
+
+.icon-guarantee:before {
+	content: "\e9be"
+}
+
+.icon-heater:before {
+	content: "\e9bf"
+}
+
+.icon-heating-fan:before {
+	content: "\e9c0"
+}
+
+.icon-heating-lamp:before {
+	content: "\e9c1"
+}
+
+.icon-inner-size:before {
+	content: "\e9c2"
+}
+
+.icon-home:before {
+	content: "\e9c3"
+}
+
+.icon-face-mask:before {
+	content: "\e9c4"
+}
+
+.icon-insect-lamp:before {
+	content: "\e9c5"
+}
+
+.icon-insect-racket:before {
+	content: "\e9c6"
+}
+
+.icon-juice-material:before {
+	content: "\e9c7"
+}
+
+.icon-line-time:before {
+	content: "\e9c8"
+}
+
+.icon-meat-grinder:before {
+	content: "\e9c9"
+}
+
+.icon-microwave:before {
+	content: "\e9ca"
+}
+
+.icon-tag:before {
+	content: "\e9cb"
+}
+
+.icon-tags:before {
+	content: "\e9cc"
+}
+
+.icon-orange-juicer:before {
+	content: "\e9cd"
+}
+
+.icon-speed:before {
+	content: "\e9ce"
+}
+
+.icon-water-dispenser:before {
+	content: "\e9cf"
+}
+
+.icon-capacity:before {
+	content: "\e9d0"
+}
+
+.icon-case-pc-size:before {
+	content: "\e9d1"
+}
+
+.icon-chipset:before {
+	content: "\e9d2"
+}
+
+.icon-connection:before {
+	content: "\e9d3"
+}
+
+.icon-cpu-cores:before {
+	content: "\e9d4"
+}
+
+.icon-cpu-thread:before {
+	content: "\e9d5"
+}
+
+.icon-edit:before {
+	content: "\e9d6"
+}
+
+.icon-hard-drive-speed:before {
+	content: "\e9d7"
+}
+
+.icon-input-source:before {
+	content: "\e9d8"
+}
+
+.icon-mainboard-size:before {
+	content: "\e9d9"
+}
+
+.icon-memory-interface:before {
+	content: "\e9da"
+}
+
+.icon-pc-tower:before {
+	content: "\e9db"
+}
+
+.icon-performance:before {
+	content: "\e9dc"
+}
+
+.icon-radiator-fan-size:before {
+	content: "\e9dd"
+}
+
+.icon-location:before {
+	content: "\e9de"
+}
+
+.icon-trash-empty:before {
+	content: "\e9df"
+}
+
+.icon-radiator-fan-speed:before {
+	content: "\e9e0"
+}
+
+.icon-ram-slot:before {
+	content: "\e9e1"
+}
+
+.icon-ram-speed:before {
+	content: "\e9e2"
+}
+
+.icon-socket:before {
+	content: "\e9e3"
+}
+
+.icon-support-mainboard:before {
+	content: "\e9e4"
+}
+
+.icon-tdp-cpu:before {
+	content: "\e9e5"
+}
+
+.icon-unit-vga:before {
+	content: "\e9e6"
+}
+
+.icon-vga-fan:before {
+	content: "\e9e7"
+}
+
+.icon-watch-screen:before {
+	content: "\e9e8"
+}
+
+.icon-water-resistant:before {
+	content: "\e9e9"
+}
+
+.icon-clothes-dryer:before {
+	content: "\e9ea"
+}
+
+.icon-coffee-grinder:before {
+	content: "\e9eb"
+}
+
+.icon-coffee-machine:before {
+	content: "\e9ec"
+}
+
+.icon-vacuum-2:before {
+	content: "\e9ed"
+}
+
+.icon-swatch-material:before {
+	content: "\e9ee"
+}
+
+.icon-list:before {
+	content: "\e9ef"
+}
+
+.icon-machine-massage:before {
+	content: "\e9f0"
+}
+
+.icon-samsung-combined:before {
+	content: "\e9f1"
+}
+
+.icon-samsung-cover:before {
+	content: "\e9f2"
+}
+
+.icon-samsung-fold:before {
+	content: "\e9f3"
+}
+
+.icon-samsung-headphone:before {
+	content: "\e9f4"
+}
+
+.icon-samsung-phone:before {
+	content: "\e9f5"
+}
+
+.icon-samsung-tablet:before {
+	content: "\e9f6"
+}
+
+.icon-samsung-watch:before {
+	content: "\e9f7"
+}
+
+.icon-stationary-bike:before {
+	content: "\e9f8"
+}
+
+.icon-treadmill:before {
+	content: "\e9f9"
+}
+
+.icon-consume-gas:before {
+	content: "\e9fa"
+}
+
+.icon-gas-stove:before {
+	content: "\e9fb"
+}
+
+.icon-lighter-system:before {
+	content: "\e9fc"
+}
+
+.icon-number-gas:before {
+	content: "\e9fd"
+}
+
+.icon-samsung-cable:before {
+	content: "\e9fe"
+}
+
+.icon-dishwasher:before {
+	content: "\e9ff"
+}
+
+.icon-film:before {
+	content: "\ea00"
+}
+
+.icon-hood:before {
+	content: "\ea01"
+}
+
+.icon-insuran-accident:before {
+	content: "\ea02"
+}
+
+.icon-insuran-car:before {
+	content: "\ea03"
+}
+
+.icon-insuran-health:before {
+	content: "\ea04"
+}
+
+.icon-insuran-money:before {
+	content: "\ea05"
+}
+
+.icon-insuran-moto:before {
+	content: "\ea06"
+}
+
+.icon-key-FPT:before {
+	content: "\ea07"
+}
+
+.icon-massage-bag:before {
+	content: "\ea08"
+}
+
+.icon-massage-chair:before {
+	content: "\ea09"
+}
+
+.icon-massage-regime:before {
+	content: "\ea0a"
+}
+
+.icon-number-dishwasher:before {
+	content: "\ea0b"
+}
+
+.icon-airport:before {
+	content: "\ea0c"
+}
+
+.icon-anti-virus:before {
+	content: "\ea0d"
+}
+
+.icon-bus:before {
+	content: "\ea0e"
+}
+
+.icon-card-online:before {
+	content: "\ea0f"
+}
+
+.icon-cart-2:before {
+	content: "\ea10"
+}
+
+.icon-cash:before {
+	content: "\ea11"
+}
+
+.icon-data:before {
+	content: "\ea12"
+}
+
+.icon-dehumidifiers:before {
+	content: "\ea13"
+}
+
+.icon-digital-door:before {
+	content: "\ea14"
+}
+
+.icon-length:before {
+	content: "\ea15"
+}
+
+.icon-light:before {
+	content: "\ea16"
+}
+
+.icon-magnet:before {
+	content: "\ea17"
+}
+
+.icon-motion-sensor:before {
+	content: "\ea18"
+}
+
+.icon-sensor:before {
+	content: "\ea19"
+}
+
+.icon-size:before {
+	content: "\ea1a"
+}
+
+.icon-speakers:before {
+	content: "\ea1b"
+}
+
+.icon-spO2:before {
+	content: "\ea1c"
+}
+
+.icon-technology:before {
+	content: "\ea1d"
+}
+
+.icon-turn:before {
+	content: "\ea1e"
+}
+
+.icon-flash:before {
+	content: "\ea1f"
+}
+
+.icon-vaccum-cleaner:before {
+	content: "\ea20"
+}
+
+.icon-voice:before {
+	content: "\ea21"
+}
+
+.icon-water-proof:before {
+	content: "\ea22"
+}
+
+.icon-camera-noise:before {
+	content: "\ea23"
+}
+
+.icon-acreage:before {
+	content: "\ea24"
+}
+
+.icon-angle-light:before {
+	content: "\ea25"
+}
+
+.icon-anti-noise:before {
+	content: "\ea26"
+}
+
+.icon-app:before {
+	content: "\ea27"
+}
+
+.icon-brush-sensor:before {
+	content: "\ea28"
+}
+
+.icon-calling:before {
+	content: "\ea29"
+}
+
+.icon-cleaner:before {
+	content: "\ea2a"
+}
+
+.icon-connects:before {
+	content: "\ea2b"
+}
+
+.icon-connet-phone:before {
+	content: "\ea2c"
+}
+
+.icon-earphone:before {
+	content: "\ea2d"
+}
+
+.icon-fan-night:before {
+	content: "\ea2e"
+}
+
+.icon-hair-care:before {
+	content: "\ea2f"
+}
+
+.icon-hot-cool:before {
+	content: "\ea30"
+}
+
+.icon-infrared-sensor:before {
+	content: "\ea31"
+}
+
+.icon-inox:before {
+	content: "\ea32"
+}
+
+.icon-insulation:before {
+	content: "\ea33"
+}
+
+.icon-humidity-2:before {
+	content: "\ea34"
+}
+
+.icon-wifi:before {
+	content: "\ea35"
+}
+
+.icon-apple-cable:before {
+	content: "\ea36"
+}
+
+.icon-earbuds:before {
+	content: "\ea37"
+}
+
+.icon-charger-pd:before {
+	content: "\ea38"
+}
+
+.icon-chromecast:before {
+	content: "\ea39"
+}
+
+.icon-frequency:before {
+	content: "\ea3a"
+}
+
+.icon-gan-technology:before {
+	content: "\ea3b"
+}
+
+.icon-index:before {
+	content: "\ea3c"
+}
+
+.icon-measure-heartbeat:before {
+	content: "\ea3d"
+}
+
+.icon-micro:before {
+	content: "\ea3e"
+}
+
+.icon-ohm:before {
+	content: "\ea3f"
+}
+
+.icon-private:before {
+	content: "\ea40"
+}
+
+.icon-resolution:before {
+	content: "\ea41"
+}
+
+.icon-usb-a:before {
+	content: "\ea42"
+}
+
+.icon-usb-charger:before {
+	content: "\ea43"
+}
+
+.icon-usb-ethernet:before {
+	content: "\ea44"
+}
+
+.icon-virtual:before {
+	content: "\ea45"
+}
+
+.icon-wireless-charging:before {
+	content: "\ea46"
+}
+
+.icon-antenna:before {
+	content: "\ea47"
+}
+
+.icon-battery-core:before {
+	content: "\ea48"
+}
+
+.icon-4k:before {
+	content: "\ea49"
+}
+
+.icon-dpi:before {
+	content: "\ea4a"
+}
+
+.icon-electric-toothbrush:before {
+	content: "\ea4b"
+}
+
+.icon-fast-charging:before {
+	content: "\ea4c"
+}
+
+.icon-feature:before {
+	content: "\ea4d"
+}
+
+.icon-hdd-driver:before {
+	content: "\ea4e"
+}
+
+.icon-ink-color:before {
+	content: "\ea4f"
+}
+
+.icon-memory-storage:before {
+	content: "\ea50"
+}
+
+.icon-page-max:before {
+	content: "\ea51"
+}
+
+.icon-power-2:before {
+	content: "\ea52"
+}
+
+.icon-responsive:before {
+	content: "\ea53"
+}
+
+.icon-router-users:before {
+	content: "\ea54"
+}
+
+.icon-adapter-3:before {
+	content: "\ea55"
+}
+
+.icon-specifications:before {
+	content: "\ea56"
+}
+
+.icon-speed-memory:before {
+	content: "\ea57"
+}
+
+.icon-usb:before {
+	content: "\ea58"
+}
+
+.icon-usb-capacity:before {
+	content: "\ea59"
+}
+
+.icon-wireless-router:before {
+	content: "\ea5a"
+}
+
+.icon-bmi:before {
+	content: "\ea5b"
+}
+
+.icon-connect-headphones:before {
+	content: "\ea5c"
+}
+
+.icon-connector:before {
+	content: "\ea5d"
+}
+
+.icon-connect-speaker:before {
+	content: "\ea5e"
+}
+
+.icon-coverage:before {
+	content: "\ea5f"
+}
+
+.icon-arrow-select:before {
+	content: "\ea60"
+}
+
+.icon-cart:before {
+	content: "\ea61"
+}
+
+.icon-mobile-phone:before {
+	content: "\ea62"
+}
+
+.icon-pay-utilities:before {
+	content: "\ea63"
+}
+
+.icon-dot-horizontal:before {
+	content: "\ea64"
+}
+
+.icon-logout:before {
+	content: "\ea65"
+}
+
+.icon-cog:before {
+	content: "\f013"
+}
+
+.icon-cogs:before {
+	content: "\f085"
+}
+
+.icon-phone-squared:before {
+	content: "\f098"
+}
+
+.icon-hdd:before {
+	content: "\f0a0"
+}
+
+.icon-filter:before {
+	content: "\f0b0"
+}
+
+.icon-mail-alt:before {
+	content: "\f0e0"
+}
+
+.icon-angle-left:before {
+	content: "\f104"
+}
+
+.icon-angle-right:before {
+	content: "\f105"
+}
+
+.icon-angle-up:before {
+	content: "\f106"
+}
+
+.icon-angle-down:before {
+	content: "\f107"
+}
+
+.icon-star-half-alt:before {
+	content: "\f123"
+}
+
+.icon-windows:before {
+	content: "\f17a"
+}
+
+.icon-android:before {
+	content: "\f17b"
+}
+
+.icon-trash:before {
+	content: "\f1f8"
+}
+
+.icon-battery-full:before {
+	content: "\f240"
+}
+
+.icon-map-o:before {
+	content: "\f278"
+}
+
+.icon-map:before {
+	content: "\f279"
+}
+
+.icon-ram:before {
+	content: "\f2db"
+}
+
+.icon-camera:before {
+	content: "\1f4f7"
+}
+
+.ic-phone-fold:before {
+	content: "\e900"
+}
+
+.ic-galaxy-buds:before {
+	content: "\e901"
+}
+
+.ic-galaxy-watch:before {
+	content: "\e902"
+}
+
+.ic-tablet-2:before {
+	content: "\e904"
+}
+
+.ic-cpu:before {
+	content: "\21"
+}
+
+.ic-clock:before {
+	content: "\22"
+}
+
+.ic-watch:before {
+	content: "\23"
+}
+
+.ic-new:before {
+	content: "\24"
+}
+
+.ic-trending:before {
+	content: "\25"
+}
+
+.ic-angle-double-left:before {
+	content: "\26"
+}
+
+.ic-angle-double-right:before {
+	content: "\27"
+}
+
+.ic-angle-double-up:before {
+	content: "\28"
+}
+
+.ic-angle-double-down:before {
+	content: "\29"
+}
+
+.ic-lightbulb:before {
+	content: "\e800"
+}
+
+.ic-check:before {
+	content: "\e801"
+}
+
+.ic-call:before {
+	content: "\e802"
+}
+
+.ic-megaphone:before {
+	content: "\e803"
+}
+
+.ic-mail:before {
+	content: "\e804"
+}
+
+.ic-star-half:before {
+	content: "\e805"
+}
+
+.ic-star:before {
+	content: "\e806"
+}
+
+.ic-star-empty:before {
+	content: "\e807"
+}
+
+.ic-right-open-big:before {
+	content: "\e808"
+}
+
+.ic-right-thin:before {
+	content: "\e809"
+}
+
+.ic-up-open-big:before {
+	content: "\e80a"
+}
+
+.ic-left-open-big:before {
+	content: "\e80b"
+}
+
+.ic-down-open-big:before {
+	content: "\e80c"
+}
+
+.ic-hdd-black:before {
+	content: "\e80d"
+}
+
+.ic-left-thin:before {
+	content: "\e80e"
+}
+
+.ic-down-thin:before {
+	content: "\e80f"
+}
+
+.ic-heart:before {
+	content: "\e810"
+}
+
+.ic-heart-empty:before {
+	content: "\e811"
+}
+
+.ic-cancel-circled:before {
+	content: "\e812"
+}
+
+.ic-down-dir:before {
+	content: "\e814"
+}
+
+.ic-up-dir:before {
+	content: "\e815"
+}
+
+.ic-left-dir:before {
+	content: "\e816"
+}
+
+.ic-right-dir:before {
+	content: "\e817"
+}
+
+.ic-face:before {
+	content: "\e818"
+}
+
+.ic-plus-squared:before {
+	content: "\e819"
+}
+
+.ic-minus:before {
+	content: "\e81a"
+}
+
+.ic-plus:before {
+	content: "\e81b"
+}
+
+.ic-sd-card:before {
+	content: "\e81c"
+}
+
+.ic-minus-squared:before {
+	content: "\e81d"
+}
+
+.ic-help-circled:before {
+	content: "\e81e"
+}
+
+.ic-help:before {
+	content: "\e81f"
+}
+
+.ic-chat:before {
+	content: "\e820"
+}
+
+.ic-movie:before {
+	content: "\e821"
+}
+
+.ic-export:before {
+	content: "\e822"
+}
+
+.ic-reply:before {
+	content: "\e823"
+}
+
+.ic-reply-all:before {
+	content: "\e824"
+}
+
+.ic-quote:before {
+	content: "\e825"
+}
+
+.ic-thumbs-up:before {
+	content: "\e826"
+}
+
+.ic-eye:before {
+	content: "\e827"
+}
+
+.ic-calendar:before {
+	content: "\e828"
+}
+
+.ic-arrow-combo:before {
+	content: "\e829"
+}
+
+.ic-ccw:before {
+	content: "\e82a"
+}
+
+.ic-basket:before {
+	content: "\e82b"
+}
+
+.ic-doc:before {
+	content: "\e82d"
+}
+
+.ic-save:before {
+	content: "\e82e"
+}
+
+.ic-ffriend:before {
+	content: "\e82f"
+}
+
+.ic-gift:before {
+	content: "\e830"
+}
+
+.ic-game:before {
+	content: "\e831"
+}
+
+.ic-laptop:before {
+	content: "\e832"
+}
+
+.ic-machine:before {
+	content: "\e833"
+}
+
+.ic-renew:before {
+	content: "\e834"
+}
+
+.ic-internet:before {
+	content: "\e835"
+}
+
+.ic-tv:before {
+	content: "\e836"
+}
+
+.ic-card:before {
+	content: "\e837"
+}
+
+.ic-video:before {
+	content: "\e838"
+}
+
+.ic-water:before {
+	content: "\e839"
+}
+
+.ic-phonecard:before {
+	content: "\e83a"
+}
+
+.ic-we:before {
+	content: "\e83b"
+}
+
+.ic-document:before {
+	content: "\e83c"
+}
+
+.ic-electric:before {
+	content: "\e83d"
+}
+
+.ic-fado:before {
+	content: "\e83e"
+}
+
+.ic-phone:before {
+	content: "\e83f"
+}
+
+.ic-promo:before {
+	content: "\e840"
+}
+
+.ic-sim:before {
+	content: "\e841"
+}
+
+.ic-tablet:before {
+	content: "\e843"
+}
+
+.ic-ok-circled:before {
+	content: "\e844"
+}
+
+.ic-software:before {
+	content: "\e845"
+}
+
+.ic-plus-circled:before {
+	content: "\e846"
+}
+
+.ic-ffriend-min:before {
+	content: "\e847"
+}
+
+.ic-spin:before {
+	content: "\e848"
+}
+
+.ic-reload:before {
+	content: "\e849"
+}
+
+.ic-minus-circled:before {
+	content: "\e84b"
+}
+
+.ic-emo-happy:before {
+	content: "\e84c"
+}
+
+.ic-crown:before {
+	content: "\e84d"
+}
+
+.ic-tryon:before {
+	content: "\e84e"
+}
+
+.ic-glasses:before {
+	content: "\e84f"
+}
+
+.ic-user:before {
+	content: "\e8b4"
+}
+
+.ic-cam2:before {
+	content: "\e8ba"
+}
+
+.ic-layout:before {
+	content: "\e8bb"
+}
+
+.ic-menu:before {
+	content: "\e8c5"
+}
+
+.ic-info-circled:before {
+	content: "\e8d3"
+}
+
+.ic-pencil:before {
+	content: "\e8ea"
+}
+
+.ic-connect:before {
+	content: "\e905"
+}
+
+.ic-th-list:before {
+	content: "\e906"
+}
+
+.ic-th:before {
+	content: "\e907"
+}
+
+.ic-book:before {
+	content: "\e908"
+}
+
+.ic-a-cover:before {
+	content: "\e909"
+}
+
+.ic-bag:before {
+	content: "\e90a"
+}
+
+.ic-battery-charge:before {
+	content: "\e90b"
+}
+
+.ic-cable:before {
+	content: "\e90c"
+}
+
+.ic-Combined-Shape:before {
+	content: "\e90d"
+}
+
+.ic-cover:before {
+	content: "\e90e"
+}
+
+.ic-drive:before {
+	content: "\e90f"
+}
+
+.ic-headphone:before {
+	content: "\e910"
+}
+
+.ic-keyboard:before {
+	content: "\e911"
+}
+
+.ic-edit-3:before {
+	content: "\e912"
+}
+
+.ic-mouse:before {
+	content: "\e913"
+}
+
+.ic-screenprotect:before {
+	content: "\e914"
+}
+
+.ic-login:before {
+	content: "\e915"
+}
+
+.ic-sdcard:before {
+	content: "\e916"
+}
+
+.ic-secondhand:before {
+	content: "\e917"
+}
+
+.ic-speaker:before {
+	content: "\e918"
+}
+
+.ic-hotsale:before {
+	content: "\e919"
+}
+
+.ic-apple:before {
+	content: "\e91a"
+}
+
+.ic-apple-cable1:before {
+	content: "\e91b"
+}
+
+.ic-a-macbook:before {
+	content: "\e91c"
+}
+
+.ic-apple-cover:before {
+	content: "\e91d"
+}
+
+.ic-apple-imac:before {
+	content: "\e91e"
+}
+
+.ic-a-power:before {
+	content: "\e91f"
+}
+
+.ic-apple-ipad:before {
+	content: "\e920"
+}
+
+.ic-apple-iphone:before {
+	content: "\e921"
+}
+
+.ic-apple-keyboard:before {
+	content: "\e922"
+}
+
+.ic-screen-size:before {
+	content: "\e923"
+}
+
+.ic-vga:before {
+	content: "\e924"
+}
+
+.ic-weight:before {
+	content: "\e925"
+}
+
+.ic-print-ink:before {
+	content: "\e926"
+}
+
+.ic-display:before {
+	content: "\e927"
+}
+
+.ic-laptop-gaming:before {
+	content: "\e928"
+}
+
+.ic-mouse-pad:before {
+	content: "\e929"
+}
+
+.ic-air-purifier:before {
+	content: "\e92a"
+}
+
+.ic-boiler:before {
+	content: "\e92b"
+}
+
+.ic-power-bank:before {
+	content: "\e92c"
+}
+
+.ic-power-socket-2:before {
+	content: "\e92d"
+}
+
+.ic-power-socket:before {
+	content: "\e92e"
+}
+
+.ic-router:before {
+	content: "\e92f"
+}
+
+.ic-scales:before {
+	content: "\e930"
+}
+
+.ic-security-camera:before {
+	content: "\e931"
+}
+
+.ic-vacuum:before {
+	content: "\e932"
+}
+
+.ic-watch-material:before {
+	content: "\e933"
+}
+
+.ic-adapter:before {
+	content: "\e934"
+}
+
+.ic-compatible-devices:before {
+	content: "\e935"
+}
+
+.ic-material1:before {
+	content: "\e936"
+}
+
+.ic-youtube:before {
+	content: "\e937"
+}
+
+.ic-adjust-time:before {
+	content: "\e938"
+}
+
+.ic-apple-mouse:before {
+	content: "\e939"
+}
+
+.ic-Selfie:before {
+	content: "\e93a"
+}
+
+.ic-360:before {
+	content: "\e93b"
+}
+
+.ic-antutu:before {
+	content: "\e93c"
+}
+
+.ic-bluetooth:before {
+	content: "\e93d"
+}
+
+.ic-box:before {
+	content: "\e93e"
+}
+
+.ic-cam:before {
+	content: "\e93f"
+}
+
+.ic-cancel:before {
+	content: "\e940"
+}
+
+.ic-close:before {
+	content: "\e941"
+}
+
+.ic-idownload:before {
+	content: "\e942"
+}
+
+.ic-expand:before {
+	content: "\e943"
+}
+
+.ic-fast-shipping:before {
+	content: "\e944"
+}
+
+.ic-front-camera:before {
+	content: "\e945"
+}
+
+.ic-local-shipping:before {
+	content: "\e946"
+}
+
+.ic-minimize:before {
+	content: "\e947"
+}
+
+.ic-pause:before {
+	content: "\e948"
+}
+
+.ic-photo:before {
+	content: "\e949"
+}
+
+.ic-play:before {
+	content: "\e94a"
+}
+
+.ic-air-fryer:before {
+	content: "\e94b"
+}
+
+.ic-zoom-in:before {
+	content: "\e94c"
+}
+
+.ic-zoom-out:before {
+	content: "\e94d"
+}
+
+.ic-apple-pencil:before {
+	content: "\e94e"
+}
+
+.ic-info:before {
+	content: "\e94f"
+}
+
+.ic-check-new:before {
+	content: "\e950"
+}
+
+.ic-exclamation:before {
+	content: "\e951"
+}
+
+.ic-adapter1:before {
+	content: "\e952"
+}
+
+.ic-headphone-2:before {
+	content: "\e953"
+}
+
+.ic-power:before {
+	content: "\e954"
+}
+
+.ic-a-macmini:before {
+	content: "\e955"
+}
+
+.ic-a-macpro:before {
+	content: "\e956"
+}
+
+.ic-apple-airtag:before {
+	content: "\e957"
+}
+
+.ic-apple-business:before {
+	content: "\e958"
+}
+
+.ic-print-quality:before {
+	content: "\e959"
+}
+
+.ic-print-speed:before {
+	content: "\e95a"
+}
+
+.ic-print:before {
+	content: "\e95b"
+}
+
+.ic-air-conditining-fan:before {
+	content: "\e95c"
+}
+
+.ic-cooling-size:before {
+	content: "\e95d"
+}
+
+.ic-fan-diameter:before {
+	content: "\e95e"
+}
+
+.ic-fan-wing:before {
+	content: "\e95f"
+}
+
+.ic-fan:before {
+	content: "\e960"
+}
+
+.ic-trophy:before {
+	content: "\e961"
+}
+
+.ic-battery:before {
+	content: "\e962"
+}
+
+.ic-filter-ratio:before {
+	content: "\e963"
+}
+
+.ic-filter-technology:before {
+	content: "\e964"
+}
+
+.ic-mobile:before {
+	content: "\e965"
+}
+
+.ic-filter-wattage:before {
+	content: "\e966"
+}
+
+.ic-guarantee-time:before {
+	content: "\e967"
+}
+
+.ic-hot-pot:before {
+	content: "\e968"
+}
+
+.ic-inner-pot-thickness:before {
+	content: "\e969"
+}
+
+.ic-inner-pot:before {
+	content: "\e96a"
+}
+
+.ic-pot-size:before {
+	content: "\e96b"
+}
+
+.ic-pressure-cooker:before {
+	content: "\e96c"
+}
+
+.ic-rice-cooker:before {
+	content: "\e96d"
+}
+
+.ic-rice-technology:before {
+	content: "\e96e"
+}
+
+.ic-users:before {
+	content: "\e96f"
+}
+
+.ic-send:before {
+	content: "\e970"
+}
+
+.ic-valve:before {
+	content: "\e971"
+}
+
+.ic-water-bin:before {
+	content: "\e972"
+}
+
+.ic-water-filter:before {
+	content: "\e973"
+}
+
+.ic-water-purifier:before {
+	content: "\e974"
+}
+
+.ic-wattage:before {
+	content: "\e975"
+}
+
+.ic-wind:before {
+	content: "\e976"
+}
+
+.ic-blades:before {
+	content: "\e977"
+}
+
+.ic-a-watch:before {
+	content: "\e978"
+}
+
+.ic-blender-mill:before {
+	content: "\e979"
+}
+
+.ic-blender:before {
+	content: "\e97a"
+}
+
+.ic-camera-security-2:before {
+	content: "\e97b"
+}
+
+.ic-camera-security:before {
+	content: "\e97c"
+}
+
+.ic-galaxy-buds-2:before {
+	content: "\e97d"
+}
+
+.ic-galaxy-buds:before {
+	content: "\e97e"
+}
+
+.ic-galaxy-pen:before {
+	content: "\e97f"
+}
+
+.ic-galaxy-tab:before {
+	content: "\e980"
+}
+
+.ic-galaxy-watch:before {
+	content: "\e981"
+}
+
+.ic-heating-technology:before {
+	content: "\e982"
+}
+
+.ic-hub:before {
+	content: "\e983"
+}
+
+.ic-induction-cooker:before {
+	content: "\e984"
+}
+
+.ic-iron:before {
+	content: "\e985"
+}
+
+.ic-juicer-capacity:before {
+	content: "\e986"
+}
+
+.ic-juicer:before {
+	content: "\e987"
+}
+
+.ic-material:before {
+	content: "\e988"
+}
+
+.ic-mill-number:before {
+	content: "\e989"
+}
+
+.ic-origin:before {
+	content: "\e98a"
+}
+
+.ic-shave-2:before {
+	content: "\e98b"
+}
+
+.ic-shave:before {
+	content: "\e98c"
+}
+
+.ic-target-location:before {
+	content: "\e98d"
+}
+
+.ic-thermometer:before {
+	content: "\e98e"
+}
+
+.ic-toothbrush:before {
+	content: "\e98f"
+}
+
+.ic-wattage1:before {
+	content: "\e990"
+}
+
+.ic-hair-dryer:before {
+	content: "\e991"
+}
+
+.ic-boiler-material:before {
+	content: "\e992"
+}
+
+.ic-boiler-size:before {
+	content: "\e993"
+}
+
+.ic-dust-capacity:before {
+	content: "\e994"
+}
+
+.ic-inner-boiler:before {
+	content: "\e995"
+}
+
+.ic-noise:before {
+	content: "\e996"
+}
+
+.ic-room-size:before {
+	content: "\e997"
+}
+
+.ic-time:before {
+	content: "\e998"
+}
+
+.ic-vacuum-filter:before {
+	content: "\e999"
+}
+
+.ic-voltage:before {
+	content: "\e99a"
+}
+
+.ic-projector-2:before {
+	content: "\e99b"
+}
+
+.ic-projector:before {
+	content: "\e99c"
+}
+
+.ic-thermal-pot:before {
+	content: "\e99d"
+}
+
+.ic-flash-light:before {
+	content: "\e99e"
+}
+
+.ic-milk-maker-size:before {
+	content: "\e99f"
+}
+
+.ic-milk-maker:before {
+	content: "\e9a0"
+}
+
+.ic-pot:before {
+	content: "\e9a1"
+}
+
+.ic-pan:before {
+	content: "\e9a2"
+}
+
+.ic-home-appliances:before {
+	content: "\e9a3"
+}
+
+.ic-adapter-2:before {
+	content: "\e9a4"
+}
+
+.ic-wireless-keyboard:before {
+	content: "\e9a5"
+}
+
+.ic-search:before {
+	content: "\e9a6"
+}
+
+.ic-wireless-mouse:before {
+	content: "\e9a7"
+}
+
+.ic-control:before {
+	content: "\e9a8"
+}
+
+.ic-hot:before {
+	content: "\e9a9"
+}
+
+.ic-oven-capacity:before {
+	content: "\e9aa"
+}
+
+.ic-oven:before {
+	content: "\e9ab"
+}
+
+.ic-electric-grill:before {
+	content: "\e9ac"
+}
+
+.ic-case-pc-tower:before {
+	content: "\e9ad"
+}
+
+.ic-gaming-chair:before {
+	content: "\e9ae"
+}
+
+.ic-gaming-mouse:before {
+	content: "\e9af"
+}
+
+.ic-hard-drive:before {
+	content: "\e9b0"
+}
+
+.ic-picture:before {
+	content: "\e9b1"
+}
+
+.ic-mainboard:before {
+	content: "\e9b2"
+}
+
+.ic-odd:before {
+	content: "\e9b3"
+}
+
+.ic-psu:before {
+	content: "\e9b4"
+}
+
+.ic-radiator-fan:before {
+	content: "\e9b5"
+}
+
+.ic-shockproof-bag:before {
+	content: "\e9b6"
+}
+
+.ic-cable-USB-A-RJ45:before {
+	content: "\e9b7"
+}
+
+.ic-cable-USB-C-audio:before {
+	content: "\e9b8"
+}
+
+.ic-electric-lunchbox:before {
+	content: "\e9b9"
+}
+
+.ic-beater-material:before {
+	content: "\e9ba"
+}
+
+.ic-cold:before {
+	content: "\e9bb"
+}
+
+.ic-dispenser-material:before {
+	content: "\e9bc"
+}
+
+.ic-egg-beater:before {
+	content: "\e9bd"
+}
+
+.ic-guarantee:before {
+	content: "\e9be"
+}
+
+.ic-heater:before {
+	content: "\e9bf"
+}
+
+.ic-heating-fan:before {
+	content: "\e9c0"
+}
+
+.ic-heating-lamp:before {
+	content: "\e9c1"
+}
+
+.ic-inner-size:before {
+	content: "\e9c2"
+}
+
+.ic-home:before {
+	content: "\e9c3"
+}
+
+.ic-face-mask:before {
+	content: "\e9c4"
+}
+
+.ic-insect-lamp:before {
+	content: "\e9c5"
+}
+
+.ic-insect-racket:before {
+	content: "\e9c6"
+}
+
+.ic-juice-material:before {
+	content: "\e9c7"
+}
+
+.ic-line-time:before {
+	content: "\e9c8"
+}
+
+.ic-meat-grinder:before {
+	content: "\e9c9"
+}
+
+.ic-microwave:before {
+	content: "\e9ca"
+}
+
+.ic-tag:before {
+	content: "\e9cb"
+}
+
+.ic-tags:before {
+	content: "\e9cc"
+}
+
+.ic-orange-juicer:before {
+	content: "\e9cd"
+}
+
+.ic-speed:before {
+	content: "\e9ce"
+}
+
+.ic-water-dispenser:before {
+	content: "\e9cf"
+}
+
+.ic-capacity:before {
+	content: "\e9d0"
+}
+
+.ic-case-pc-size:before {
+	content: "\e9d1"
+}
+
+.ic-chipset:before {
+	content: "\e9d2"
+}
+
+.ic-connection:before {
+	content: "\e9d3"
+}
+
+.ic-cpu-cores:before {
+	content: "\e9d4"
+}
+
+.ic-cpu-thread:before {
+	content: "\e9d5"
+}
+
+.ic-edit:before {
+	content: "\e9d6"
+}
+
+.ic-hard-drive-speed:before {
+	content: "\e9d7"
+}
+
+.ic-input-source:before {
+	content: "\e9d8"
+}
+
+.ic-mainboard-size:before {
+	content: "\e9d9"
+}
+
+.ic-memory-interface:before {
+	content: "\e9da"
+}
+
+.ic-pc-tower:before {
+	content: "\e9db"
+}
+
+.ic-performance:before {
+	content: "\e9dc"
+}
+
+.ic-radiator-fan-size:before {
+	content: "\e9dd"
+}
+
+.ic-location:before {
+	content: "\e9de"
+}
+
+.ic-trash-empty:before {
+	content: "\e9df"
+}
+
+.ic-radiator-fan-speed:before {
+	content: "\e9e0"
+}
+
+.ic-ram-slot:before {
+	content: "\e9e1"
+}
+
+.ic-ram-speed:before {
+	content: "\e9e2"
+}
+
+.ic-socket:before {
+	content: "\e9e3"
+}
+
+.ic-support-mainboard:before {
+	content: "\e9e4"
+}
+
+.ic-tdp-cpu:before {
+	content: "\e9e5"
+}
+
+.ic-unit-vga:before {
+	content: "\e9e6"
+}
+
+.ic-vga-fan:before {
+	content: "\e9e7"
+}
+
+.ic-watch-screen:before {
+	content: "\e9e8"
+}
+
+.ic-water-resistant:before {
+	content: "\e9e9"
+}
+
+.ic-clothes-dryer:before {
+	content: "\e9ea"
+}
+
+.ic-coffee-grinder:before {
+	content: "\e9eb"
+}
+
+.ic-coffee-machine:before {
+	content: "\e9ec"
+}
+
+.ic-vacuum-2:before {
+	content: "\e9ed"
+}
+
+.ic-swatch-material:before {
+	content: "\e9ee"
+}
+
+.ic-list:before {
+	content: "\e9ef"
+}
+
+.ic-machine-massage:before {
+	content: "\e9f0"
+}
+
+.ic-samsung-combined:before {
+	content: "\e9f1"
+}
+
+.ic-samsung-cover:before {
+	content: "\e9f2"
+}
+
+.ic-samsung-fold:before {
+	content: "\e9f3"
+}
+
+.ic-samsung-headphone:before {
+	content: "\e9f4"
+}
+
+.ic-samsung-phone:before {
+	content: "\e9f5"
+}
+
+.ic-samsung-tablet:before {
+	content: "\e9f6"
+}
+
+.ic-samsung-watch:before {
+	content: "\e9f7"
+}
+
+.ic-stationary-bike:before {
+	content: "\e9f8"
+}
+
+.ic-treadmill:before {
+	content: "\e9f9"
+}
+
+.ic-consume-gas:before {
+	content: "\e9fa"
+}
+
+.ic-gas-stove:before {
+	content: "\e9fb"
+}
+
+.ic-lighter-system:before {
+	content: "\e9fc"
+}
+
+.ic-number-gas:before {
+	content: "\e9fd"
+}
+
+.ic-samsung-cable:before {
+	content: "\e9fe"
+}
+
+.ic-dishwasher:before {
+	content: "\e9ff"
+}
+
+.ic-film:before {
+	content: "\ea00"
+}
+
+.ic-hood:before {
+	content: "\ea01"
+}
+
+.ic-insuran-accident:before {
+	content: "\ea02"
+}
+
+.ic-insuran-car:before {
+	content: "\ea03"
+}
+
+.ic-insuran-health:before {
+	content: "\ea04"
+}
+
+.ic-insuran-money:before {
+	content: "\ea05"
+}
+
+.ic-insuran-moto:before {
+	content: "\ea06"
+}
+
+.ic-key-FPT:before {
+	content: "\ea07"
+}
+
+.ic-massage-bag:before {
+	content: "\ea08"
+}
+
+.ic-massage-chair:before {
+	content: "\ea09"
+}
+
+.ic-massage-regime:before {
+	content: "\ea0a"
+}
+
+.ic-number-dishwasher:before {
+	content: "\ea0b"
+}
+
+.ic-airport:before {
+	content: "\ea0c"
+}
+
+.ic-anti-virus:before {
+	content: "\ea0d"
+}
+
+.ic-bus:before {
+	content: "\ea0e"
+}
+
+.ic-card-online:before {
+	content: "\ea0f"
+}
+
+.ic-cart-2:before {
+	content: "\ea10"
+}
+
+.ic-cash:before {
+	content: "\ea11"
+}
+
+.ic-data:before {
+	content: "\ea12"
+}
+
+.ic-dehumidifiers:before {
+	content: "\ea13"
+}
+
+.ic-digital-door:before {
+	content: "\ea14"
+}
+
+.ic-length:before {
+	content: "\ea15"
+}
+
+.ic-light:before {
+	content: "\ea16"
+}
+
+.ic-magnet:before {
+	content: "\ea17"
+}
+
+.ic-motion-sensor:before {
+	content: "\ea18"
+}
+
+.ic-sensor:before {
+	content: "\ea19"
+}
+
+.ic-size:before {
+	content: "\ea1a"
+}
+
+.ic-speakers:before {
+	content: "\ea1b"
+}
+
+.ic-spO2:before {
+	content: "\ea1c"
+}
+
+.ic-technology:before {
+	content: "\ea1d"
+}
+
+.ic-turn:before {
+	content: "\ea1e"
+}
+
+.ic-flash:before {
+	content: "\ea1f"
+}
+
+.ic-vaccum-cleaner:before {
+	content: "\ea20"
+}
+
+.ic-voice:before {
+	content: "\ea21"
+}
+
+.ic-water-proof:before {
+	content: "\ea22"
+}
+
+.ic-camera-noise:before {
+	content: "\ea23"
+}
+
+.ic-acreage:before {
+	content: "\ea24"
+}
+
+.ic-angle-light:before {
+	content: "\ea25"
+}
+
+.ic-anti-noise:before {
+	content: "\ea26"
+}
+
+.ic-app:before {
+	content: "\ea27"
+}
+
+.ic-brush-sensor:before {
+	content: "\ea28"
+}
+
+.ic-calling:before {
+	content: "\ea29"
+}
+
+.ic-cleaner:before {
+	content: "\ea2a"
+}
+
+.ic-connects:before {
+	content: "\ea2b"
+}
+
+.ic-connet-phone:before {
+	content: "\ea2c"
+}
+
+.ic-earphone:before {
+	content: "\ea2d"
+}
+
+.ic-fan-night:before {
+	content: "\ea2e"
+}
+
+.ic-hair-care:before {
+	content: "\ea2f"
+}
+
+.ic-hot-cool:before {
+	content: "\ea30"
+}
+
+.ic-infrared-sensor:before {
+	content: "\ea31"
+}
+
+.ic-inox:before {
+	content: "\ea32"
+}
+
+.ic-insulation:before {
+	content: "\ea33"
+}
+
+.ic-humidity-2:before {
+	content: "\ea34"
+}
+
+.ic-wifi:before {
+	content: "\ea35"
+}
+
+.ic-apple-cable:before {
+	content: "\ea36"
+}
+
+.ic-earbuds:before {
+	content: "\ea37"
+}
+
+.ic-charger-pd:before {
+	content: "\ea38"
+}
+
+.ic-chromecast:before {
+	content: "\ea39"
+}
+
+.ic-frequency:before {
+	content: "\ea3a"
+}
+
+.ic-gan-technology:before {
+	content: "\ea3b"
+}
+
+.ic-index:before {
+	content: "\ea3c"
+}
+
+.ic-measure-heartbeat:before {
+	content: "\ea3d"
+}
+
+.ic-micro:before {
+	content: "\ea3e"
+}
+
+.ic-ohm:before {
+	content: "\ea3f"
+}
+
+.ic-private:before {
+	content: "\ea40"
+}
+
+.ic-resolution:before {
+	content: "\ea41"
+}
+
+.ic-usb-a:before {
+	content: "\ea42"
+}
+
+.ic-usb-charger:before {
+	content: "\ea43"
+}
+
+.ic-usb-ethernet:before {
+	content: "\ea44"
+}
+
+.ic-virtual:before {
+	content: "\ea45"
+}
+
+.ic-wireless-charging:before {
+	content: "\ea46"
+}
+
+.ic-antenna:before {
+	content: "\ea47"
+}
+
+.ic-battery-core:before {
+	content: "\ea48"
+}
+
+.ic-4k:before {
+	content: "\ea49"
+}
+
+.ic-dpi:before {
+	content: "\ea4a"
+}
+
+.ic-electric-toothbrush:before {
+	content: "\ea4b"
+}
+
+.ic-fast-charging:before {
+	content: "\ea4c"
+}
+
+.ic-feature:before {
+	content: "\ea4d"
+}
+
+.ic-hdd-driver:before {
+	content: "\ea4e"
+}
+
+.ic-ink-color:before {
+	content: "\ea4f"
+}
+
+.ic-memory-storage:before {
+	content: "\ea50"
+}
+
+.ic-page-max:before {
+	content: "\ea51"
+}
+
+.ic-power-2:before {
+	content: "\ea52"
+}
+
+.ic-responsive:before {
+	content: "\ea53"
+}
+
+.ic-router-users:before {
+	content: "\ea54"
+}
+
+.ic-adapter-3:before {
+	content: "\ea55"
+}
+
+.ic-specifications:before {
+	content: "\ea56"
+}
+
+.ic-speed-memory:before {
+	content: "\ea57"
+}
+
+.ic-usb:before {
+	content: "\ea58"
+}
+
+.ic-usb-capacity:before {
+	content: "\ea59"
+}
+
+.ic-wireless-router:before {
+	content: "\ea5a"
+}
+
+.ic-bmi:before {
+	content: "\ea5b"
+}
+
+.ic-connect-headphones:before {
+	content: "\ea5c"
+}
+
+.ic-connector:before {
+	content: "\ea5d"
+}
+
+.ic-connect-speaker:before {
+	content: "\ea5e"
+}
+
+.ic-coverage:before {
+	content: "\ea5f"
+}
+
+.ic-arrow-select:before {
+	content: "\ea60"
+}
+
+.ic-cart:before {
+	content: "\ea61"
+}
+
+.ic-mobile-phone:before {
+	content: "\ea62"
+}
+
+.ic-pay-utilities:before {
+	content: "\ea63"
+}
+
+.ic-dot-horizontal:before {
+	content: "\ea64"
+}
+
+.ic-logout:before {
+	content: "\ea65"
+}
+
+.ic-cog:before {
+	content: "\f013"
+}
+
+.ic-cogs:before {
+	content: "\f085"
+}
+
+.ic-phone-squared:before {
+	content: "\f098"
+}
+
+.ic-hdd:before {
+	content: "\f0a0"
+}
+
+.ic-filter:before {
+	content: "\f0b0"
+}
+
+.ic-mail-alt:before {
+	content: "\f0e0"
+}
+
+.ic-angle-left:before {
+	content: "\f104"
+}
+
+.ic-angle-right:before {
+	content: "\f105"
+}
+
+.ic-angle-up:before {
+	content: "\f106"
+}
+
+.ic-angle-down:before {
+	content: "\f107"
+}
+
+.ic-star-half-alt:before {
+	content: "\f123"
+}
+
+.ic-windows:before {
+	content: "\f17a"
+}
+
+.ic-android:before {
+	content: "\f17b"
+}
+
+.ic-trash:before {
+	content: "\f1f8"
+}
+
+.ic-battery-full:before {
+	content: "\f240"
+}
+
+.ic-map-o:before {
+	content: "\f278"
+}
+
+.ic-map:before {
+	content: "\f279"
+}
+
+.ic-ram:before {
+	content: "\f2db"
+}
+
+.ic-camera:before {
+	content: "\1f4f7"
+}
+
+.ic-noti:before {
+	content: "\ea66"
+}

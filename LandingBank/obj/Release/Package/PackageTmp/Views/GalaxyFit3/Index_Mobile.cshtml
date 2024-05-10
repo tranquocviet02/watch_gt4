@@ -1,0 +1,170 @@
+﻿@{
+    ViewBag.Title = "Galaxy Fit 3";
+    Layout = "~/Views/Shared/_layout_Mobile.cshtml";
+}
+
+
+@section meta {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="description"
+        content="Giá chỉ hơn 1 triệu với 101 bài tập đa dạng | pin 13 ngày bền bỉ | Huấn luyện giấc ngủ ngon">
+    <meta property="og:image" id="ogImage"
+        content="https://hoanghamobile.com/Content/Galaxy Fit3/img/FB Galaxy Fit3-thumb-ok.jpg">
+    <meta property="og:url" content="https://hoanghamobile.com/samsung-galaxy-fit3">
+    <link rel="stylesheet" href="~/Content/Galaxy Fit3/css/bootstrap.min.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/Galaxy Fit3/js-css/web_Mobile.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/Galaxy Fit3/js-css/Galaxy Fit3.css?@DateTime.Now">
+    <script src="https://hoanghamobile.com/Content/web/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.post('/Ajax/Price', { "id": "4108" }, function (data) {
+                $(data).each(function (index, value) {
+                    for (var i = 0; i < 4; i++) {
+                        var href_ck = $('#idsanpham_href' + (i > 0 ? i : '') + '_' + value.ID);
+                        if (href_ck.length > 0) {
+                            var hrefUrl = value.UID + '?buy=1';
+                            href_ck.attr('href', hrefUrl);
+                        }
+                    }
+                });
+            });
+        });
+
+    </script>
+
+    <style>
+        .jquery-modal.blocker{
+            display: none;
+        }
+    </style>
+}
+
+
+<main class="main-content background-main background-white">
+    <div class="Content-mobile-img-banner gap-40px">
+
+        <a href="" id="idsanpham_href_4108">
+            <img class="Flip-feature-one-banner w-100"
+                src="~/Content/Galaxy Fit3/img/FB-Galaxy-Fit3-mb.jpg?@DateTime.Now" alt="text banner">
+        </a>
+        <div class="product-action ">
+            <a title="ĐẶT NGAY" href="" id="idsanpham_href1_4108" class="btn-red  btnbuy">
+                <strong>ĐẶT NGAY</strong>
+            </a>
+        </div>
+        <section class="flex-column-center w-100 position-relative">
+            <h1 class="text-banner w-text-mobile position-absolute-1">Galaxy Fit3</h1>
+            <img class="Flip-feature-one-banner w-100" src="~/Content/Galaxy Fit3/img/mb/ảnh 1.jpeg?@DateTime.Now"
+                alt="text banner">
+        </section>
+
+        <div class="product-action ">
+            <a title="ĐẶT NGAY" href="javascript:;" class="btn-red btnQuickSubscription btnbuy">
+                <strong>ĐẶT NGAY</strong>
+            </a>
+        </div>
+
+        <section class="flex-column-center w-100 ">
+            <div class="flex-column-center w-100 w-text-mobile gap-10px">
+                <h2 class="title-banner">Thời lượng pin bền bỉ đến 13 ngày</h2>
+                <p class="title-detail">Thời lượng pin đến 13 ngày sử dụng với một lần sạc, hoặc nhanh chóng sạc đầy đến
+                    65% trong
+                    vòng 30 phút. Thôi lo lắng về thời lượng pin, thỏa sức tận hưởng cuộc sống năng động mỗi ngày.</p>
+            </div>
+
+            <img class="Flip-feature-one-banner w-100" src="~/Content/Galaxy Fit3/img/mb/ảnh 2.jpg?@DateTime.Now"
+                alt="text banner">
+        </section>
+
+        <section class="flex-column-center w-100 position-relative">
+            <div class="flex-column-center w-100 w-text-mobile  gap-10px">
+                <h2 class="title-banner">Màn hình lớn 1,6" AMOLED</h2>
+                <p class="title-detail">Màn hình lớn 1,6" mang đến một không gian thoải mái để thao tác trên Galaxy
+                    Fit3, Dễ dàng hoàn thành
+                    được nhiều việc hơn khi giờ đây bạn có thể nhìn , chạm , vuốt thật đơn giản</p>
+            </div>
+            <div class="d-flex-center w-text-mobile justify-content-around padding-30px">
+                <div class="flex-column-center">
+                    <div class="d-flex-center">
+                        <h1 class="item-h1-watch">1.6</h1>
+                        <h2 class="item-h2-watch">inch</h2>
+                    </div>
+                    <h3 class="item-h3-watch">Rectangullar Display </h3>
+                </div>
+                <div>
+                    <div class="d-flex-center">
+                        <h1 class="item-h1-watch">256</h1>
+                        <h2 class="item-h2-watch">x</h2>
+                        <h1 class="item-h1-watch">402</h1>
+                    </div>
+                    <h3 class="item-h3-watch">Resolution</h3>
+                </div>
+            </div>
+            <video style="  margin-bottom: -120px;" src="~/Content/Galaxy Fit3/video/fit3-mb.mp4"
+             poster="~/Content/Galaxy Fit3/img/mb/ảnh 3.jpg" autoplay loop muted></video>
+
+            @* <img class="Flip-feature-one-banner w-100" src="~/Content/Galaxy Fit3/img/mb/ảnh 3.jpg?@DateTime.Now"
+                alt="text banner"> *@
+        </section>
+
+        <section class="flex-column-center w-100 position-relative">
+            <div class="flex-column-center w-100 w-text-mobile padding-bottom-30px gap-10px">
+                <h2 class="title-banner">Theo dõi giấc ngủ <br> và hơn 100 chế độ luyện tập</h2>
+                <p class="title-detail">Dễ dàng truy cập đến hơn 100 bài tập chỉ bằng cách nhấn đúp vào nút Home. Bạn
+                    quên nhấn Bắt đầu? Đừng lo gì cả, Vì Galaxy Fit3 sẽ tự động nhận dạng và giúp theo dõi các bài tập luyện phổ biến như
+                    chạy bộ, tập với máy elip,máy chèo thuyền, và cả bơi lội.</p>
+            </div>
+            <img class="Flip-feature-one-banner w-100" src="~/Content/Galaxy Fit3/img/mb/ảnh 4-1.jpg?@DateTime.Now"
+                alt="text banner">
+            <img class="Flip-feature-one-banner w-100" src="~/Content/Galaxy Fit3/img/mb/ảnh 4-0.jpg?@DateTime.Now"
+                alt="text banner">
+        </section>
+
+
+        <section class="flex-column-center w-100 position-relative ">
+            <div class="flex-column-center w-100 w-text-mobile padding-30px gap-10px">
+                <h2 class="title-banner">Nhận thông báo <br> và điều khiển media trong nhát mắt</h2>
+                <p class="title-detail">Chụp ảnh, điều khiển nhạc, kiểm tra cuộc gọi điện,phản hồi tin nhắn,... Một khi đã
+                    đồng bộ Galaxy Fit3 với
+                    điện thoại Galaxy, bạn có thể làm được mọi thứ ngay trên cổ tay mình. Còn nếu điện thoại bạn bị thất
+                    lạc? Bạn có
+                    thể nhờ Galaxy Fit3 kích hoạt tiếng chuông định vị điện thoại của mình. Không chỉ thế, bạn còn
+                    có thể sao lưu dự phòng các cài đặt yêu thích, từ Mặt đồng hồ đến các ứng dụng và hơn thế nữa.</p>
+            </div>
+            <img class="Flip-feature-one-banner w-100" src="~/Content/Galaxy Fit3/img/mb/ảnh 5.jpg?@DateTime.Now"
+                alt="text banner">
+        </section>
+
+         <section class="flex-column-center w-100 position-relative">
+            <div class="flex-column-center w-100 w-text-mobile padding-30px gap-10px">
+                <h2 class="title-banner ">Thiết lập ngay Galaxy Fit3 <br> với tài khoản Samsung của bạn</h2>
+                <p class="title-detail">Kiểm tra lượng calo bạn đã đốt cháy hôm nay hay xem giờ địa phương trên khắp thế giới. Bạn muốn tùy
+	            biến mặt đồng hồ của mình như thế nào? Thỏa sức chọn phong cách bạn thích trong bộ sưu tập hơn 100 
+	            mặt đồng hồ, từ kiểu cung cấp thông tin đến kiểu cá tính thời thượng, hoặc tự sáng tạo mặt đồng hồ với bức ảnh
+	            yêu thích của bạn.</p>
+            </div>
+            <img class="Flip-feature-one-banner w-100" src="~/Content/Galaxy Fit3/img/mb/ảnh 7.jpg?@DateTime.Now"
+                alt="text banner">
+        </section>
+
+        <section class="flex-column-center w-100 position-relative background-black-mb">
+            <div class="flex-column-center w-100 w-text-mobile position-absolute-2 gap-10px">
+                <h2 class="title-banner text-white">Cảnh báo té ngã, gửi trợ giúp ngay</h2>
+                <p class="title-detail text-white">Khi phát hiện một cú ngã thông qua hệ thống cảm biến tích hợp, bao gồm áp kế, Galaxy Fit3 sẽ hỏi xem bạn
+                    bạn có cần hỗ trợ giúp hay không. Trong những trường hợp nguy cấp khác. Bạn có thể nhấn nút Home 5 lần để
+                    thông báo ngay cho những số liên lạc khẩn cấp. Thông tin y tế đã đăng ký trước của bạn sẽ hiện trên
+                    màn hình khóa khi đơn vị trợ giúp đến nơi.</p>
+            </div>
+            <img class="Flip-feature-one-banner w-100" src="~/Content/Galaxy Fit3/img/mb/ảnh 6.jpg?@DateTime.Now"
+                alt="text banner">
+        </section>
+
+
+        <div class="product-action ">
+            <a title="ĐẶT NGAY" href="javascript:;" class="btn-red btnQuickSubscription btnbuy">
+                <strong>ĐẶT NGAY</strong>
+            </a>
+        </div>
+    </div>
+</main>

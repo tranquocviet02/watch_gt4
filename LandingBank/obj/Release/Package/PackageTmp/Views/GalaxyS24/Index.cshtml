@@ -1,0 +1,1712 @@
+﻿@{
+    ViewBag.Title = "Đặt trước Galaxy S24 Series - Ưu đãi tới 7 Triệu";
+    Layout = "~/Views/Shared/_layout_Desktop.cshtml";
+}
+
+@section meta {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="description"
+        content="[18-27/1] Đặt trước ngay giảm thẳng tới 3 triệu + giảm thêm 1tr qua QRcode hoặc thu cũ trợ giá tới 5 triệu + gói 1 năm Samsung Care+">
+    <meta property="og:image" content="https://hoanghamobile.com/Content/s24/img/thumb-landing-s24.jpg">
+    <meta property="og:url" content="https://hoanghamobile.com/samsung-galaxy-s24-series">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="~/Content/s24/css/swiper-bundle.min.css?@DateTime.Now" />
+    <link rel="stylesheet" href="https://hoanghamobile.com/Content/GalaxyZ2024/js-css/model.css">
+    <script src="https://hoanghamobile.com/Content/web/js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="~/Content/s24/css/bootstrap.min.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/s24/js-css/web_s24.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/s24/js-css/time-countdown.css?@DateTime.Now">
+    <style>
+        .countdown {
+            font-size: 2em;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+        }
+
+        .hidden-div {
+            display: none;
+        }
+
+        .s24-div,
+        .s24-512GB-div {
+            display: none;
+            max-width: 390px;
+        }
+
+        .s24-plus-div,
+        .s24-plus-512GB-div {
+            display: none;
+            max-width: 390px;
+        }
+
+        .s24-utra-div,
+        .s24-utra-512GB-div,
+        .s24-utra-1TB-div {
+            display: none;
+            max-width: 390px;
+        }
+
+        #popup-modal,
+        .jquery-modal,
+        #sticker-modal {
+            display: none !important;
+        }
+
+        body {
+            overflow: auto !important;
+        }
+
+        .js--close-modal {
+            background: black;
+            position: absolute;
+            right: -15px;
+            top: -15px;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            background: #575656;
+            box-shadow: 0 2px 10px #000;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .signup-container {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .no-scroll-body {
+            overflow: hidden !important;
+            position: relative;
+            height: 100%;
+        }
+
+        .custom-close-button-class {
+            display: block !important;
+            border: none !important;
+        }
+
+        .swal2-confirm {
+            display: none !important;
+        }
+
+        .item-text {
+            text-align: start;
+            font-size: 16px;
+            padding-bottom: 8px;
+        }
+
+        .section-rules .box-shadow {
+            background: white;
+        }
+
+        .feature-minigame {
+            align-items: start;
+            text-align: center;
+            /* width: 100%; */
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: center;
+            padding: 26px 0;
+
+        }
+    </style>
+    <script>
+
+        $(document).ready(function () {
+            $.post('/Ajax/Price', { "id": "4037,4038,4039,2252,3437,3551,2899,947,3821", "4075", "4078" , "4079" , "4080" }, function (data) {
+                $(data).each(function (index, value) {
+                    // Update the price container
+                    var priceContainer = $('#idsanpham_' + value.ID);
+
+                    if (priceContainer.length > 0) {
+                        var formattedPrice = parseFloat(value.BestPrice).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+
+                        if (!isNaN(value.BestPrice) && value.BestPrice !== null && value.BestPrice !== undefined && value.BestPrice !== "") {
+                            priceContainer.html('<li class="title-price formatted-number resetfont">' + formattedPrice + '</li>');
+                        } else {
+                            priceContainer.html('');
+                        }
+                    }
+
+                    // Update the last price container
+                    var priceLastPrice = $('#idsanpham_LastPrice_' + value.ID);
+
+                    if (priceLastPrice.length > 0) {
+                        var lastPrice = parseFloat(value.LastPrice);
+                        var formattedLastPrice = isNaN(lastPrice) || !lastPrice ? 0 : lastPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+
+                        if (!isNaN(value.LastPrice) && value.LastPrice !== null && value.LastPrice !== undefined && value.LastPrice !== "") {
+                            priceLastPrice.html(formattedLastPrice);
+                        } else {
+                            priceLastPrice.html('');
+                        }
+                    }
+
+                    // Update the sale price container
+                    var priceSale = $('#idsanpham_sale_' + value.ID);
+
+                    if (priceSale.length > 0) {
+                        var salePrice = parseFloat(value.LastPrice) - parseFloat(value.BestPrice);
+
+                        if (isNaN(salePrice) || salePrice === 0) {
+                            priceSale.addClass("d-none-important");
+                        } else {
+                            priceSale.removeClass("d-none-important").addClass("d-block-important");
+                            var formattedSalePrice = salePrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+                            priceSale.html(formattedSalePrice);
+                        }
+                    }
+
+                    // Update the image source
+                    var Image_ck = $('#idsanpham_Image_' + value.ID);
+
+                    if (Image_ck.length > 0) {
+                        var arrayImages = JSON.parse(value.Image);
+                        var imageUrl = '/i/productlist/ts' + arrayImages[0].Url;
+                        Image_ck.attr('src', imageUrl);
+                    }
+
+                    // Update the product title
+                    var title_ck = $('#idsanpham_title_' + value.ID);
+
+                    if (title_ck.length > 0) {
+                        var title = value.Title;
+
+                        // Remove either "- Chính hãng (Tin đồn)" or "- Chính hãng"
+                        var TitleString = title.replace(/- Chính hãng \(Tin đồn\)|- Chính hãng/g, '');
+
+                        title_ck.html(TitleString);
+                    }
+
+                    // Update the first product link
+                    var href_ck = $('#idsanpham_href_' + value.ID);
+
+                    if (href_ck.length > 0) {
+                        var hrefUrl = value.UID + '?buy=1';
+                        href_ck.attr('href', hrefUrl);
+                    }
+
+                    // Update the second product link
+                    var href_ck2 = $('#idsanpham_href2_' + value.ID);
+
+                    if (href_ck2.length > 0) {
+                        var href2 = value.UID + '?buy=1';
+                        href_ck2.attr('href', href2);
+                    }
+
+
+                    // Update the price container
+                    var priceContainer = $('#idsanpham_512GB_' + value.ID);
+
+                    if (priceContainer.length > 0) {
+                        var formattedPrice = parseFloat(value.BestPrice).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+
+                        if (!isNaN(value.BestPrice) && value.BestPrice !== null && value.BestPrice !== undefined && value.BestPrice !== "") {
+                            priceContainer.html('<li class="title-price formatted-number resetfont">' + formattedPrice + '</li>');
+                        } else {
+                            priceContainer.html('');
+                        }
+                    }
+
+                    // Update the last price container
+                    var priceLastPrice = $('#idsanpham_LastPrice_512GB_' + value.ID);
+
+                    if (priceLastPrice.length > 0) {
+                        var lastPrice = parseFloat(value.LastPrice);
+                        var formattedLastPrice = isNaN(lastPrice) || !lastPrice ? 0 : lastPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+
+                        if (!isNaN(value.LastPrice) && value.LastPrice !== null && value.LastPrice !== undefined && value.LastPrice !== "") {
+                            priceLastPrice.html(formattedLastPrice);
+                        } else {
+                            priceLastPrice.html('');
+                        }
+                    }
+
+                    // Update the sale price container
+                    var priceSale = $('#idsanpham_sale_512GB_' + value.ID);
+
+                    if (priceSale.length > 0) {
+                        var salePrice = parseFloat(value.LastPrice) - parseFloat(value.BestPrice);
+
+                        if (isNaN(salePrice) || salePrice === 0) {
+                            priceSale.addClass("d-none-important");
+                        } else {
+                            priceSale.removeClass("d-none-important").addClass("d-block-important");
+                            var formattedSalePrice = salePrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+                            priceSale.html(formattedSalePrice);
+                        }
+                    }
+
+                    // Update the image source
+                    var Image_ck = $('#idsanpham_Image_512GB_' + value.ID);
+
+                    if (Image_ck.length > 0) {
+                        var arrayImages = JSON.parse(value.Image);
+                        var imageUrl = '/i/productlist/ts' + arrayImages[0].Url;
+                        Image_ck.attr('src', imageUrl);
+                    }
+
+                    // Update the product title
+                    var title_ck = $('#idsanpham_title_512GB_' + value.ID);
+
+                    if (title_ck.length > 0) {
+                        var title = value.Title;
+
+                        // Remove either "- Chính hãng (Tin đồn)" or "- Chính hãng"
+                        var TitleString = title.replace(/- Chính hãng \(Tin đồn\)|- Chính hãng/g, '');
+
+                        title_ck.html(TitleString);
+                    }
+
+                    // Update the first product link
+                    var href_ck = $('#idsanpham_href_512GB_' + value.ID);
+
+                    if (href_ck.length > 0) {
+                        var hrefUrl = value.UID + '?buy=1';
+                        href_ck.attr('href', hrefUrl);
+                    }
+
+                    // Update the second product link
+                    var href_ck2 = $('#idsanpham_href2_512GB_' + value.ID);
+
+                    if (href_ck2.length > 0) {
+                        var href2 = value.UID + '?buy=1';
+                        href_ck2.attr('href', href2);
+                    }
+
+
+                    // Update the price container
+                    var priceContainer = $('#idsanpham_1TB_' + value.ID);
+
+                    if (priceContainer.length > 0) {
+                        var formattedPrice = parseFloat(value.BestPrice).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+
+                        if (!isNaN(value.BestPrice) && value.BestPrice !== null && value.BestPrice !== undefined && value.BestPrice !== "") {
+                            priceContainer.html('<li class="title-price formatted-number resetfont">' + formattedPrice + '</li>');
+                        } else {
+                            priceContainer.html('');
+                        }
+                    }
+
+                    // Update the last price container
+                    var priceLastPrice = $('#idsanpham_LastPrice_1TB_' + value.ID);
+
+                    if (priceLastPrice.length > 0) {
+                        var lastPrice = parseFloat(value.LastPrice);
+                        var formattedLastPrice = isNaN(lastPrice) || !lastPrice ? 0 : lastPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+
+                        if (!isNaN(value.LastPrice) && value.LastPrice !== null && value.LastPrice !== undefined && value.LastPrice !== "") {
+                            priceLastPrice.html(formattedLastPrice);
+                        } else {
+                            priceLastPrice.html('');
+                        }
+                    }
+
+                    // Update the sale price container
+                    var priceSale = $('#idsanpham_sale_1TB_' + value.ID);
+
+                    if (priceSale.length > 0) {
+                        var salePrice = parseFloat(value.LastPrice) - parseFloat(value.BestPrice);
+
+                        if (isNaN(salePrice) || salePrice === 0) {
+                            priceSale.addClass("d-none-important");
+                        } else {
+                            priceSale.removeClass("d-none-important").addClass("d-block-important");
+                            var formattedSalePrice = salePrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+                            priceSale.html(formattedSalePrice);
+                        }
+                    }
+
+                    // Update the image source
+                    var Image_ck = $('#idsanpham_Image_1TB_' + value.ID);
+
+                    if (Image_ck.length > 0) {
+                        var arrayImages = JSON.parse(value.Image);
+                        var imageUrl = '/i/productlist/ts' + arrayImages[0].Url;
+                        Image_ck.attr('src', imageUrl);
+                    }
+
+                    // Update the product title
+                    var title_ck = $('#idsanpham_title_1TB_' + value.ID);
+
+                    if (title_ck.length > 0) {
+                        var title = value.Title;
+
+                        // Remove either "- Chính hãng (Tin đồn)" or "- Chính hãng"
+                        var TitleString = title.replace(/- Chính hãng \(Tin đồn\)|- Chính hãng/g, '');
+
+                        title_ck.html(TitleString);
+                    }
+
+                    // Update the first product link
+                    var href_ck = $('#idsanpham_href_1TB_' + value.ID);
+
+                    if (href_ck.length > 0) {
+                        var hrefUrl = value.UID + '?buy=1';
+                        href_ck.attr('href', hrefUrl);
+                    }
+
+                    // Update the second product link
+                    var href_ck2 = $('#idsanpham_href2_1TB_' + value.ID);
+
+                    if (href_ck2.length > 0) {
+                        var href2 = value.UID + '?buy=1';
+                        href_ck2.attr('href', href2);
+                    }
+                });
+            });
+        });
+
+    </script>
+}
+
+<main class="main-content">
+    <div class="content-v1 gap-26px margin-bottom-26px">
+
+        <section class="feature-section-flex feature-one position-relative">
+            <div class="position-absolute start-0 top-0">
+                <img class="Flip-feature-logo w-100 " src="~/Content/s24/img/logo samsung.png?@DateTime.Now"
+                    alt="hình ảnh banner">
+            </div>
+            <div class="d-flex-center position-relative">
+                
+                    <a href="https://hoanghamobile.com/dien-thoai-di-dong/samsung/samsung-galaxy-s24-series"><img class="Flip-feature-one-banner w-100 "
+                    src="~/Content/s24/img/Preorder-Galaxy-S24-Series-pc.jpg?@DateTime.Now" alt="hình ảnh banner"></a>
+            </div>
+        </section>
+        <div class="flex-column-center gap-26px">
+            <h1 class="feature-section-banner-titler">Bước vào kỷ nguyên quyền năng cùng Galaxy S24 Series</h1>
+            <img class="Flip-feature-one-banner w-100 " src="~/Content/s24/img/Flip-feature-banner-2.png?@DateTime.Now"
+                alt="hình ảnh banner">
+            <div id="countdown" class="d-flex-center">
+                <div id='tiles' class="d-flex-center w-100 gap-12px"></div>
+
+            </div>
+            <img class="Flip-feature-one-banner w-auto "
+                src="~/Content/s24/img/Flip-feature-banner-text.png?@DateTime.Now" alt="hình ảnh banner">
+        </div>
+
+    </div>
+    <div class="content-v1 fixed-container">
+        <div class="site-grid">
+            <div class="grid-column-span-4 toggle" data-target="#Flip-section1">
+                <img class="Flip-feature-one-banner w-100 " src="~/Content/s24/img/chi tiet dat hang.png?@DateTime.Now"
+                    alt="hình ảnh banner">
+            </div>
+            <div class="grid-column-span-4 ">
+                <a href="https://hoanghamobile.com/tin-tuc/thu-cu-len-doi-samsung-galaxy-s24-series"><img class="Flip-feature-one-banner w-100 " src="~/Content/s24/img/thu cu len doi.png?@DateTime.Now"
+                    alt="hình ảnh banner"></a>
+            </div>
+            <div class="grid-column-span-4 toggle" data-target="#Flip-section3">
+                <img class="Flip-feature-one-banner w-100 " src="~/Content/s24/img/detail san pham.png?@DateTime.Now"
+                    alt="hình ảnh banner">
+            </div>
+        </div>
+    </div>
+
+    <div class="content-v1 content order-details hidden-div" style="display: flex;" id="Flip-section1">
+        <div class="w-100" style=" margin-bottom: -2px;margin-left: 30%;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="20" viewBox="0 0 27 20" fill="none">
+                <path d="M13.5 2.53526e-06L26.0574 19.5L0.942628 19.5L13.5 2.53526e-06Z" fill="#D9D9D9" />
+            </svg>
+        </div>
+        <div class="content-v1 gap-26px ">
+            <div class="feature-section-detail site-grid">
+                <div class="site-goods-sku site-grid--half-quarter grid-column-span-3">
+                    <a class="site-goods-sku__image" href="https://hoanghamobile.com/dien-thoai/samsung-galaxy-s24-ultra-chinh-hang?buy=1" >
+                        <img class="Flip-feature-one-banner w-100 s24-utra-div" id="s24-utra-Black"
+                            style="display: flex;" src="~/Content/s24/img/s24 ultra đen.png?@DateTime.Now"
+                            alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-utra-div" id="s24-utra-grey"
+                            src="~/Content/s24/img/s24 ultra xám.png?@DateTime.Now" alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-utra-div" id="s24-utra-purple"
+                            src="~/Content/s24/img/s24 ultra tím.png?@DateTime.Now" alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-utra-div" id="s24-utra-Yellow"
+                            src="~/Content/s24/img/s24 ultra vàng.png?@DateTime.Now" alt="hình ảnh banner">
+                    </a>
+                    <div class="site-goods-sku__info">
+                        <h1 class="resetfont">Galaxy S24 Ultra 256GB</h1>
+                        <h1 class="resetfont d-none" id="idsanpham_title_4039"></h1>
+                        <div class="d-flex-center gap-6px info-color">
+                            <div class="info-color-item s24-utra" data-target="#s24-utra-Black"
+                                style="background: #4A4A4D;">
+
+                            </div>
+                            <div class="info-color-item s24-utra" data-target="#s24-utra-grey"
+                                style="background: #C5C3C3;">
+
+                            </div>
+                            <div class="info-color-item s24-utra" data-target="#s24-utra-purple"
+                                style="background: #52566D;">
+
+                            </div>
+                            <div class="info-color-item s24-utra" data-target="#s24-utra-Yellow"
+                                style="background: #F1EAD4;">
+
+                            </div>
+                        </div>
+                        <div class="info-price d-flex-center gap-10px">
+                            <h3 class="resetfont">Giá từ</h3>
+                            <h2 class="resetfont">33.990.000 ₫</h2>
+                            <h2 class="resetfont d-none" id="idsanpham_4039">33.990.000 ₫</h2>
+                        </div>
+                    </div>
+                    <div class="site-goods-sku__km">
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM1
+                            </div>
+                            <p class="resetfont">Giảm ngay <b>3.000.000đ + 1.000.000 QR Code</b></p>
+                        </div>
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM2
+                            </div>
+                            <p class="resetfont">Thu cũ trợ giá lên đến <b>5.000.000đ</b> (Không áp dụng kèm <b>KM1</b>)
+                            </p>
+                        </div>
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM3
+                            </div>
+                            <p class="resetfont">Tặng Samsung Care+ 1 năm trị giá 2 Triệu và Ốp lưng chính hãng ( <b style="color: red;">Giá tốt LH 19002091</b> )</p>
+                        </div>
+                    </div>
+                    <div class="site-goods-sku__actions">
+                        <a href="https://hoanghamobile.com/dien-thoai/samsung-galaxy-s24-ultra-chinh-hang?buy=1"  class="site-goods-sku__link">
+                            <span class="mi-btn__text resetfont">ĐẶT TRƯỚC NGAY</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="site-goods-sku site-grid--half-quarter grid-column-span-3">
+                    <a class="site-goods-sku__image" href="https://hoanghamobile.com/dien-thoai/samsung-galaxy-s24-Ultra-12gb-512gb-chinh-hang?buy=1" >
+                        <img class="Flip-feature-one-banner w-100 s24-utra-512GB-div" id="s24-utra-Black-512GB"
+                            style="display: flex;" src="~/Content/s24/img/s24 ultra đen.png?@DateTime.Now"
+                            alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-utra-512GB-div" id="s24-utra-grey-512GB"
+                            src="~/Content/s24/img/s24 ultra xám.png?@DateTime.Now" alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-utra-512GB-div" id="s24-utra-purple-512GB"
+                            src="~/Content/s24/img/s24 ultra tím.png?@DateTime.Now" alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-utra-512GB-div" id="s24-utra-Yellow-512GB"
+                            src="~/Content/s24/img/s24 ultra vàng.png?@DateTime.Now" alt="hình ảnh banner">
+                    </a>
+                    <div class="site-goods-sku__info">
+                        <h1 class="resetfont">Galaxy S24 Ultra 512GB</h1>
+                        <h1 class="resetfont d-none" id="idsanpham_title_512GB_4039">Galaxy S24 Ultra 512GB</h1>
+                        <div class="d-flex-center gap-6px info-color">
+                            <div class="info-color-item s24-utra-512GB" data-target="#s24-utra-Black-512GB"
+                                style="background: #4A4A4D;">
+
+                            </div>
+                            <div class="info-color-item s24-utra-512GB" data-target="#s24-utra-grey-512GB"
+                                style="background: #C5C3C3;">
+
+                            </div>
+                            <div class="info-color-item s24-utra-512GB" data-target="#s24-utra-purple-512GB"
+                                style="background: #52566D;">
+
+                            </div>
+                            <div class="info-color-item s24-utra-512GB" data-target="#s24-utra-Yellow-512GB"
+                                style="background: #F1EAD4;">
+
+                            </div>
+                        </div>
+                        <div class="info-price d-flex-center gap-10px">
+                            <h3 class="resetfont">Giá từ</h3>
+                            <h2 class="resetfont">37.490.000 ₫</h2>
+                            <h2 class="resetfont d-none" id="idsanpham_512GB_4039"></h2>
+                        </div>
+                    </div>
+                    <div class="site-goods-sku__km">
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM1
+                            </div>
+                            <p class="resetfont">Giảm ngay <b>3.000.000đ + 1.000.000 QR Code</b></p>
+                        </div>
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM2
+                            </div>
+                            <p class="resetfont">Thu cũ trợ giá lên đến <b>5.000.000đ</b> (Không áp dụng kèm <b>KM1</b>)
+                            </p>
+                        </div>
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM3
+                            </div>
+                            <p class="resetfont">Tặng Samsung Care+ 1 năm trị giá 2 Triệu và Ốp lưng chính hãng ( <b style="color: red;">Giá tốt LH 19002091</b> )</p>
+                        </div>
+                    </div>
+                    <div class="site-goods-sku__actions">
+                        <a href="https://hoanghamobile.com/dien-thoai/samsung-galaxy-s24-Ultra-12gb-512gb-chinh-hang?buy=1"  class="site-goods-sku__link">
+                            <span class="mi-btn__text resetfont">ĐẶT TRƯỚC NGAY</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="site-goods-sku site-grid--half-quarter grid-column-span-3">
+                    <a class="site-goods-sku__image" href="https://hoanghamobile.com/dien-thoai/samsung-galaxy-s24-Ultra-12gb-1tb-chinh-hang?buy=1" >
+                        <img class="Flip-feature-one-banner w-100 s24-utra-1TB-div" id="s24-utra-Black-1TB"
+                            style="display: flex;" src="~/Content/s24/img/s24 ultra đen.png?@DateTime.Now"
+                            alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-utra-1TB-div" id="s24-utra-grey-1TB"
+                            src="~/Content/s24/img/s24 ultra xám.png?@DateTime.Now" alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-utra-1TB-div" id="s24-utra-purple-1TB"
+                            src="~/Content/s24/img/s24 ultra tím.png?@DateTime.Now" alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-utra-1TB-div" id="s24-utra-Yellow-1TB"
+                            src="~/Content/s24/img/s24 ultra vàng.png?@DateTime.Now" alt="hình ảnh banner">
+                    </a>
+                    <div class="site-goods-sku__info">
+                        <h1 class="resetfont">Galaxy S24 Ultra 1TB</h1>
+                        <h1 class="resetfont d-none" id="idsanpham_title_1TB_4039">Galaxy S24 Ultra 1TB</h1>
+                        <div class="d-flex-center gap-6px info-color">
+                            <div class="info-color-item s24-utra-1TB" data-target="#s24-utra-Black-1TB"
+                                style="background: #4A4A4D;">
+
+                            </div>
+                            <div class="info-color-item s24-utra-1TB" data-target="#s24-utra-grey-1TB"
+                                style="background: #C5C3C3;">
+
+                            </div>
+                            <div class="info-color-item s24-utra-1TB" data-target="#s24-utra-purple-1TB"
+                                style="background: #52566D;">
+
+                            </div>
+                            <div class="info-color-item s24-utra-1TB" data-target="#s24-utra-Yellow-1TB"
+                                style="background: #F1EAD4;">
+
+                            </div>
+                        </div>
+                        <div class="info-price d-flex-center gap-10px">
+                            <h3 class="resetfont">Giá từ</h3>
+                            <h2 class="resetfont">44.490.000 ₫</h2>
+                            <h2 class="resetfont d-none" id="idsanpham_4039"></h2>
+                        </div>
+                    </div>
+                    <div class="site-goods-sku__km">
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM1
+                            </div>
+                            <p class="resetfont">Giảm ngay <b>3.000.000đ + 1.000.000 QR Code</b></p>
+                        </div>
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM2
+                            </div>
+                            <p class="resetfont">Thu cũ trợ giá lên đến <b>5.000.000đ</b> (Không áp dụng kèm <b>KM1</b>)
+                            </p>
+                        </div>
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM3
+                            </div>
+                            <p class="resetfont">Tặng Samsung Care+ 1 năm trị giá 2 Triệu và Ốp lưng chính hãng ( <b style="color: red;">Giá tốt LH 19002091</b> )</p>
+                        </div>
+                    </div>
+                    <div class="site-goods-sku__actions">
+                        <a href="https://hoanghamobile.com/dien-thoai/samsung-galaxy-s24-Ultra-12gb-1tb-chinh-hang?buy=1"  class="site-goods-sku__link">
+                            <span class="mi-btn__text resetfont">ĐẶT TRƯỚC NGAY</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="site-goods-sku site-grid--half-quarter grid-column-span-3">
+                    <a class="site-goods-sku__image" href="https://hoanghamobile.com/dien-thoai/samsung-galaxy-s24-chinh-hang?buy=1" >
+                        <img class="Flip-feature-one-banner w-100 s24-div" id="Flip-Black" style="display: flex;"
+                            src="~/Content/s24/img/s24 đen.png?@DateTime.Now" alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-div" id="Flip-grey"
+                            src="~/Content/s24/img/s24 xám.png?@DateTime.Now" alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-div" id="Flip-purple"
+                            src="~/Content/s24/img/s24 tím.png?@DateTime.Now" alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-div" id="Flip-Yellow"
+                            src="~/Content/s24/img/s24 vàng.png?@DateTime.Now" alt="hình ảnh banner">
+                    </a>
+                    <div class="site-goods-sku__info flex-column-center gap-12px">
+                        <h1 class="resetfont" >Galaxy S24 256GB</h1>
+                        <div class="d-flex-center gap-6px info-color">
+                            <div class="info-color-item s24" data-target="#Flip-Black" style="background: #4A4A4D;">
+
+                            </div>
+                            <div class="info-color-item s24" data-target="#Flip-grey" style="background: #C5C3C3;">
+
+                            </div>
+                            <div class="info-color-item s24" data-target="#Flip-purple" style="background: #52566D;">
+
+                            </div>
+                            <div class="info-color-item s24" data-target="#Flip-Yellow" style="background: #F1EAD4;">
+
+                            </div>
+                        </div>
+                        <div class="info-price d-flex-center gap-10px">
+                            <h3 class="resetfont">Giá từ</h3>
+                            <h2 class="resetfon">22.990.000 ₫</h2>
+                            <h2 class="resetfont d-none" id="idsanpham_4037"></h2>
+                        </div>
+                    </div>
+                    <div class="site-goods-sku__km">
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM1
+                            </div>
+                            <p class="resetfont">Giảm ngay <b>2.000.000đ + 1.000.000 QR Code</b></p>
+                        </div>
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM2
+                            </div>
+                            <p class="resetfont">Thu cũ trợ giá lên đến <b>4.000.000đ</b> (Không áp dụng kèm <b>KM1</b>
+                                )</p>
+                        </div>
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM3
+                            </div>
+                            <p class="resetfont">Tặng Samsung Care+ 1 năm trị giá 2 Triệu và Ốp lưng chính hãng ( <b style="color: red;">Giá tốt LH 19002091</b> )</p>
+                        </div>
+                    </div>
+                    <div class="site-goods-sku__actions">
+                        <a href="https://hoanghamobile.com/dien-thoai/samsung-galaxy-s24-chinh-hang?buy=1"  class="site-goods-sku__link">
+                            <span class="mi-btn__text resetfont">ĐẶT TRƯỚC NGAY</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="site-goods-sku site-grid--half-quarter grid-column-span-3">
+                    <a class="site-goods-sku__image" href="https://hoanghamobile.com/dien-thoai/samsung-galaxy-s24-8gb-512gb-chinh-hang?buy=1" >
+                        <img class="Flip-feature-one-banner w-100 s24-512GB-div" id="Flip-Black-512GB"
+                            style="display: flex;" src="~/Content/s24/img/s24 đen.png?@DateTime.Now"
+                            alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-512GB-div" id="Flip-grey-512GB"
+                            src="~/Content/s24/img/s24 xám.png?@DateTime.Now" alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-512GB-div" id="Flip-purple-512GB"
+                            src="~/Content/s24/img/s24 tím.png?@DateTime.Now" alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-512GB-div" id="Flip-Yellow-512GB"
+                            src="~/Content/s24/img/s24 vàng.png?@DateTime.Now" alt="hình ảnh banner">
+                    </a>
+                    <div class="site-goods-sku__info flex-column-center gap-12px">
+                        <h1 class="resetfont">Galaxy S24 512GB</h1>
+                        <h1 class="resetfont d-none" id="idsanpham_title_512GB_4037"></h1>
+                        <div class="d-flex-center gap-6px info-color">
+                            <div class="info-color-item s24-512GB" data-target="#Flip-Black-512GB"
+                                style="background: #4A4A4D;">
+
+                            </div>
+                            <div class="info-color-item s24-512GB" data-target="#Flip-grey-512GB"
+                                style="background: #C5C3C3;">
+
+                            </div>
+                            <div class="info-color-item s24-512GB" data-target="#Flip-purple-512GB"
+                                style="background: #52566D;">
+
+                            </div>
+                            <div class="info-color-item s24-512GB" data-target="#Flip-Yellow-512GB"
+                                style="background: #F1EAD4;">
+
+                            </div>
+                        </div>
+                        <div class="info-price d-flex-center gap-10px">
+                            <h3 class="resetfont">Giá từ</h3>
+                            <h2 class="resetfon">26.490.000 ₫</h2>
+                            <h2 class="resetfont d-none" id="idsanpham_512GB_4037"></h2>
+                        </div>
+                    </div>
+                    <div class="site-goods-sku__km">
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM1
+                            </div>
+                            <p class="resetfont">Giảm ngay <b>2.000.000đ + 1.000.000 QR Code</b></p>
+                        </div>
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM2
+                            </div>
+                            <p class="resetfont">Thu cũ trợ giá lên đến <b>4.000.000đ</b> (Không áp dụng kèm <b>KM1</b>
+                                )</p>
+                        </div>
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM3
+                            </div>
+                            <p class="resetfont">Tặng Samsung Care+ 1 năm trị giá 2 Triệu và Ốp lưng chính hãng ( <b style="color: red;">Giá tốt LH 19002091</b> )</p>
+                        </div>
+                    </div>
+                    <div class="site-goods-sku__actions">
+                        <a href="https://hoanghamobile.com/dien-thoai/samsung-galaxy-s24-8gb-512gb-chinh-hang?buy=1"  class="site-goods-sku__link">
+                            <span class="mi-btn__text resetfont">ĐẶT TRƯỚC NGAY</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="site-goods-sku site-grid--half-quarter grid-column-span-3">
+                    <a class="site-goods-sku__image" href="https://hoanghamobile.com/dien-thoai/samsung-galaxy-s24-plus-chinh-hang?buy=1" >
+                        <img class="Flip-feature-one-banner w-100 s24-plus-div" id="s24-plus-Black"
+                            style="display: flex;" src="~/Content/s24/img/s24plus đen.png?@DateTime.Now"
+                            alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-plus-div " id="s24-plus-grey"
+                            src="~/Content/s24/img/s24plus xám.png?@DateTime.Now" alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-plus-div " id="s24-plus-purple"
+                            src="~/Content/s24/img/s24plus tím.png?@DateTime.Now" alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-plus-div " id="s24-plus-Yellow"
+                            src="~/Content/s24/img/s24plus vàng.png?@DateTime.Now" alt="hình ảnh banner">
+                    </a>
+                    <div class="site-goods-sku__info">
+                        <h1 class="resetfont">Galaxy S24 Plus 256GB</h1>
+                        <h1 class="resetfont d-none" id="idsanpham_title_4038"></h1>
+                        <div class="d-flex-center gap-6px info-color">
+                            <div class="info-color-item s24-plus" data-target="#s24-plus-Black"
+                                style="background: #4A4A4D;">
+
+                            </div>
+                            <div class="info-color-item s24-plus" data-target="#s24-plus-grey"
+                                style="background: #C5C3C3;">
+
+                            </div>
+                            <div class="info-color-item s24-plus" data-target="#s24-plus-purple"
+                                style="background: #52566D;">
+
+                            </div>
+                            <div class="info-color-item s24-plus" data-target="#s24-plus-Yellow"
+                                style="background: #F1EAD4;">
+
+                            </div>
+                        </div>
+                        <div class="info-price d-flex-center gap-10px">
+                            <h3 class="resetfont">Giá từ</h3>
+                            <h2 class="resetfont">26.990.000 ₫</h2>
+                            <h2 class="resetfont d-none" id="idsanpham_4038">26.990.000 ₫</h2>
+                        </div>
+                    </div>
+                    <div class="site-goods-sku__km">
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM1
+                            </div>
+                            <p class="resetfont">Giảm ngay <b>3.000.000đ + 1.000.000 QR Code</b></p>
+                        </div>
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM2
+                            </div>
+                            <p class="resetfont">Thu cũ trợ giá lên đến <b>5.000.000đ</b> (Không áp dụng kèm <b>KM1</b>
+                                )</p>
+                        </div>
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM3
+                            </div>
+                            <p class="resetfont">Tặng Samsung Care+ 1 năm trị giá 2 Triệu và Ốp lưng chính hãng ( <b style="color: red;">Giá tốt LH 19002091</b> )</p>
+                        </div>
+                    </div>
+                    <div class="site-goods-sku__actions">
+                        <a href="https://hoanghamobile.com/dien-thoai/samsung-galaxy-s24-plus-chinh-hang?buy=1" class="site-goods-sku__link">
+                            <span class="mi-btn__text resetfont">ĐẶT TRƯỚC NGAY</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="site-goods-sku site-grid--half-quarter grid-column-span-3">
+                    <a class="site-goods-sku__image" href="https://hoanghamobile.com/dien-thoai/samsung-galaxy-s24-plus-12gb-512gb-chinh-hang?buy=1" >
+                        <img class="Flip-feature-one-banner w-100 s24-plus-512GB-div" id="s24-plus-Black-512GB"
+                            style="display: flex;" src="~/Content/s24/img/s24plus đen.png?@DateTime.Now"
+                            alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-plus-512GB-div " id="s24-plus-grey-512GB"
+                            src="~/Content/s24/img/s24plus xám.png?@DateTime.Now" alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-plus-512GB-div " id="s24-plus-purple-512GB"
+                            src="~/Content/s24/img/s24plus tím.png?@DateTime.Now" alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 s24-plus-512GB-div " id="s24-plus-Yellow-512GB"
+                            src="~/Content/s24/img/s24plus vàng.png?@DateTime.Now" alt="hình ảnh banner">
+                    </a>
+                    <div class="site-goods-sku__info">
+                        <h1 class="resetfont">Galaxy S24 Plus 512GB</h1>
+                        <h1 class="resetfont d-none" id="idsanpham_title_512GB_4038"></h1>
+                        <div class="d-flex-center gap-6px info-color">
+                            <div class="info-color-item s24-plus-512GB" data-target="#s24-plus-Black-512GB"
+                                style="background: #4A4A4D;">
+
+                            </div>
+                            <div class="info-color-item s24-plus-512GB" data-target="#s24-plus-grey-512GB"
+                                style="background: #C5C3C3;">
+
+                            </div>
+                            <div class="info-color-item s24-plus-512GB" data-target="#s24-plus-purple-512GB"
+                                style="background: #52566D;">
+
+                            </div>
+                            <div class="info-color-item s24-plus-512GB" data-target="#s24-plus-Yellow-512GB"
+                                style="background: #F1EAD4;">
+
+                            </div>
+                        </div>
+                        <div class="info-price d-flex-center gap-10px">
+                            <h3 class="resetfont">Giá từ</h3>
+                            <h2 class="resetfont">30.490.000 ₫</h2>
+                            <h2 class="resetfont d-none" id="idsanpham_4038"></h2>
+                        </div>
+                    </div>
+                    <div class="site-goods-sku__km">
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM1
+                            </div>
+                            <p class="resetfont">Giảm ngay <b>3.000.000đ + 1.000.000 QR Code</b></p>
+                        </div>
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM2
+                            </div>
+                            <p class="resetfont">Thu cũ trợ giá lên đến <b>5.000.000đ</b> (Không áp dụng kèm <b>KM1</b>
+                                )</p>
+                        </div>
+                        <div class="d-flex-center gap-4px">
+                            <div class="div-km">
+                                KM3
+                            </div>
+                            <p class="resetfont">Tặng Samsung Care+ 1 năm trị giá 2 Triệu và Ốp lưng chính hãng ( <b style="color: red;">Giá tốt LH 19002091</b> )</p>
+                        </div>
+                    </div>
+                    <div class="site-goods-sku__actions">
+                        <a href="https://hoanghamobile.com/dien-thoai/samsung-galaxy-s24-plus-12gb-512gb-chinh-hang?buy=1" class="site-goods-sku__link">
+                            <span class="mi-btn__text resetfont">ĐẶT TRƯỚC NGAY</span>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="autumn-renewed w-100 flex-column-center gap-26px">
+                <div class="feature-section-tiler">
+                    <h1 class="resetfont">Chương trình thu cũ đổi mới</h1>
+                </div>
+                <div class="w-100">
+                    <div class=" gap-20px feature-section-autumn-renewed flex-column-center ">
+                        <div class="site-grid autumn-renewed-item-detail w-100">
+                            <div class="site-goods-sku__info grid-column-span-3 w-auto">
+                                <div class="site-goods-sku__image">
+                                    <img class="Flip-feature-one-banner w-100 "
+                                        src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/06/05/my-project.png"
+                                        alt="hình ảnh banner">
+                                </div>
+                                <h1>iPhone 14 Pro Max 6GB/256GB</h1>
+                                <div class="info-price d-flex-center gap-10px justify-content-start">
+                                    <h3 class="resetfont">Giá thu đến: </h3>
+                                    <h2 class="resetfont">21.760.000 ₫</h2>
+                                </div>
+                                <div class="info-price d-flex-center gap-10px justify-content-start">
+                                    <h3 class="resetfont">Giá lên đời từ: </h3>
+                                    <h2 class="resetfont">3.230.000 ₫</h2>
+                                </div>
+                            </div>
+                            <div class="site-goods-sku__info grid-column-span-3 w-auto">
+                                <div class="site-goods-sku__image">
+                                    <img class="Flip-feature-one-banner w-100 "
+                                        src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/06/05/my-project.png"
+                                        alt="hình ảnh banner">
+                                </div>
+                                <h1>iPhone 14 Pro Max 6GB/128GB</h1>
+                                <div class="info-price d-flex-center gap-10px justify-content-start">
+                                    <h3 class="resetfont">Giá thu đến: </h3>
+                                    <h2 class="resetfont">20.880.000 ₫</h2>
+                                </div>
+                                <div class="info-price d-flex-center gap-10px justify-content-start">
+                                    <h3 class="resetfont">Giá lên đời từ: </h3>
+                                    <h2 class="resetfont">4.110.000 ₫</h2>
+                                </div>
+                            </div>
+                            <div class="site-goods-sku__info grid-column-span-3 w-auto">
+                                <div class="site-goods-sku__image">
+                                    <img class="Flip-feature-one-banner w-100 "
+                                        src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/06/01/samsung-galaxy-s23-ultra.png"
+                                        alt="hình ảnh banner">
+                                </div>
+                                <h1>Galaxy S23 ultra 8GB/256GB</h1>
+                                <div class="info-price d-flex-center gap-10px justify-content-start">
+                                    <h3 class="resetfont">Giá thu đến: </h3>
+                                    <h2 class="resetfont">16.230.000 ₫</h2>
+                                </div>
+                                <div class="info-price d-flex-center gap-10px justify-content-start">
+                                    <h3 class="resetfont">Giá lên đời từ: </h3>
+                                    <h2 class="resetfont">8.760.000 ₫</h2>
+                                </div>
+                            </div>
+                            <div class="site-goods-sku__info grid-column-span-3 w-auto">
+                                <div class="site-goods-sku__image">
+                                    <img class="Flip-feature-one-banner w-100 "
+                                        src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/02/02/s23-xang.png"
+                                        alt="hình ảnh banner">
+                                </div>
+                                <h1>Galaxy S23 Plus 8GB/256GB</h1>
+                                <div class="info-price d-flex-center gap-10px justify-content-start">
+                                    <h3 class="resetfont">Giá thu đến: </h3>
+                                    <h2 class="resetfont">12.700.000 ₫</h2>
+                                </div>
+                                <div class="info-price d-flex-center gap-10px justify-content-start">
+                                    <h3 class="resetfont">Giá lên đời từ: </h3>
+                                    <h2 class="resetfont">12.290.000 ₫</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <h2>chương trình thu cũ lên đời xem thêm <b><a style="font-style: italic;color:red !important;    cursor: pointer;" href="https://hoanghamobile.com/tin-tuc/thu-cu-len-doi-samsung-galaxy-s24-series">tại đây</a></b>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-section-tiler">
+                <h1 class="resetfont">Ưu đãi mua cùng giá tốt</h1>
+            </div>
+            <div class="feature-section-detail site-grid">
+                <div class="site-goods-sku site-grid--half-quarter">
+                    <div class="site-goods-sku__image">
+                        <img class="Flip-feature-one-banner w-100 "
+                            src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/08/10/image-removebg-preview_637957687304481353.png"
+                            alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 d-none" src="" id="idsanpham_Image_2252"
+                            alt="hình ảnh banner">
+                    </div>
+                    <div class="site-goods-sku__info">
+                        <h1 class="resetfont">Samsung Galaxy Buds 2 Pro</h1>
+                        <h1 class="resetfont d-none" id="idsanpham_title_2252"></h1>
+                        <div class="info-price d-flex-center gap-10px">
+                            <h2 class="resetfont">3.190.000 ₫</h2>
+                            <h4 class="resetfont">4.990.000 ₫</h4>
+                        </div>
+                        <div class="info-price d-flex-center gap-10px d-none ">
+                            <h2 class="resetfont" id="idsanpham_2252">3.190.000 ₫</h2>
+                            <h4 class="resetfont" id="idsanpham_LastPrice_2252">4.990.000 ₫</h4>
+                        </div>
+                        <div class="info-save">
+                            <p>Đã tiết kiệm</p>
+                            <h4> 1.800.000đ</h4>
+                            <h4 id="idsanpham_sale_2252" class="d-none"></h4>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="site-goods-sku site-grid--half-quarter">
+                    <div class="site-goods-sku__image">
+                        <img class="Flip-feature-one-banner w-100 "
+                            src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/07/26/glaxy-watch-6-classic-47mm-bt-r960-3.png"
+                            alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 d-none" src="" id="idsanpham_Image_3437"
+                            alt="hình ảnh banner">
+                    </div>
+                    <div class="site-goods-sku__info">
+                        <h1 class="resetfont">Samsung Galaxy Watch6 40mm BT (R930)</h1>
+                        <h1 class="resetfont d-none" id="idsanpham_title_3437"></h1>
+                        <div class="info-price d-flex-center gap-10px">
+                            <h2 class="resetfont">4.990.000 ₫</h2>
+                            <h4 class="resetfont">6.990.000 ₫</h4>
+                        </div>
+                        <div class="info-price d-flex-center gap-10px d-none ">
+                            <h2 class="resetfont" id="idsanpham_3437">3.190.000 ₫</h2>
+                            <h4 class="resetfont" id="idsanpham_LastPrice_3437">4.990.000 ₫</h4>
+                        </div>
+                        <div class="info-save">
+                            <p>Đã tiết kiệm</p>
+                            <h4> 2.000.000đ</h4>
+                            <h4 id="idsanpham_sale_3437" class="d-none"></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="site-goods-sku site-grid--half-quarter">
+                    <div class="site-goods-sku__image">
+                        <img class="Flip-feature-one-banner w-100 "
+                            src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/07/26/classic-den.png"
+                            alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 d-none" src="" id="idsanpham_Image_3551"
+                            alt="hình ảnh banner">
+                    </div>
+                    <div class="site-goods-sku__info">
+                        <h1 class="resetfont">Samsung Galaxy Watch6 Classic 43mm BT (R950)
+                        </h1>
+                        <h1 class="resetfont d-none" id="idsanpham_title_3551">
+                        </h1>
+                        <div class="info-price d-flex-center gap-10px">
+                            <h2 class="resetfont">5.990.000 ₫</h2>
+                            <h4 class="resetfont"> 8.990.000 ₫</h4>
+                        </div>
+                        <div class="info-price d-flex-center gap-10px d-none ">
+                            <h2 class="resetfont" id="idsanpham_3551">3.190.000 ₫</h2>
+                            <h4 class="resetfont" id="idsanpham_LastPrice_3551">4.990.000 ₫</h4>
+                        </div>
+                        <div class="info-save">
+                            <p>Đã tiết kiệm</p>
+                            <h4> 3.000.000đ</h4>
+                            <h4 id="idsanpham_sale_3551" class="d-none"></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="site-goods-sku site-grid--half-quarter">
+                    <div class="site-goods-sku__image">
+                        <img class="Flip-feature-one-banner w-100 "
+                            src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/10/11/tab-s9-fe-2.png"
+                            alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 d-none" src="" id="idsanpham_Image_3551"
+                            alt="hình ảnh banner">
+                    </div>
+                    <div class="site-goods-sku__info">
+                        <h1 class="resetfont">Samsung Galaxy Tab S9 FE Plus Wifi 8GB/128GB <br> (Giá đã bao gồm Galaxy
+                            Gift) </h1>
+                        <h1 class="resetfont d-none" id="idsanpham_title_3821"></h1>
+                        <div class="info-price d-flex-center gap-10px">
+                            <h2 class="resetfont">9.990.000 ₫</h2>
+                            <h4 class="resetfont">13.990.000 ₫</h4>
+                        </div>
+                        <div class="info-price d-flex-center gap-10px d-none ">
+                            <h2 class="resetfont" id="idsanpham_3821">3.190.000 ₫</h2>
+                            <h4 class="resetfont" id="idsanpham_LastPrice_3821">4.990.000 ₫</h4>
+                        </div>
+                        <div class="info-save">
+                            <p>Đã tiết kiệm</p>
+                            <h4> 4.000.000đ</h4>
+                            <h4 id="idsanpham_sale_3821" class="d-none"></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="site-goods-sku site-grid--half-quarter">
+                    <div class="site-goods-sku__image">
+                        <img class="Flip-feature-one-banner w-100 "
+                            src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2021/01/21/25w.png"
+                            alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 d-none" src="" id="idsanpham_Image_947"
+                            alt="hình ảnh banner">
+                    </div>
+                    <div class="site-goods-sku__info">
+                        <h1 class="resetfont">Củ sạc Samsung Type-C 25W</h1>
+                        <h1 class="resetfont d-none" id="idsanpham_title_947"></h1>
+                        <div class="info-price d-flex-center gap-10px">
+                            <h2 class="resetfont">199.000 ₫</h2>
+                            <h4 class="resetfont">499.000 ₫</h4>
+                        </div>
+                        <div class="info-price d-flex-center gap-10px d-none ">
+                            <h2 class="resetfont" id="idsanpham_947">3.190.000 ₫</h2>
+                            <h4 class="resetfont" id="idsanpham_LastPrice_947">4.990.000 ₫</h4>
+                        </div>
+                        <div class="info-save">
+                            <p>Đã tiết kiệm</p>
+                            <h4> 300.000đ</h4>
+                            <h4 id="idsanpham_sale_947" class="d-none"></h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="site-goods-sku site-grid--half-quarter">
+                    <div class="site-goods-sku__image">
+                        <img class="Flip-feature-one-banner w-100 "
+                            src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/12/14/vn-45w-power-adapter-ep-t4510-ep-t4510xbegww-530966008-removebg-preview.png"
+                            alt="hình ảnh banner">
+                        <img class="Flip-feature-one-banner w-100 d-none" src="" id="idsanpham_Image_2899"
+                            alt="hình ảnh banner">
+                    </div>
+                    <div class="site-goods-sku__info">
+                        <h1 class="resetfont">Củ sạc kèm cáp Samsung 45W, EP-T4510 (Type-C)</h1>
+                        <h1 class="resetfont d-none" id="idsanpham_title_2899"></h1>
+                        <div class="info-price d-flex-center gap-10px">
+                            <h2 class="resetfont">790.000 ₫</h2>
+                            <h4 class="resetfont">1.190.000 ₫</h4>
+                        </div>
+                        <div class="info-price d-flex-center gap-10px d-none ">
+                            <h2 class="resetfont" id="idsanpham_2899">3.190.000 ₫</h2>
+                            <h4 class="resetfont" id="idsanpham_LastPrice_2899">4.990.000 ₫</h4>
+                        </div>
+                        <div class="info-save">
+                            <p>Đã tiết kiệm</p>
+                            <h4> 400.000đ</h4>
+                            <h4 id="idsanpham_sale_2899" class="d-none"></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-v1 content product-information hidden-div" id="Flip-section3">
+        <div class="w-100" style="    margin-right: 30%;display: flex;justify-content: end;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="20" viewBox="0 0 27 20" fill="none">
+                <path d="M13.5 2.53526e-06L26.0574 19.5L0.942628 19.5L13.5 2.53526e-06Z" fill="#D9D9D9"></path>
+            </svg>
+        </div>
+        <div class="swiper mySwiper w-100">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide product-information-detail gap-12px">
+                    <div class="flex-column-center-start detail-s24-text">
+                        <h1 class="product-information-h1">Khoanh vùng Search đa năng với Google mang đến đột phá mới
+                            trong
+                            việc
+                            tìm kiếm thông tin</h1>
+                        <p class="product-information-p">Khi đang thỏa thích lướt mạng và vô tình bắt gặp thứ bạn đang
+                            muốn
+                            tìm,
+                            đơn giản là khoanh tròn hình ảnh đó và Galaxy AI sẽ mang đến hàng loạt kết quả tương thích.
+                            Ta da, bạn thậm chí có thể tìm kiếm để lên kế hoạch cho chuyến du lịch sắp tới,
+                            những điểm đến và món ăn hấp dẫn gần đây thật dễ dàng!​</p>
+                    </div>
+
+                    <video class="w-100" autoplay controls muted loop preload="auto"
+                        poster="~/Content/s24/video/img video s24.png">
+                        <source src="~/Content/s24/video/video s24.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="swiper-slide product-information-detail gap-12px">
+                    <div class="flex-column-center-start detail-s24-text">
+                        <h1 class="product-information-h1">Trợ lý Note quyền năng - Tóm tắt nhanh gọn và sắp xếp thông
+                            minh
+                            mọi
+                            ghi chú trong nháy mắt​</h1>
+                        <p class="product-information-p">Trợ lý Note trên Galaxy S24 Series nâng hiệu suất công việc lên
+                            tầm
+                            cao
+                            mới​ bằng cách căn chỉnh đề mục, tuỳ chọn phông chữ dù là viết vội bằng S Pen, sửa lỗi chính
+                            tả
+                            và
+                            tóm lược đoạn văn bản dài chỉ sau một chạm.​ Ngoài ra, bạn còn có thể tạo bìa riêng cho ghi
+                            chú,
+                            tất cả sẽ được được hệ thống hóa và dễ dàng tìm kiếm hơn bao giờ hết​</p>
+                    </div>
+
+                    <img class="Flip-feature-one-banner w-100 " src="~/Content/s24/img/note swiper.png?@DateTime.Now"
+                        alt="hình ảnh banner">
+                </div>
+
+                <div class="swiper-slide product-information-detail gap-12px">
+                    <div class="flex-column-center-start detail-s24-text">
+                        <h1 class="product-information-h1">Trợ lý Chat thông minh
+                            Biến hóa ấn tượng với từng ngữ cảnh trò chuyện​​</h1>
+                        <p class="product-information-p">Trải nghiệm Galaxy AI trên Galaxy S24 Series giúp đề xuất câu
+                            trả
+                            lời
+                            hoặc giúp viết lại tin nhắn phù hợp với ngữ cảnh và văn phong khác nhau,
+                            dù là trang trọng, lịch sự hay thân mật. ​​</p>
+                    </div>
+
+                    <img class="Flip-feature-one-banner w-100 " src="~/Content/s24/img/tro li swiper.png?@DateTime.Now"
+                        alt="hình ảnh banner">
+                </div>
+
+                <div class="swiper-slide product-information-detail gap-12px">
+                    <div class="flex-column-center-start detail-s24-text">
+                        <h1 class="product-information-h1">Phiên dịch trực tiếp cuộc gọi
+                            Mở tiềm năng kết nối mới vượt mọi rào cản ngôn ngữ​​</h1>
+                        <p class="product-information-p">Dịch trực tiếp 2 chiều theo thời gian thực mang đến trải nghiệm
+                            giao
+                            tiếp mượt mà và nhanh chóng trên Galaxy S24 Series.​
+                            Meeting xuyên quốc gia hay du lịch đến vùng đất mới? Nay chẳng phải lo những khác biệt ngôn
+                            ngữ
+                            ngăn
+                            cách! ​​​</p>
+                    </div>
+
+                    <img class="Flip-feature-one-banner w-100 "
+                        src="~/Content/s24/img/translate swiper.png?@DateTime.Now" alt="hình ảnh banner">
+                </div>
+
+                <div class="swiper-slide product-information-detail gap-12px">
+                    <div class="flex-column-center-start detail-s24-text">
+                        <h1 class="product-information-h1">Hậu kì sáng tạo cùng​ Trợ lí chỉnh ảnh chuyên nghiệp​​</h1>
+                        <p class="product-information-p">Chỉnh sửa hình ảnh nhanh gọn và điêu luyện như một nhà sáng tạo
+                            nội
+                            dung chuyên nghiệp dù bạn là ai​. Những khoảnh khắc đáng nhớ,
+                            những thước phim thường nhật sẽ được khắc họa sống động bằng việc thay đổi bố cục và làm đầy
+                            phong
+                            cảnh còn thiếu, di chuyển và thay đổi kích thước chủ thể cho đến việc xóa hình ảnh phản
+                            chiếu,
+                            tất
+                            cả chỉ diễn ra trong tích tắc với Galaxy AI​​​​</p>
+                    </div>
+
+                    <img class="Flip-feature-one-banner w-100 "
+                        src="~/Content/s24/img/sang tao swiper.png?@DateTime.Now" alt="hình ảnh banner">
+                </div>
+
+                <div class="swiper-slide product-information-detail gap-12px">
+                    <div class="flex-column-center-start detail-s24-text">
+                        <h1 class="product-information-h1">Cảm hứng bất tận từ huyền thoại ​Camera Zoom Mắt thần bóng
+                            đêm​​
+                        </h1>
+                        <p class="product-information-p">Sở hữu bộ sưu tập ảnh chụp đêm rực nét​ với kích thước điểm ảnh
+                            lớn
+                            hơn
+                            1.6 lần và biên độ dao động OIS
+                            lớn hơn cho chất lượng hình ảnh và video sáng rõ hơn đến 60% và ổn định hơn đến 40%.​​ Chụp
+                            chân
+                            dung đêm ấn tượng ấn tượng hơn nữa với ​
+                            AI đo chiều sâu các lớp ảnh và xử lý tín hiệu chuyên dụng Night Solution, biến những bức ảnh
+                            thành
+                            “kiệt tác” nghệ thuật.​​​​​</p>
+
+                    </div>
+                    <img class="Flip-feature-one-banner w-100 " src="~/Content/s24/img/camera swiper.png?@DateTime.Now"
+                        alt="hình ảnh banner">
+                </div>
+
+                <div class="swiper-slide product-information-detail gap-12px">
+                    <div class="flex-column-center-start detail-s24-text">
+                        <h1 class="product-information-h1">Chiến game đỉnh cao với bộ vi xử lý mạnh nhất từng có trên
+                            Galaxy​​
+                        </h1>
+                        <p class="product-information-p">Trên siêu phẩm Galaxy S24 Ultra, Vi xử lý Snapdragon® 8 Gen 3
+                            for
+                            Galaxy sát cánh cùng các chiến thần dẫn đầu và phá đảo mọi tựa game. Với mong muốn liên tục
+                            cải
+                            tiến
+                            trải nghiệm người dùng, tản nhiệt buồng hơi được nâng cấp lớn hơn lên đến 1.9 lần cho trải
+                            nghiệm
+                            giải trí liền mạch, hiệu năng tuyệt đỉnh cân mọi trận game chẳng ngại nóng máy. ​​</p>
+
+                    </div>
+                    <img class="Flip-feature-one-banner w-100 " src="~/Content/s24/img/game swiper.png?@DateTime.Now"
+                        alt="hình ảnh banner">
+                </div>
+
+                <div class="swiper-slide product-information-detail gap-12px">
+                    <div class="flex-column-center-start detail-s24-text">
+                        <h1 class="product-information-h1">Câu chuyện của sắc màu – Kho báu từ thiên nhiên​​​
+                        </h1>
+                        <p class="product-information-p">Galaxy S24 Series tiếp tục hành trình chinh phục người dùng với
+                            bộ
+                            sưu
+                            tập đa sắc màu và thiết kế ấn tượng, được truyền cảm hứng từ khoáng sản quý giá và vật liệu
+                            bền
+                            bỉ
+                            với thời gian.​​</p>
+                    </div>
+
+                    <img class="Flip-feature-one-banner w-100 "
+                        src="~/Content/s24/img/all color swiper.png?@DateTime.Now" alt="hình ảnh banner">
+                </div>
+            </div>
+            <button class="start_css swiper-button-prev" type="button" onclick="plusDivs_accessory(-1)" tabindex="0"
+                aria-label="Previous slide" aria-controls="product-container-compare">
+                <svg class="start_css" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"
+                    fill="none">
+                    <rect width="50" height="50" rx="25" fill="white"></rect>
+                    <path d="M31 13L19 25L31 37" stroke="#EE3215" stroke-width="3"></path>
+                </svg>
+            </button>
+            <button class="start_css swiper-button-next" type="button" onclick="plusDivs_accessory(1)" tabindex="0"
+                aria-label="Next slide" aria-controls="product-container">
+                <svg class="start_css" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"
+                    fill="none">
+                    <rect width="50" height="50" rx="25" fill="white"></rect>
+                    <path d="M19 37L31 25L19 13" stroke="#EE3215" stroke-width="3"></path>
+                </svg>
+
+            </button>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <section class=" feature-minigame d-flex-start section-rules gap-20px">
+        <div class="content-rules box-shadow position-relative w-100">
+            <div class="item-text">
+                <!-- Phần nội dung được hiển thị ban đầu -->
+                <div class="content-initial">
+                    <p><b>ĐẶT TRƯỚC SAMSUNG GALAXY S24 SERIES</b></p>
+                    <p><b>Thời gian đặt trước: 18/01/2024 - 27/01/2024</b></p>
+                    <p><b>- Cọc:</b> 1.000.000 đ/máy</p>
+                    <p><b>- Trả hàng sớm : </b>19:00 ngày 27/01/2024</p>
+                    <p><b>- Màu sắc : </b>Đen , Xám , Tím , Vàng</p>
+                    <p><b>- Ưu đãi :</b> </p>
+                    <p> + Thu cũ lên đời trợ giá tới 5.000.000đ</p>
+                    <p> + Hoặc giảm tới 3.000.000đ + 1.000.000đ qua QRcode</p>
+                    <p> + Ưu đãi 1 Năm Samsung care+</p>
+                    <p> + Tặng ốp lưng chính hãng</p>
+                    <p> + Hỗ trợ trả góp 0%</p>
+                </div>
+
+            </div>
+            @* <div class="bgd-overlay wrap-btn">
+            <button class="btn-more" id="showMoreBtn">
+            Xem thêm
+            </button>
+            </div> *@
+        </div>
+        <div class="col-lg-8 w-49 ">
+            <div class="card">
+                <div class="card-header p-3">
+                    <h4 class="card-title d-none" id="totalRegistrations"></h4>
+                    <h4 class="card-title" id="totalAll"></h4>
+                    <div class="frm-search">
+                        <input class="form-control desktop-only searchPhoneCustomer" type="search" id="searchInput"
+                            name="search" placeholder="Nhập số điện thoại để tìm kiếm"
+                            style="padding: 3px 12px 3px 12px;">
+                    </div>
+                </div>
+                <div class="card-body p-3">
+                    <div class="table-responsive">
+                        <table class="table table-striped mb-0">
+
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Tiêu đề</th>
+                                    <th>Số điện thoại</th>
+                                    <th>Trạng thái</th>
+                                </tr>
+                            </thead>
+                            <tbody id="registrationTableBody"></tbody>
+                        </table>
+                        <div class="bgd-overlay wrap-btn">
+                            <button class="btn-more" id="showlist">
+                                Xem thêm
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+<div class="popup-modal popup-show-list-customer myModal3" id="popup-btn-list" role="dialog">
+    <div class="popup-overlay js--close-modal"></div>
+    <div class="popup-modal-dialog">
+        <div class="popup-main p-0">
+            <div class="w-100" style="">
+                <div class="card">
+                    <div class="card-header p-3  ">
+                        <h4 class="card-title d-none" id="totalRegistrations-model"></h4>
+                        <h4 class="card-title" id="totalAll-model"></h4>
+                        <div class="frm-search">
+                            <input class="form-control desktop-only searchPhoneCustomer" type="search"
+                                id="searchInput-model" name="search" placeholder="Nhập số điện thoại để tìm kiếm"
+                                style="padding: 3px 12px 3px 12px;">
+                        </div>
+                        <a class="popup-btn-close-list js--close-modal"><svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                                y="0px" width="20" height="30" viewBox="0 0 48 48">
+                                <path
+                                    d="M 11.480469 5.0058594 C 10.500482 5.0058442 9.521297 5.3771405 8.7792969 6.1191406 L 6.1191406 8.7792969 C 4.6346201 10.26247 4.6351404 12.69764 6.1191406 14.181641 L 15.9375 24 L 6.1191406 33.818359 C 4.6346201 35.301533 4.6351404 37.736703 6.1191406 39.220703 L 8.7792969 41.880859 C 10.26247 43.36538 12.69764 43.36486 14.181641 41.880859 L 24 32.0625 L 33.818359 41.880859 C 35.301533 43.36538 37.736703 43.36486 39.220703 41.880859 L 41.880859 39.220703 C 43.36538 37.73753 43.36486 35.30236 41.880859 33.818359 L 32.0625 24 L 41.880859 14.181641 C 43.36538 12.698467 43.36486 10.263297 41.880859 8.7792969 L 39.220703 6.1191406 C 37.73753 4.6346201 35.30236 4.6351404 33.818359 6.1191406 L 24 15.9375 L 14.181641 6.1191406 C 13.440054 5.3768804 12.460456 5.0058746 11.480469 5.0058594 z M 11.480469 6.9921875 C 11.944232 6.9921723 12.408165 7.1734634 12.767578 7.5332031 L 23.292969 18.058594 A 1.0001 1.0001 0 0 0 24.707031 18.058594 L 35.232422 7.5332031 C 35.952422 6.8132033 37.087814 6.8137237 37.806641 7.5332031 L 40.466797 10.193359 C 41.186797 10.913359 41.186276 12.048752 40.466797 12.767578 L 29.941406 23.292969 A 1.0001 1.0001 0 0 0 29.941406 24.707031 L 40.466797 35.232422 C 41.186797 35.952422 41.186276 37.087814 40.466797 37.806641 L 37.806641 40.466797 C 37.086641 41.186797 35.951248 41.186276 35.232422 40.466797 L 24.707031 29.941406 A 1.0001 1.0001 0 0 0 23.292969 29.941406 L 12.767578 40.466797 C 12.047578 41.186797 10.912186 41.186276 10.193359 40.466797 L 7.5332031 37.806641 C 6.8132033 37.086641 6.8137237 35.951248 7.5332031 35.232422 L 18.058594 24.707031 A 1.0001 1.0001 0 0 0 18.058594 23.292969 L 7.5332031 12.767578 C 6.8132033 12.047578 6.8137237 10.912186 7.5332031 10.193359 L 10.193359 7.5332031 C 10.553359 7.1732032 11.016706 6.9922027 11.480469 6.9921875 z"
+                                    fill="white">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="card-body p-3" style="max-height: 450px;overflow-y: auto;">
+                        <div class="table-responsive">
+                            <table class="table table-striped mb-0">
+
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Tiêu đề</th>
+                                        <th>Số điện thoại</th>
+                                        <th>Trạng thái</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="registrationTableBody-model"></tbody>
+                            </table>
+
+
+                        </div>
+                    </div>
+                    <div class="bgd-overlay wrap-btn" style="text-align: center;margin-bottom: 10px;">
+                        <button class="btn-more" id="loadMoreButton-model">
+                            Xem thêm
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="text" class="d-none" id="searchInput-total">
+
+
+@section scripts {
+
+<script>
+    $(document).ready(function () {
+        $('#showlist').click(function () {
+            $('#popup-btn-list').css('display', 'block');
+            $('body').addClass('no-scroll-body');
+        });
+
+        $('.popup-btn-close-list').click(function () {
+            $('#popup-btn-list').css('display', 'none');
+            $('body').removeClass('no-scroll-body');
+        });
+    });
+
+</script>
+<script type="text/javascript">
+    let displayedItems = 5; // Number of items to display initially
+    let ItemData = 6; // Number of items to display initially
+    const itemsPerLoad = 5; // Number of items to load on each "Load More" click
+
+    async function fetchData() {
+        try {
+            const response = await $.post('/Ajax/OrderTable', { id: '4037,4038,4039,4080,4079,4078,4075' });
+            // Note: Assuming the response is already in JSON format, no need for response.json()
+            return response;
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
+
+    async function displayData() {
+        const data = await fetchData();
+        const tableBody = document.getElementById('registrationTableBody');
+        const totalRegistrations = document.getElementById('totalRegistrations');
+        const searchInput = document.getElementById('searchInput');
+
+        let html = '';
+        let count = 0;
+
+        data.slice(0, ItemData).reverse().forEach((entry, index) => {
+            const { Title, Phone, Note } = entry;
+
+            if (Phone.toLowerCase().includes(searchInput.value.toLowerCase())) {
+                count++;
+
+                const reversedIndex = data.length - index;
+
+                html += `<tr>
+                <td>${reversedIndex}</td>
+                <td>${Title}</td>
+                <td>${Phone}</td>
+                <td> <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" fill="green" class="bi bi-check-circle" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm-.47 11.97a.98.98 0 0 0 1.41 0l3.53-3.53a.98.98 0 1 0-1.41-1.41L7 10.58l-2.12-2.12a.98.98 0 1 0-1.41 1.41l3.53 3.53z"/></svg> Đã đăng ký</td>
+                </tr>`;
+            }
+        });
+
+        tableBody.innerHTML = html;
+        totalRegistrations.textContent = `Danh sách ${count} khách đăng ký `;
+    }
+
+    async function displayData_model() {
+        const data = await fetchData();
+        const tableBody_model = document.getElementById('registrationTableBody-model');
+        const totalRegistrations_model = document.getElementById('totalRegistrations-model');
+        const searchInput_model = document.getElementById('searchInput-model');
+
+        let html_model = '';
+        let count_model = 0;
+
+        data.slice(0, displayedItems).reverse().forEach((entry, index) => {
+            const { Title, Phone, Note } = entry;
+
+            if (Phone.toLowerCase().includes(searchInput_model.value.toLowerCase())) {
+                count_model++;
+
+                const reversedIndexModel = data.length - index;
+
+                html_model += `<tr class="ask-content-data">
+                                <td>${reversedIndexModel}</td>
+                                <td>${Title}</td>
+                                <td>${Phone}</td>
+                                <td> <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" fill="green" class="bi bi-check-circle" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm-.47 11.97a.98.98 0 0 0 1.41 0l3.53-3.53a.98.98 0 1 0-1.41-1.41L7 10.58l-2.12-2.12a.98.98 0 1 0-1.41 1.41l3.53 3.53z"/></svg> Đã đăng ký</td>
+                            </tr>`;
+            }
+        });
+
+        tableBody_model.innerHTML = html_model;
+        totalRegistrations_model.textContent = `Danh sách ${count_model} khách đăng ký `;
+    }
+
+    async function totalcoune() {
+        const data = await fetchData();
+        const totalAll = document.getElementById('totalAll');
+        const totalAll_model = document.getElementById('totalAll-model');
+        const searchInput_total = document.getElementById('searchInput-total');
+
+        let count = 0;
+        data.forEach((entry, index) => {
+            const { Phone } = entry;
+
+            if (Phone.toLowerCase().includes(searchInput_total.value.toLowerCase())) {
+                count++;
+            }
+        });
+
+        totalAll.textContent = `Danh sách ${count} khách đăng ký `;
+        totalAll_model.textContent = `Danh sách ${count} khách đăng ký `;
+    }
+
+    function loadMore() {
+        displayedItems += itemsPerLoad;
+        displayData_model();
+    }
+
+    function viewAll() {
+        displayedItems = Number.MAX_SAFE_INTEGER;
+        displayData_model();
+    }
+
+    window.onload = () => {
+        displayData();
+        totalcoune();
+
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', displayData);
+
+        displayData_model();
+
+        const searchInput_model = document.getElementById('searchInput-model');
+        searchInput_model.addEventListener('input', viewAll);
+
+        const loadMoreButton_model = document.getElementById('loadMoreButton-model');
+        loadMoreButton_model.addEventListener('click', loadMore);
+
+        const showlist_model = document.getElementById('showlist');
+        showlist_model.addEventListener('click', loadMore);
+    };
+
+
+</script>
+
+    <script src="~/Content/s24/js/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            zoom: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        @* autoplay: {
+        delay: 10000, // Thời gian chờ giữa các slide (miligiây)
+        disableOnInteraction: false, // Tự động dừng khi người dùng tương tác với slider
+        }, *@
+                                                                                                                                                    });
+
+
+    </script>
+<script>
+$(document).ready(function () {
+    function toggleVisibility(targetClass, targetDivId) {
+        var targetDiv = $(targetDivId);
+
+        // Check if the targetDiv is currently set to display: flex
+        var isFlexDisplay = targetDiv.css('display') === 'flex';
+
+        // If it's not already displayed as flex, then toggle the visibility
+        if (!isFlexDisplay) {
+            // Hide all elements with the targetClass
+            $(targetClass).hide();
+
+            // Show and set display to 'flex' for the targetDiv
+            targetDiv.show().css('display', 'flex');
+        }
+    }
+
+    $('.toggle').click(function () {
+        toggleVisibility('.hidden-div', $(this).data('target'));
+    });
+});
+
+
+</script>
+<script>
+    $(document).ready(function () {
+        function toggleVisibility(targetClass, targetDivId) {
+            var targetDiv = $(targetDivId);
+
+            // Kiểm tra xem phần tử đang được hiển thị hay không
+            if (targetDiv.is(':visible')) {
+                // Nếu đang hiển thị, bạn có thể thực hiện một hành động khác ở đây
+                console.log('Đang hiển thị, không ẩn');
+            } else {
+                // Nếu không hiển thị, ẩn tất cả và hiển thị div tương ứng
+                $(targetClass).not(targetDivId).hide();
+                targetDiv.show();
+            }
+        }
+
+
+        $('.s24').click(function () {
+            toggleVisibility('.s24-div', $(this).data('target'));
+        });
+
+        $('.s24-512GB').click(function () {
+            toggleVisibility('.s24-512GB-div', $(this).data('target'));
+        });
+
+        $('.s24-plus').click(function () {
+            toggleVisibility('.s24-plus-div', $(this).data('target'));
+        })
+
+        $('.s24-plus-512GB').click(function () {
+            toggleVisibility('.s24-plus-512GB-div', $(this).data('target'));
+        });
+
+        $('.s24-utra').click(function () {
+            toggleVisibility('.s24-utra-div', $(this).data('target'));
+        });
+
+        $('.s24-utra-512GB').click(function () {
+            toggleVisibility('.s24-utra-512GB-div', $(this).data('target'));
+        });
+
+        $('.s24-utra-1TB').click(function () {
+            toggleVisibility('.s24-utra-1TB-div', $(this).data('target'));
+        });
+    });
+
+
+</script>
+<script>
+    var target_date = new Date('2024-01-27T19:00:00').getTime(); // set the countdown date
+    var days, hours, minutes, seconds; // variables for time units
+
+    var countdown = document.getElementById("tiles"); // get tag element
+
+    getCountdown();
+
+    setInterval(function () { getCountdown(); }, 1000);
+
+    function getCountdown() {
+
+        // find the amount of "seconds" between now and target
+        var current_date = new Date().getTime();
+        var seconds_left = (target_date - current_date) / 1000;
+
+        days = pad(parseInt(seconds_left / 86400));
+        seconds_left = seconds_left % 86400;
+
+        hours = pad(parseInt(seconds_left / 3600));
+        seconds_left = seconds_left % 3600;
+
+        minutes = pad(parseInt(seconds_left / 60));
+        seconds = pad(parseInt(seconds_left % 60));
+
+        // format countdown string + set tag value
+        countdown.innerHTML = "<div> <span>" + days + "</span> <p>Ngày</p> </div> <div> <span>" + hours + "</span> <p>Giờ</p> </div> <div> <span>" + minutes + "</span> <p>Phút</p> </div> <div> <span>" + seconds + "</span> <p>Giây</p> </div> ";
+    }
+
+    function pad(n) {
+        return (n < 10 ? '0' : '') + n;
+    }
+
+
+</script>
+
+@* <script>
+document.addEventListener("DOMContentLoaded", function () {
+var header = document.getElementById("sticky-header");
+var div = document.getElementById("fixed-div");
+
+window.addEventListener("scroll", function () {
+var scrollPosition = window.scrollY;
+
+// Add or remove CSS class based on scroll position
+if (scrollPosition > 0) {
+header.classList.add("fixed");
+} else {
+header.classList.remove("fixed");
+}
+});
+});
+
+</script> *@
+}

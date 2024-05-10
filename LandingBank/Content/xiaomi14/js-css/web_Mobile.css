@@ -1,0 +1,738 @@
+.grid-gap15 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.div-1 .content-text {
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    /* width: 90%; */
+    align-items: start;
+    text-align: center;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@media (max-width: 500px) {
+
+    .div-1 .content-text {
+        gap: 1rem;
+    }
+}
+
+.div-2 .item1-div2 .content-text {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+@media (max-width: 500px) {
+
+    .div-2 .item1-div2 .content-text {
+        gap: 0.5rem;
+    }
+}
+
+.div-2 .item2-div2 .content-text {
+    position: absolute;
+    bottom: 10%;
+    /* width: 100%; */
+    left: 8%;
+    align-items: center;
+    text-align: start;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.div-3 .item1-div3 .content-text {
+    position: absolute;
+    top: 25%;
+    left: 8%;
+    /* width: 100%; */
+    align-items: start;
+    text-align: center;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem
+}
+
+@media (max-width: 640px) {
+
+    .div-3 .item1-div3 .content-text {
+        left: 10%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .div-3 .item1-div3 .content-text {
+        gap: 1rem;
+    }
+}
+
+.div-3 .item1-div3-two .detail1-item-div3 .content-text {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem
+}
+@media (max-width: 640px) {
+
+    .div-3 .item1-div3-two .detail1-item-div3 .content-text {
+        gap: 1rem;
+    }
+}
+
+.div-3 .item1-div3-two .detail2-item-div3 .content-text {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem
+}
+
+@media (max-width: 500px) {
+
+    .div-3 .item1-div3-two .detail2-item-div3 .content-text {
+        gap: 0.5rem
+    }
+}
+
+.content-text.sec-1 .title {
+    color: #fff;
+    font-size: 30px;
+    text-align: start;
+    font-weight: 700;
+    display: inline-block;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+    width: 100%;
+}
+
+
+@media (max-width: 640px) {
+
+    .content-text.sec-1 .title {
+        font-size: 1.4rem;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .content-text.sec-1 .title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .content-text.sec-1 .title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .content-text.sec-1 .title {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+.content-text.sec-1 .des-title {
+    color: #fff;
+    font-size: 18px;
+    text-align: start;
+    font-weight: 300;
+    display: inline-block;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+    width: 100%;
+}
+
+@media (max-width: 640px) {
+
+    .content-text.sec-1 .des-title {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .content-text.sec-1 .des-title {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .content-text.sec-1 .des-title {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .content-text.sec-1 .des-title {
+        font-size: 13px;
+    }
+}
+
+
+
+.div-4 .content-text .title {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+    display: inline-block;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-4 .content-text .des-title {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 2rem;
+    font-weight: 300;
+    display: inline-block;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+
+
+.div-4 .content-text .detail-title {
+    margin: 20px 0px 70px 0;
+    padding: 0;
+    color: black;
+    font-size: 1.2rem;
+    opacity: .6;
+    font-weight: 300;
+    display: inline-block;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+
+@media (max-width: 550px) {
+
+    .div-4 .content-text .detail-title {
+        font-size: 13px;
+    }
+    
+}
+
+.div-5{
+    background: #ffffffeb;
+    padding: 20px 0;
+}
+
+
+.div-5 .div-5-text {
+    /* position: absolute;
+    top: 4%;
+    left: 5%; */
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 28px);
+}
+
+.div-5 .content-text .title {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 2rem;
+    text-align: start;
+    font-weight: 700;
+    display: inline-block;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-5 .content-text .des-title {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 2rem;
+    text-align: start;
+    font-weight: 300;
+    display: inline-block;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-5-text-detail.box1 {
+    position: absolute;
+    top: 15.5%;
+    left: 2%;
+}
+
+.div-5-text-detail.box2 {
+    position: absolute;
+    top: 45%;
+    left: 2%;
+}
+
+.div-5-text-detail.box3 {
+    position: absolute;
+    top: 48%;
+    left: 2%;
+}
+
+.div-5-text-detail .title {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 1.5rem;
+    text-align: start;
+    font-weight: 700;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+
+
+.div-5-text-detail .des-title {
+    /* margin: 20px 0px 70px 0; */
+    padding: 0;
+    color: black;
+    font-size: 1rem;
+    opacity: 0.8;
+    text-align: start;
+    font-weight: 300;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+
+
+.div-6-text .title-red {
+    margin: 0;
+    padding: 0;
+    color: #e10019;
+    font-size: 2rem;
+    text-align: start;
+    font-weight: 700;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-6-text .title {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 2rem;
+    text-align: start;
+    font-weight: 700;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-6-text .des-title {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 2rem;
+    text-align: start;
+    font-weight: 300;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-6-text .detail-title {
+    margin: 20px 0px 70px 0;
+    padding: 0;
+    color: black;
+    font-size: 1.2rem;
+    opacity: .6;
+    text-align: start;
+    font-weight: 300;
+    z-index: 1;
+    font-family: 'Xiaomi Brand', sans-serif;
+}
+.div-7{
+    padding: 50px 0;
+}
+.div-7-text{
+    width: 90%;gap: 50px;top: 0;
+}
+
+.div-7-text .justify-content-between{
+    gap: 20px;
+}
+
+
+.div-7-text .title {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 2rem;
+    text-align: start;
+    font-weight: 300;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-7-text .detail-title {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 1.4rem;
+    text-align: start;
+    font-weight: 700;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-8-text .title {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 2rem;
+    text-align: start;
+    font-weight: 700;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-8-text .des-title {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 2rem;
+    text-align: start;
+    font-weight: 300;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-8-text .detail-title {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 18px;
+    opacity: .6;
+    text-align: start;
+    font-weight: 300;
+    z-index: 1;
+    font-family: 'Xiaomi Brand', sans-serif;
+}
+
+
+
+.div-8-text {
+    position: absolute;
+    top: 3%;
+    width: 97%;
+    left: 2%;
+}
+
+    .div-8-text .title-item {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-size: 37px;
+        text-align: start;
+        font-weight: 700;
+        z-index: 1;
+        font-family: 'Xiaomi Brand', sans-serif;
+    }
+
+
+    .div-8-text .des-title-item {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-size: 19px;
+        opacity: .6;
+        text-align: start;
+        font-weight: 300;
+        z-index: 1;
+        font-family: 'Xiaomi Brand', sans-serif;
+    }
+
+.div-9-text {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    left: 5%;
+    /* height: 100%; */
+}
+
+.div-9-text div div {
+    gap: 10px;
+}
+@media (max-width: 400px) {
+    .div-9-text {
+        top: 5%;
+    }
+    .div-9-text div div {
+        gap: 5px;
+    }
+}
+
+
+
+    .div-9-text .des-title {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-size: 19px;
+        opacity: .6;
+        text-align: start;
+        font-weight: 300;
+        z-index: 1;
+        font-family: 'Xiaomi Brand', sans-serif;
+    }
+
+    .div-9-text .title-item {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-size: 19px;
+        text-align: start;
+        font-weight: 700;
+        z-index: 1;
+        font-family: 'Xiaomi Brand', sans-serif;
+    }
+
+    .div-9-text .des-title-item {
+        margin: 0;
+        padding: 0;
+        -webkit-text-fill-color: transparent;
+        background: linear-gradient(0deg, #a3cec6, #215542);
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-repeat: no-repeat;
+        background-size: 150% 150%;
+        color: #fff;
+        font-size: 2rem;
+        text-align: start;
+        font-weight: 700;
+        z-index: 1;
+        font-family: 'Xiaomi Brand', sans-serif;
+    }
+
+
+    .div-9-text .detail-title-item {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-size: 1.2rem;
+        opacity: .4;
+        text-align: start;
+        font-weight: 300;
+        z-index: 1;
+        font-family: 'Xiaomi Brand', sans-serif;
+    }
+
+.div-10 img {
+    max-width: 251px;
+    margin-left: 40px;
+}
+.div-10-text{
+    padding: 20px 0;
+}
+
+.div-10-text .title {
+    margin: 0;
+    padding: 0;
+    color: #5f9b8a;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 700;
+    z-index: 1;
+    font-family: 'Xiaomi Brand', sans-serif;
+}
+
+.div-10-text .des-title {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 700;
+    z-index: 1;
+    font-family: 'Xiaomi Brand', sans-serif;
+}
+
+
+.div-11-text .title {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 2rem;
+    text-align: start;
+    font-weight: 700;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-11-text .des-title {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 2rem;
+    text-align: start;
+    font-weight: 300;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-11-text .detail-title {
+    margin: 00;
+    padding: 0;
+    color: #000;
+    font-size: 18px;
+    opacity: .6;
+    text-align: start;
+    font-weight: 300;
+    z-index: 1;
+    font-family: 'Xiaomi Brand', sans-serif;
+}
+
+.div-11-text {
+    /* position: absolute; */
+    top: 5%;
+    width: 100%;
+}
+
+.div-12-text {
+    width: 100%;
+}
+
+.div-12-item1 {
+    width: 100%;
+}
+
+.div-12-item2-children{
+    width: 100%;
+    gap: 5px;
+}
+
+    .div-12-item2 .div-12-item2-children {
+        width: 23%;
+        gap: 15px;
+    }
+
+.div-12-text .title, .div-12-text .des-title,
+.div-12-text .des-title-item, .div-12-text .title-item, .div-12-text .detail-title-item, .div-13-text .detail-title-item {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    z-index: 1;
+    text-align: start;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-12-text .title {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.div-12-text .des-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.div-12-text .title-item {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.div-12-text .des-title-item {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.div-12-text .detail-title-item, .div-13-text .detail-title-item {
+    font-size: 19px;
+    font-weight: 400;
+    opacity: .6;
+}
+
+.div-13-text {
+    padding: 50px;
+}
+.img-icon{
+    max-width: 45px !important;
+}
+
+.img-ngang1 , .img-ngang2{
+    width: 64% !important;
+}
+.img-ngang3{
+    width: 75% !important;
+}
+
+@media (max-width: 550px) {
+
+    .div-5-text-detail .title {
+        font-size: 19px;
+    }
+    .div-5-text-detail .des-title {
+        /* margin: 20px 0px 70px 0; */
+        font-size: 13px;
+    }
+    .div-5-text-detail.box1{
+        top: 13.5%;
+    }
+    .img-ngang1, .img-ngang2{
+        width: 65% !important;
+    }
+    .img-ngang3{
+        width: 76% !important;
+    }
+    .div-5-text-detail.box3{
+        top: 49%;
+    }
+    .div-5 .content-text .title, .div-5 .content-text .des-title, .div-6-text .title ,
+     .div-6-text .des-title, .div-7-text .title,
+      .div-8-text .title, .div-8-text .des-title,
+      .div-10-text .des-title, .div-11-text .title, .div-11-text .des-title, .div-12-text .title-item , .div-6-text .title-red ,
+      .div-4 .content-text .title , .div-4 .content-text .des-title {
+        font-size: 1.6rem;
+    }
+    .div-8-text .title-item , .div-12-text .des-title-item , .div-9-text .title-item , .div-9-text .des-title-item{
+        font-size: 1.4rem;
+    }
+    .div-8-text .detail-title, .div-11-text .detail-title, 
+    .div-12-text .detail-title-item, .div-13-text .detail-title-item, 
+    .div-9-text .detail-title-item, .div-6-text .detail-title{
+        margin: 0;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 470px) { 
+    .div-5-text-detail.box3 {
+        top: 45%;
+    }
+}

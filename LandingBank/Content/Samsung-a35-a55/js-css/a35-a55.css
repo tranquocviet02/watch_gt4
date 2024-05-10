@@ -1,0 +1,176 @@
+﻿
+@font-face {
+    font-family: InfinixDisplay;
+    src: url(../font/InfinixDisplay.otf) format("opentype");
+}
+
+@font-face {
+    font-family: InfinixDisplay-AR;
+    src: url(../font/InfinixDisplay_ar.otf) format("opentype")
+}
+
+@font-face {
+    font-family: InfinixDisplay-TH;
+    src: url(../font/InfinixDisplay_th.otf) format("opentype")
+}
+
+@font-face {
+    font-family: AktivGroteskEx-Bold;
+    font-weight: bold;
+    letter-spacing: 3px;
+    src: url(../font/AktivGroteskEx_Bd.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: AktivGroteskEx-Medium;
+    src: url(../font/AktivGroteskEx_Md.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: AktivGroteskEx-Regular;
+    src: url(../font/AktivGroteskEx_Rg.ttf) format("truetype")
+}
+
+
+.btn-cart {
+    width: 100%;
+    max-width: 540px;
+    /* height: 100%; */
+    text-align: center;
+    margin: 25px 0px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+    .btn-cart a {
+        width: 50%;
+        padding: 0.5rem 1rem;
+        font-size: 1.15625rem;
+        border-radius: 0.6rem;
+        background: transparent linear-gradient(180deg, #ff990e 0%, #ff6801 100%) 0% 0% no-repeat padding-box;
+        /*                    background: var(--green-green-1, #009981);*/
+        color: var(--white-white-1, #FFF);
+        font-feature-settings: 'clig' off, 'liga' off;
+        /* H7/Semibold (13) */
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        box-shadow: 0 4px 6px #00000029;
+        border-radius: 5px;
+        border: none;
+    }
+
+        .btn-cart a:hover {
+            background: transparent linear-gradient(0deg, #ff990e 0%, #ff6801 100%) 0% 0% no-repeat padding-box;
+        }
+
+.max-w-1200px {
+    max-width: 1200px;
+}
+
+.max-w-387px {
+    max-width: 387px;
+}
+
+.max-w-500px {
+    max-width: 500px;
+}
+
+.max-w-282px {
+    max-width: 282px;
+}
+
+.max-w-791px {
+    max-width: 791px;
+}
+
+.max-w-224px {
+    max-width: 224px;
+}
+
+.button-slide {
+    border: 2px solid;
+    border-radius: 21px;
+}
+
+.background-four {
+    background: url('/Content/Oppon3/img_n3_Flip/background.png'), lightgray 0px -260.853px / 100% 133.402% no-repeat;
+    background-size: cover; /* Tùy chỉnh kích thước hình ảnh */
+    background-position: center; /* Đặt vị trí hình ảnh */
+    background-repeat: no-repeat; /* Ngăn lặp lại hình ảnh */
+}
+
+.oppo-n3-Default .background-add {
+    background: #020304;
+}
+
+.background-n-3-white {
+    background: var(--n-3-white, #FFF);
+}
+
+.color-n-3-black {
+    color: var(--n-3-black, #000) !important;
+}
+
+.color-n-3-white {
+    color: var(--n-3-white, #fff) !important;
+}
+
+.s-18 {
+    font-size: 1.8rem;
+}
+
+
+.div-banner {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-add {
+    display: flex;
+    padding: 7px 21px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+}
+.btn-add-all {
+    display: flex;
+    padding: 7px 21px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+}
+
+.background-2CFF73 {
+    background: #2CFF73 !important;
+}
+
+.div-banner-item.active{
+    background: #2CFF73 !important;
+}
+.background-1D1D1F {
+    background: #1D1D1F;
+}
+
+.text-btn-add {
+    font-family: OPPO Sans 3.0 230625;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* 157.143% */
+    letter-spacing: 0.039px;
+    text-transform: capitalize;
+}
+
+.div-banner-item:hover,
+.div-banner-item.active {
+    box-shadow: inset 0 -2px 0px #2CFF73;
+    cursor: pointer;
+}

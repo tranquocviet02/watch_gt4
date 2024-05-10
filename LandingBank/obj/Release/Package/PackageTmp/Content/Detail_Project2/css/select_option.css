@@ -1,0 +1,103 @@
+
+.select-menu , .select-menu-detail{
+    width: 50%;
+}
+.select-menu .select-btn , .select-menu-detail .select-btn-detail{
+    cursor: pointer;
+    display: inline-flex;
+    padding: 8px 12px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    width: 100%;
+    padding: 8px 12px;
+    align-items: flex-start;
+    gap: 12px;
+    border-radius: 5px;
+    border: 1px solid var(--black-black-3, #C9C9C9);
+}
+
+.select-menu .select-btn span,.select-menu-detail .select-btn-detail span{
+    color: var(--black-black-1, #191919);
+    font-feature-settings: 'clig' off, 'liga' off;
+    
+    /* H7/Bold (13) */
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.select-menu.active .select-btn i{
+    transform: rotate(-180deg);
+}
+.select-menu .options , .select-menu-detail .options-detail{
+    position: absolute;
+    /* padding: 20px; */
+    margin-top: 4px;
+    width: 17%;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    display: none;
+    border-radius: 5px;
+    /* border: 1px solid var(--green-green-4, #DBF9EB); */
+    padding: 0px 5px 5px 5px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+
+}
+.select-menu.active .options , .select-menu-detail.active .options-detail{
+    display: block;
+}
+.options .option , .options-detail .option-detail{
+    display: flex;
+    padding: 6px 8px 6px 32px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    background: #FFF;
+}
+.options .option_province.active , .options-detail .option_district.active{
+    cursor: pointer;
+    display: flex;
+    padding: 6px 8px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 5px;
+background: var(--green-green-4, #DBF9EB);
+}
+.options .option:hover , .options-detail .option-detail:hover{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 5px;
+background: var(--green-green-4, #DBF9EB);
+}
+.options .option svg , .options-detail .option-detail svg{
+    display: none;
+}
+
+.options .option_province.active svg , .options-detail .option_district.active svg{
+    display: block;
+}
+.option i{
+    font-size: 25px;
+    margin-right: 12px;
+}
+.option .option-text , .options-detail .option-text-detail{
+    color: var(--black-black-1, #191919);
+    font-feature-settings: 'clig' off, 'liga' off;
+    
+    /* H7/Regular (13) */
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

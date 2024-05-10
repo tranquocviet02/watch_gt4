@@ -1,0 +1,386 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_layout_Mobile.cshtml";
+}
+
+@section meta {
+    <script src="https://hoanghamobile.com/Content/web/js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="~/Content/SamsungAI/css/bootstrap.min.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/SamsungAI/js-css/main.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/SamsungAI/js-css/web_Mobile.css">
+    <link rel="stylesheet" href="~/Content/SamsungAI/js-css/SamsungAI.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/SamsungAI/js-css/index.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/SamsungAI/css/swiper-bundle.min.css?@DateTime.Now" />
+    <style>
+        #popup-modal,
+        .jquery-modal,
+        #sticker-modal {
+            display: none !important;
+        }
+
+        body {
+            overflow: auto !important;
+        }
+
+        .footer-stick-right,
+        .footer-zalo {
+            z-index: 10;
+        }
+
+        .js--close-modal {
+            position: absolute;
+            right: -15px;
+            top: -15px;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            background: #575656;
+            box-shadow: 0 2px 10px #000;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .signup-container {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .no-scroll-body {
+            overflow: hidden !important;
+            position: relative;
+            height: 100%;
+        }
+
+        .video-content-2 {
+            width: 100%;
+            transition: transform 4s ease, rotate 4s ease;
+        }
+
+        .matrix {
+            transform: matrix(1, 0, 0, 1, 0, 0) !important;
+            opacity: 1 !important;
+        }
+    </style>
+
+}
+
+
+<main class="main-content background-white padding-bottom-50px">
+    <div class="Content-mb gap-40px">
+        <section class="section sec1 div1 flex-column-center gap-20px">
+            <img class="w-100" src="~/Content/SamsungAI/img/galaxyai_kv_mb.jpg?@DateTime.Now">
+            <div class="content-text gap-20px">
+                <div class="flex-column-center w-100">
+                    <h1 class="title">Kỉ nguyên công nghệ mới với Quyền năng Galaxy AI
+                        <sub><a href="#desc-section" title="Kỉ nguyên công nghệ mới với Quyền năng Galaxy AI" class="click_sup">1</a></sub>
+                    </h1>
+                    <h2 class="sub-title">
+                        Galaxy AI – mang đến trải nghiệm hoàn toàn mới và thay đổi cách mà bạn kết nối
+                        với thế giới, khai mở sự sáng tạo, nâng tầm hiệu suất công việc, và mở ra vô vàn tiềm năng.
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="section sec1 div2 flex-column-center gap-20px">
+            <div class="content-text gap-10px">
+                 <h2 class="detail-title">Khoanh tròn để tìm kiếm 
+                     <sub><a href="#desc-section" title="Khoanh tròn để tìm kiếm " class="click_sup">2</a></sub>
+                      </h2>
+                <h1 class="title">Chỉ cần khoanh tròn là tìm được thông tin. Thật dễ dàng!</h1>
+                <h3 class="sub-title">
+                    Một cách thức hoàn toàn mới để tìm kiếm thật dễ dàng và nhanh chóng - Khoanh tròn để tìm kiếm với
+                    Google.
+                    <br> Trong lúc lướt mạng xã hội yêu thích, hãy sử dụng bút S Pen hoặc ngón tay của bạn để khoanh
+                    tròn và nhận kết quả tức thì.
+                </h3>
+            </div>
+            <video class="video_self w-100 video-content-2 fade-video"
+                   src="~/Content/SamsungAI/video/galaxyai_kv_search_mb_video.mp4?@DateTime.Now"
+                   poster="~/Content/SamsungAI/img/galaxyai_kv_search_mb.jpg?@DateTime.Now"
+                   autoplay muted x5-video-player-fullscreen="true" playsinline controls loop fmp-c="0">
+            </video>
+
+            <div class="w-100 ">
+                <img class="img-text" src="~/Content/SamsungAI/img/galaxyai_kv_search_mb_text.jpg?@DateTime.Now">
+            </div>
+
+        </section>
+
+        <section class="section sec1 div3 w-100  gap-20px">
+            <div class="content-text w-100">
+                    <h2 class="detail-title">Phiên dịch trực tiếp
+                         <sub><a href="#desc-section" title="Phiên dịch trực tiếp" class="click_sup">3</a></sub>
+                     </h2>
+                    <h1 class="title">Phiên dịch trực tiếp cuộc gọi</h1>
+                    <h3 class="sub-title ">
+                        Cuộc gọi hội thoại được dịch trực tiếp trong lúc bạn đang trò chuyện – giúp phá vỡ mọi rào cản
+                        ngôn ngữ. Galaxy AI sẽ là trợ lý phiên dịch luôn đồng hành cũng bạn.
+                    </h3>
+                </div>
+            <div class="item-grid-two w-100">
+                <video class="video_self w-100"
+                       src="~/Content/SamsungAI/video/galaxyai_kv_translate_mb_video.mp4?@DateTime.Now"
+                       poster="~/Content/SamsungAI/img/galaxyai_kv_translate_mb.jpg?@DateTime.Now" 
+                       autoplay muted x5-video-player-fullscreen="true" playsinline controls loop fmp-c="0">
+                </video>
+            </div>
+        </section>
+
+        <section class="section sec1 div4 flex-column-center gap-20px">
+            <div class="content-text">
+                <h2 class="detail-title">Trợ lý Chỉnh ảnh chuyên nghiệp
+                    <sub><a href="#desc-section" title="Trợ lý Chỉnh ảnh chuyên nghiệp" class="click_sup">4</a></sub>
+                </h2>
+                <h1 class="title">Biến mọi ảnh chụp thành tuyệt tác với AI</h1>
+                <h3 class="sub-title">
+                    Ảnh chụp của bạn sẽ hoàn hảo hơn với Trợ lý Chỉnh ảnh chuyên nghiệp. Với sự trợ giúp từ Galaxy AI,
+                    việc chỉnh sửa ảnh như di chuyển vật thể, zoom gần hơn, căn chỉnh bố cục thật dễ dàng.
+                </h3>
+            </div>
+            <video class="video_self w-100" src="~/Content/SamsungAI/video/galaxyai_kv_photo_mb_video.mp4?@DateTime.Now"
+                   poster="~/Content/SamsungAI/img/galaxyai_kv_photo_mb.jpg?@DateTime.Now"
+                    autoplay muted x5-video-player-fullscreen="true" playsinline controls loop fmp-c="0">
+            </video>
+        </section>
+
+        <section class="section sec1 div5 flex-column-center gap-20px">
+            <div class="content-text">
+                <h2 class="detail-title">Trợ lý phiên dịch
+                    <sub><a href="#desc-section" title="Trợ lý phiên dịch" class="click_sup">5</a></sub>
+                </h2>
+                <h1 class="title">Phiên dịch mọi cuộc trò chuyện trong thời gian thực</h1>
+                <h3 class="sub-title">
+                    Cần một phiên dịch viên khi bạn đi ra ngoài? Với sự trợ giúp xủa Galaxy AI, tính năng Trợ lý phiên
+                    dịch giúp chuyển ngữ cuộc trò chuyện trực tiếp ngay trên điện thoại của bạn một cách dễ dàng. Giờ
+                    thì không rào cản ngôn ngữ nào có thể làm khó bạn.
+                </h3>
+            </div>
+            <video class="video_self w-100" src="~/Content/SamsungAI/video/galaxyai_kv_troly_mb_video.mp4?@DateTime.Now"
+                   poster="~/Content/SamsungAI/img/galaxyai_kv_troly_mb.jpg?@DateTime.Now" 
+                   autoplay muted x5-video-player-fullscreen="true" playsinline controls loop fmp-c="0">
+            </video>
+
+        </section>
+
+
+        <section class="section sec1 div6 flex-column-center background-black gap-20px">
+            <div class="content-text">
+                <h2 class="detail-title">Giữ cuộc trò chuyện liền mạch với Galaxy Buds
+                    <sub><a href="#desc-section" title="Phiên dịch trực tiếp" class="click_sup white-white-1">6</a></sub>
+                </h2>
+                <h1 class="title">Phiên dịch mọi cuộc trò chuyện trong thời gian thực</h1>
+                <h3 class="sub-title">
+                    Phiên dịch cuộc đối thoại trực tiếp thật dễ dàng với tính năng Trợ lý phiên dịch trên điện thoại
+                    Galaxy. Với sự trợ giúp của Galaxy Buds, bạn có thể trò chuyện thoải mái hơn, mà không cần phải
+                    chuyển điện thoại qua lại.
+                    Giờ đây trò chuyện đa ngôn ngữ thật dễ dàng!
+                </h3>
+            </div>
+            <img class="w-100" src="~/Content/SamsungAI/img/galaxyai_kv_face_mb.jpg?@DateTime.Now">
+        </section>
+
+
+        <section class="section sec1 div6 flex-column-center-start gap-20px">
+
+            <div class="flex-column-center w-100 section sec1">
+                <h1 class="title-banner">Quyền năng Galaxy AI đã có trên thiết bị của bạn </h1>
+            </div>
+            <div class="flex-column-center-start w-100 section sec1">
+                <div class="content-text align-items-start">
+                    <h1 class="title">Galaxy S Series</h1>
+                </div>
+                <div class="d-flex-start w-100 gap-20px overflow-auto padding-bottom-30px">
+                    <img class="w-40" src="~/Content/SamsungAI/img/galaxyai_kv_ai_line_up_mb-1.jpg?@DateTime.Now">
+                    <img class="w-40" src="~/Content/SamsungAI/img/galaxyai_kv_ai_line_up_mb-2.jpg?@DateTime.Now">
+                    <img class="w-40" src="~/Content/SamsungAI/img/galaxyai_kv_ai_line_up_mb-3.jpg?@DateTime.Now">
+                    <img class="w-40" src="~/Content/SamsungAI/img/galaxyai_kv_ai_line_up_mb-4.jpg?@DateTime.Now">
+                    <img class="w-40" src="~/Content/SamsungAI/img/galaxyai_kv_ai_line_up_mb-5.jpg?@DateTime.Now">
+                </div>
+            </div>
+
+            <div class="flex-column-center-start w-100 section sec1">
+                <div class="content-text align-items-start">
+                    <h1 class="title">Galaxy Z Series</h1>
+                </div>
+                @* <div class="d-flex-start w-100 gap-20px overflow-auto padding-bottom-30px">
+                    <img class="w-40" src="~/Content/SamsungAI/img/galaxyai_kv_ai_line_up_smart_mb-1.jpg?@DateTime.Now">
+                    <img class="w-40" src="~/Content/SamsungAI/img/galaxyai_kv_ai_line_up_smart_mb-2.jpg?@DateTime.Now">
+                    <img class="w-40" src="~/Content/SamsungAI/img/galaxyai_kv_ai_line_up_smart_mb-3.jpg?@DateTime.Now">
+                </div> *@
+                <div class="site-grid">
+                    <div class="item-grid-two">
+                        <img class="w-100"
+                             src="~/Content/SamsungAI/img/galaxyai_kv_ai_line_up_smart_mb-1.jpg?@DateTime.Now">
+                    </div>
+                    <div class="item-grid-two">
+                        <img class="w-100"
+                             src="~/Content/SamsungAI/img/galaxyai_kv_ai_line_up_smart_mb-2.jpg?@DateTime.Now">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-column-center-start w-100 section sec1">
+                <div class="content-text align-items-start">
+                    <h1 class="title">Tablets</h1>
+                </div>
+                <div class="d-flex-start w-100 gap-20px overflow-auto padding-bottom-30px">
+                    <img class="w-40" src="~/Content/SamsungAI/img/galaxyai_kv_ai_line_up_table_mb-1.jpg?@DateTime.Now">
+                    <img class="w-40" src="~/Content/SamsungAI/img/galaxyai_kv_ai_line_up_table_mb-2.jpg?@DateTime.Now">
+                    <img class="w-40" src="~/Content/SamsungAI/img/galaxyai_kv_ai_line_up_table_mb-3.jpg?@DateTime.Now">
+                </div>
+            </div>
+
+            <div class="flex-column-center-start w-100 section sec1">
+                <div class="content-text align-items-start">
+                    <h1 class="title">Galaxy Buds</h1>
+                </div>
+                <div class="d-flex-start w-100 gap-20px overflow-auto padding-bottom-30px">
+                    <img class="w-40" src="~/Content/SamsungAI/img/galaxyai_kv_ai_line_up_buds2pro_mb-1.jpg?@DateTime.Now">
+                    <img class="w-40" src="~/Content/SamsungAI/img/galaxyai_kv_ai_line_up_buds2pro_mb-2.jpg?@DateTime.Now">
+                    <img class="w-40" src="~/Content/SamsungAI/img/galaxyai_kv_ai_line_up_buds2pro_mb-3.jpg?@DateTime.Now">
+                </div>
+            </div>
+        </section>
+
+
+                <!-- ghi chú -->
+        <section class="section sec1">
+            <div class="content-text text-align-start"  id="desc-section">
+                <p class="item-title">1. *Cần phải đăng nhập tài khoản Samsung để sử dụng một số tính năng AI nhất
+                        định.
+                        <br> *Samsung không đưa ra bất kỳ lời hứa, đảm bảo hoặc cam kết nào về độ chính xác, đầy đủ hoặc
+                        độ tin cậy của đầu ra do các tính năng AI cung cấp.
+                        <br> *Hình ảnh mô phỏng cho mục đích minh họa. Trình tự được rút ngắn và mô phỏng. UI thực tế có
+                        thể khác.
+                        <br> *Tính năng Galaxy AI được cung cấp miễn phí đến cuối năm 2025 trên các thiết bị Samsung
+                        Galaxy được hỗ trợ. Các điều khoản khác có thể được áp dụng cho các tính năng AI do bên thứ ba
+                        cung cấp.
+                        <br> *Độ khả dụng của các tính năng thay đổi tùy theo thiết bị.
+                        <br> *Các tính năng AI không được hỗ trợ trên Tab S9FE/+.
+                        <br> *Galaxy AI trên Galaxy S23 series, Galaxy Z Flip5, Fold 5 và Tab S9 | S9+ | S9 Ultra khả
+                        dụng từ One UI 6.1 trở lên.
+                    </p>
+
+                    <p class="item-title" >
+                    2. *Trình tự được rút gọn và mang tính chất mô phỏng. Kết quả chỉ nhằm mục đích minh họa. Kết quả có
+                    thể khác nhau tùy thuộc vào kết quả phù hợp trực quan. Yêu cầu kết nối internet. Người dùng có thể
+                    cần cập nhật Android lên phiên bản mới nhất. Chức năng của sản phẩm có thể phụ thuộc vào cài đặt ứng
+                    dụng và thiết bị. Một số chức năng có thể không tương thích với một số ứng dụng nhất định. Tính khả
+                    dụng của dịch vụ thay đổi theo quốc gia và ngôn ngữ. Độ chính xác của kết quả không được đảm bảo.
+                    <br> *Độ khả dụng của các tính năng thay đổi tùy theo thiết bị.
+                    <br> *Hình ảnh mô phỏng cho mục đích minh họa. UI thực tế có thể khác.
+                    </p>
+
+                    <p class="item-title " >
+                        3. *Phiên dịch trực tiếp yêu cầu kết nối mạng và đăng nhập Tài khoản Samsung. Live Translate chỉ
+                        khả dụng trên ứng dụng Samsung Phone được cài đặt sẵn. Một số ngôn ngữ có thể yêu cầu tải xuống
+                        gói ngôn ngữ. Tính khả dụng của dịch vụ có thể thay đổi tùy theo ngôn ngữ. Độ chính xác của kết
+                        quả không được đảm bảo.
+                        <br> *Độ khả dụng của các tính năng thay đổi tùy theo thiết bị.
+                        <br> *Hình ảnh mô phỏng cho mục đích minh họa. UI thực tế có thể khác.
+                    </p>
+
+                    <p class="item-title">
+                    4. *Generative Edit yêu cầu kết nối mạng và đăng nhập Tài khoản Samsung. Chỉnh sửa với kết quả
+                    Generative Edit cho ảnh được thay đổi kích thước lên đến 12MP. Hình mờ có thể nhìn thấy được vì hình
+                    ảnh đầu ra đã được làm nét khi lưu để cho biết hình ảnh được tạo bởi AI. Độ chính xác và độ tin cậy
+                    của đầu ra có thể không được đảm bảo hoàn toàn.
+                    <br> *Độ khả dụng của các tính năng thay đổi tùy theo thiết bị.
+                    <br> *Hình ảnh mô phỏng cho mục đích minh họa. UI thực tế có thể khác.
+                    </p>
+
+                    <p class="item-title" >
+                    5. *Tính năng Trợ lý phiên dịch yêu cầu đăng nhập Tài khoản Samsung. Một số ngôn ngữ có thể yêu cầu tải
+                    xuống gói ngôn ngữ. Tính khả dụng của dịch vụ có thể khác nhau tùy theo ngôn ngữ. Độ chính xác của
+                    kết quả không được đảm bảo. Tính khả dụng và các tính năng được hỗ trợ có thể khác nhau tùy theo
+                    ngôn ngữ, quốc gia, khu vực hoặc nhà cung cấp dịch vụ.
+                    <br> *Độ khả dụng của các tính năng thay đổi tùy theo thiết bị.
+                    <br> *Hình ảnh mô phỏng cho mục đích minh họa. UI thực tế có thể khác.
+                    </p>
+
+                    <p class="item-title" >
+                    6. *Tính năng Trợ lý phiên dịch yêu cầu đăng nhập Tài khoản Samsung. Một số ngôn ngữ có thể yêu cầu tải
+                    xuống gói ngôn ngữ. Tính khả dụng của dịch vụ có thể khác nhau tùy theo ngôn ngữ. Độ chính xác của
+                    kết quả không được đảm bảo.
+                    <br> *Độ khả dụng của các tính năng thay đổi tùy theo thiết bị.
+                </p>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+
+@section scripts {
+    <!-- Swiper JS -->
+    <script src="~/Content/SamsungAI/js/swiper-bundle.min.js"></script>
+    @*
+            <script>
+
+        const textElements = document.querySelectorAll('.fade-in-text');
+                var image = document.getElementById('image');
+                var video = document.getElementById('video');
+
+
+                function checkIfInView() {
+
+                    textElements.forEach((textElement) => {
+
+                        const textRect = textElement.getBoundingClientRect();
+                        if (textRect.top <= window.innerHeight && textRect.bottom >= 0) {
+
+                            // Sau 3 giây, hiển thị video
+                            setTimeout(function () {
+                                image.style.display = 'none'; // Hiển thị ảnh
+                                video.style.display = 'block'; // Hiển thị video
+                            }, 3000); // 3000 milliseconds = 3 seconds
+                        } else {
+                            debugger
+                            // Sau 3 giây, hiển thị video
+                            video.style.display = 'none';
+                            image.style.display = 'block'; // Hiển thị ảnh
+                        }
+                    });
+
+                }
+
+                window.addEventListener('scroll', checkIfInView);
+                window.addEventListener('resize', checkIfInView);
+
+                checkIfInView(); // Kiá»ƒm tra láº§n Ä‘áº§u khi trang web táº£i lĂªn
+            </script> *@
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    @* <script>
+        $(document).ready(function(){
+            // Sau 2 giây, thay đổi poster của video
+            setTimeout(function(){
+                $('#video1').attr('poster', '~/Content/SamsungAI/img/new_poster_image.jpg');
+                $('#previewImage').hide(); // Ẩn ảnh preview sau khi video bắt đầu phát
+                $('#video1').style.display = 'block';
+            }, 2000); // Thời gian là 2 giây (2000 milliseconds)
+        });
+        </script> *@
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            zoom: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 10000, // Thời gian chờ giữa các slide (miligiây)
+                disableOnInteraction: false, // Tự động dừng khi người dùng tương tác với slider
+            },
+        });
+
+    </script>
+
+}

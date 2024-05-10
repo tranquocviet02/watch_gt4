@@ -1,0 +1,164 @@
+.w-100-32px {
+    width: calc(100% - 32px);
+
+}
+
+.one.section-item-title div .one-item-title {
+    color: #7E19FE;
+    font-family: "Noto Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.96px;
+}
+
+.text-frame {
+    color: #646464;
+    font-family: "Noto Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.45px;
+}
+
+@media screen and (max-width: 400) {
+    .text-frame {
+        font-size: 13px;
+    }
+}
+
+.item-detail .item-detail-title-one {
+    color: var(--Black-Black-1, #191919);
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Noto Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.72px;
+}
+
+.div-detail-item{
+    min-width: 130px;
+}
+
+.div-detail-item .detail-item-title {
+    color: var(--Black-Black-1, #191919);
+text-align: center;
+font-family: "Noto Sans";
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -0.75px;
+}
+
+.product-information .information-item {
+    display: flex;
+padding: 10px 20px;
+align-items: center;
+
+}
+
+.information-item .information-item-title {
+    color: var(--Black-Black-1, #191919);
+font-family: "Noto Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: -0.6px;
+}
+
+.information-item .information-item-detail .information-item-detail-one {
+ color: var(--Black-Black-1, #191919);
+font-family: "Noto Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: -0.6px;
+}
+
+.information-item .information-item-detail .information-item-detail-two {
+    color: var(--Black-Black-1, #191919);
+    font-family: "Noto Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.45px;
+}
+
+.item-price .item-price-detail {
+    width: 100%;
+    display: flex;
+    padding: 18px 0px 18px 0px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
+    border-top: 1px solid var(--Black-Black-5, #EBEBEB);
+    border-bottom: 1px solid var(--Black-Black-5, #EBEBEB);
+    border-left: 1px solid var(--Black-Black-5, #EBEBEB);
+    background: var(--White-White-1, #FFF);
+}
+
+.item-price .item-price-detail .item-price-detail-title-one {
+    color: var(--Black-Black-1, #191919);
+    font-family: "Noto Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.66px;
+}
+
+.item-price .item-price-detail .item-price-detail-title-two {
+font-family: "Noto Sans";
+font-size: 42px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -2.1px;
+background: linear-gradient(35deg, #7C1FA4 1.81%, #7E19FE 49.4%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+
+.item-price .item-price-button {
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    border-radius: 0px 0px 10px 10px;
+    padding: 18px 0px 18px 0px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(85deg, #7C1FA4 15.92%, #7E19FE 72.59%);
+}
+
+.item-price .item-price-button:hover {
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    border-radius: 0px 0px 10px 10px;
+    padding: 18px 0px 18px 0px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(85deg, #7C1FA4 15.92%, #7E19FE 72.59%);
+}
+
+.item-price .item-price-button .item-price-button-item {
+    color: var(--White-White-1, #FFF);
+    font-family: "Noto Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.66px;
+}

@@ -1,0 +1,491 @@
+﻿@{
+    ViewBag.Title = "Oppo reno 11";
+    @* Layout = "~/Views/Shared/_layout_Desktop.cshtml"; *@
+}
+
+
+@section meta {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="description" content="">
+    <meta property="og:image" id="ogImage" content="https://hoanghamobile.com/Content/OppoReno11/img/Greeen.png">
+    <meta property="og:url" content="https://hoanghamobile.com/oppo-reno-11f">
+    <link rel="stylesheet" href="~/Content/OppoReno11/js-css/swiper-bundle.min.css?@DateTime.Now" />
+    <link rel="stylesheet" href="~/Content/OppoReno11/css/bootstrap.min.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/OppoReno11/js-css/web_Desktop.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/OppoReno11/js-css/OppoReno11.css?@DateTime.Now">
+    <link rel="stylesheet" href="https://hoanghamobile.com/Content/GalaxyZ2024/js-css/model.css?@DateTime.Now">
+    <link rel="stylesheet" href="~/Content/GalaxyZ2024/js-css/model.css?@DateTime.Now">
+    <script src="https://hoanghamobile.com/Content/web/js/jquery-3.5.1.min.js"></script>
+
+    <link rel="stylesheet" href="~/Content/GalaxyZ2024/js-css/web_Desktop.css?@DateTime.Now">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.post('/Ajax/Price', { "id": "4108" }, function (data) {
+                $(data).each(function (index, value) {
+                    for (var i = 0; i < 4; i++) {
+                        var href_ck = $('#idsanpham_href' + (i > 0 ? i : '') + '_' + value.ID);
+                        if (href_ck.length > 0) {
+                            var hrefUrl = value.UID + '?buy=1';
+                            href_ck.attr('href', hrefUrl);
+                        }
+                    }
+                });
+            });
+        });
+
+    </script>
+}
+
+<main class="main-content background-main">
+    <div class="Content-v1 feature-section gap-30px">
+        <section class="feature-section-one position-relative">
+            <picture>
+                <!-- Hình ảnh mặc định khi không có điều kiện nào được đáp ứng -->
+                <a href="">
+                    <img class="Flip-feature-one-banner w-100" src="~/Content/OppoReno11/img/Greeen.png?@DateTime.Now"
+                        alt="text banner">
+                </a>
+            </picture>
+
+        </section>
+
+        <div class="product-action" style="    margin-top: -100px; z-index: 1;">
+            <a title="Đăng ký nhận thông tin" href="javascript:;" class="btn-oppo11-blue btnbuy">
+                <strong>MUA NGAY</strong></a>
+        </div>
+
+        <section class="feature-section-two d-flex-center gap-30px">
+            <div class="flex-column-center item-title item-title-two gap-10px">
+                <h1 class="title-banner">Quà Tặng Trendy</h1>
+                <img class="Flip-feature-one-banner w-100"
+                    src="~/Content/OppoReno11/img/Loa Olike Headline.png?@DateTime.Now" alt="text banner">
+                <div class="div-icon">
+                    <div class="div-icon-item">
+                        <img class="Flip-feature-one-banner" src="~/Content/OppoReno11/img/Bluetooth.png?@DateTime.Now"
+                            alt="text banner">
+                        <h1 class="item-title-two-detail">Kết Nối Bluetooth 5.3</h1>
+                    </div>
+                    <div class="div-icon-item">
+                        <img class="Flip-feature-one-banner" src="~/Content/OppoReno11/img/Battery.png?@DateTime.Now"
+                            alt="text banner">
+                        <h1 class="item-title-two-detail">Bin Bền Bỉ 2400mAH</h1>
+                    </div>
+                    <div class="div-icon-item">
+                        <img class="Flip-feature-one-banner" src="~/Content/OppoReno11/img/Sound.png?@DateTime.Now"
+                            alt="text banner">
+                        <h1 class="item-title-two-detail">Chất Âm Sống Động</h1>
+                    </div>
+                    <div class="div-icon-item">
+                        <img class="Flip-feature-one-banner" src="~/Content/OppoReno11/img/Light.png?@DateTime.Now"
+                            alt="text banner">
+                        <h1 class="item-title-two-detail">Đèn Chuyển Màu Theo Nhạc</h1>
+                    </div>
+                </div>
+            </div>
+            <img class="Flip-feature-one-banner w-70" src="~/Content/OppoReno11/img/Loa Olike.png?@DateTime.Now"
+                alt="text banner">
+        </section>
+
+        <section class="feature-section-three d-flex-center gap-20px">
+            <img class="Flip-feature-one-banner w-70"
+                src="~/Content/OppoReno11/img/Fun Sáng Tạo Visual.png?@DateTime.Now" alt="text banner">
+            <div class="flex-column-center item-title w-45 gap-10px">
+                <img class="Flip-feature-one-banner w-100"
+                    src="~/Content/OppoReno11/img/Fun Sáng tạo Header.png?@DateTime.Now" alt="text banner">
+                <h1 class="item-title-banner">Ảnh Chân Dung Độc Đáo</h1>
+                <p class="item-title-detail">Reno11 F 5G sở hữu bộ 3 Camera 64MP siêu nét bắt mọi khoảnh khắc cực chất
+                    và chân thực đến từng chi tiết . Không chỉ thế , các tính năng chỉnh sửa thú vị
+                    trên điện thoại sẽ giúp bạn trổ tài sáng tạo những bức ảnh chân dung độc lạ - đậm bản sắc cá nhân
+                    nhất!</p>
+            </div>
+        </section>
+
+
+        <section class="feature-section-four d-flex-center gap-20px">
+            <div class="flex-column-center item-title w-45 gap-10px">
+                <img class="Flip-feature-one-banner w-100"
+                    src="~/Content/OppoReno11/img/Fun Sống động.png?@DateTime.Now" alt="text banner">
+                <h1 class="item-title-banner">Rực Rỡ Mọi Góc Nhìn</h1>
+                <p class="item-title-detail">Nâng tầm chất lượng hiển thị chuẩn Flagship với màn hình AMOLED 120Hz và
+                    thiết kế khung viền vuông
+                    siêu mỏng cho bạn đắm chìm trong thế giới phim ảnh đỉnh chóp </p>
+                <img class="Flip-feature-one-banner w-100" src="~/Content/OppoReno11/img/Icons List.png?@DateTime.Now"
+                    alt="text banner">
+            </div>
+            <img class="Flip-feature-one-banner w-70"
+                src="~/Content/OppoReno11/img/Fun Sống Động Visual.png?@DateTime.Now" alt="text banner">
+        </section>
+
+        <div class="product-action ">
+            <a title="Đăng ký nhận thông tin" href="javascript:;" class="btn-oppo11-blue  btnbuy">
+                <strong>MUA NGAY</strong></a>
+        </div>
+
+        <section class="feature-section-five d-flex-center gap-20px">
+            <img class="Flip-feature-one-banner w-70"
+                src="~/Content/OppoReno11/img/Fun Thời Thượng BG Visual.png?@DateTime.Now" alt="text banner">
+            <div class="flex-column-center item-title w-45 gap-10px">
+                <img class="Flip-feature-one-banner w-100"
+                    src="~/Content/OppoReno11/img/Fun Thời Thượng BG.png?@DateTime.Now" alt="text banner">
+                <h1 class="item-title-banner">Vân Kim Sa Lấp Lánh</h1>
+                <p class="item-title-detail">Reno11 F 5G tiên phong thiết kế mặt lưng hiệu ứng kim sa cùng màu sắc lấy
+                    cảm hứng từ thiên nhiên tạo nên
+                    diện mạo chiếc điện thoại nhìn là mê; xứng danh "Bestie" đồng hành cùng bạn bung lụa khoe cá tính!
+                </p>
+            </div>
+        </section>
+
+
+        <section class="feature-section-six d-flex-center gap-20px div-bg-white">
+            <div class="flex-column-center item-title w-45 z-index-2 gap-10px">
+                <img class="Flip-feature-one-banner w-100"
+                    src="~/Content/OppoReno11/img/Fun Mượt Mà Heading.png?@DateTime.Now" alt="text banner">
+                <h1 class="item-title-banner">Giải Trí Cực Đỉnh</h1>
+                <p class="item-title-detail">Vi xử lí Mediatek Dimensity 7050 5G kết hợp bộ nhớ lớn 256GB với RAM mở
+                    rộng giúp đa nhiệm
+                    mượt mà, chấp mọi thể loại app và chiến game zui tới bến.</p>
+            </div>
+            <img class="Flip-feature-one-banner w-70 z-index-2"
+                src="~/Content/OppoReno11/img/Chip set.png?@DateTime.Now" alt="text banner">
+            <img class="Flip-feature-one-banner position-right"
+                src="~/Content/OppoReno11/img/pastelwavy2 2.png?@DateTime.Now" alt="text banner">
+        </section>
+
+        <section class="feature-section-sevent d-flex-center gap-20px">
+            <img class="Flip-feature-one-banner w-70  z-index-2"
+                src="~/Content/OppoReno11/img/Fun Bền Bỉ visual.png?@DateTime.Now" alt="text banner">
+            <div class="flex-column-center item-title w-45  z-index-2 gap-10px">
+                <img class="Flip-feature-one-banner w-100" src="~/Content/OppoReno11/img/Group 2927.png?@DateTime.Now"
+                    alt="text banner">
+                <h1 class="item-title-banner">Tận Hưởng Trọn Ngày Dài</h1>
+                <p class="item-title-detail">Reno11 F 5G được trang bị bộ đôi pin siêu lớn - sạc siêu nhanh mang đến
+                    năng
+                    lượng bất tận và
+                    đảm bảo trải nghiệm không gián đoạn; sẵn sàn đồng hành cùng GenZ trong mọi cuộc vui!</p>
+
+                <div class="d-flex-start w-100">
+                    <img class="Flip-feature-one-banner w-70" src="~/Content/OppoReno11/img/Sạc Nhanh.png?@DateTime.Now"
+                        alt="text banner">
+                    <img class="Flip-feature-one-banner w-50" src="~/Content/OppoReno11/img/Pin Lớn.png?@DateTime.Now"
+                        alt="text banner">
+                </div>
+
+                <img class="Flip-feature-one-banner position-right"
+                    src="~/Content/OppoReno11/img/cloud blur 4.png?@DateTime.Now" alt="text banner">
+            </div>
+
+        </section>
+
+        <div class="product-action ">
+            <a title="Đăng ký nhận thông tin" href="javascript:;" class="btn-oppo11-blue  btnbuy">
+                <strong>MUA NGAY</strong></a>
+        </div>
+
+
+        <section class=" feature-dangky d-flex-start section-rules gap-20px w-100 align-items-start">
+            <div class="content-rules box-shadow position-relative w-49 background-white">
+                <div class="item-text">
+                    <!-- Phần nội dung được hiển thị ban đầu -->
+                    <div class="content-initial">
+                        <p><b>DEAL FUN SIÊU DZUI ĐÂY DZỒI</b></p>
+                        <p>Khách hàng khi đăng ký nhận thông tin hoặc chơi minigame trong thời gian quy
+                            định,</p>
+                        <p>sẽ có cơ hội nhận được 01 voucher giảm giá 50% khi mua OPPO Reno11 F 5G tại Hoàng
+                            Hà Mobile</p>
+                        <p>-----------</p>
+                        <p><b>Các thức tham gia</b></p>
+                        <p><b>CHƯƠNG TRÌNH 1 (CT1): Từ 02/03/2024 đến 11h00 ngày 08/03/2024</b></p>
+                        <p><b>- Bước 1: Khách hàng điền các thông tin theo đúng yêu cầu</b></p>
+                        <p><b>- Bước 2: Bấm vào Đăng ký ngay</b></p>
+
+                        @* <p><b>CHƯƠNG TRÌNH 2 (CT2): Duy nhất từ 11h00 - 12h00 ngày 08/03/2024</b></p>
+                        <p>- Bước 1: Điền các thông tin theo đúng yêu cầu và trả lời câu hỏi</p>
+                        <p>- Bước 2: Chọn câu trả lời đúng</p>
+                        <p>- Bước 3: Bấm vào Đăng ký ngay</p>
+                        <p>-----------</p>
+                        <p><b>✅ Điều kiện nhận giải: Làm đúng đủ các bước trên, sau khi kết thúc chương
+                                trình,</p>
+                        <p>Hoàng Hà Mobile sẽ quay số trực tiếp tại trang web random.org để tìm ra 11 vị
+                            khách</p>
+                        <p>may mắn nhất (gồm 05 khách hàng tham gia CT1 và 06 khách hàng tham gia CT2)!</b>
+                        </p>
+                        <p>------------</p>
+                        <p>- Các chương trình sẽ kết thúc sau 12h00 ngày 08/03/2024</p> *@
+                    </div>
+
+                </div>
+                <div class="bgd-overlay wrap-btn">
+                    <button class="btn-more" id="showMoreBtn">
+                        Xem thêm
+                    </button>
+                </div>
+            </div>
+            <div class="signup-container w-50 flex-column-center gap-20px">
+                <form id="DangkyForm" class="signup-form">
+                    <h2 class="title-add-cart">Đăng ký nhận thông tin có cơ hội nhận được 01 voucher giảm giá 50% khi
+                        mua OPPO Reno11 F 5G</h2>
+                    <div class="d-flex-start w-100">
+                        <div class="input-group cart-order-input">
+                            <input type="text" id="Dangkyname" name="name" placeholder="Nhập họ và tên"
+                                class="cart-pre-order_text-field-input__8Tno5" value="">
+                            <span class="error-message" id="DangkynameError"></span><br>
+                        </div>
+                        <div class="input-group cart-order-input">
+                            <input type="text" id="phone" name="Dangkyphone" placeholder="Nhập số điện thoại"
+                                class="cart-pre-order_text-field-input__8Tno5" value="">
+                            <span class="error-message" id="DangkyphoneError"></span><br>
+                        </div>
+                    </div>
+                    <div class="d-flex-start w-100">
+                        <div class="input-group cart-order-input">
+                            <input type="text" id="Dangkyemail" name="email" placeholder="Nhập email"
+                                class="cart-pre-order_text-field-input__8Tno5" value="">
+                            <span class="error-message" id="DangkyemailError"></span><br>
+                        </div>
+                    </div>
+
+
+                    <button type="submit" id="ButtonDangky" class="button-add">Đăng Ký Ngay</button>
+                </form>
+            </div>
+        </section>
+
+        <section class=" feature-dangky d-flex-start section-rules gap-20px w-100 align-items-start">
+            <div class="content-rules box-shadow position-relative w-49 background-white">
+                <div class="item-text">
+                    <!-- Phần nội dung được hiển thị ban đầu -->
+                    <div class="content-initial">
+                        <p><b>DEAL FUN SIÊU DZUI ĐÂY DZỒI</b></p>
+                        <p>Khách hàng khi đăng ký nhận thông tin hoặc chơi minigame trong thời gian quy
+                            định,</p>
+                        <p>sẽ có cơ hội nhận được 01 voucher giảm giá 50% khi mua OPPO Reno11 F 5G tại Hoàng
+                            Hà Mobile</p>
+                        <p>-----------</p>
+                        <p><b>Các thức tham gia</b></p>
+                        <p><b>CHƯƠNG TRÌNH 1 (CT1): Từ 02/03/2024 đến 11h00 ngày 08/03/2024</b></p>
+                        <p><b>- Bước 1: Khách hàng điền các thông tin theo đúng yêu cầu</b></p>
+                        <p><b>- Bước 2: Bấm vào Đăng ký ngay</b></p>
+
+                        <p><b>CHƯƠNG TRÌNH 2 (CT2): Duy nhất từ 11h00 - 12h00 ngày 08/03/2024</b></p>
+                        <p>- Bước 1: Điền các thông tin theo đúng yêu cầu và trả lời câu hỏi</p>
+                        <p>- Bước 2: Chọn câu trả lời đúng</p>
+                        <p>- Bước 3: Bấm vào Đăng ký ngay</p>
+                        <p>-----------</p>
+                        <p><b>✅ Điều kiện nhận giải: Làm đúng đủ các bước trên, sau khi kết thúc chương
+                                trình,</p>
+                        <p>Hoàng Hà Mobile sẽ quay số trực tiếp tại trang web random.org để tìm ra 11 vị
+                            khách</p>
+                        <p>may mắn nhất (gồm 05 khách hàng tham gia CT1 và 06 khách hàng tham gia CT2)!</b>
+                        </p>
+                        <p>------------</p>
+                        <p>- Các chương trình sẽ kết thúc sau 12h00 ngày 08/03/2024</p>
+                    </div>
+
+                </div>
+                <div class="bgd-overlay wrap-btn">
+                    <button class="btn-more" id="showMoreBtn">
+                        Xem thêm
+                    </button>
+                </div>
+            </div>
+            <div class="signup-container w-50 flex-column-center gap-20px">
+                <img class="Flip-feature-one-banner w-100"
+                    src="~/Content/OppoReno11/img/minigame reno 11f.jpg?@DateTime.Now" alt="text banner">
+                <form id="MinigameForm" class="signup-form">
+                    <h2 class="title-add-cart">Đăng ký nhận thông tin có cơ hội nhận được 01 voucher giảm giá 50% khi
+                        mua OPPO Reno11 F 5G</h2>
+                    <div class="d-flex-start w-100">
+                        <div class="input-group cart-order-input">
+                            <input type="text" id="Minigamename" name="name" placeholder="Nhập họ và tên"
+                                class="cart-pre-order_text-field-input__8Tno5" value="">
+                            <span class="error-message" id="MinigamenameError"></span><br>
+                        </div>
+                        <div class="input-group cart-order-input">
+                            <input type="text" id="Minigamephone" name="phone" placeholder="Nhập số điện thoại"
+                                class="cart-pre-order_text-field-input__8Tno5" value="">
+                            <span class="error-message" id="MinigamephoneError"></span><br>
+                        </div>
+                    </div>
+                    <div class="d-flex-start w-100">
+                        <div class="input-group cart-order-input">
+                            <input type="text" id="Minigameemail" name="email" placeholder="Nhập email"
+                                class="cart-pre-order_text-field-input__8Tno5" value="">
+                            <span class="error-message" id="MinigameemailError"></span><br>
+                        </div>
+                    </div>
+
+
+                    <button type="submit" id="ButtonMinigame" class="button-add">Đăng Ký Ngay</button>
+                </form>
+            </div>
+        </section>
+
+
+
+        <div class="popup-modal popup-show-list-customer myModal3" id="popup-show-program" role="dialog">
+            <div class="popup-overlay js--close-modal"></div>
+            <div class="popup-modal-dialog">
+                <div class="popup-main text-align-start">
+                    <a class="popup-btn-close js--close-modal"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                            width="20" height="30" viewBox="0 0 48 48">
+                            <path
+                                d="M 11.480469 5.0058594 C 10.500482 5.0058442 9.521297 5.3771405 8.7792969 6.1191406 L 6.1191406 8.7792969 C 4.6346201 10.26247 4.6351404 12.69764 6.1191406 14.181641 L 15.9375 24 L 6.1191406 33.818359 C 4.6346201 35.301533 4.6351404 37.736703 6.1191406 39.220703 L 8.7792969 41.880859 C 10.26247 43.36538 12.69764 43.36486 14.181641 41.880859 L 24 32.0625 L 33.818359 41.880859 C 35.301533 43.36538 37.736703 43.36486 39.220703 41.880859 L 41.880859 39.220703 C 43.36538 37.73753 43.36486 35.30236 41.880859 33.818359 L 32.0625 24 L 41.880859 14.181641 C 43.36538 12.698467 43.36486 10.263297 41.880859 8.7792969 L 39.220703 6.1191406 C 37.73753 4.6346201 35.30236 4.6351404 33.818359 6.1191406 L 24 15.9375 L 14.181641 6.1191406 C 13.440054 5.3768804 12.460456 5.0058746 11.480469 5.0058594 z M 11.480469 6.9921875 C 11.944232 6.9921723 12.408165 7.1734634 12.767578 7.5332031 L 23.292969 18.058594 A 1.0001 1.0001 0 0 0 24.707031 18.058594 L 35.232422 7.5332031 C 35.952422 6.8132033 37.087814 6.8137237 37.806641 7.5332031 L 40.466797 10.193359 C 41.186797 10.913359 41.186276 12.048752 40.466797 12.767578 L 29.941406 23.292969 A 1.0001 1.0001 0 0 0 29.941406 24.707031 L 40.466797 35.232422 C 41.186797 35.952422 41.186276 37.087814 40.466797 37.806641 L 37.806641 40.466797 C 37.086641 41.186797 35.951248 41.186276 35.232422 40.466797 L 24.707031 29.941406 A 1.0001 1.0001 0 0 0 23.292969 29.941406 L 12.767578 40.466797 C 12.047578 41.186797 10.912186 41.186276 10.193359 40.466797 L 7.5332031 37.806641 C 6.8132033 37.086641 6.8137237 35.951248 7.5332031 35.232422 L 18.058594 24.707031 A 1.0001 1.0001 0 0 0 18.058594 23.292969 L 7.5332031 12.767578 C 6.8132033 12.047578 6.8137237 10.912186 7.5332031 10.193359 L 10.193359 7.5332031 C 10.553359 7.1732032 11.016706 6.9922027 11.480469 6.9921875 z"
+                                fill="white">
+                            </path>
+                        </svg>
+                    </a>
+                    <h3 class="popup-title resetfont">Thể lệ chương trình</h3>
+                    <div class="popup-contents">
+                        <div class="content-rules-programe">
+                            <div class="content-rules">
+                                <div class="item align-items-start">
+                                    <p><b>DEAL FUN SIÊU DZUI ĐÂY DZỒI</b></p>
+                                    <p>Khách hàng khi đăng ký nhận thông tin hoặc chơi minigame trong thời gian quy
+                                        định,</p>
+                                    <p>sẽ có cơ hội nhận được 01 voucher giảm giá 50% khi mua OPPO Reno11 F 5G tại Hoàng
+                                        Hà Mobile</p>
+                                    <p>-----------</p>
+                                    <p><b>Các thức tham gia</b></p>
+                                    <p><b>CHƯƠNG TRÌNH 1 (CT1): Từ 02/03/2024 đến 11h00 ngày 08/03/2024</b></p>
+                                    <p><b>- Bước 1: Khách hàng điền các thông tin theo đúng yêu cầu</b></p>
+                                    <p><b>- Bước 2: Bấm vào Đăng ký ngay</b></p>
+
+                                    <p><b>CHƯƠNG TRÌNH 2 (CT2): Duy nhất từ 11h00 - 12h00 ngày 08/03/2024</b></p>
+                                    <p>- Bước 1: Điền các thông tin theo đúng yêu cầu và trả lời câu hỏi</p>
+                                    <p>- Bước 2: Chọn câu trả lời đúng</p>
+                                    <p>- Bước 3: Bấm vào Đăng ký ngay</p>
+                                    <p>-----------</p>
+                                    <p><b>✅ Điều kiện nhận giải: Làm đúng đủ các bước trên, sau khi kết thúc chương
+                                            trình,</p>
+                                    <p>Hoàng Hà Mobile sẽ quay số trực tiếp tại trang web random.org để tìm ra 11 vị
+                                        khách</p>
+                                    <p>may mắn nhất (gồm 05 khách hàng tham gia CT1 và 06 khách hàng tham gia CT2)!</b>
+                                    </p>
+                                    <p>------------</p>
+                                    <p>- Các chương trình sẽ kết thúc sau 12h00 ngày 08/03/2024</p>
+                                    <p>- 01 khách hàng chỉ được trúng tối đa 01 phần quà trong chương trình</p>
+                                    <p>- 01 khách hàng chỉ được tham gia 01 lần. Nếu phát hiện trùng lặp SĐT hoặc email,
+                                    </p>
+                                    <p>kết quả sẽ bị loại</p>
+                                    <p>- Khách hàng vui lòng sử dụng tên - email - số điện thoại chính chủ để thuận lợi
+                                    </p>
+                                    <p>trong quá trình trao quà</p>
+                                    <p>- Chương trình không áp dụng với những khách hàng đã trúng quà có trị giá trên 1
+                                    </p>
+                                    <p>Triệu của Hoàng Hà Mobile từ 2023 – 2024</p>
+                                    <p>- Chương trình không áp dụng với nhân viên Hoàng Hà Mobile và OPPO</p>
+                                    <p>- BTC sẽ liên hệ trao quà qua SĐT khách đăng ký chơi game. Nếu không liên hệ được
+                                        do</p>
+                                    <p>SĐT không có thật hoặc khách hàng không nghe máy trong 03 lần liên hệ, BTC xin
+                                        phép</p>
+                                    <p>hủy quà trường hợp đó.</p>
+                                    <p>- Quà tặng không có giá trị quy đổi thành tiền mặt</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+@{
+    var commentModel = new QStore.Models.Review.ReviewListReq()
+            {
+                ModelID = 3670, //ID của sản phẩm. VD 3794 = OPPO Find N3
+                SystemTypeID = ((int)QStore.Models.Enum.SystemType.Product),
+                Title = "Tên sản phẩm",
+            };
+}
+@Html.Partial("_Comment", commentModel)
+
+@section scripts {
+    <script src="~/Content/GalaxyZ2024/js-css/web-n3.js?@DateTime.Now"></script>
+    <script>
+        $(document).ready(function () {
+            $('#showMoreBtn').click(function () {
+                $('#popup-show-program').css('display', 'block');
+                $('body').addClass('no-scroll-body');
+            });
+
+            $('.popup-btn-close').click(function () {
+                $('#popup-show-program').css('display', 'none');
+                $('body').removeClass('no-scroll-body');
+            });
+        @*
+            $('#showlist').click(function () {
+            $('#popup-btn-list').css('display', 'block');
+            $('body').addClass('no-scroll-body');
+            });
+
+            $('.popup-btn-close-list').click(function () {
+            $('#popup-btn-list').css('display', 'none');
+            $('body').removeClass('no-scroll-body');
+            }); *@
+                        });
+
+    </script>
+
+
+    <script>
+
+        $(document).ready(function () {
+            $('#ButtonDangky').click(function (event) {
+                event.preventDefault(); // Ngăn chặn sự kiện mặc định của nút submit
+
+                const Dangkyname = $('#Dangkyname').val();
+                const Dangkyphone = $('#Dangkyphone').val();
+                const Dangkyemail = $('#Dangkyemail').val();
+
+                // Gửi dữ liệu qua AJAX POST
+                $.ajax({
+                    url: '',
+                    type: 'POST',
+                    data: {
+                        Title: Dangkyname,
+                        Phone: Dangkyphone,
+                        Email: Dangkyemail
+                    },
+                    success: function (response) {
+                        console.log('Data sent successfully:', response);
+                    },
+                    error: function (error) {
+                        console.error('There was a problem with the request:', error);
+                        // Xử lý lỗi nếu cần
+                    }
+                });
+            });
+
+            $('#ButtonMinigame').click(function (event) {
+                event.preventDefault(); // Ngăn chặn sự kiện mặc định của nút submit
+
+                const Minigamename = $('#Minigamename').val();
+                const Minigamephone = $('#Minigamephone').val();
+                const Minigameemail = $('#Minigameemail').val();
+
+                // Gửi dữ liệu qua AJAX POST
+                $.ajax({
+                    url: '',
+                    type: 'POST',
+                    data: {
+                        Title: Minigamename,
+                        Phone: Minigamephone,
+                        Email: Minigameemail
+                    },
+                    success: function (response) {
+                        console.log('Data sent successfully:', response);
+                    },
+                    error: function (error) {
+                        console.error('There was a problem with the request:', error);
+                        // Xử lý lỗi nếu cần
+                    }
+                });
+            });
+        });
+
+    </script>
+
+}

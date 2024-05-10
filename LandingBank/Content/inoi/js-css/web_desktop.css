@@ -1,0 +1,133 @@
+.title-banner h1{
+    color: #7E19FE;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Noto Sans";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 78px;
+    /* 121.875% */
+    letter-spacing: -3.2px;
+}
+
+.feature-section-item .item-title .title-one {
+    color: var(--Black-Black-1, #191919);
+leading-trim: both;
+text-edge: cap;
+font-family: "Noto Sans";
+font-size: 31px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -0.93px;
+text-align: start;
+}
+
+.feature-section-item .item-title .title-two {
+    color: var(--Black-Black-1, #191919);
+    text-align: center;
+    font-family: "Noto Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.9px;
+    text-align: start;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+}
+
+.feature-section-item .item-title .title-two div {
+    min-width: 130px;
+}
+
+.feature-section-item .item-title .title-three .title-three-item p{
+    color: var(--Black-Black-1, #191919);
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Noto Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.9px;
+}
+
+.feature-section-item .item-title .title-three div .title-three-item h4{
+    color: var(--Black-Black-1, #191919);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Noto Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.54px;
+}
+
+
+.item-three-price .item-three-price-one {
+padding: 18px 96px 18px 97px;
+border-radius: 10px 0px 0px 10px;
+border-top: 1px solid var(--Black-Black-5, #EBEBEB);
+border-bottom: 1px solid var(--Black-Black-5, #EBEBEB);
+border-left: 1px solid var(--Black-Black-5, #EBEBEB);
+background: var(--White-White-1, #FFF);
+}
+
+.item-title .title-detail h1 {
+font-family: "Noto Sans";
+font-size: 42px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -2.1px;
+background: linear-gradient(35deg, #7C1FA4 1.81%, #7E19FE 49.4%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.item-title .title-detail h2 {
+    color: var(--Black-Black-1, #191919);
+    font-family: "Noto Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.66px;
+}
+
+
+.item-three-price .item-three-price-two {
+    cursor: pointer;
+    display: flex;
+padding: 18px 37px;
+justify-content: center;
+border-radius: 0px 10px 10px 0px;
+align-items: center;
+background: linear-gradient(85deg, #7C1FA4 15.92%, #7E19FE 72.59%);
+} 
+
+.item-three-price .item-three-price-two:hover {
+    background: linear-gradient(85deg, #4D0D69 15.92%, #5408B5 72.59%);
+} 
+
+.title-button h1 {
+    color: var(--White-White-1, #FFF);
+font-family: "Noto Sans";
+font-size: 22px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -0.66px;
+}
+
+.item-three-price .title-detail{
+    max-height: 30px;
+}
+

@@ -1,0 +1,528 @@
+.grid-gap15 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.div-1 .content-text{
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.div-2 .item1-div2 .content-text{
+    position: absolute;
+    top: 12%;
+    left: 5%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.div-2 .item2-div2 .content-text{
+    position: absolute;
+    top: 12%;
+    width: 100%;
+    align-items: center;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.div-3 .item1-div3 .content-text{
+    position: absolute;
+    top: 12%;
+    left: 20%;
+    width: 100%;
+    align-items: start;
+    text-align: center;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.div-3 .item1-div3-two .detail1-item-div3 .content-text{
+    position: absolute;
+    top: 15%;
+    right: 12%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.div-3 .item1-div3-two .detail2-item-div3 .content-text{
+    position: absolute;
+    top: 15%;
+    left: 12%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.content-text.sec-1 .title{
+    color: #fff;
+    font-size: 33px;
+    text-align: start;
+    font-weight: 700;
+    display: inline-block;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.content-text.sec-1 .des-title{
+    color: #fff;
+    font-size: 20px;
+    text-align: start;
+    font-weight: 300;
+    display: inline-block;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-4 .content-text .title{
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 54px;
+    text-align: center;
+    font-weight: 700;
+    display: inline-block;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-4 .content-text .des-title{
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 54px;
+    text-align: center;
+    font-weight: 300;
+    display: inline-block;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+
+.div-4 .content-text .detail-title{
+    margin: 20px 0px 70px 0;
+    padding: 0;
+    color: black;
+    font-size: 19px;
+    opacity: .6;
+    text-align: center;
+    font-weight: 300;
+    display: inline-block;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-5 .div-5-text {
+    position: absolute;
+    top: 4%;
+    left: 5%;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+}
+.div-5 .content-text .title{
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 50px;
+    text-align: start;
+    font-weight: 700;
+    display: inline-block;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-5 .content-text .des-title{
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 50px;
+    text-align: start;
+    font-weight: 300;
+    display: inline-block;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-5-text-detail.box1 {
+    position: absolute;
+    top: 41.5%;
+    left: 16%;
+}
+
+.div-5-text-detail.box2 {
+    position: absolute;
+    top: 62%;
+    left: 16%;
+}
+
+.div-5-text-detail.box3 {
+    position: absolute;
+    top: 65%;
+    left: 16%;
+}
+
+.div-5-text-detail .title{
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 28.5px;
+    text-align: start;
+    font-weight: 700;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-5-text-detail .des-title{
+    margin: 20px 0px 70px 0;
+    padding: 0;
+    color: black;
+    font-size: 19px;
+    opacity: .6;
+    text-align: start;
+    font-weight: 300;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-6-text .title-red{
+    margin: 0;
+    padding: 0;
+    color: #e10019;
+    font-size: 25.2px;
+    text-align: start;
+    font-weight: 700;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-6-text .title{
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 53.5px;
+    text-align: start;
+    font-weight: 700;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-6-text .des-title{
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 53.5px;
+    text-align: start;
+    font-weight: 300;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-6-text .detail-title{
+    margin: 20px 0px 70px 0;
+    padding: 0;
+    color: black;
+    font-size: 19px;
+    opacity: .6;
+    text-align: start;
+    font-weight: 300;
+    z-index: 1;
+    font-family: 'Xiaomi Brand', sans-serif;
+}
+
+.div-7-text .title {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 53.5px;
+    text-align: center;
+    font-weight: 300;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-7-text .detail-title {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 29.7px;
+    text-align: start;
+    font-weight: 700;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-8-text .title{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 53.5px;
+    text-align: start;
+    font-weight: 700;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-8-text .des-title{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 53.5px;
+    text-align: start;
+    font-weight: 300;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-8-text .detail-title{
+    margin: 20px 0px 40px 0;
+    padding: 0;
+    color: #fff;
+    font-size: 19px;
+    opacity: .6;
+    text-align: start;
+    font-weight: 300;
+    z-index: 1;
+    font-family: 'Xiaomi Brand', sans-serif;
+}
+
+.div-8-text {
+    position: absolute;
+    top: 10%;
+    width: 41%;
+    left: 5%;
+}
+
+.div-8-text .title-item{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 37px;
+    text-align: start;
+    font-weight: 700;
+    z-index: 1;
+    font-family: 'Xiaomi Brand', sans-serif;
+}
+
+
+.div-8-text .des-title-item{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 19px;
+    opacity: .6;
+    text-align: start;
+    font-weight: 300;
+    z-index: 1;
+    font-family: 'Xiaomi Brand', sans-serif;
+}
+
+.div-9-text{
+    position: absolute;
+    top: 20%;
+    width: 50%;
+    left: 5%;
+    
+}
+.div-9-text .des-title{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 19px;
+    opacity: .6;
+    text-align: start;
+    font-weight: 300;
+    z-index: 1;
+    font-family: 'Xiaomi Brand', sans-serif;
+}
+
+.div-9-text .title-item{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 35px;
+    text-align: start;
+    font-weight: 700;
+    z-index: 1;
+    font-family: 'Xiaomi Brand', sans-serif;
+}
+
+.div-9-text .des-title-item{
+    margin: 0;
+    padding: 0;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(0deg, #a3cec6, #215542);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 150% 150%;
+    color: #fff;
+    font-size: 56px;
+    text-align: start;
+    font-weight: 700;
+    z-index: 1;
+    font-family: 'Xiaomi Brand', sans-serif;
+}
+
+
+.div-9-text .detail-title-item{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 19px;
+    opacity: .4;
+    text-align: start;
+    font-weight: 300;
+    z-index: 1;
+    font-family: 'Xiaomi Brand', sans-serif;
+}
+
+.div-10 img {
+    max-width: 251px;
+    margin-left: 40px;
+}
+
+.div-10-text .title{
+    margin: 0;
+    padding: 0;
+    color: #5f9b8a;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 700;
+    z-index: 1;
+    font-family: 'Xiaomi Brand', sans-serif;
+}
+
+.div-10-text .des-title{
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 70.3px;
+    text-align: center;
+    font-weight: 700;
+    z-index: 1;
+    font-family: 'Xiaomi Brand', sans-serif;
+}
+
+
+.div-11-text .title{
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 50.5px;
+    text-align: start;
+    font-weight: 700;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-11-text .des-title{
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 50.5px;
+    text-align: start;
+    font-weight: 300;
+    z-index: 1;
+    font-family: 'Camphor Pro', sans-serif;
+}
+
+.div-11-text .detail-title{
+    margin: 20px 0px 40px 0;
+    padding: 0;
+    color: #000;
+    font-size: 19px;
+    opacity: .6;
+    text-align: start;
+    font-weight: 300;
+    z-index: 1;
+    font-family: 'Xiaomi Brand', sans-serif;
+}
+
+.div-11-text{
+    position: absolute;
+    top: 15%;
+    width: 85%;
+}
+
+.div-12-text{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.div-12-item1{
+    position: absolute;
+    top: 7%;
+    justify-content: space-between;
+    width: 65%;
+}
+.div-12-item2{
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.div-12-item2 .div-12-item2-children{
+    width: 23%;
+    gap: 15px;
+}
+
+.div-12-text .title , .div-12-text .des-title ,
+ .div-12-text .des-title-item , .div-12-text .title-item , .div-12-text .detail-title-item , .div-13-text .detail-title-item{
+    margin: 0;
+    padding: 0;
+    color: #000;
+    z-index: 1;
+    text-align: start;
+    font-family: 'Camphor Pro', sans-serif;
+ } 
+
+.div-12-text .title{
+    font-size: 118.9px;   
+    font-weight: 700;
+}
+
+.div-12-text .des-title{
+    font-size: 28.9px;
+    font-weight: 700;
+
+}
+
+.div-12-text .title-item{
+    font-size: 47.5px;
+    font-weight: 700;
+}
+
+.div-12-text .des-title-item{
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.div-12-text .detail-title-item , .div-13-text .detail-title-item{
+    font-size: 19px;
+    font-weight: 400;
+    opacity: .6;
+}
+
+.div-13-text{
+    padding: 50px;
+}

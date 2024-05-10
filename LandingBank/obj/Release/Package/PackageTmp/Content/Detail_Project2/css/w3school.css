@@ -1,0 +1,69 @@
+.w3-badge {
+    width: 40px !important;
+    height: 5px !important;
+    /* border-radius: 12px; */
+    border-radius: 12px !important;
+    background: var(--green-green-1, #009981) !important;
+
+}
+.w3-badge1 {
+    width: 40px !important;
+    height: 5px !important;
+    /* border-radius: 12px; */
+    border-radius: 12px !important;
+    background: var(--white-white-1, #FFF) !important;
+}
+.opacity{
+    opacity: 1 !important;
+}
+.w3-opacity-off1,.w3-hover-opacity-off1:hover {
+    opacity: 1
+}
+.w3-text-green, .w3-hover-text-green:hover {
+    color: #4CAF50;
+}
+.w3-green, .w3-hover-green:hover {
+    color: #fff;
+    background-color: #4CAF50;
+}
+.w3-white, .w3-hover-white:hover {
+    color: #000!important;
+    background-color: #fff!important;
+}
+
+.w3_opacity {
+    opacity: 1;
+    border: 1.5px solid var(--green-green-1, #009981);
+}
+.w3-white1, .w3-hover-white1:hover {
+    color: #000!important;
+    background-color: #fff!important;
+}
+
+.icon_accessory_left :hover {
+    opacity: 1;
+}
+.icon_accessory_right :hover {
+    opacity: 1;
+}
+
+.icon_compare_left :hover {
+    opacity: 1;
+}
+.icon_compare_right :hover {
+    opacity: 1;
+}
+
+.icon_new_left :hover {
+    opacity: 1;
+}
+.icon_new_right :hover {
+    opacity: 1;
+}
+
+.icon_news_left :hover {
+    opacity: 1;
+}
+.icon_news_right :hover {
+    opacity: 1;
+}
